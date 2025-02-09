@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documentation</title>
+        <link rel="icon" href="/images/favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/llOaSlDEy1.css">
+        <link rel="stylesheet" href="/styles/JvZULsTpTa.css">
+</head>
+<body>
+    
+
+<section class="documentation-page">
+    <header class="header">
+    <a href="/">
+        <img src="/images/logo.webp" alt="ReaSonus logo" class="logo">
+    </a>
+</header>
+    <section class="center">
+        <aside class="menu">
+    <nav>
+        <ul>
+            <li class="main red active"><a href="/documentation">Let's
+                    Start</a></li>
+            <ul>
+                <li class="sub red"><a on:click="{handleAnchorClick}" href="#installation">Installation</a></li>
+                <li class="sub red"><a on:click="{handleAnchorClick}" href="#settings">Settings</a></li>
+            </ul>
+            <li class="main blue "><a href="/documentation/faderport8">Faderport 8/16</a></li>
+            <ul>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a></li>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+                </li>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#automation">Automation</a>
+                </li>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#general-controls">General</a></li>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#mix-management">Mix Management</a></li>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a></li>
+                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#function-controls">Function Control</a></li>
+            </ul>
+            <li class="main grey "><a href="/documentation/goodies">Goodies</a></li>
+            <ul>
+                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#plugin-control">Plugins Control</a></li>
+                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#plugin-mapping">Plugins Mapping</a></li>
+                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#functions-management">Functions
+                        Management</a></li>
+                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#filters-management">Filters Management</a>
+                </li>
+            </ul>
+        </ul>
+    </nav>
+</aside>
+<script>
+    (function smoothScroll() {
+        const menuItems = document.querySelectorAll('.menu .sub a');
+
+        function handleAnchorClick(event) {
+            event.preventDefault()
+            const link = event.currentTarget;
+            const anchorId = new URL(link.href).hash.replace('#', '');
+            const anchor = document.getElementById(anchorId);
+
+            const root = document.querySelector('.page-content');
+            if (!root) {
+                return;
+            }
+
+            root.scrollTo({
+                top: (anchor?.offsetTop || 0) - 84,
+                behavior: 'smooth'
+            });
+
+        }
+
+        for (const menuItem of Array.from(menuItems)) {
+            menuItem.addEventListener('click', handleAnchorClick);
+        }
+
+    })();
+</script>
+        <section class="page-content">
+            
+                <div class="documentation-block" id="installation">
+    <article class="red">
+        <header>
+            <h2>Installation</h2>
+        </header>
+        
+            <section class="image-content">
+    <img class="installation" src="/images/controller-transport.svg" alt="">
+    <section class="content">
+        
+            
+                <h3>Before you start</h3>
+            
+            
+        <p>ReaSonus Native has the following dependencies:</p>
+        <ul>
+            <li><b>SWS:</b> If you have not installed it yet, you can download it from the <a href="https://www.sws-extension.org" target="_blank">SWS website</a></li>
+        </ul>
+        <p>Also your <b>FaderPort</b> should be in Studio One mode. You can check the manual for more info about that</p>
+        
+        
+            
+                <h3>Manual installation</h3>
+            
+            
+        <p>Currently the only way of installing ReaSonus FaderPort is by downloading the latest version and manually install it. The plan it to make it available for ReaPack.</p>
+        <p>
+            <a class="button" href="https://github.com/navelpluisje/Reasonus-Native/releases/latest">Download ReaSonus FaderPort</a>
+        </p>
+        <p>In Reaper go to <i>Options &gt; Show REAPER resource in Explorer/Finder</i>, this will open the folder with all the REAPER files. In this folder open the <i>UserPlugins</i> folder and copy the downloaded ReaSonus extension into this folder</p>
+    
+        
+            
+                <h3>Nice Extra&acute;s</h3>
+            
+            
+            <p>
+                REAPER does not reinitialize midi devices when they get activated with REAPER already running. You can in that case open the preferences, open the settings page of ReaSonus FaderPort under <i>Control/OSC/Web</i> and close it again. <br>
+                To make this a bit easier you could add another extension named <b>reaper_automidireset</b>. This will do all this automated and in the background. More info here <a href="https://forum.cockos.com/showthread.php?t=257649">on the Forum</a>
+            </p>
+        
+        
+    </section>
+</section>
+        
+        
+    </article>
+</div>
+            
+                <div class="documentation-block" id="settings">
+    <article class="red">
+        <header>
+            <h2>Settings</h2>
+        </header>
+        
+            <section class="image-content">
+    <img class="settings" src="/images/settings.webp" alt="The Faderport transport controls">
+    <section class="content">
+        
+            
+            
+<p>After installation you have to make some settings to make it work.</p>
+<p>First of all you should select the correct <b>Control surface mode</b>. Select <b>ReaSonus FaderPort</b> and the settings as displayed in the image should appear:</p>
+<ul>
+    <li><b>Surface:</b> Select your controller here.</li>
+    <li><b>MIDI In:</b> Select the proper MIDI Input</li>
+    <li><b>MIDI Out:</b> Select the proper MIDI Input</li>
+</ul>
+<p>These should get you started with the FaderPort.Beside these there are a couple of settings to mnake your live easier:</p>
+<ul>
+    <li><b>Disable Plugin Control:</b> If you use another controller for controlling the plugins, you can select this. 
+        The Pplugins mode is still active and you are still able to open the plugin window. 
+        From that point, the ReaSonus FaderPort will not do anything anymore for the plugins</li>
+    <li><b>Swap Shift buttons:</b> This swaps the left and right Shift button.</li>
+</ul>
+<blockquote>These settings have no effect on the FaderPort V2</blockquote>
+<p>The Documentation button should open your default browser and open this website</p>
+        
+        
+    </section>
+</section>
+        
+        
+    </article>
+</div>
+            
+        </section>
+    </section>
+    <footer class="footer">
+    <section class="footer-content">
+        <ul class="link-list">
+            <li><a href=""><img src="/images/icon-github.svg" alt=""> Repository</a></li>
+            <li><a href=""><img src="/images/icon-bug.svg" alt="">Report an issue</a></li>
+            <li><a href=""><img src="/images/icon-chat.svg" alt="">Discussion</a></li>
+            <li><a href=""><img src="/images/icon-coffee.svg" alt="">Buy me some coffee</a></li>
+        </ul>
+    </section>
+</footer>
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<section class="image-content">
+    <img class="{{ block.title | slug}}" src="/images/{{ block.image }}" alt="{{ block.imageAlt }}" />
+    <section class="content">
+        {% for item in block.blocks %}
+            {% if item.title %}
+                <h3>{{ item.title | safe }}</h3>
+            {% endif %}
+            {{ item.content | safe }}
+        {% endfor %}
+    </section>
+</section>

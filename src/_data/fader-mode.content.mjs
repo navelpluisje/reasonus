@@ -1,0 +1,210 @@
+const track = {
+  title: "Track",
+  content: `
+    <ol>
+      <li><b>Display:</b></li>
+      <ul>
+        <li><b>Line 1:</b> Track name</li>
+        <li><b>Line 2:</b></li>
+        <ul>
+          <li><b>Default:</b> Track number</li>
+          <li><b>Left Shift:</b> Track number</li>
+          <li><b>Right Shift:</b> Track number</li>
+          <li><b>Arm:</b> Input name</li>
+        </ul>
+        <li><b>Line 3: </b></li>
+        <ul>
+          <li><b>Default:</b> Pan value (depending on the mode it is pan or width)</li>
+          <li><b>Left Shift:</b> Pan value 1</li>
+          <li><b>Right Shift:</b> Pan value 1</li>
+          <li><b>Arm:</b> Track monitor mode</li>
+        </ul>
+        <li><b>Line 4:</b></li>
+        <ul>
+          <li><b>Default:</b> Track number</li>
+          <li><b>Left Shift:</b> Pan value 2</li>
+          <li><b>Right Shift:</b> Pan value 2</li>
+          <li><b>Arm:</b> Recording mode</li>
+        </ul>
+      </ul>
+      <li><b>Meter:</b> Shows the Vu meter only in default mode. The meter is hidden when using the shift and or arm button.</li>
+      <li><b>Value bar:</b></li>
+      <ul>
+        <li><b>Default:</b> Displays the Tracks current pan position.</li>
+        <li><b>Left Shift:</b> Track volume.</li>
+      </ul>
+      <li><b>Pan/Param:</b></li>
+      <ul>
+        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+      </ul>
+      <li><b>Select button:</b></li>
+      <ul>
+        <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
+        <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
+        <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+        <li><b>Arm:</b> Toggle Track arm.</li>
+      </ul>
+      <li><b>Solo:</b> Isolates the corresponding Tracks output signal in the mix. Press and hold to solo for a couple of seconds.</li>
+      <li><b>Mute:</b> Mutes the corresponding Tracks output signal. Press and hold to mute for a couple of seconds.</li>
+      <li><b>Touch-Sensitive Fader:</b></li>
+      <ul>
+        <li><b>Default:</b> Control volume levels.</li>
+        <li><b>Left Shift:</b> Control the pan value 1.</li>
+        <li><b>right Shift:</b> Control the pan value 2.</li>
+      </ul>
+    </ol>
+  `,
+};
+
+const plugin = {
+  title: "Plugin",
+  content: `
+    <ol>
+      <li><b>Display:</b></li>
+      <ul>
+        <li><b>Line 1:</b> Track name, the colors are inverted in track mode for the selected track.</li>
+        <li><b>Line 1:</b> Plugin name</li>
+        <li><b>Line 1:</b> Plugin enabled</li>
+        <li><b>Line 1:</b> In Hui mode this shows the current index and total number of plugins. In track mode, it is empty</li>
+        </ul>
+      <li><b>Meter:</b> Disabled</li>
+      <li><b>Value bar:</b></li>
+      <ul>
+        <li><b>Default:</b> Displays the Tracks current pan position.</li>
+        <li><b>Left Shift:</b> Track volume.</li>
+      </ul>
+      <li><b>Pan/Param:</b></li>
+      <ul>
+        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+      </ul>
+      <li><b>Select button:</b></li>
+      <ul>
+      <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
+      <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
+      <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+      <li><b>Arm:</b> Toggle Track arm.</li>
+      </ul>
+      <li><b>Solo:</b> Toggle plugin window.</li>
+      <li><b>Mute:</b></li>
+      <ul>
+      <li><b>Default:</b> Toggle plugin enabled.</li>
+      <li><b>Left Shift:</b> Toggle plugin offline.</li>
+      </ul>
+      <li><b>Touch-Sensitive Fader:</b> Control volume levels.</li>
+    </ol>
+  `,
+};
+
+const send = {
+  title: "Send",
+  content: `
+    <ol>
+      <li><b>Display:</b></li>
+      <ul>
+        <li><b>Line 1:</b> Track name, the colors are inverted in track mode for the selected track.</li>
+        <li><b>Line 1:</b> Send destination name</li>
+        <li><b>Line 1:</b> Send mode</li>
+        <li><b>Line 1:</b> In Hui mode this shows the current index and total number of sends. In track mode, it shows the send automation mode</li>
+        </ul>
+      <li><b>Meter:</b> Disabled</li>
+      <li><b>Value bar:</b></li>
+      <ul>
+        <li><b>Default:</b> Displays the Sends current pan position.</li>
+        <li><b>Left Shift:</b> Send volume.</li>
+      </ul>
+      <li><b>Pan/Param:</b></li>
+      <ul>
+        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+      </ul>
+      <li><b>Select button:</b></li>
+      <ul>
+        <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
+        <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
+        <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+        <li><b>Arm:</b> Toggle Track arm.</li>
+      </ul>
+      <li><b>Solo:</b></li>
+      <ul>
+        <li><b>Default:</b> Toggle send phase.</li>
+        <li><b>Left Shift:</b> Toggle send Mono/Stereo.</li>
+      </ul>
+      <li><b>Mute:</b></li>
+      <ul>
+        <li><b>Default:</b> Toggle send mute.</li>
+        <li><b>Left Shift:</b> Loop through send mode.</li>
+      </ul>
+      <li><b>Touch-Sensitive Fader:</b></li>
+      <ul>
+        <li><b>Default:</b> Control send volume level.</li>
+        <li><b>Left Shift:</b> Control send pan.</li>
+      </ul>
+    </ol>
+  `,
+};
+
+const receive = {
+  title: "Receive",
+  content: `
+      <ol>
+      <li><b>Display:</b></li>
+      <ul>
+        <li><b>Line 1:</b> Track name, the colors are inverted in track mode for the selected track.</li>
+        <li><b>Line 1:</b> Receive source name</li>
+        <li><b>Line 1:</b> Receive mode</li>
+        <li><b>Line 1:</b> In Hui mode this shows the current index and total number of receives. In track mode, it shows the send automation mode</li>
+        </ul>
+      <li><b>Meter:</b> Disabled</li>
+      <li><b>Value bar:</b></li>
+      <ul>
+        <li><b>Default:</b> Displays the Receives current pan position.</li>
+        <li><b>Left Shift:</b> Receive volume.</li>
+      </ul>
+      <li><b>Pan/Param:</b></li>
+      <ul>
+        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+      </ul>
+      <li><b>Select button:</b></li>
+      <ul>
+        <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
+        <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
+        <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+        <li><b>Arm:</b> Toggle Track arm.</li>
+      </ul>
+      <li><b>Solo:</b></li>
+      <ul>
+        <li><b>Default:</b> Toggle receive phase.</li>
+        <li><b>Left Shift:</b> Toggle receive Mono/Stereo.</li>
+      </ul>
+      <li><b>Mute:</b></li>
+      <ul>
+        <li><b>Default:</b> Toggle receive mute.</li>
+        <li><b>Left Shift:</b> Loop through receive mode.</li>
+      </ul>
+      <li><b>Touch-Sensitive Fader:</b></li>
+      <ul>
+        <li><b>Default:</b> Control receive volume level.</li>
+        <li><b>Left Shift:</b> Control receive pan.</li>
+      </ul>
+    </ol>
+  `,
+};
+
+export default {
+  type: "tabs",
+  title: "Fader Modes",
+  color: "blue",
+  description: `
+    <p>The Faderport has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p>
+    <p>By pressing the Plugin, Send and Pan (which shows the receives) when they are already active, you can switch between Hui and Track mode</p>`,
+  image: "controller-track.svg",
+  tabs: {
+    track,
+    plugin,
+    send,
+    receive,
+  },
+};

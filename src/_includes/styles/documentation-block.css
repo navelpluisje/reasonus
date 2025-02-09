@@ -1,0 +1,74 @@
+.documentation-block {
+    container-type: inline-size;
+    max-width: 30rem;
+    width: 100%;
+
+    article {
+        --accent-color: var(--jonquil);
+        
+        display: grid;
+        height: 100%;
+        grid-template-rows: 4.5rem auto .25rem;
+        border-radius: 1rem;
+        background: var(--accent-color);
+        position: relative;
+        background-image: url('/images/logo-only.svg');
+        background-repeat: no-repeat;
+        background-position: -1rem -4rem;
+        background-size: 17.5rem auto;
+
+        &.yellow {
+            --accent-color: var(--jonquil);
+        }
+        &.blue {
+            --accent-color: var(--sky-blue);
+        }
+        &.red {
+            --accent-color: var(--tomato);
+        }
+        &.gray {
+            --accent-color: var(--battleship-gray);
+        }
+    }
+    
+    header {
+        grid-area: 1/1/2/2;
+        overflow: hidden;
+        align-content: center;
+        justify-content: center;
+        position: sticky;
+        top: -2rem;
+        z-index: 0;
+        
+        h2 {
+            grid-area: 1/1/2/2;
+            padding: 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            font-family: "Lexend", serif;
+            letter-spacing: -4%;
+            font-weight: 300;
+            font-size: 2rem;
+        }
+    }
+    
+    .content {
+        z-index: 4;
+        grid-area: 2/1/4/2;
+        background-color: var(--white);
+        border-width: 0 0 .25rem 0;
+        position: relative;
+        padding: 0;
+    }
+}
+
+.documentation-block + .documentation-block {
+    margin-top: 2rem;
+}
+
+@media (min-width: 786px) {
+    .documentation-block {
+        max-width: 90rem;
+    }
+}

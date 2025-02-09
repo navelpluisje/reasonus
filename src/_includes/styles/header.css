@@ -1,0 +1,14 @@
+.header {
+    background-color: var(--jonquil);
+    display: flex;
+    height: 5.25rem;
+    align-items: center;
+    justify-content: center;
+    
+    .logo {
+        --logo-width: 12rem;
+    
+        width: var(--logo-width);
+        filter: drop-shadow(0 0 0.125rem var(--black-30));
+    }
+}

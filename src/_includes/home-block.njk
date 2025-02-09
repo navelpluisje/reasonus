@@ -1,0 +1,14 @@
+<div class="home-block {{ item.color }}">
+    <article class={{item.color}}>
+        <header>
+            <img src="/images/{{ item.image }}" alt="" class="image" />
+            <img src="images/logo-only.svg" alt="" class="logo"/>
+        </header>
+        <section class="content">
+            <Heading>{{item.title}}</Heading>
+            <section>
+                {{ item.content | safe }}
+            </section>
+        </section>
+    </article>
+</div>

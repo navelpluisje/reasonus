@@ -1,0 +1,47 @@
+<section class="tabs-content">
+    <img class="{{ block.title | slug}}" src="/images/{{ block.image }}" alt="{{ block.imageAlt }}" />
+    <section class="content">
+        {{ block.description | safe }}
+        <section class="tab-bar">
+            {% for key, tab in block.tabs %}
+                <button data-id="{{ key }}">{{ tab.title }}</button>
+            {% endfor %}
+        </section>
+        <section class="tab-content">
+            {% for key, tab in block.tabs %}
+                <section class="tab {{ key }}" data-id="{{ key }}">{{ tab.content | safe }}</section>
+            {% endfor %}
+        </section>
+    </section>
+</section>
+<script>
+    (function tabs() {
+        const tabs = document.querySelectorAll('.tab-bar button');
+        const tabContents = document.querySelectorAll('.tab-content .tab');
+
+        tabs[0].classList.add('selected')
+        tabContents[0].classList.add('selected')
+
+        function handleTabClick(event) {
+            const id = event.target.dataset.id;
+            for (const tab of Array.from(tabs)) {
+                if (tab.dataset.id !== id) {
+                    tab.classList.remove('selected');
+                } else {
+                    tab.classList.add('selected');
+                }
+            }
+            for (const tabContent of Array.from(tabContents)) {
+                if (tabContent.dataset.id !== id) {
+                    tabContent.classList.remove('selected');
+                } else {
+                    tabContent.classList.add('selected');
+                }
+            }
+        }
+        
+        for (const tab of Array.from(tabs)) {
+            tab.addEventListener('click', handleTabClick);
+        }
+    })()
+</script>
