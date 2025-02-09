@@ -9,7 +9,7 @@ export default {
       content: `<p>Rather than forcing you to revise your mixing method, the FaderPort augments the way you currently mix. You still use
       your faithful keyboard and mouse for things they do well, and the FaderPort handles the features you want to get your
       fingers on, allowing you to customize your workflow.</p>`,
-      image: "faderport2.webp",
+      image: "/images/faderport2.webp",
     },
     {
       color: "red",
@@ -29,13 +29,13 @@ export default {
       Controll last touched plugin param
       </li>
       </ul>`,
-      image: "faderport16.webp",
+      image: "/images/faderport16.webp",
     },
     {
       color: "gray",
       title: "Free & Open Source",
       content: `<p>ReaSonus Native is Open Source</p>`,
-      image: "filter-functions.webp",
+      image: "/images/filter-functions.webp",
     },
   ],
 };

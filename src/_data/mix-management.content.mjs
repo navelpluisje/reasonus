@@ -2,7 +2,7 @@ export default {
   title: "Mix Management",
   color: "blue",
   type: "image",
-  image: "images/controller-mix-management.svg",
+  image: "/images/controller-mix-management.svg",
   imageAlt: "",
   blocks: [
     {
