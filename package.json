@@ -8,7 +8,10 @@
     "@11ty/eleventy": "^3.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "npx eleventy",
+    "build:prod": "env NODE_ENV=production npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
   },
   "keywords": [
     "11ty"

@@ -200,7 +200,7 @@ export default {
   description: `
     <p>The Faderport has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p>
     <p>By pressing the Plugin, Send and Pan (which shows the receives) when they are already active, you can switch between Hui and Track mode</p>`,
-  image: "controller-track.svg",
+  image: "/images/controller-track.svg",
   tabs: {
     track,
     plugin,

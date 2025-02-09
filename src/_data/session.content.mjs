@@ -2,7 +2,7 @@ export default {
   title: "Session Navigator",
   color: "blue",
   type: "image",
-  image: "controller-session.svg",
+  image: "/images/controller-session.svg",
   imageAlt: "",
   blocks: [
     {

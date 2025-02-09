@@ -2,7 +2,7 @@ export default {
   title: "Settings",
   color: "red",
   type: "image",
-  image: "settings.webp",
+  image: "/images/settings.webp",
   imageAlt: "The Faderport transport controls",
   blocks: [
     {

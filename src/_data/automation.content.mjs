@@ -2,7 +2,7 @@ export default {
   title: "Automation",
   color: "blue",
   type: "image",
-  image: "controller-automation.svg",
+  image: "/images/controller-automation.svg",
   imageAlt: "",
   blocks: [
     {

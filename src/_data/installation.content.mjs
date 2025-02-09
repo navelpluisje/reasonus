@@ -2,7 +2,7 @@ export default {
   title: "Installation",
   color: "red",
   type: "image",
-  image: "controller-transport.svg",
+  image: "/images/controller-transport.svg",
   blocks: [
     {
       title: "Before you start",

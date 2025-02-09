@@ -1,5 +1,5 @@
 <section class="image-content">
-    <img class="{{ block.title | slug}}" src="/images/{{ block.image }}" alt="{{ block.imageAlt }}" />
+    <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
     <section class="content">
         {% for item in block.blocks %}
             {% if item.title %}

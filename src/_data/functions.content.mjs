@@ -2,7 +2,7 @@ export default {
   title: "Function Controls",
   color: "blue",
   type: "image",
-  image: "controller-function.svg",
+  image: "/images/controller-function.svg",
   imageAlt: "",
   blocks: [
     {

@@ -2,7 +2,7 @@ export default {
   title: "Transport",
   color: "blue",
   type: "image",
-  image: "controller-transport.svg",
+  image: "/imagescontroller-transport.svg",
   imageAlt: "",
   blocks: [
     {

@@ -2,7 +2,7 @@ export default {
   title: "General Controls",
   color: "blue",
   type: "image",
-  image: "controller-general.svg",
+  image: "/images/controller-general.svg",
   imageAlt: "",
   blocks: [
     {

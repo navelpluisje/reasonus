@@ -2,7 +2,7 @@ export default {
   title: "Functions Management",
   color: "gray",
   type: "image",
-  image: "function-control.webp",
+  image: "/images/function-control.webp",
   imageAlt: "",
   blocks: [
     {

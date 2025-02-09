@@ -2,20 +2,28 @@
     {% include "styles/base.css" %}
 {% endcss %}
 
+{% set baseCss %}
+    {% getBundleFileUrl "css", "base" %}
+{% endset %}
+
+{% set pageCss %}
+    {% getBundleFileUrl "css" %}
+{% endset %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }}</title>
-        <link rel="icon" href="/images/favicon.svg">
+        <link rel="icon" href="{{ '/images/favicon.svg' | url }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="{% getBundleFileUrl "css", "base"%}">
-        <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+        <link rel="stylesheet" href="{{ baseCss | trim | url }}">
+        <link rel="stylesheet" href="{{ pageCss | trim | url }}">
 </head>
 <body>
     {{ content | safe }}

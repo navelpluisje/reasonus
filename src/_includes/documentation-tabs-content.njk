@@ -1,5 +1,5 @@
 <section class="tabs-content">
-    <img class="{{ block.title | slug}}" src="/images/{{ block.image }}" alt="{{ block.imageAlt }}" />
+    <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
     <section class="content">
         {{ block.description | safe }}
         <section class="tab-bar">

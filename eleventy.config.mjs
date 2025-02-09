@@ -1,6 +1,8 @@
 import Nunjucks from "nunjucks";
 
 export default function (eleventyConfig) {
+  const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "";
+
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])
   );
@@ -11,7 +13,14 @@ export default function (eleventyConfig) {
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
 
   eleventyConfig.addBundle("css", {
-    toFileDirectory: "styles",
+    toFileDirectory: `styles`,
+    transforms: [
+      // Add the pathPrefix to all css urls is the current url starts with a slash
+      (content) => {
+        const result = content.replace(/url\('\//g, `url('/${pathPrefix}/`);
+        return result;
+      },
+    ],
   });
 
   eleventyConfig.addPassthroughCopy({
@@ -19,7 +28,7 @@ export default function (eleventyConfig) {
   });
 
   return {
-    // pathPrefix: "test",
+    pathPrefix,
     dir: {
       output: "dist",
       input: "src/content",

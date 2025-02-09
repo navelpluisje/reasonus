@@ -1,14 +1,14 @@
 <aside class="menu">
     <nav>
         <ul>
-            <li class="main red {{ 'active' if page.url === '/documentation/' }}"><a href="/documentation">Let's
+            <li class="main red {{ 'active' if page.url === '/documentation/' }}"><a href="{{ '/documentation' | url }}">Let's
                     Start</a></li>
             <ul>
                 <li class="sub red"><a on:click={handleAnchorClick} href="#installation">Installation</a></li>
                 <li class="sub red"><a on:click={handleAnchorClick} href="#settings">Settings</a></li>
             </ul>
             <li class="main blue {{ 'active' if page.url === '/documentation/faderport8/' }}"><a
-                    href="/documentation/faderport8">Faderport 8/16</a></li>
+                    href="{{ '/documentation/faderport8' | url }}">Faderport 8/16</a></li>
             <ul>
                 <li class="sub blue"><a on:click={handleAnchorClick} href="#fader-modes">Fader Modes</a></li>
                 <li class="sub blue"><a on:click={handleAnchorClick} href="#transport">Transport</a>
@@ -21,7 +21,7 @@
                 <li class="sub blue"><a on:click={handleAnchorClick} href="#function-controls">Function Control</a></li>
             </ul>
             <li class="main grey {{ 'active' if page.url === '/documentation/goodies/' }}"><a
-                    href="/documentation/goodies">Goodies</a></li>
+                    href="{{ '/documentation/goodies' | url }}">Goodies</a></li>
             <ul>
                 <li class="sub grey"><a on:click={handleAnchorClick} href="#plugin-control">Plugins Control</a></li>
                 <li class="sub grey"><a on:click={handleAnchorClick} href="#plugin-mapping">Plugins Mapping</a></li>
