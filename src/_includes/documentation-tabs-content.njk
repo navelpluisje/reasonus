@@ -9,7 +9,7 @@
         </section>
         <section class="tab-content">
             {% for key, tab in block.tabs %}
-                <section class="tab {{ key }}" data-id="{{ key }}">{{ tab.content | safe }}</section>
+                <section class="tab {{ key }}" data-id="{{ key }}">{{ tab.content | pathPrefix | safe}}</section>
             {% endfor %}
         </section>
     </section>

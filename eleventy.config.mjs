@@ -6,8 +6,15 @@ export default function (eleventyConfig) {
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])
   );
+
   eleventyConfig.addNunjucksFilter("slug", function (value) {
     return value.toLowerCase().replace(/\s/g, "-");
+  });
+
+  eleventyConfig.addNunjucksFilter("pathPrefix", function (value) {
+    return value
+      .replace(/src="\//g, `src="/${pathPrefix}/`)
+      .replace(/href="\//g, `href="/${pathPrefix}/`);
   });
 
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);

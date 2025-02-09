@@ -5,7 +5,7 @@
             {% if item.title %}
                 <h3>{{ item.title | safe }}</h3>
             {% endif %}
-            {{ item.content | safe }}
+            {{ item.content | pathPrefix | safe }}
         {% endfor %}
     </section>
 </section>
