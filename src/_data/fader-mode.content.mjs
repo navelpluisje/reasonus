@@ -228,7 +228,7 @@ export default {
           <li><b>Stereo Pan:</b> This mode has 2 values. <b>Pan Value 1</b> is for Left/Right panning and <b>Pan Value 2</b> for the width</li>
           <li><b>Dual Pan:</b> This mode has 2 values. <b>Pan Value 1</b> is for Left panning value and <b>Pan Value 2</b> for the right panning value</li>
         </ul>
-        <p>The last will show 2 knobs/faders in REAPER for panning. You can find more info about the <b>Panning Modes</b> in theh REAPER documentation</p>
+        <p>The last will show 2 knobs/faders in REAPER for panning. You can find more info about the <b>Panning Modes</b> in the REAPER documentation</p>
       `,
     },
   ],
