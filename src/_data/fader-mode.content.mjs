@@ -21,7 +21,7 @@ const track = {
         </ul>
         <li><b>Line 4:</b></li>
         <ul>
-          <li><b>Default:</b> Track number</li>
+          <li><b>Default:</b> Not Used</li>
           <li><b>Left Shift:</b> Pan value 2</li>
           <li><b>Right Shift:</b> Pan value 2</li>
           <li><b>Arm:</b> Recording mode</li>
