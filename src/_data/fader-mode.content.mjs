@@ -207,4 +207,29 @@ export default {
     send,
     receive,
   },
+  extra: [
+    {
+      type: "explanation",
+      title: "HUI or Track mode",
+      description: `
+      <p>For the <b>Plugin</b>, <b>Send</b> and <b>Receive</b> Fader modes, when you open them first, they open in <b>HUI</b> mode. In this mode you controll all plugins, sends and receives from the respective channel. In the display you see a counter for the number of items and the current selected one. You can use the Pan encoder to scroll though the items.</p>
+      <img src="/images/hui-mode.svg" />
+      <p>In Track mode (press the button again to get here), all the plugins, sends and receives of the first selected track are spread over the tracks. If there are more items then the number of channels you can use the Pan encoder to scroll to the next items. The selected track is highlighted.</p>
+      <img src="/images/track-mode.svg" />
+      `,
+    },
+    {
+      type: "explanation",
+      title: "Pan values",
+      description: `
+        <p>Reaper has 3 pan modes. Depending on the choosen mode, there are 1 or 2 pan values.</p>
+        <ul>
+          <li><b>Stereo Balance/Mono Pan:</b> This is the default and in REAPER you'll see only one pan knob/fader. In this mode <b>Pan Value 2</b> has no function</li>
+          <li><b>Stereo Pan:</b> This mode has 2 values. <b>Pan Value 1</b> is for Left/Right panning and <b>Pan Value 2</b> for the width</li>
+          <li><b>Dual Pan:</b> This mode has 2 values. <b>Pan Value 1</b> is for Left panning value and <b>Pan Value 2</b> for the right panning value</li>
+        </ul>
+        <p>The last will show 2 knobs/faders in REAPER for panning. You can find more info about the <b>Panning Modes</b> in theh REAPER documentation</p>
+      `,
+    },
+  ],
 };

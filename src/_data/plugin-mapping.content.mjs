@@ -32,7 +32,7 @@ export default {
     Ui: {
       title: "Ui",
       content: `
-      <p>Within ReaSonus it is also possible to manuall add a mapping or to edit some settings of the mapping. If you want to use this, you have to be in the learn mode. More about that in the <b>MIDI Learn</b> tab.</p>
+      <p>Within ReaSonus it is also possible to manually add a mapping or to edit some settings of the mapping. If you want to use this, you have to be in the learn mode. More about that in the <b>MIDI Learn</b> tab.</p>
       <p>In this mode, press the <b>Left Shift</b> and press the <b>Select</b> button of the channel you want to edit. The window on the left appears:</p>
       <h3>The Fields</h3>
       <ul>

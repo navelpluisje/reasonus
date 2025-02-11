@@ -1,0 +1,8 @@
+{% macro explanation(title, explanation='', type='explanation') %}
+<article class="explanation-macro {{ type }}">
+    <header>
+        <h4>{{ title | safe }}</h4>
+    </header>
+    <section>{{ explanation | safe }}</section>
+</article>
+{% endmacro %}

@@ -3,7 +3,7 @@
     max-width: 30rem;
     width: 100%;
 
-    article {
+    > article {
         --accent-color: var(--jonquil);
         
         display: grid;
@@ -46,14 +46,14 @@
             display: flex;
             align-items: center;
             z-index: 1;
-            font-family: "Lexend", serif;
+            font-family: var(--font-heading);
             letter-spacing: -4%;
             font-weight: 300;
             font-size: 2rem;
         }
     }
     
-    .content {
+    > .content {
         z-index: 4;
         grid-area: 2/1/4/2;
         background-color: var(--white);

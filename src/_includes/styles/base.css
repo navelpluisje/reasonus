@@ -12,6 +12,8 @@
 
   --header-height: 5.25rem;
   --menu-width: 256px;
+
+  --font-heading: 'lexend', sans-serif;
 }
 
 html {
@@ -84,5 +86,9 @@ body {
   font-weight: 500;
   border-radius: .5rem;
   padding: 0 2rem;
+}
 
+a {
+  color: var(--accent-color, var(--jonquil));
+  font-weight: 400;
 }

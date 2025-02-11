@@ -1,5 +1,7 @@
 <section class="image-content">
-    <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
+    <picture class="img-container">
+        <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
+    </picture>
     <section class="content">
         {% for item in block.blocks %}
             {% if item.title %}
@@ -8,4 +10,11 @@
             {{ item.content | pathPrefix | safe }}
         {% endfor %}
     </section>
+    {% if block.extra %}
+        <section class="extras">
+            {% for extra in block.extra %}
+                {{ explanation(extra.title, extra.description, extra.type) }}
+            {% endfor %}
+        </section>
+    {% endif %}
 </section>

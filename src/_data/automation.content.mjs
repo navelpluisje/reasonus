@@ -48,4 +48,10 @@ export default {
     `,
     },
   ],
+  extra: [
+    {
+      title: "More about Automation Modes",
+      description: `<p>More info about automation modes can be found in <a href="https://reaper.blog/2017/07/reaper-automation-modes-explained/" target="_blank">this video by The REAPER Blog</a>.</p>`,
+    },
+  ],
 };

@@ -1,5 +1,7 @@
 <section class="tabs-content">
-    <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
+    <picture class="img-container">
+        <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
+    </picture>
     <section class="content">
         {{ block.description | safe }}
         <section class="tab-bar">
@@ -11,8 +13,15 @@
             {% for key, tab in block.tabs %}
                 <section class="tab {{ key }}" data-id="{{ key }}">{{ tab.content | pathPrefix | safe}}</section>
             {% endfor %}
-        </section>
+        </section>        
     </section>
+    {% if block.extra %}
+        <section class="extras">
+            {% for extra in block.extra %}
+                {{ explanation(extra.title, extra.description, extra.type) }}
+            {% endfor %}
+        </section>
+    {% endif %}
 </section>
 <script>
     (function tabs() {

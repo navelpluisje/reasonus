@@ -17,7 +17,7 @@ export default {
 <p>These should get you started with the FaderPort.Beside these there are a couple of settings to make your live easier:</p>
 <ul>
     <li><b>Disable Plugin Control:</b> If you use another controller for controlling the plugins, you can select this. 
-        The Pplugins mode is still active and you are still able to open the plugin window. 
+        The plugins mode is still active and you are still able to open the plugin window. 
         From that point, the ReaSonus FaderPort will not do anything anymore for the plugins</li>
     <li><b>Swap Shift buttons:</b> This swaps the left and right Shift button.</li>
 </ul>
