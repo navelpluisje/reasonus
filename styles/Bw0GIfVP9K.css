@@ -91,4 +91,15 @@ body {
 a {
   color: var(--accent-color, var(--jonquil));
   font-weight: 400;
+
+  &[target="_blank"]::after {
+    background-image: url('/reasonus/images/external-link.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: .75rem;
+    margin-left: .25rem;
+    width: .75rem;
+  }
 }
