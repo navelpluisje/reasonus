@@ -64,9 +64,9 @@ const plugin = {
       <li><b>Display:</b></li>
       <ul>
         <li><b>Line 1:</b> Track name, the colors are inverted in track mode for the selected track.</li>
-        <li><b>Line 1:</b> Plugin name</li>
-        <li><b>Line 1:</b> Plugin enabled</li>
-        <li><b>Line 1:</b> In Hui mode this shows the current index and total number of plugins. In track mode, it is empty</li>
+        <li><b>Line 2:</b> Plugin name</li>
+        <li><b>Line 3:</b> Plugin enabled</li>
+        <li><b>Line 4:</b> In Hui mode this shows the current index and total number of plugins. In track mode, it is empty</li>
         </ul>
       <li><b>Meter:</b> Disabled</li>
       <li><b>Value bar:</b></li>
@@ -104,9 +104,9 @@ const send = {
       <li><b>Display:</b></li>
       <ul>
         <li><b>Line 1:</b> Track name, the colors are inverted in track mode for the selected track.</li>
-        <li><b>Line 1:</b> Send destination name</li>
-        <li><b>Line 1:</b> Send mode</li>
-        <li><b>Line 1:</b> In Hui mode this shows the current index and total number of sends. In track mode, it shows the send automation mode</li>
+        <li><b>Line 2:</b> Send destination name</li>
+        <li><b>Line 3:</b> Send mode</li>
+        <li><b>Line 4:</b> In Hui mode this shows the current index and total number of sends. In track mode, it shows the send automation mode</li>
         </ul>
       <li><b>Meter:</b> Disabled</li>
       <li><b>Value bar:</b></li>
@@ -152,9 +152,9 @@ const receive = {
       <li><b>Display:</b></li>
       <ul>
         <li><b>Line 1:</b> Track name, the colors are inverted in track mode for the selected track.</li>
-        <li><b>Line 1:</b> Receive source name</li>
-        <li><b>Line 1:</b> Receive mode</li>
-        <li><b>Line 1:</b> In Hui mode this shows the current index and total number of receives. In track mode, it shows the send automation mode</li>
+        <li><b>Line 2:</b> Receive source name</li>
+        <li><b>Line 3:</b> Receive mode</li>
+        <li><b>Line 4:</b> In Hui mode this shows the current index and total number of receives. In track mode, it shows the send automation mode</li>
         </ul>
       <li><b>Meter:</b> Disabled</li>
       <li><b>Value bar:</b></li>
