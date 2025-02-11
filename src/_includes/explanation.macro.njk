@@ -3,6 +3,6 @@
     <header>
         <h4>{{ title | safe }}</h4>
     </header>
-    <section>{{ explanation | safe }}</section>
+    <section>{{ explanation | pathPrefix | safe }}</section>
 </article>
 {% endmacro %}
