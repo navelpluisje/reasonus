@@ -34,7 +34,7 @@ export default {
     {
       color: "gray",
       title: "Free & Open Source",
-      content: `<p>ReaSonus Native is Open Source</p>`,
+      content: `<p>ReaSonus Native is Open Source</p><p>ReaSonus Native is free</p><p>Feel free to contribute</p>`,
       image: "/images/filter-functions.webp",
     },
   ],
