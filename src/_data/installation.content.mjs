@@ -19,7 +19,7 @@ export default {
       content: `
         <p>Currently the only way of installing <b>ReaSonus Native</b> is by downloading the latest version and manually install it. The plan it to make it available for ReaPack.</p>
         <p>
-            <a class="button" href="https://github.com/navelpluisje/Reasonus-Native/releases/latest">Download <b>ReaSonus Native</b></a>
+            <a class="button" href="https://github.com/navelpluisje/Reasonus-Native/releases/latest" target="_blank">Download <b>ReaSonus Native</b></a>
         </p>
         <p>In Reaper go to <i>Options &gt; Show REAPER resource in Explorer/Finder</i>, this will open the folder with all the REAPER files. In this folder open the <i>UserPlugins</i> folder and copy the downloaded ReaSonus extension into this folder</p>
     `,
@@ -29,7 +29,7 @@ export default {
       content: `
             <p>
                 REAPER does not reinitialize midi devices when they get activated with REAPER already running. You can in that case open the preferences, open the settings page of <b>ReaSonus Native</b> under <i>Control/OSC/Web</i> and close it again. <br/>
-                To make this a bit easier you could add another extension named <b>reaper_automidireset</b>. This will do all this automated and in the background. More info here <a href="https://forum.cockos.com/showthread.php?t=257649">on the Forum</a>
+                To make this a bit easier you could add another extension named <b>reaper_automidireset</b>. This will do all this automated and in the background. More info here <a href="https://forum.cockos.com/showthread.php?t=257649" target="_blank">on the Forum</a>
             </p>
         `,
     },
