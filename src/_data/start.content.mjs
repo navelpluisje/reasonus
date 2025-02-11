@@ -11,7 +11,7 @@ export default {
         <p>The documentation should guide you through the functionalities of <b>ReaSonus Native</b>. The first part is about installation and settings</p>
         <p>The second part will explain all the controlls of the <b>FaderPort</b>. What they do when, etc.</p>
         <p>The last part explains about the goodies in <b>ReaSonus Native</b> like filter management, managing the functions and plugin mapping</p>
-        <p>If one of teh screenshots is not as clear as you would like, open it in real life. Nothing as good as the real deal</p>
+        <p>If one of the screenshots is not as clear as you would like, open it in real life. Nothing as good as the real deal</p>
     `,
     },
   ],
