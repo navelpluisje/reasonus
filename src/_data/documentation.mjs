@@ -8,7 +8,9 @@ import functions from "./functions.content.mjs";
 import installation from "./installation.content.mjs";
 import settings from "./settings.content.mjs";
 import functionManagement from "./function-management.content.mjs";
+import filterManagement from "./filter-management.content.mjs";
 import pluginMapping from "./plugin-mapping.content.mjs";
+import start from "./start.content.mjs";
 
 export default [
   {
@@ -16,6 +18,7 @@ export default [
     slug: "",
     color: "red",
     blocks: {
+      start,
       installation,
       settings,
     },
@@ -41,6 +44,7 @@ export default [
     blocks: {
       pluginMapping,
       functionManagement,
+      filterManagement,
     },
   },
 ];

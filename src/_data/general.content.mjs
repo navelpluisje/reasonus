@@ -39,15 +39,15 @@ export default {
             </ul>
             <li><b>Macro:</b></li>
             <ul>
-                <li><b>Default:</b> Toggle the window filters dialog for managing the acttions attached to the function keys</li>
-                <li><b>Left Shift:</b> Toggle the window for managing the filters</li>
+                <li><b>Default:</b> Toggle the window for managing the filters.</li>
+                <li><b>Left Shift:</b> Toggle the window filters dialog for managing the actions attached to the function keys.</li>
 
             </ul>
             <li><b>Link:</b></li>
             <ul>
                 <li><b>Default:</b> </li>
                 <ul>
-                    <li>When not controlling a plugin, it will make the 8th fader controll the last touched parameter. The group of actual track faders will beb 7 from then.</li>
+                    <li>When not controlling a plugin, it will make the last fader controll the last touched parameter. This can be usefull for creating quick envelopes for that parameter. The display will show info about the plugin, parameter and value. The group of actual track faders will be 7 or 15 from then.</li>
                     <li>When controlling a plugin, it will toggle the plugin map edit mode. You are then able to edit your plugin mapping</li>
                 </ul>
                 <li><b>Left Shift:</b> Toggle following the cursor</li>

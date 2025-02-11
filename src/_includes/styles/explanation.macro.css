@@ -1,6 +1,4 @@
 .explanation-macro {
-    --accent-color: var(--sky-blue);
-
     border-radius: 1rem;
     border: 2px solid var(--accent-color);
     background-color: var(--background);

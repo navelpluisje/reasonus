@@ -22,4 +22,10 @@ export default {
     `,
     },
   ],
+  extra: [
+    {
+      title: "Managing the functions",
+      description: `<p><b>ReaSonus Native</b> has a user interface for managing your Functions. More info about how to manage the Functions can be found here: <a href="/documentation/goodies/#functions-management">Functions Management</a>.</p>`,
+    },
+  ],
 };

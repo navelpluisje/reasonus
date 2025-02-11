@@ -33,7 +33,7 @@ export default {
             <li><b>All:</b> </li>
             <ul>
                 <li><b>Default:</b> Reset all the filter and show all the tracks</li>
-                <li><b>Left Shift:</b> Show the custom menu's. This will display all your fiolters in the track displays. Use the select button to select the filter</li>
+                <li><b>Left Shift:</b> Show the custom menu's. This will display all your filters in the track displays. Use the select button to select the filter. If there are more filters then there are tracks, you can use the Pan encoder to scroll through the filters</li>
                 <li><b>Right Shift:</b> Filter all the tracks with sends</li>
 
             </ul>

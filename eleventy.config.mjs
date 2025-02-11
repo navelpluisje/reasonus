@@ -12,6 +12,9 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("pathPrefix", function (value) {
+    if (!pathPrefix) {
+      return value;
+    }
     return value
       .replace(/src="\//g, `src="/${pathPrefix}/`)
       .replace(/href="\//g, `href="/${pathPrefix}/`);
@@ -24,6 +27,10 @@ export default function (eleventyConfig) {
     transforms: [
       // Add the pathPrefix to all css urls is the current url starts with a slash
       (content) => {
+        if (!pathPrefix) {
+          return content;
+        }
+
         const result = content.replace(/url\('\//g, `url('/${pathPrefix}/`);
         return result;
       },
