@@ -5,7 +5,7 @@ export default {
   image: "/images/plugin-edit.webp",
   imageAlt: "",
   description:
-    "There are muktiple ways of managing the mapping of plugin parameters. By far the easiest will be via MIDI Learn Multiple ways. midi learn. You can use the Ui for it, which also gives you the option to change the parameter names, number of steps etc. The last one is by changing the mapping files by hand",
+    "There are multiple ways of managing the mapping of plugin parameters. By far the easiest will be via MIDI Learn Multiple ways. You can use the Ui, which also gives you the option to change the parameter names, number of steps etc. The last one is by changing the mapping files by hand",
   tabs: {
     "Midi Learn": {
       title: "MIDI Learn",

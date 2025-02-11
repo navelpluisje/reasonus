@@ -113,7 +113,7 @@ export default {
                 <li><b>Encoder Click:</b> </li>
                 <ul>
                     <li><b>Default:</b> Edit region near cursor</li>
-                    <li><b>Left Shift</b> Move edit cursor to start of current measure</li>
+                    <li><b>Left Shift</b> Insert region from time selection and edit</li>
                     <li><b>Right Shift</b> Delete region near cursor</li>
                 </ul>
                 <li><b>Next:</b> </li>
