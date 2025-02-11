@@ -20,7 +20,7 @@ export default {
       title: "Will be appreciated",
       description: `
     <p><b>ReaSonus Native</b> is a free and open source project, but takes some time and effort to create and maintain. 
-    It is not required off cource but a donation for maintining would be highly appreciated. This will for example be used for maintaining the Windows version, because I do not own a Windows machine.
+    It is not required off course but a donation for maintining would be highly appreciated. This will for example be used for maintaining the Windows version, because I do not own a Windows machine.
     </p>
     <p>Donating can be done via the link in the footer.</p>`,
     },
