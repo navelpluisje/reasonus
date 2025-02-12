@@ -42,11 +42,19 @@ const track = {
       <ul>
         <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
         <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
-        <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+        <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
         <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
-      <li><b>Solo:</b> Isolates the corresponding Tracks output signal in the mix. Press and hold to solo for a couple of seconds.</li>
-      <li><b>Mute:</b> Mutes the corresponding Tracks output signal. Press and hold to mute for a couple of seconds.</li>
+      <li><b>Solo:</b></li>
+      <ul>
+        <li><b>Default:</b> Isolates the corresponding Tracks output signal in the mix.</li>
+        <li><b>Long Press:</b> Holding the Solo button for longer then half a second makes the button momentary. This means that after releasing the button after that half a second, the value will go to the previous value after release. This can be helpfull for quickly checking a track soloed.</li>
+        </ul>
+        <li><b>Mute:</b></li>
+        <ul>
+        <li><b>Default:</b> Mutes the corresponding Tracks output signal.</li>
+        <li><b>Long Press:</b> Holding the Mute button for longer then half a second makes the button momentary. This means that after releasing the button after that half a second, the value will go to the previous value after release. This can be helpfull for quickly checking with the track muted.</li>
+      </ul>
       <li><b>Touch-Sensitive Fader:</b></li>
       <ul>
         <li><b>Default:</b> Control volume levels.</li>
@@ -83,7 +91,7 @@ const plugin = {
       <ul>
       <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
       <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
-      <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+      <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
       <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
       <li><b>Solo:</b> Toggle plugin window.</li>
@@ -123,7 +131,7 @@ const send = {
       <ul>
         <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
         <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
-        <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+        <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
         <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
       <li><b>Solo:</b></li>
@@ -171,7 +179,7 @@ const receive = {
       <ul>
         <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
         <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
-        <li><b>right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
+        <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
         <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
       <li><b>Solo:</b></li>
