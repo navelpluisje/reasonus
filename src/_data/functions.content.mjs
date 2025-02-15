@@ -1,5 +1,5 @@
 export default {
-  title: "Function Controls",
+  title: "Function Controlls",
   color: "blue",
   type: "image",
   image: "/images/controller-function.svg",

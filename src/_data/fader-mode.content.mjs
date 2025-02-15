@@ -35,8 +35,8 @@ const track = {
       </ul>
       <li><b>Pan/Param:</b></li>
       <ul>
-        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
-        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Default:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
       </ul>
       <li><b>Select button:</b></li>
       <ul>
@@ -84,8 +84,8 @@ const plugin = {
       </ul>
       <li><b>Pan/Param:</b></li>
       <ul>
-        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
-        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Default:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
       </ul>
       <li><b>Select button:</b></li>
       <ul>
@@ -124,8 +124,8 @@ const send = {
       </ul>
       <li><b>Pan/Param:</b></li>
       <ul>
-        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
-        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Default:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
       </ul>
       <li><b>Select button:</b></li>
       <ul>
@@ -172,8 +172,8 @@ const receive = {
       </ul>
       <li><b>Pan/Param:</b></li>
       <ul>
-        <li><b>Default:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
-        <li><b>Left Shift:</b> Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Default:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
+        <li><b>Left Shift:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
       </ul>
       <li><b>Select button:</b></li>
       <ul>

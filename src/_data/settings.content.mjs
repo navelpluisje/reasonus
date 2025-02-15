@@ -3,7 +3,7 @@ export default {
   color: "red",
   type: "image",
   image: "/images/settings.webp",
-  imageAlt: "The Faderport transport controls",
+  imageAlt: "The Faderport transport controlls",
   blocks: [
     {
       content: `
@@ -14,7 +14,7 @@ export default {
     <li><b>MIDI In:</b> Select the proper MIDI Input</li>
     <li><b>MIDI Out:</b> Select the proper MIDI Input</li>
 </ul>
-<p>These should get you started with the FaderPort.Beside these there are a couple of settings to make your live easier:</p>
+<p>These should get you started with the FaderPort.Beside these there are a couple of settings to make your life easier:</p>
 <ul>
     <li><b>Disable Plugin Control:</b> If you use another controller for controlling the plugins, you can select this. 
         The plugins mode is still active and you are still able to open the plugin window. 

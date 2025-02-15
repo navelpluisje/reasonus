@@ -1,5 +1,5 @@
 export default {
-  title: "General Controls",
+  title: "General Controlls",
   color: "blue",
   type: "image",
   image: "/images/controller-general.svg",

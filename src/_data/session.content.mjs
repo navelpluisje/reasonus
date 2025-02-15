@@ -7,7 +7,7 @@ export default {
   blocks: [
     {
       content: `
-        <p>The Session Navigator provides quick navigation and session controls. Each button alters the functions of the push-button encoder and the Next and Prev buttons on either side.</p>
+        <p>The Session Navigator provides quick navigation and session controlls. Each button alters the functions of the push-button encoder and the Next and Prev buttons on either side.</p>
         <ol>
             <li><b>Channel:</b> Control channel scrolling</li>
             <ul>
