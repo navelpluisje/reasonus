@@ -132,7 +132,7 @@
             top: 0;
             bottom: 1rem;
 
-            &.general-controls,
+            &.general-controlls,
             &.mix-management {
                 max-width: 10rem;
             }
