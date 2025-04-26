@@ -178,7 +178,7 @@
       <ul>
         <li><b>Default:</b> Control volume levels.</li>
         <li><b>Left Shift:</b> Control the pan value 1.</li>
-        <li><b>right Shift:</b> Control the pan value 2.</li>
+        <li><b>Right Shift:</b> Control the pan value 2.</li>
       </ul>
     </ol>
   </section>
@@ -210,7 +210,11 @@
       <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
       <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
-      <li><b>Solo:</b> Toggle plugin window.</li>
+      <li><b>Solo:</b></li>
+      <ul>
+      <li><b>Default:</b> Toggle plugin window.</li>
+      <li><b>Left Shift:</b> If no plugin mapping is available, a popup will ask if you want a mapping. If the plugin window is already open, it will be closed.</li>
+      </ul>
       <li><b>Mute:</b></li>
       <ul>
       <li><b>Default:</b> Toggle plugin enabled.</li>
@@ -449,37 +453,37 @@
       <ul>
         <li><b>Default:</b> Engages Latch Automation on currently selected track.</li>
         <li><b>Left Shift:</b> Save your session.</li>
-        <li><b>Left Shift:</b> Engages Latch Automation globally.</li>
+        <li><b>Right Shift:</b> Engages Latch Automation globally.</li>
       </ul>
       <li><b>Trim:</b></li>
       <ul>
         <li><b>Default:</b> Engages Trim Automation on currently selected track.</li>
         <li><b>Left Shift:</b> Redo the last action.</li>
-        <li><b>Left Shift:</b> Engages Trim Automation globally.</li>
+        <li><b>Right Shift:</b> Engages Trim Automation globally.</li>
       </ul>
       <li><b>Off:</b></li>
       <ul>
         <li><b>Default:</b> Engages Latch Preview Automation on currently selected track.</li>
         <li><b>Left Shift:</b> Undo the last action.</li>
-        <li><b>Left Shift:</b> Engages Latch Preview Automation globally.</li>
+        <li><b>Right Shift:</b> Engages Latch Preview Automation globally.</li>
       </ul>
       <li><b>Read:</b></li>
       <ul>
         <li><b>Default:</b> Engages Read Automation on currently selected track.</li>
         <li><b>Left Shift:</b> Not implemented yet.</li>
-        <li><b>Left Shift:</b> Engages Read Automation globally.</li>
+        <li><b>Right Shift:</b> Engages Read Automation globally.</li>
       </ul>
       <li><b>Write:</b></li>
       <ul>
         <li><b>Default:</b> Engages Write Automation on currently selected track.</li>
         <li><b>Left Shift:</b> Not implemented yet.</li>
-        <li><b>Left Shift:</b> Engages Write Automation globally.</li>
+        <li><b>Right Shift:</b> Engages Write Automation globally.</li>
       </ul>
       <li><b>Touch:</b></li>
       <ul>
         <li><b>Default:</b> Engages Touch Automation on currently selected track.</li>
         <li><b>Left Shift:</b> Not implemented yet.</li>
-        <li><b>Left Shift:</b> Engages Touch Automation globally.</li>
+        <li><b>Right Shift:</b> Engages Touch Automation globally.</li>
       </ul>
     </ol>
     
@@ -596,7 +600,7 @@
             
         <p>Mix management houses a serie of filters to filter the tracks to ease your mixing even more. Here a description of all the filter options available</p>
         <ol>
-            <li><b>Audio:</b> Filter all theh tracks that have audio items in them.</li>
+            <li><b>Audio:</b> Filter all the tracks that have audio items in them.</li>
             <li><b>VI:</b></li>
             <ul>
                 <li><b>Default:</b> Filter all tracks with Virtual Instruments</li>
@@ -626,9 +630,37 @@
             </ul>
 
         </ol>
-    
+        
         
     </section>
+    
+        <section class="extras">
+            
+                
+<article class="explanation-macro ">
+    <header>
+        <h4>Button Colors</h4>
+    </header>
+    <section><p>When selecting a filter the button illuminates and can have one of the three different colors. This way it is easier to see which filter ypou applied to your mix</p>
+          <ul>
+          <li><b>White:</b> When you selected the filter without shift button.</li>
+          <li><b>Yellow:</b> When you selected the filter with the <b>Left Shift</b> button.</li>
+          <li><b>Green:</b> When you selected the filter with the <b>Right Shift</b> button.</li>
+          </ul>
+          </section>
+</article>
+
+            
+                
+<article class="explanation-macro ">
+    <header>
+        <h4>Managing the User Filters</h4>
+    </header>
+    <section><p><b>ReaSonus Native</b> has a user interface for managing your filters. More info about how to manage the User Filters can be found here: <a href="/reasonus/documentation/goodies/#filters-management">Filters Management</a>.</p></section>
+</article>
+
+            
+        </section>
     
 </section>
         
@@ -832,7 +864,7 @@
         
             
             
-        <p>Each of the eight buttons also gives you acces to configurable functions by pressing the Left Shift buttons together with these buttons</p>
+        <p>Each of the eight buttons also gives you acces to configurable functions by pressing the <b>Left Shift</b> buttons together with these buttons</p>
         <ul class="no-style">
             <li><b>F1:</b> Open or close the Mixer</li>
             <li><b>F2:</b> Open or close the Media Explorer</li>
