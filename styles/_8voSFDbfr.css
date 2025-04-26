@@ -343,7 +343,9 @@
     height: 5.25rem;
     align-items: center;
     justify-content: center;
-    
+    box-shadow: 0 .25rem .5rem -.25rem rgba(0,0,0,.5);
+    border-radius: 0 0 1rem 1rem;
+
     .logo {
         --logo-width: 12rem;
     
