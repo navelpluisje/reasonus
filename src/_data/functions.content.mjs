@@ -7,7 +7,7 @@ export default {
   blocks: [
     {
       content: `
-        <p>Each of the eight buttons also gives you acces to configurable functions by pressing the Left Shift buttons together with these buttons</p>
+        <p>Each of the eight buttons also gives you acces to configurable functions by pressing the <b>Left Shift</b> buttons together with these buttons</p>
         <ul class="no-style">
             <li><b>F1:</b> Open or close the Mixer</li>
             <li><b>F2:</b> Open or close the Media Explorer</li>

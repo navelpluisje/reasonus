@@ -59,7 +59,7 @@ const track = {
       <ul>
         <li><b>Default:</b> Control volume levels.</li>
         <li><b>Left Shift:</b> Control the pan value 1.</li>
-        <li><b>right Shift:</b> Control the pan value 2.</li>
+        <li><b>Right Shift:</b> Control the pan value 2.</li>
       </ul>
     </ol>
   `,
@@ -94,7 +94,11 @@ const plugin = {
       <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
       <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
-      <li><b>Solo:</b> Toggle plugin window.</li>
+      <li><b>Solo:</b></li>
+      <ul>
+      <li><b>Default:</b> Toggle plugin window.</li>
+      <li><b>Left Shift:</b> If no plugin mapping is available, a popup will ask if you want a mapping. If the plugin window is already open, it will be closed.</li>
+      </ul>
       <li><b>Mute:</b></li>
       <ul>
       <li><b>Default:</b> Toggle plugin enabled.</li>
