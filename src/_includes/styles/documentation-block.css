@@ -20,6 +20,9 @@
         &.yellow {
             --accent-color: var(--jonquil);
         }
+        &.green {
+            --accent-color: var(--olive);
+        }
         &.blue {
             --accent-color: var(--sky-blue);
         }

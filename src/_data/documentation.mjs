@@ -11,10 +11,16 @@ import functionManagement from "./function-management.content.mjs";
 import filterManagement from "./filter-management.content.mjs";
 import pluginMapping from "./plugin-mapping.content.mjs";
 import start from "./start.content.mjs";
+/**
+ * FaderPort V2 imports
+ */
+import track from "./track.content.mjs";
+import session_v2 from "./session-v2.content.mjs";
+import functions_v2 from "./functions-v2.content.mjs";
 
 export default [
   {
-    title: "v2",
+    title: "start",
     slug: "",
     color: "red",
     blocks: {
@@ -35,6 +41,17 @@ export default [
       mixManagement,
       session,
       functions,
+    },
+  },
+  {
+    title: "faderportv2",
+    slug: "faderportv2",
+    color: "green",
+    blocks: {
+      track,
+      transport,
+      session_v2,
+      functions_v2,
     },
   },
   {
