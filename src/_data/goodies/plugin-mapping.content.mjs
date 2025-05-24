@@ -5,7 +5,7 @@ export default {
   image: "/images/plugin-edit.webp",
   imageAlt: "",
   description: `<p>There are multiple ways of managing the mapping of plugin parameters. 
-    By far the easiest will be via MIDI Learn Multiple ways. You can also use the UI, which gives you the option to change parameter names, step number, and so on.
+    By far the easiest will be via MIDI Learn. You can also use the UI, which gives you the option to change parameter names, step number, and so on.
     This requires changing the mapping files by hand. </p>`,
   tabs: {
     "Midi Learn": {
@@ -15,7 +15,7 @@ export default {
       <p>The idea about the <b>MIDI Learn</b> method is to make the mapping as simple as possible. When in the Plugin Channel Mode:</p>
       <ul>
         <li>Press the Solo button to open the window of that plugin.</li>
-        <li>When there is no configuration yet, a little message pops up to ask if you want to create a configuration</li>
+        <li>Press the <b>Link</b>-button will open the editing mode. If no mapping has been done for the selected plugin, a new mapping will be created automaticaly. In this mode the button is blinking.</li>
       </ul>
       <p>Now a configuration file gets created in the background and the linking is started. All displays should now look like this </p>
       <img src="/images/plugin-learn-free.svg" style="width: 5rem;"/>
@@ -23,6 +23,7 @@ export default {
       <p>The <b>Select</b>-button can be used fo toggle buttons (on/off) or plugin parameters with a limited amount of steps. in that case, when the correct data is available from the plugin, pressing the <b>Select</b>-button will loop through the options</p>
       <p>If all channels are populated (or earlier) you can use the <b>Pan/Param</b> encoder to scroll to a next set of empty slots</p>
       <p>If you want to disconnect an assignment, you can press the <b>Right Shift</b> and press the <b>Select</b> button or touch the fader you want to disconnect. The connection in removed and the text will change to <b>Free</b> again.</p>
+      <p>Once done editing, press thge <b>Link</b>-button again. Now you can use your mapping instantly</p>
       <h3>Edit Mapping</h3>
       <p>If the selected plugin already has a mapping, this will get activated instantly. If you want to make changes to the mapping, press the <b>Link</b> button. This will enable the edit mode. All values should be cleared from the displays and the empty slots will display the Empty text again.</p>
       <p>If you want to overwrite a mapping, just wiggle/touch a plugin parameter and the select the control you want to assign it to. This will overwrite it</p>

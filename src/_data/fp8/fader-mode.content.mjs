@@ -94,12 +94,11 @@ const plugin = {
       <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
       <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
-      <li><b>Solo:</b></li>
+      <li><b>Solo:</b> The Solo button is illuminated when there is a mapping available</li>
       <ul>
       <li><b>Default:</b> Toggle plugin window.</li>
-      <li><b>Left Shift:</b> If no plugin mapping is available, a popup will ask if you want a mapping. If the plugin window is already open, it will be closed.</li>
       </ul>
-      <li><b>Mute:</b></li>
+      <li><b>Mute:</b> The mute button is illuminated when the plugin is disabled</li>
       <ul>
       <li><b>Default:</b> Toggle plugin enabled.</li>
       <li><b>Left Shift:</b> Toggle plugin offline.</li>
@@ -210,7 +209,7 @@ export default {
   title: "Fader Modes",
   color: "blue",
   description: `
-    <p>The Faderport has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p>
+    <p>The FaderPort has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p>
     <p>By pressing the Plugin, Send and Pan (which shows the receives) when they are already active, you can switch between Hui and Track mode</p>`,
   image: "/images/controller-track.svg",
   tabs: {

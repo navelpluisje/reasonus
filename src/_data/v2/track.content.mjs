@@ -6,7 +6,7 @@ export default {
   blocks: [
     {
       content: `
-        <p>The Faderport has a single fader that is mostly used for the selected track. 7 of the top 8 buttons controll theh selected track.</p>
+        <p>The FaderPort V2 has a single fader that is mostly used for the selected track. 7 of the top 8 buttons controll theh selected track.</p>
     `,
     },
     {
