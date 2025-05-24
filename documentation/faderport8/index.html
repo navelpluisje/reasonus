@@ -14,8 +14,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/reasonus/styles/Bw0GIfVP9K.css">
-        <link rel="stylesheet" href="/reasonus/styles/_8voSFDbfr.css">
+        <link rel="stylesheet" href="/reasonus/styles/ROMejcehpd.css">
+        <link rel="stylesheet" href="/reasonus/styles/naAdT8oz4N.css">
 </head>
 <body>
     
@@ -28,83 +28,126 @@
 </header>
     <section class="center">
         <aside class="menu">
-    <nav>
-        <ul>
-            <li class="main red "><a href="/reasonus/documentation">Let's
-                    Start</a></li>
-            <ul>
-                <li class="sub red"><a on:click="{handleAnchorClick}" href="#installation">Installation</a></li>
-                <li class="sub red"><a on:click="{handleAnchorClick}" href="#settings">Settings</a></li>
-            </ul>
-            <li class="main blue active"><a href="/reasonus/documentation/faderport8">Faderport 8/16</a></li>
-            <ul>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#transport">Transport</a>
-                </li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#automation">Automation</a>
-                </li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#general-controlls">General</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#mix-management">Mix Management</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#function-controlls">Function Control</a></li>
-            </ul>
-            <li class="main grey "><a href="/reasonus/documentation/goodies">Goodies</a></li>
-            <ul>
-                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#plugin-mapping">Plugins Mapping</a></li>
-                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#functions-management">Functions
-                        Management</a></li>
-                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#filters-management">Filters Management</a>
-                </li>
-            </ul>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li class="main red ">
+        <a href="/reasonus/documentation">Let's Start</a>
+      </li>
+      <ul>
+        <li class="sub red">
+          <a on:click="{handleAnchorClick}" href="#installation">Installation</a>
+        </li>
+        <li class="sub red">
+          <a on:click="{handleAnchorClick}" href="#settings">Settings</a>
+        </li>
+      </ul>
+      <li class="main blue active">
+        <a href="/reasonus/documentation/faderport8">FaderPort 8/16</a>
+      </li>
+      <ul>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#automation">Automation</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#general-controlls">General</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#mix-management">Mix Management</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#function-controlls">Function Control</a>
+        </li>
+      </ul>
+      <li class="main green ">
+        <a href="/reasonus/documentation/faderportv2">FaderPort V2</a>
+      </li>
+      <ul>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#track">Track</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#function-controlls">Function Control</a>
+        </li>
+      </ul>
+      <li class="main grey ">
+        <a href="/reasonus/documentation/goodies">Goodies</a>
+      </li>
+      <ul>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#plugin-mapping">Plugins Mapping</a>
+        </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#functions-management">Functions Management</a>
+        </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#filters-management">Filters Management</a>
+        </li>
+      </ul>
+    </ul>
+  </nav>
 </aside>
 <script>
-    (function smoothScroll() {
-        const menuItems = document.querySelectorAll('.menu .sub a');
+  ;(function smoothScroll() {
+    const menuItems = document.querySelectorAll(".menu .sub a")
 
-        function handleAnchorClick(event) {
-            event.preventDefault()
-            const link = event.currentTarget;
-            const anchorId = new URL(link.href).hash.replace('#', '');
-            const anchor = document.getElementById(anchorId);
+    function handleAnchorClick(event) {
+      const rootFontSize = parseFloat(
+        window.getComputedStyle(document.body).getPropertyValue("font-size"),
+      )
 
-            const root = document.querySelector('.page-content');
-            if (!root) {
-                return;
-            }
+      event.preventDefault()
+      const link = event.currentTarget
+      const anchorId = new URL(link.href).hash.replace("#", "")
+      const anchor = document.getElementById(anchorId)
 
-            root.scrollTo({
-                top: (anchor?.offsetTop || 0) - 84,
-                behavior: 'smooth'
-            });
+      const root = document.querySelector(".page-content")
+      if (!root) {
+        return
+      }
 
-        }
+      root.scrollTo({
+        top: (anchor?.offsetTop || 0) - 7.25 * rootFontSize,
+        behavior: "smooth",
+      })
+    }
 
-        for (const menuItem of Array.from(menuItems)) {
-            menuItem.addEventListener('click', handleAnchorClick);
-        }
-
-    })();
+    for (const menuItem of Array.from(menuItems)) {
+      menuItem.addEventListener("click", handleAnchorClick)
+    }
+  })()
 </script>
+
         <section class="page-content">
             
                 
 
 <div class="documentation-block" id="fader-modes">
-    <article class="blue">
-        <header>
-            <h2>Fader Modes</h2>
-        </header>
-        
-        
-            <section class="tabs-content">
+  <article class="blue">
+    <header>
+      <h2>Fader Modes</h2>
+    </header>
+      <section class="tabs-content">
     <picture class="img-container">
         <img class="fader-modes" src="/reasonus/images/controller-track.svg" alt="">
     </picture>
     <section class="content">
         
-    <p>The Faderport has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p>
+    <p>The FaderPort has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p>
     <p>By pressing the Plugin, Send and Pan (which shows the receives) when they are already active, you can switch between Hui and Track mode</p>
         <section class="tab-bar">
             
@@ -210,12 +253,11 @@
       <li><b>Right Shift:</b> Selects the range of Tracks between the previous selected Track and the current selected Track.</li>
       <li><b>Arm:</b> Toggle Track arm.</li>
       </ul>
-      <li><b>Solo:</b></li>
+      <li><b>Solo:</b> The Solo button is illuminated when there is a mapping available</li>
       <ul>
       <li><b>Default:</b> Toggle plugin window.</li>
-      <li><b>Left Shift:</b> If no plugin mapping is available, a popup will ask if you want a mapping. If the plugin window is already open, it will be closed.</li>
       </ul>
-      <li><b>Mute:</b></li>
+      <li><b>Mute:</b> The mute button is illuminated when the plugin is disabled</li>
       <ul>
       <li><b>Default:</b> Toggle plugin enabled.</li>
       <li><b>Left Shift:</b> Toggle plugin offline.</li>
@@ -383,20 +425,19 @@
             tab.addEventListener('click', handleTabClick);
         }
     })()
-</script>
-        
-    </article>
+</script> 
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="transport">
-    <article class="blue">
-        <header>
-            <h2>Transport</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="blue">
+    <header>
+      <h2>Transport</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="transport" src="/reasonus/images/controller-transport.svg" alt="">
     </picture>
@@ -426,21 +467,19 @@
         
     </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="automation">
-    <article class="blue">
-        <header>
-            <h2>Automation</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="blue">
+    <header>
+      <h2>Automation</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="automation" src="/reasonus/images/controller-automation.svg" alt="">
     </picture>
@@ -503,21 +542,19 @@
             
         </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="general-controlls">
-    <article class="blue">
-        <header>
-            <h2>General Controlls</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="blue">
+    <header>
+      <h2>General Controlls</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="general-controlls" src="/reasonus/images/controller-general.svg" alt="">
     </picture>
@@ -576,21 +613,19 @@
         
     </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="mix-management">
-    <article class="blue">
-        <header>
-            <h2>Mix Management</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="blue">
+    <header>
+      <h2>Mix Management</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="mix-management" src="/reasonus/images/controller-mix-management.svg" alt="">
     </picture>
@@ -662,21 +697,19 @@
             
         </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="session-navigator">
-    <article class="blue">
-        <header>
-            <h2>Session Navigator</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="blue">
+    <header>
+      <h2>Session Navigator</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="session-navigator" src="/reasonus/images/controller-session.svg" alt="">
     </picture>
@@ -842,21 +875,19 @@
         
     </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="function-controlls">
-    <article class="blue">
-        <header>
-            <h2>Function Controlls</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="blue">
+    <header>
+      <h2>Function Controlls</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="function-controlls" src="/reasonus/images/controller-function.svg" alt="">
     </picture>
@@ -893,11 +924,10 @@
             
         </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
         </section>
     </section>

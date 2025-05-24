@@ -14,8 +14,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/reasonus/styles/Bw0GIfVP9K.css">
-        <link rel="stylesheet" href="/reasonus/styles/_8voSFDbfr.css">
+        <link rel="stylesheet" href="/reasonus/styles/ROMejcehpd.css">
+        <link rel="stylesheet" href="/reasonus/styles/naAdT8oz4N.css">
 </head>
 <body>
     
@@ -28,76 +28,120 @@
 </header>
     <section class="center">
         <aside class="menu">
-    <nav>
-        <ul>
-            <li class="main red active"><a href="/reasonus/documentation">Let's
-                    Start</a></li>
-            <ul>
-                <li class="sub red"><a on:click="{handleAnchorClick}" href="#installation">Installation</a></li>
-                <li class="sub red"><a on:click="{handleAnchorClick}" href="#settings">Settings</a></li>
-            </ul>
-            <li class="main blue "><a href="/reasonus/documentation/faderport8">Faderport 8/16</a></li>
-            <ul>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#transport">Transport</a>
-                </li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#automation">Automation</a>
-                </li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#general-controlls">General</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#mix-management">Mix Management</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a></li>
-                <li class="sub blue"><a on:click="{handleAnchorClick}" href="#function-controlls">Function Control</a></li>
-            </ul>
-            <li class="main grey "><a href="/reasonus/documentation/goodies">Goodies</a></li>
-            <ul>
-                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#plugin-mapping">Plugins Mapping</a></li>
-                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#functions-management">Functions
-                        Management</a></li>
-                <li class="sub grey"><a on:click="{handleAnchorClick}" href="#filters-management">Filters Management</a>
-                </li>
-            </ul>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li class="main red active">
+        <a href="/reasonus/documentation">Let's Start</a>
+      </li>
+      <ul>
+        <li class="sub red">
+          <a on:click="{handleAnchorClick}" href="#installation">Installation</a>
+        </li>
+        <li class="sub red">
+          <a on:click="{handleAnchorClick}" href="#settings">Settings</a>
+        </li>
+      </ul>
+      <li class="main blue ">
+        <a href="/reasonus/documentation/faderport8">FaderPort 8/16</a>
+      </li>
+      <ul>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#automation">Automation</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#general-controlls">General</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#mix-management">Mix Management</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#function-controlls">Function Control</a>
+        </li>
+      </ul>
+      <li class="main green ">
+        <a href="/reasonus/documentation/faderportv2">FaderPort V2</a>
+      </li>
+      <ul>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#track">Track</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#session-navigator">Session Navigator</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#function-controlls">Function Control</a>
+        </li>
+      </ul>
+      <li class="main grey ">
+        <a href="/reasonus/documentation/goodies">Goodies</a>
+      </li>
+      <ul>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#plugin-mapping">Plugins Mapping</a>
+        </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#functions-management">Functions Management</a>
+        </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#filters-management">Filters Management</a>
+        </li>
+      </ul>
+    </ul>
+  </nav>
 </aside>
 <script>
-    (function smoothScroll() {
-        const menuItems = document.querySelectorAll('.menu .sub a');
+  ;(function smoothScroll() {
+    const menuItems = document.querySelectorAll(".menu .sub a")
 
-        function handleAnchorClick(event) {
-            event.preventDefault()
-            const link = event.currentTarget;
-            const anchorId = new URL(link.href).hash.replace('#', '');
-            const anchor = document.getElementById(anchorId);
+    function handleAnchorClick(event) {
+      const rootFontSize = parseFloat(
+        window.getComputedStyle(document.body).getPropertyValue("font-size"),
+      )
 
-            const root = document.querySelector('.page-content');
-            if (!root) {
-                return;
-            }
+      event.preventDefault()
+      const link = event.currentTarget
+      const anchorId = new URL(link.href).hash.replace("#", "")
+      const anchor = document.getElementById(anchorId)
 
-            root.scrollTo({
-                top: (anchor?.offsetTop || 0) - 84,
-                behavior: 'smooth'
-            });
+      const root = document.querySelector(".page-content")
+      if (!root) {
+        return
+      }
 
-        }
+      root.scrollTo({
+        top: (anchor?.offsetTop || 0) - 7.25 * rootFontSize,
+        behavior: "smooth",
+      })
+    }
 
-        for (const menuItem of Array.from(menuItems)) {
-            menuItem.addEventListener('click', handleAnchorClick);
-        }
-
-    })();
+    for (const menuItem of Array.from(menuItems)) {
+      menuItem.addEventListener("click", handleAnchorClick)
+    }
+  })()
 </script>
+
         <section class="page-content">
             
                 
 
 <div class="documentation-block" id="let&#39;s-start">
-    <article class="red">
-        <header>
-            <h2>Let&#39;s Start</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="red">
+    <header>
+      <h2>Let&#39;s Start</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="let&#39;s-start" src="/reasonus/images/favicon.svg" alt="">
     </picture>
@@ -147,21 +191,19 @@
             
         </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="installation">
-    <article class="red">
-        <header>
-            <h2>Installation</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="red">
+    <header>
+      <h2>Installation</h2>
+    </header>
+     <section class="image-content">
     <picture class="img-container">
         <img class="installation" src="/reasonus/images/icon-github-color.svg" alt="">
     </picture>
@@ -204,30 +246,36 @@
         
     </section>
     
-</section>
-        
-        
-    </article>
+</section>  
+  </article>
 </div>
+
             
                 
 
 <div class="documentation-block" id="settings">
-    <article class="red">
-        <header>
-            <h2>Settings</h2>
-        </header>
-        
-            <section class="image-content">
+  <article class="red">
+    <header>
+      <h2>Settings</h2>
+    </header>
+      <section class="tabs-content">
     <picture class="img-container">
-        <img class="settings" src="/reasonus/images/settings.webp" alt="The Faderport transport controlls">
+        <img class="settings" src="/reasonus/images/settings.webp" alt="The FaderPort transport controlls">
     </picture>
     <section class="content">
-        
+        <p>After installation you have to change some settings to make it work.</p>
+        <section class="tab-bar">
             
+                <button data-id="FP_8">FaderPort 8 &amp; 16</button>
             
-<p>After installation you have to change some settings to make it work.</p>
-<p>First of all you should select the correct <b>Control surface mode</b>. Select <b>ReaSonus FaderPort</b> and the settings as displayed in the image should appear:</p>
+                <button data-id="FP_V2">FaderPort V2</button>
+            
+        </section>
+        <section class="tab-content">
+            
+                <section class="tab FP_8" data-id="FP_8">
+
+<p>First of all you should select the correct <b>Control surface mode</b>. Select <b>ReaSonus FaderPort 8 &amp; 16</b> for the FaderPort 8 or 16 or select <b>ReaSonus FaderPort V2</b> for the FaderPort V2 and the settings as displayed in the image should appear:</p>
 <ul>
     <li><b>Surface:</b> Select your controller here.</li>
     <li><b>MIDI In:</b> Select the proper MIDI Input</li>
@@ -235,25 +283,72 @@
 </ul>
 <p>These should get you started with the FaderPort.Beside these there are a couple of settings to make your life easier:</p>
 <ul>
-    <li><b>Disable Plugin Control*:</b> If you use another controller for controlling the plugins, you can select this. 
+    <li><b>Disable Plugin Control:</b> If you use another controller for controlling the plugins, you can select this. 
         The plugins mode is still active and you are still able to open the plugin window. 
         From that point, the ReaSonus FaderPort will not do anything anymore for the plugins</li>
-    <li><b>Swap Shift buttons*:</b> This swaps the left and right Shift button.</li>
+    <li><b>Swap Shift buttons:</b> This swaps the left and right Shift button.</li>
+    <li><b>Mute/Solo momentary:</b> When set, it will make the Solo and Mute buttons momentary.
+    The timeout for being momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms
+    and release it, it will instant unsolo again</li>
+    <li><b>Overwrite Time Code:</b> Overwrites the time code selected in REAPER</li>
+    <li><b>Time Code:</b> Select the time code type you want to overwrite REAPERs time code with </li>
+</ul>
+<p>The Documentation button should open your default browser and open this website</p>
+        </section>
+            
+                <section class="tab FP_V2" data-id="FP_V2">
+<p>First of all you should select the correct <b>Control surface mode</b>. Select <b>ReaSonus FaderPort V2</b> for the FaderPort 8 or 16 or select <b>ReaSonus FaderPort V2</b> for the FaderPort V2 and the settings as displayed in the image should appear:</p>
+<ul>
+    <li><b>MIDI In:</b> Select the proper MIDI Input</li>
+    <li><b>MIDI Out:</b> Select the proper MIDI Input</li>
+</ul>
+<p>These should get you started with the FaderPort.Beside these there are a couple of settings to make your life easier:</p>
+<ul>
     <li><b>Mute/Solo momentary:</b> When set, it will make the Solo and Mute buttons momentary.
     The timeout for being momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms
     and release it, it will instant unsolo again</li>
 </ul>
-<blockquote>Settings marked with a '*' have no effect on the FaderPort V2</blockquote>
 <p>The Documentation button should open your default browser and open this website</p>
-        
-        
+        </section>
+            
+        </section>        
     </section>
     
 </section>
+<script>
+    (function tabs() {
+        const tabs = document.querySelectorAll('.tab-bar button');
+        const tabContents = document.querySelectorAll('.tab-content .tab');
+
+        tabs[0].classList.add('selected')
+        tabContents[0].classList.add('selected')
+
+        function handleTabClick(event) {
+            const id = event.target.dataset.id;
+            for (const tab of Array.from(tabs)) {
+                if (tab.dataset.id !== id) {
+                    tab.classList.remove('selected');
+                } else {
+                    tab.classList.add('selected');
+                }
+            }
+            for (const tabContent of Array.from(tabContents)) {
+                if (tabContent.dataset.id !== id) {
+                    tabContent.classList.remove('selected');
+                } else {
+                    tabContent.classList.add('selected');
+                }
+            }
+        }
         
-        
-    </article>
+        for (const tab of Array.from(tabs)) {
+            tab.addEventListener('click', handleTabClick);
+        }
+    })()
+</script> 
+  </article>
 </div>
+
             
         </section>
     </section>
