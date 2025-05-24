@@ -1,62 +1,130 @@
 <aside class="menu">
-    <nav>
-        <ul>
-            <li class="main red {{ 'active' if page.url === '/documentation/' }}"><a href="{{ '/documentation' | url }}">Let's
-                    Start</a></li>
-            <ul>
-                <li class="sub red"><a on:click={handleAnchorClick} href="#installation">Installation</a></li>
-                <li class="sub red"><a on:click={handleAnchorClick} href="#settings">Settings</a></li>
-            </ul>
-            <li class="main blue {{ 'active' if page.url === '/documentation/faderport8/' }}"><a
-                    href="{{ '/documentation/faderport8' | url }}">Faderport 8/16</a></li>
-            <ul>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#fader-modes">Fader Modes</a></li>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#transport">Transport</a>
-                </li>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#automation">Automation</a>
-                </li>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#general-controlls">General</a></li>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#mix-management">Mix Management</a></li>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#session-navigator">Session Navigator</a></li>
-                <li class="sub blue"><a on:click={handleAnchorClick} href="#function-controlls">Function Control</a></li>
-            </ul>
-            <li class="main grey {{ 'active' if page.url === '/documentation/goodies/' }}"><a
-                    href="{{ '/documentation/goodies' | url }}">Goodies</a></li>
-            <ul>
-                <li class="sub grey"><a on:click={handleAnchorClick} href="#plugin-mapping">Plugins Mapping</a></li>
-                <li class="sub grey"><a on:click={handleAnchorClick} href="#functions-management">Functions
-                        Management</a></li>
-                <li class="sub grey"><a on:click={handleAnchorClick} href="#filters-management">Filters Management</a>
-                </li>
-            </ul>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li class="main red {{ 'active' if page.url === '/documentation/' }}">
+        <a href="{{ '/documentation' | url }}">Let's Start</a>
+      </li>
+      <ul>
+        <li class="sub red">
+          <a on:click="{handleAnchorClick}" href="#installation"
+            >Installation</a
+          >
+        </li>
+        <li class="sub red">
+          <a on:click="{handleAnchorClick}" href="#settings">Settings</a>
+        </li>
+      </ul>
+      <li
+        class="main blue {{ 'active' if page.url === '/documentation/faderport8/' }}"
+      >
+        <a href="{{ '/documentation/faderport8' | url }}">FaderPort 8/16</a>
+      </li>
+      <ul>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#automation">Automation</a>
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#general-controlls"
+            >General</a
+          >
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#mix-management"
+            >Mix Management</a
+          >
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#session-navigator"
+            >Session Navigator</a
+          >
+        </li>
+        <li class="sub blue">
+          <a on:click="{handleAnchorClick}" href="#function-controlls"
+            >Function Control</a
+          >
+        </li>
+      </ul>
+      <li
+        class="main green {{ 'active' if page.url === '/documentation/faderportv2/' }}"
+      >
+        <a href="{{ '/documentation/faderportv2' | url }}">FaderPort V2</a>
+      </li>
+      <ul>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#track">Track</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#session-navigator"
+            >Session Navigator</a
+          >
+        </li>
+        <li class="sub green">
+          <a on:click="{handleAnchorClick}" href="#function-controlls"
+            >Function Control</a
+          >
+        </li>
+      </ul>
+      <li
+        class="main grey {{ 'active' if page.url === '/documentation/goodies/' }}"
+      >
+        <a href="{{ '/documentation/goodies' | url }}">Goodies</a>
+      </li>
+      <ul>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#plugin-mapping"
+            >Plugins Mapping</a
+          >
+        </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#functions-management"
+            >Functions Management</a
+          >
+        </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#filters-management"
+            >Filters Management</a
+          >
+        </li>
+      </ul>
+    </ul>
+  </nav>
 </aside>
 <script>
-    (function smoothScroll() {
-        const menuItems = document.querySelectorAll('.menu .sub a');
+  ;(function smoothScroll() {
+    const menuItems = document.querySelectorAll(".menu .sub a")
 
-        function handleAnchorClick(event) {
-            event.preventDefault()
-            const link = event.currentTarget;
-            const anchorId = new URL(link.href).hash.replace('#', '');
-            const anchor = document.getElementById(anchorId);
+    function handleAnchorClick(event) {
+      const rootFontSize = parseFloat(
+        window.getComputedStyle(document.body).getPropertyValue("font-size"),
+      )
 
-            const root = document.querySelector('.page-content');
-            if (!root) {
-                return;
-            }
+      event.preventDefault()
+      const link = event.currentTarget
+      const anchorId = new URL(link.href).hash.replace("#", "")
+      const anchor = document.getElementById(anchorId)
 
-            root.scrollTo({
-                top: (anchor?.offsetTop || 0) - 84,
-                behavior: 'smooth'
-            });
+      const root = document.querySelector(".page-content")
+      if (!root) {
+        return
+      }
 
-        }
+      root.scrollTo({
+        top: (anchor?.offsetTop || 0) - 7.25 * rootFontSize,
+        behavior: "smooth",
+      })
+    }
 
-        for (const menuItem of Array.from(menuItems)) {
-            menuItem.addEventListener('click', handleAnchorClick);
-        }
-
-    })();
+    for (const menuItem of Array.from(menuItems)) {
+      menuItem.addEventListener("click", handleAnchorClick)
+    }
+  })()
 </script>

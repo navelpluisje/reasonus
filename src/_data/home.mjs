@@ -1,6 +1,6 @@
 export default {
   title: "ReaSonus Native",
-  description: "The REAPER extension fully catered for the Presonus Faderport.",
+  description: "The REAPER extension fully catered for the Presonus FaderPort.",
   documenationButton: "Documentation",
   blocks: [
     {
