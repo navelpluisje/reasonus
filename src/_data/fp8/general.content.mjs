@@ -14,12 +14,14 @@ export default {
                 <li><b>Plugin mode:</b> When in Hui mode this will scroll through the track plugins</li>
                 <li><b>Send mode:</b> When in Hui mode this will scroll through the track sends</li>
                 <li><b>Receive mode:</b> When in Hui mode this will scroll through the track receives</li>
-
-            </ul>
-            <li><b>Encoder Click:</b></li>
-            <ul>
+                <li><b>Menu mode:</b> Scroll through the menu options</li>
+                
+                </ul>
+                <li><b>Encoder Click:</b></li>
+                <ul>
                 <li><b>Default:</b> Toggle between pan values (left/right, pan/width, etc), depending on the track pan mode</li>
                 <li><b>Left Shift:</b> Reset the pan and with to default values</li>
+                <li><b>Menu mode:</b> Select/confirm by pressing the encoder</li>
 
             </ul>
             <li><b>Arm:</b> </li>
