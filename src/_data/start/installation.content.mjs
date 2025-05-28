@@ -15,9 +15,15 @@ export default {
         `,
     },
     {
+      title: "ReaPack",
+      content: `
+        <p>By far the easiest way to install <b>ReaSonus</b> Native is via <b>ReaPack</b>.<br/>In REAPER open <b>ReaPack</b>, search for 'ReaSonus'. Select 'ReaSonus Native' and install it.</p>
+    `,
+    },
+    {
       title: "Manual installation",
       content: `
-        <p>Currently, the only way to install <b>ReaSonus Native</b> is by downloading the latest version and manually installing it. The plan is to make it available for ReaPack.</p>
+        <p>For manual install <b>ReaSonus Native</b> you have to download the latest version and move it to the correct folder</p>
         <p>
             <a class="button" href="https://github.com/navelpluisje/Reasonus-Native/releases/latest" target="_blank">Download <b>ReaSonus Native</b></a>
         </p>
