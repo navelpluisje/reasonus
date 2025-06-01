@@ -29,7 +29,7 @@ export default {
       <li><b>Touch:</b></li>
       <ul>
         <li><b>Default:</b> Engages Touch Automation on currently selected track.</li>
-        <li><b>Left Shift:</b> Opens the menu. Within the menu you can set all the options available in the settings screen. You can use the pan encoder to select the item and set a value. With pressing you confirm your options. All changes are applied instant, so no reload of the surface. Pressing the button combination again, will get you to the previous mode.</li>
+        <li><b>Left Shift:</b> Opens the menu. Within the menu you can set all the options available in the settings screen. You can use the pan encoder to select the item and set a value. With pressing you confirm your options. All changes are applied instant, so no reload of the surface. Pressing the button combination again, will get you to the previous mode. The last display will show the version number of <b>ReaSonus Native</b></li>
         <li><b>Right Shift:</b> Engages Touch Automation globally.</li>
       </ul>
       <li><b>Write:</b></li>

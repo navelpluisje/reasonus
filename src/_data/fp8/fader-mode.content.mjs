@@ -66,7 +66,6 @@ const track = {
     <header><h4>Time Code</h4></header>
       <section>When you are in Track mode, you can toggle the time code to display in the displays by pressing the <b>Track</b>-button again. This will show the time code in the last displays, according to the length of the time code. In the settings are options to overwrite the toime code as displayed in REAPER with one of your choice.</section>
       <img src="/images/time-code.svg" />
-      <section>The last display will show the version number of ReaSonus</section>
     </article>
   `,
 };
