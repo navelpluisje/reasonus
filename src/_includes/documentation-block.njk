@@ -5,8 +5,10 @@
     <header>
       <h2>{{ block.title }}</h2>
     </header>
-    {% if block.type === 'image' %} {% include "documentation-image-content.njk"
-    %} {% endif %} {% if block.type === 'tabs' %} {% include
-    "documentation-tabs-content.njk" %} {% endif %}
+    {% if block.type === 'default' %} {% include
+    "documentation-default-content.njk"%} {% endif %} {% if block.type ===
+    'image' %} {% include "documentation-image-content.njk"%} {% endif %} {% if
+    block.type === 'tabs'%} {% include "documentation-tabs-content.njk" %} {%
+    endif %}
   </article>
 </div>
