@@ -15,19 +15,20 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/reasonus/styles/ROMejcehpd.css">
-        <link rel="stylesheet" href="/reasonus/styles/naAdT8oz4N.css">
+        <link rel="stylesheet" href="/reasonus/styles/LxohX2_0FT.css">
 </head>
 <body>
     
 
+
 <section class="documentation-page">
-    <header class="header">
+  <header class="header">
     <a href="/reasonus/">
         <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo">
     </a>
 </header>
-    <section class="center">
-        <aside class="menu">
+  <section class="center">
+    <aside class="menu">
   <nav>
     <ul>
       <li class="main red ">
@@ -97,6 +98,9 @@
         <li class="sub grey">
           <a on:click="{handleAnchorClick}" href="#filters-management">Filters Management</a>
         </li>
+        <li class="sub grey">
+          <a on:click="{handleAnchorClick}" href="#reasonus-actions">ReaSonus Actions</a>
+        </li>
       </ul>
     </ul>
   </nav>
@@ -132,16 +136,15 @@
   })()
 </script>
 
-        <section class="page-content">
-            
-                
+    <section class="page-content">
+       
 
 <div class="documentation-block" id="plugin-mapping">
   <article class="gray">
     <header>
       <h2>Plugin Mapping</h2>
     </header>
-      <section class="tabs-content">
+       <section class="tabs-content">
     <picture class="img-container">
         <img class="plugin-mapping" src="/reasonus/images/plugin-edit.webp" alt="">
     </picture>
@@ -238,15 +241,14 @@
   </article>
 </div>
 
-            
-                
+       
 
 <div class="documentation-block" id="functions-management">
   <article class="gray">
     <header>
       <h2>Functions Management</h2>
     </header>
-     <section class="image-content">
+      <section class="image-content">
     <picture class="img-container">
         <img class="functions-management" src="/reasonus/images/function-control.webp" alt="">
     </picture>
@@ -268,15 +270,14 @@
   </article>
 </div>
 
-            
-                
+       
 
 <div class="documentation-block" id="filters-management">
   <article class="gray">
     <header>
       <h2>Filters Management</h2>
     </header>
-     <section class="image-content">
+      <section class="image-content">
     <picture class="img-container">
         <img class="filters-management" src="/reasonus/images/filter-management.webp" alt="">
     </picture>
@@ -333,10 +334,89 @@
   </article>
 </div>
 
-            
+       
+
+<div class="documentation-block" id="reasonus-actions">
+  <article class="gray">
+    <header>
+      <h2>ReaSonus Actions</h2>
+    </header>
+     <section class="default-content">
+  <section class="content">
+      
+        <p>With <b>ReaSonus Native</b> also some actions get installed. These are internally also used in the extension, but if you want one or more of them as a menu button, you can.</p>
+       
+  </section>
+  
+  <section class="extras">
+     
+<article class="explanation-macro ">
+    <header>
+        <h4>Reasonus: Toggle follow the play cursor</h4>
+    </header>
+    <section>
+        <p>Toggle Follow the play cursor. This action has a state, so should reflect its state in the button</p>
+
+        <p>ID: <code>REASONUS_TOGGLE_PLAY_CURSOR_COMMAND</code></p>
         </section>
+</article>
+  
+<article class="explanation-macro ">
+    <header>
+        <h4>Reasonus: Show the ReaSonus Filters window</h4>
+    </header>
+    <section>
+        <p>Toggle the ReaSonus filters window. This action has a state, so should reflect its state in the button</p>
+
+        <p>ID: <code>REASONUS_SHOW_REASONUS_FILTERS_WINDOW</code></p>
+        </section>
+</article>
+  
+<article class="explanation-macro ">
+    <header>
+        <h4>Reasonus: Show the ReaSonus Functions window</h4>
+    </header>
+    <section>
+        <p>Toggle the ReaSonus functions window. This action has a state, so should reflect its state in the button</p>
+        <p>This one is for the FaderPort 8 & 16 only</p>
+
+        <p>ID: <code>REASONUS_SHOW_REASONUS_FUNCTION_WINDOW</code></p>
+        </section>
+</article>
+  
+<article class="explanation-macro ">
+    <header>
+        <h4>Reasonus: Show Reaper resource path</h4>
+    </header>
+    <section>
+        <p>Shows the Reaper Resource folder location in a console so you can easily copy it</p>
+
+        <p>ID: <code>REASONUS_SHOW_REAPER_RESOURCE_PATH_COMMAND</code></p>
+        </section>
+</article>
+  
+<article class="explanation-macro ">
+    <header>
+        <h4>Reasonus: Close all floating fx windows</h4>
+    </header>
+    <section>
+        <p>Colses all the open fx windows. All other windows just stay open</p>
+
+        <p>ID: <code>REASONUS_CLOSE_ALL_FLOATING_FX_WINDOWS_COMMAND</code></p>
+        </section>
+</article>
+ 
+  </section>
+  
+</section>
+   
+  </article>
+</div>
+
+      
     </section>
-    <footer class="footer">
+  </section>
+  <footer class="footer">
     <section class="footer-content">
         <ul class="link-list">
             <li><a href="https://github.com/navelpluisje/Reasonus-Native"><img src="/reasonus/images/icon-github.svg" alt=""> Repository</a></li>
@@ -347,8 +427,6 @@
     </section>
 </footer>
 </section>
-
-
 
 </body>
 </html>
