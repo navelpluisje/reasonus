@@ -38,7 +38,7 @@ const track = {
         <li><b>Default:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
         <li><b>Left Shift:</b> Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li>
       </ul>
-      <li><b>Select button:</b></li>
+      <li><b>Select button:</b> When the track is armed for recording, the button will blink</li>
       <ul>
         <li><b>Default:</b> Unique-select the Track. Other Tracks will be de-selected.</li>
         <li><b>Left Shift:</b> Select the Track. All previous selected Tracks will also stay selected.</li>
@@ -66,6 +66,7 @@ const track = {
     <header><h4>Time Code</h4></header>
       <section>When you are in Track mode, you can toggle the time code to display in the displays by pressing the <b>Track</b>-button again. This will show the time code in the last displays, according to the length of the time code. In the settings are options to overwrite the toime code as displayed in REAPER with one of your choice.</section>
       <img src="/images/time-code.svg" />
+      <section>The last display will show the version number of ReaSonus</section>
     </article>
   `,
 };
