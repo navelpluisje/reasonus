@@ -38,10 +38,16 @@ export default {
                 </ul>
                 <li><b>Encoder:</b> </li>
                 <ul>
-                    <li><b>Default:</b> Moves the faderbank by steps of 1 track</li>
-                    <li><b>Left Shift:</b> Moves the faderbank by steps of 8/16 tracks</li>
+                    <li><b>Default:</b> Sets the volume for the master track</li>
+                    <li><b>Left Shift:</b> Set the pan, or left pan for the master track</li>
+                    <li><b>Right Shift:</b> Set the width, or right pan for the master track</li>
                 </ul>
-                <li><b>Encoder Click:</b> Not implemented</li>
+                <li><b>Encoder Click:</b> </li>
+                <ul>
+                    <li><b>Default:</b> Not implemented</li>
+                    <li><b>Left Shift:</b> Reset the pan, or left pan for the master track</li>
+                    <li><b>Right Shift:</b> Reset the width, or right pan for the master track</li>
+                </ul>
                 <li><b>Next:</b> </li>
                 <ul>
                     <li><b>Default:</b> Moves the faderbank by steps of 1 track</li>
