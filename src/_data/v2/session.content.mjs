@@ -69,7 +69,7 @@ export default {
                 <li><b>Next:</b>  Select the next track.</li>
 
             </ul>
-            <li><b>Section:</b> Handle adding, deleting and editing regions</li>
+            <li><b>Section:</b> Handle adding, deleting and editing regions. Pressing this button wile in the Section mode, will open the edit Region window</li>
             <ul>
                 <li><b>Previous:</b></li>
                 <ul>
@@ -83,8 +83,8 @@ export default {
                 </ul>
                 <li><b>Encoder Click:</b> </li>
                 <ul>
-                    <li><b>Default:</b> Edit region near cursor</li>
-                    <li><b>Shift:</b> Insert region from time selection and edit</li>
+                    <li><b>Default:</b> Insert region from time selection and edit...</li>
+                    <li><b>Shift:</b> Delete region near cursor</li>
                 </ul>
                 <li><b>Next:</b> </li>
                 <ul>
@@ -117,7 +117,7 @@ export default {
                 </ul>
                 
             </ul>
-            <li><b>Marker:</b> Handle adding, deleting and editing markers</li>
+            <li><b>Marker:</b> Handle adding, deleting and editing markers. Pressing this button wile in the Marker mode, will add a marker at the current position</li>
             <ul>
                 <li><b>Previous:</b> Goto/select previous marker/region</li>
                 <li><b>Encoder:</b> </li>
@@ -127,8 +127,8 @@ export default {
                 </ul>
                 <li><b>Encoder Click:</b> </li>
                 <ul>
-                    <li><b>Default:</b> Insert marker at current position</li>
-                    <li><b>Shift:</b> Insert and/or edit marker at current position</li>
+                    <li><b>Default:</b> Insert and/or edit marker at current position</li>
+                    <li><b>Shift:</b> Delete marker near cursor</li>
                 </ul>
                 <li><b>Next:</b> Goto/select next marker/region</li>
             </ul>
