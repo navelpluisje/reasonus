@@ -30,11 +30,11 @@ export default {
           <li><b>Default:</b> Arm the selected Track for recording.</li>
           <li><b>Shift:</b> Arm all tracks for recording.</li>
         </ul>
-        <li><b>Shift:</b> Speaks for itself I hope/</li>
+        <li><b>Shift:</b> Speaks for itself I hope. By default this is a momentary button. When clicking/release quick the <b>Shift</b> stays engaged</li>
         <li><b>Bypass:</b></li>
         <ul>
-          <li><b>Default:</b> Toggle Bypass all the effects for the selected Track.</li>
-          <li><b>Shift:</b> Toggle Bypass for all tracks.</li>
+          <li><b>Default:</b> Toggle Bypass all the effects for the selected track.</li>
+          <li><b>Shift:</b> Toggle Bypass all the effects for all tracks.</li>
         </ul>
         <li><b>Touch:</b></li>
         <ul>
@@ -54,6 +54,15 @@ export default {
       </ol>
 
       `,
+    },
+  ],
+  extra: [
+    {
+      title: "Momentary Mute/Solo",
+      description: `
+      <p> Making the <b>Mute</b> and <b>Solo</b> momentary is a setting. In REAPER go to the Preferences pane, select <b>Control/OSC/web</b> and double click the <b>ReaSonus FaderPort V2</b></p>
+      <p>Toggle the check box named <b>Mute/Solo Momentary</b></p>
+    `,
     },
   ],
 };

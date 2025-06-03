@@ -7,14 +7,14 @@ export default {
   blocks: [
     {
       content: `
-        <p>The bottom row of the eight buttons also gives you acces to configurable functions by pressing the <b>Left Shift</b> buttons together with these buttons</p>
+        <p>The bottom row of the eight buttons also gives you acces to configurable functions by pressing the <b>Shift</b> buttons together with these buttons</p>
+        <p>The functions can be changed as described in below.</p>
         <ul class="no-style">
-            <li><b>F1:</b> Open or close the Mixer</li>
-            <li><b>F2:</b> Open or close the Media Explorer</li>
-            <li><b>F3:</b> Open or close the Routing Matrix</li>
-            <li><b>F4:</b> Open or close the Effects Browser</li>
+            <li><b>F1:</b> Custom function (user defined)</li>
+            <li><b>F2:</b> Custom function (user defined)</li>
+            <li><b>F3:</b> Custom function (user defined)</li>
+            <li><b>F4:</b> Custom function (user defined)</li>
         </ul>
-
     `,
     },
   ],
