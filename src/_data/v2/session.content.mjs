@@ -58,7 +58,7 @@ export default {
                 <li><b>Next:</b> Set metronome speed to 2x</li>
 
             </ul>
-            <li><b>Channel:</b> Control channel scrolling</li>
+            <li><b>Channel:</b> Control channel scrolling. The button will have the track color.</li>
             <ul>
                 <li><b>Previous:</b> Select the previous track.</li>
                 <li><b>Encoder:</b> </li>

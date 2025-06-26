@@ -31,6 +31,7 @@ import functionManagement from "./goodies/function-management.content.mjs";
 import filterManagement from "./goodies/filter-management.content.mjs";
 import pluginMapping from "./goodies/plugin-mapping.content.mjs";
 import actions from "./goodies/actions.content.mjs";
+import oldVersion from "./goodies/remove-old-version.content.mjs";
 
 export default [
   {
@@ -77,6 +78,7 @@ export default [
       functionManagement,
       filterManagement,
       actions,
+      oldVersion,
     },
   },
 ];
