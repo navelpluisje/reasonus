@@ -30,6 +30,7 @@ export default {
 
             </ul>
             <li><b>Master:</b> Control the master channel</li>
+            <p>When Master fader mode is engaged, the last channel of the FaderPort will control the master track. The encoder, next and previous button will handle the selected Session</p>
             <ul>
                 <li><b>Previous:</b></li>
                 <ul>
@@ -180,5 +181,18 @@ export default {
         </ol>
     `,
     },
-  ],
-};
+    ],
+    extra: [
+        {
+          title: "Master fader mode",
+          description: `<p>When master fader mode is engaged and the master button is pressed, the last channel of the FaderPort will control the master track. This will:</p>
+              <ul>
+              <li>Let you control the master fader, mute and solo button</li>
+              <li>Let you control the automation mode of the master track (track should be selected as with the other tracks)</li>
+              <li>Let you control the Master track plugins</li>
+              </ul>
+              <p>Sends and Receives do not work for the master track as it is not supported for the master track in Reaper
+              `,
+        },
+      ],
+    };
