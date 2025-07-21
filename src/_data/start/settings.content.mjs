@@ -24,6 +24,7 @@ export default {
     <li><b>Untouch last touched param after learn:</b> When selected the last touched param will be set to untouched after parameter learn.</li>
     <li><b>Enable master fader mode:</b> When selected en pressing the master button will enable master fader mode. This makes the last track of the FaderPort control the master track.</li>
     <li><b>Swap Shift buttons:</b> This swaps the left and right Shift button.</li>
+    <li><b>Fader Reset:</b> When eneabled, you can use the <b>[Left Shift]</b> button to reset the fader value while touching teh fader.</li>
     <li><b>Mute/Solo momentary:</b> When set, it will make the Solo and Mute buttons momentary.
     The timeout for being momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms
     and release it, it will instant unsolo again</li>

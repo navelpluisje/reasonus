@@ -178,9 +178,8 @@ export default {
                 <li><b>Next:</b> Goto/select next marker/region</li>
 
             </ul>
-        </ol>
-    `,
-    },
+        </ol>`,
+        },
     ],
     extra: [
         {
