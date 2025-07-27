@@ -4,6 +4,7 @@ import Fetch from "@11ty/eleventy-fetch";
 
 export default async function () {
   const token = process.env.STRAPI_TOKEN;
+  const strapiUrl = process.env.STRAPI_URL;
   let menu_response;
 
   const query = {
@@ -32,8 +33,9 @@ export default async function () {
   };
 
   try {
+    console.log({ strapiUrl });
     menu_response = await Fetch(
-      `${process.env.STRAPI_URL}/api/menu?${qs.stringify(query, {
+      `${strapiUrl}/api/menu?${qs.stringify(query, {
         encodeValuesOnly: true,
       })}`,
       {
