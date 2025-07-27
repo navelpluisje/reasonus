@@ -1,4 +1,4 @@
-import http from "http";
+import https from "https";
 import fs from "fs";
 import path from "path";
 import "dotenv/config";
@@ -23,7 +23,7 @@ export const downloadImage = (imagePath) => {
     fs.mkdirSync(imageLocation, { recursive: true });
   }
 
-  http
+  https
     .get(imageUrl, (response) => {
       response.pipe(file);
 
