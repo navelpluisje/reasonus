@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - main
+env:
+  # Setting an environment variable with the value of a configuration variable
+  STRAPI_URL: ${{ vars.STRAPI_URL }}
+  STRAPI_TOKEN: ${{ vars.STRAPI_TOKEN }}
 
 jobs:
   build:
-    environment: main
     runs-on: ubuntu-24.04
 
     strategy:
