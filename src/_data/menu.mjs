@@ -33,7 +33,6 @@ export default async function () {
   };
 
   try {
-    console.log({ strapiUrl });
     menu_response = await Fetch(
       `${strapiUrl}/api/menu?${qs.stringify(query, {
         encodeValuesOnly: true,

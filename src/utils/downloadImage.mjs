@@ -33,7 +33,9 @@ export const downloadImage = (imagePath) => {
       });
     })
     .on("error", (err) => {
-      fs.unlink(imageName);
+      fs.unlink(imageName, (e) => {
+        console.log({ e });
+      });
       console.error(`Error downloading image: ${err.message}`);
     });
 };
