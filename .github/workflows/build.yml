@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    environment: main
     runs-on: ubuntu-24.04
 
     strategy:

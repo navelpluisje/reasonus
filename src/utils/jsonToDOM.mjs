@@ -53,14 +53,14 @@ const getModifiers = (val) => {
   return res;
 };
 
-export function jsonToDOM(blocks) {
+export function jsonToDOM(blocks = []) {
   let result = "";
 
   for (const block of blocks) {
     const { type, children, ...rest } = block;
 
     if (children) {
-      result += components.blocks[type](jsonToDOM(children), rest);
+      result += components.blocks?.[type](jsonToDOM(children), rest);
     } else {
       const mods = getModifiers(block);
       result += mods.reduce((acc, m) => {
