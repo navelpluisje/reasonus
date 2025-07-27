@@ -1,13 +1,13 @@
-<div class="home-block {{ item.color }}">
-    <article class={{item.color}}>
+<div class="home-block {{ item.Color | slugify }}">
+    <article class={{item.Color | slugify }}>
         <header>
-            <img src="{{ item.image | url }}" alt="" class="image" />
+            <img src="{{ item.Image | url }}" alt="" class="image" />
             <img src="{{ '/images/logo-only.svg' | url }}" alt="" class="logo"/>
         </header>
         <section class="content">
-            <Heading>{{item.title}}</Heading>
+            <Heading>{{item.Title}}</Heading>
             <section>
-                {{ item.content | safe }}
+                {{ item.Content | safe }}
             </section>
         </section>
     </article>

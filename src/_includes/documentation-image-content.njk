@@ -1,19 +1,26 @@
 <section class="image-content">
     <picture class="img-container">
-        <img class="{{ block.title | slug}}" src="{{ block.image | url }}" alt="{{ block.imageAlt }}" />
+        <img class="{{ block.Title | slugify }}" src="{{ block.Image | url }}" alt="{{ block.ImageAlt }}" />
     </picture>
     <section class="content">
+        {{ block.Content | pathPrefix | safe }}
+
         {% for item in block.blocks %}
             {% if item.title %}
                 <h3>{{ item.title | safe }}</h3>
             {% endif %}
             {{ item.content | pathPrefix | safe }}
         {% endfor %}
+
+        {% if block.Tabs | dump !== '[]' %}
+            {{ tabs(block.Tabs) }}
+        {% endif %}
+
     </section>
-    {% if block.extra %}
+    {% if block.Explanations | dump !== '[]' %}
         <section class="extras">
-            {% for extra in block.extra %}
-                {{ explanation(extra.title, extra.description, extra.type) }}
+            {% for extra in block.Explanations %}
+                {{ explanation(extra.Title, extra.Content, extra.type) }}
             {% endfor %}
         </section>
     {% endif %}

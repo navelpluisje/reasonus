@@ -1,14 +1,19 @@
 {% from "./explanation.macro.njk" import explanation %}
+{% from "./tabs.macro.njk" import tabs %}
 
-<div class="documentation-block" id="{{ block.title | slug }}">
-  <article class="{{ doc.color }}">
+<div class="documentation-block" id="{{ block.Title | slugify }}">
+  <article class="{{ doc.Color | slugify }}">
     <header>
-      <h2>{{ block.title }}</h2>
+      <h2>{{ block.Title }}</h2>
     </header>
-    {% if block.type === 'default' %} {% include
-    "documentation-default-content.njk"%} {% endif %} {% if block.type ===
-    'image' %} {% include "documentation-image-content.njk"%} {% endif %} {% if
-    block.type === 'tabs'%} {% include "documentation-tabs-content.njk" %} {%
-    endif %}
+    {% if block.Type === 'default-block' %} 
+      {% include "documentation-default-content.njk" %} 
+    {% endif %} 
+    {% if block.Type === 'image-block' %} 
+      {% include "documentation-image-content.njk" %} 
+    {% endif %} 
+    {% if block.Type === 'tabs-block'%} 
+      {% include "documentation-tabs-content.njk" %} 
+    {% endif %}
   </article>
 </div>

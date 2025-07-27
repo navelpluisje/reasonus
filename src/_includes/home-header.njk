@@ -6,8 +6,9 @@
         <img src="{{ '/images/Faderport8-header-large.webp' | url}}" alt="" class="device" />
     </section>
     <section class="content">
-        <Heading>{{ home.title }}</Heading>
-        <p>{{ home.description }}</p>
-        <a class="button" href="{{ '/documentation' | url }}">{{ home.documenationButton }}</a>
+        <Heading>{{ home.Title }}</Heading>
+        <p>{{ home.Content | pathPrefix | safe }}</p>
+        <a class="button" href="{{ home.ButtonUrl | url }}">{{ home.Button }}</a>
     </section>
 </header>
+    

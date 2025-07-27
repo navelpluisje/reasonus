@@ -1,13 +1,15 @@
 <section class="default-content">
   <section class="content">
-    {% for item in block.blocks %} {% if item.title %}
-    <h3>{{ item.title | safe }}</h3>
-    {% endif %} {{ item.content | pathPrefix | safe }} {% endfor %}
+    {% if block.Title %}
+      <h3>{{ block.Title | safe }}</h3>
+    {% endif %} 
+    {{ block.Content | pathPrefix | safe }} 
   </section>
-  {% if block.extra %}
-  <section class="extras">
-    {% for extra in block.extra %} {{ explanation(extra.title,
-    extra.description, extra.type) }} {% endfor %}
-  </section>
+  {% if block.Explanations | dump !== '[]' %}
+      <section class="extras">
+          {% for extra in block.Explanations %}
+              {{ explanation(extra.Title, extra.Content, extra.type) }}
+          {% endfor %}
+      </section>
   {% endif %}
 </section>

@@ -1,4 +1,7 @@
 node_modules
 dist
+cms_images
 
+.cache
+._env
 .DS_Store

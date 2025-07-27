@@ -84,7 +84,8 @@
         &.green {
             --accent-color: var(--olive);
         }
-        &.grey {
+        &.grey,
+        &.gray {
             --accent-color: var(--battleship-gray);
         }
     }
