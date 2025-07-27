@@ -37,7 +37,7 @@ export default async function () {
 
   try {
     home_response = await Fetch(
-      `${STRAPI_URL}/api/home?${qs.stringify(query, {
+      `${process.env.STRAPI_URL}/api/home?${qs.stringify(query, {
         encodeValuesOnly: true,
       })}`,
       {

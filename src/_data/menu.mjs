@@ -33,7 +33,7 @@ export default async function () {
 
   try {
     menu_response = await Fetch(
-      `${STRAPI_URL}/api/menu?${qs.stringify(query, {
+      `${process.env.STRAPI_URL}/api/menu?${qs.stringify(query, {
         encodeValuesOnly: true,
       })}`,
       {
