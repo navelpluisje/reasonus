@@ -10,7 +10,9 @@ function getFileName(path) {
 
 export const downloadImage = (imagePath) => {
   const imageLocation = path.join(process.cwd(), "src", "public", "cms_images");
-  const imageUrl = `${process.env.STRAPI_URL}${imagePath}`;
+  const imageUrl = imagePath.startsWith("https")
+    ? imagePath
+    : `${process.env.STRAPI_URL}${imagePath}`;
   const imageName = `${imageLocation}/${getFileName(imageUrl)}`;
 
   if (fs.existsSync(imageName)) {
