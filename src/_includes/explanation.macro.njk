@@ -1,8 +1,15 @@
-{% macro explanation(title, explanation='', type='explanation') %}
+{% macro explanation(title, content = [], type='explanation') %}
 <article class="explanation-macro {{ type }}">
     <header>
         <h4>{{ title | safe }}</h4>
     </header>
-    <section>{{ explanation | pathPrefix | safe }}</section>
+    <section>
+        {% for contentItem in content %}
+            {{ contentItem.Content | pathPrefix | safe }}
+            {% if contentItem.Image %}
+                <img class="{{ titleitle | slugify }}" src="{{ contentItem.Image | url }}" alt="{{ contentItem.ImageAlt }}" />
+            {% endif %}
+        {% endfor %}
+    </section>
 </article>
 {% endmacro %}

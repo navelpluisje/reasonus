@@ -1,113 +1,31 @@
 <aside class="menu">
   <nav>
     <ul>
-      <li class="main red {{ 'active' if page.url === '/documentation/' }}">
-        <a href="{{ '/documentation' | url }}">Let's Start</a>
-      </li>
-      <ul>
-        <li class="sub red">
-          <a on:click="{handleAnchorClick}" href="#installation"
-            >Installation</a
-          >
-        </li>
-        <li class="sub red">
-          <a on:click="{handleAnchorClick}" href="#settings">Settings</a>
-        </li>
-      </ul>
+      {% for item in menu %} 
+      {% if item.Slug === '/' %}
+      {% set url = ['/', item.Type, '/'] | join | lower %}
+      {% else %}
+      {% set url = ['/', item.Type, '/', item.Slug, '/'] | join | lower %}
+      {% endif %}
       <li
-        class="main blue {{ 'active' if page.url === '/documentation/faderport8/' }}"
+        class="main {{ item.Color | lower }} {{ 'active' if page.url === url }}"
       >
-        <a href="{{ '/documentation/faderport8' | url }}">FaderPort 8/16</a>
+        <a href="{{ url | url | lower}}">{{ item.Title }}</a>
       </li>
       <ul>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#fader-modes">Fader Modes</a>
+      {% for subItem in item.SubMenu %}
+        <li class="sub {{ item.Color | lower }}">
+          <a on:click="{handleAnchorClick}" href="#{{ subItem | slugify }}">
+            {{ subItem }}
+          </a>
         </li>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
-        </li>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#automation">Automation</a>
-        </li>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#general-controlls"
-            >General</a
-          >
-        </li>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#mix-management"
-            >Mix Management</a
-          >
-        </li>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#session-navigator"
-            >Session Navigator</a
-          >
-        </li>
-        <li class="sub blue">
-          <a on:click="{handleAnchorClick}" href="#function-controlls"
-            >Function Control</a
-          >
-        </li>
+      {% endfor %}
       </ul>
-      <li
-        class="main green {{ 'active' if page.url === '/documentation/faderportv2/' }}"
-      >
-        <a href="{{ '/documentation/faderportv2' | url }}">FaderPort V2</a>
-      </li>
-      <ul>
-        <li class="sub green">
-          <a on:click="{handleAnchorClick}" href="#track">Track</a>
-        </li>
-        <li class="sub green">
-          <a on:click="{handleAnchorClick}" href="#transport">Transport</a>
-        </li>
-        <li class="sub green">
-          <a on:click="{handleAnchorClick}" href="#session-navigator"
-            >Session Navigator</a
-          >
-        </li>
-        <li class="sub green">
-          <a on:click="{handleAnchorClick}" href="#function-controlls"
-            >Function Control</a
-          >
-        </li>
+      {% endfor %}
       </ul>
-      <li
-        class="main grey {{ 'active' if page.url === '/documentation/goodies/' }}"
-      >
-        <a href="{{ '/documentation/goodies' | url }}">Goodies</a>
-      </li>
-      <ul>
-        <li class="sub grey">
-          <a on:click="{handleAnchorClick}" href="#plugin-mapping"
-            >Plugins Mapping</a
-          >
-        </li>
-        <li class="sub grey">
-          <a on:click="{handleAnchorClick}" href="#functions-management"
-            >Functions Management</a
-          >
-        </li>
-        <li class="sub grey">
-          <a on:click="{handleAnchorClick}" href="#filters-management"
-            >Filters Management</a
-          >
-        </li>
-        <li class="sub grey">
-          <a on:click="{handleAnchorClick}" href="#reasonus-actions"
-            >ReaSonus Actions</a
-          >
-        </li>
-        <li class="sub grey">
-          <a on:click="{handleAnchorClick}" href="#remove-old-version"
-            >Remove old version</a
-          >
-        </li>
-      </ul>
-    </ul>
   </nav>
 </aside>
+
 <script>
   ;(function smoothScroll() {
     const menuItems = document.querySelectorAll(".menu .sub a")
@@ -136,5 +54,5 @@
     for (const menuItem of Array.from(menuItems)) {
       menuItem.addEventListener("click", handleAnchorClick)
     }
-  })()
+  })();
 </script>

@@ -1,0 +1,57 @@
+{% from "./explanation.macro.njk" import explanation %}
+
+{% macro tabs(tabs) %}
+<section class="tabs-macro">
+    <section class="tab-bar">
+        {% for tab in tabs %}
+            <button data-id="{{ tab.Title | slugify }}">{{ tab.Title }}</button>
+        {% endfor %}
+    </section>
+    <section class="tab-content">
+        {% for tab in tabs %}
+            <section class="tab {{ tab.Title | slugify }}" data-id="{{ tab.Title | slugify }}">
+                {{ tab.Content | pathPrefix | safe}}
+                {% if tab.Explanations | dump !== '[]' %}
+                    <section class="extras">
+                        {% for extra in tab.Explanations %}
+                            {{ explanation(extra.Title, extra.Content, extra.type) }}
+                        {% endfor %}
+                    </section>
+                {% endif %}
+            </section>
+        {% endfor %}
+    </section>        
+</section>        
+
+<script>
+    (function tabs() {
+        const tabs = document.querySelectorAll('.tab-bar button');
+        const tabContents = document.querySelectorAll('.tab-content .tab');
+
+        tabs[0].classList.add('selected')
+        tabContents[0].classList.add('selected')
+
+        function handleTabClick(event) {
+            const id = event.target.dataset.id;
+            for (const tab of Array.from(tabs)) {
+                if (tab.dataset.id !== id) {
+                    tab.classList.remove('selected');
+                } else {
+                    tab.classList.add('selected');
+                }
+            }
+            for (const tabContent of Array.from(tabContents)) {
+                if (tabContent.dataset.id !== id) {
+                    tabContent.classList.remove('selected');
+                } else {
+                    tabContent.classList.add('selected');
+                }
+            }
+        }
+        
+        for (const tab of Array.from(tabs)) {
+            tab.addEventListener('click', handleTabClick);
+        }
+    })()
+</script>
+{% endmacro %}

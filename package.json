@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Documentation website for ReaSonus Native",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@types/bun": "^1.2.19",
+    "@types/qs": "^6.14.0",
+    "bun-types": "^1.2.19",
+    "dotenv": "^17.2.0",
+    "qs": "^6.14.0"
   },
   "scripts": {
     "build:dev": "npx eleventy",
@@ -17,5 +21,8 @@
     "11ty"
   ],
   "author": "Erwin Goossen <erwin@navelpluisje.nl>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^5.1.0"
+  }
 }
