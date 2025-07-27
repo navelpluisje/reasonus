@@ -3,5 +3,5 @@ dist
 cms_images
 
 .cache
-._env
+.env
 .DS_Store
