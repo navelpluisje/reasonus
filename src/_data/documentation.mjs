@@ -69,7 +69,7 @@ export default async function () {
   // );
   try {
     documentation_response = await Fetch(
-      `http://localhost:1337/api/pages?${qs.stringify(query, {
+      `${STRAPI_URL}/api/pages?${qs.stringify(query, {
         encodeValuesOnly: true,
       })}`,
       {
