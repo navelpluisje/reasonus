@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+
+{% css %}
+{% include "styles/posts.css" %}
+{% endcss %}
+<section class="posts-page">
+  {% include "header.njk" %}
+  <section class="center">
+    <section class="posts-grid">
+      {% for post in posts %}
+        {% include "posts-block.njk" %}
+      {% endfor %}
+    </section>
+  </section>
+  {% include "footer.njk" %}
+</section>

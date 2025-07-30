@@ -2,36 +2,13 @@ import qs from "qs";
 import "dotenv/config";
 import { jsonToDOM } from "../utils/jsonToDOM.mjs";
 import Fetch from "@11ty/eleventy-fetch";
-import { downloadImage } from "../utils/downloadImage.mjs";
-
-const populateImage = {
-  fields: ["name", "url", "width", "height"],
-};
-
-const populateExplanation = {
-  fields: ["Title"],
-  populate: {
-    Content: {
-      fields: ["Content"],
-      populate: {
-        Image: populateImage,
-      },
-    },
-  },
-};
-
-const populateTabs = {
-  fields: ["Title", "Content"],
-  populate: {
-    Explanations: populateExplanation,
-  },
-};
-
-const renameImage = (image = "") => {
-  image && downloadImage(image);
-
-  return image.replace("uploads", "cms_images");
-};
+import {
+  populateExplanation,
+  populateImage,
+  populateTabs,
+} from "../utils/strapiFields.mjs";
+import { renameImage } from "../utils/renameImage.mjs";
+import { generateId } from "../utils/generateId.mjs";
 
 export default async function () {
   const token = process.env.STRAPI_TOKEN;
@@ -62,11 +39,6 @@ export default async function () {
     },
   };
 
-  // console.log(
-  //   qs.stringify(query, {
-  //     encodeValuesOnly: true,
-  //   })
-  // );
   try {
     documentation_response = await Fetch(
       `${process.env.STRAPI_URL}/api/pages?${qs.stringify(query, {
@@ -103,6 +75,7 @@ export default async function () {
           AltText: block.Image?.alternativeText,
           Content: jsonToDOM(block.Content),
           Tabs: block.Tabs.map((tab) => ({
+            Id: generateId(item.documentId, block.id, tab.id),
             Title: tab.Title,
             Content: jsonToDOM(tab.Content),
             Explanations: tab.Explanations.map((explanation) => ({

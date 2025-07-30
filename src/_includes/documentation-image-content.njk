@@ -1,16 +1,26 @@
+{% css %}
+{% include "styles/documentation-image-content.css" %}
+{% endcss %}
 <section class="image-content">
     <picture class="img-container">
-        <img class="{{ block.Title | slugify }}" src="{{ block.Image | url }}" alt="{{ block.ImageAlt }}" />
+        <img class="{{ block.Title | slugify }}" src="{{ block.Image | url }}" alt="{{ block.ImageAlt }}"/>
     </picture>
     <section class="content">
         {{ block.Content | pathPrefix | safe }}
-
         {% if block.Tabs | dump !== '[]' %}
+            {% js %}
+            {% include "javascript/tabs.js" %}
+            {% endjs %}
+            {% css %}
+            {% include "styles/tabs.macro.css" %}
+            {% endcss %}
             {{ tabs(block.Tabs) }}
         {% endif %}
-
     </section>
     {% if block.Explanations | dump !== '[]' %}
+        {% css %}
+        {% include "styles/explanation.macro.css" %}
+        {% endcss %}
         <section class="extras">
             {% for extra in block.Explanations %}
                 {{ explanation(extra.Title, extra.Content, extra.type) }}

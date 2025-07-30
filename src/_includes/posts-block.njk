@@ -1,0 +1,16 @@
+{% css %}
+{% include "styles/posts-block.css" %}
+{% endcss %}
+<article class="posts-block {{ post.Color }}">
+    <header>
+        <img src="{{ post.Image | url }}" alt="" class="image"/>
+        <img src="{{ '/images/logo-only.svg' | url }}" alt="" class="logo"/>
+    </header>
+    <section class="content">
+        <section class="title">{{ post.Title }}</section>
+        <section>
+            {{ post.Content | strip }}
+        </section>
+        <a href="/posts/{{ post.Title | slugify }}" class="button">Read more</a>
+    </section>
+</article>

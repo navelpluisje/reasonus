@@ -1,58 +1,31 @@
+{% js %}
+{% include "javascript/smoothScroll.js" %}
+{% endjs %}
+{% css %}
+{% include "styles/menu.css" %}
+{% endcss %}
 <aside class="menu">
   <nav>
     <ul>
-      {% for item in menu %} 
-      {% if item.Slug === '/' %}
-      {% set url = ['/', item.Type, '/'] | join | lower %}
-      {% else %}
-      {% set url = ['/', item.Type, '/', item.Slug, '/'] | join | lower %}
-      {% endif %}
-      <li
-        class="main {{ item.Color | lower }} {{ 'active' if page.url === url }}"
-      >
-        <a href="{{ url | url | lower}}">{{ item.Title }}</a>
-      </li>
-      <ul>
-      {% for subItem in item.SubMenu %}
-        <li class="sub {{ item.Color | lower }}">
-          <a on:click="{handleAnchorClick}" href="#{{ subItem | slugify }}">
-            {{ subItem }}
-          </a>
+      {% for item in menu %}
+        {% if item.Slug === '/' %}
+          {% set url = ['/', item.Type, '/'] | join | lower %}
+        {% else %}
+          {% set url = ['/', item.Type, '/', item.Slug, '/'] | join | lower %}
+        {% endif %}
+        <li class="main {{ item.Color | lower }} {{ 'active' if page.url === url }}">
+          <a href="{{ url | url | lower }}">{{ item.Title }}</a>
         </li>
+        <ul>
+          {% for subItem in item.SubMenu %}
+            <li class="sub {{ item.Color | lower }}">
+              <a on:click="{handleAnchorClick}" href="#{{ subItem | slugify }}">
+                {{ subItem }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       {% endfor %}
-      </ul>
-      {% endfor %}
-      </ul>
+    </ul>
   </nav>
 </aside>
-
-<script>
-  ;(function smoothScroll() {
-    const menuItems = document.querySelectorAll(".menu .sub a")
-
-    function handleAnchorClick(event) {
-      const rootFontSize = parseFloat(
-        window.getComputedStyle(document.body).getPropertyValue("font-size"),
-      )
-
-      event.preventDefault()
-      const link = event.currentTarget
-      const anchorId = new URL(link.href).hash.replace("#", "")
-      const anchor = document.getElementById(anchorId)
-
-      const root = document.querySelector(".page-content")
-      if (!root) {
-        return
-      }
-
-      root.scrollTo({
-        top: (anchor?.offsetTop || 0) - 7.25 * rootFontSize,
-        behavior: "smooth",
-      })
-    }
-
-    for (const menuItem of Array.from(menuItems)) {
-      menuItem.addEventListener("click", handleAnchorClick)
-    }
-  })();
-</script>

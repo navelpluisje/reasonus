@@ -3,22 +3,24 @@ layout: base.njk
 ---
 
 {% css %}
-    {% include "styles/home.css" %}
-    {% include "styles/home-block.css" %}
-    {% include "styles/home-header.css" %}
-    {% include "styles/home-footer.css" %}
+{% include "styles/home.css" %}
+{% include "styles/home-block.css" %}
+{% include "styles/home-post.css" %}
+{% include "styles/home-header.css" %}
+{% include "styles/home-footer.css" %}
 {% endcss %}
-
 <section class="home-page">
     {% include 'home-header.njk' %}
-
     <section class="home-main">
         {% for item in home.Highlights %}
             {% include 'home-block.njk' %}
         {% endfor %}
     </section>
-    
+    <section class="home-posts">
+        <h3>Recent posts</h3>
+        {% for post in posts | first(3) %}
+            {% include 'home-post.njk' %}
+        {% endfor %}
+    </section>
     {% include "home-footer.njk" %}
 </section>
-
-

@@ -1,0 +1,37 @@
+---
+layout: base.njk
+---
+
+{% css %}
+{% include "styles/post.css" %}
+{% endcss %}
+<section class="post-page {{ post.Color }}">
+  {% include "header.njk" %}
+  <section class="center">
+    <section class="post-image">
+      <img src="{{ post.Image }}"/>
+    </section>
+    <section class="post-content">
+      <h1 class="post-title">
+        {{ post.Title }}
+      </h1>
+      {{ post.Content | safe }}
+      <section class="post-pagination">
+        <div class="previous-post">
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}">Previous Post</a>
+          {% endif %}
+        </div>
+        <div class="post-list">
+          <a href="/posts">All posts</a>
+        </div>
+        <div class="next-post">
+          {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}">Next Post</a>
+          {% endif %}
+        </div>
+      </section>
+    </section>
+  </section>
+  {% include "footer.njk" %}
+</section>

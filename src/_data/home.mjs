@@ -2,17 +2,8 @@ import qs from "qs";
 import "dotenv/config";
 import Fetch from "@11ty/eleventy-fetch";
 import { jsonToDOM } from "../utils/jsonToDOM.mjs";
-import { downloadImage } from "../utils/downloadImage.mjs";
-
-const populateImage = {
-  fields: ["name", "url", "width", "height"],
-};
-
-const renameImage = (image = "") => {
-  image && downloadImage(image);
-
-  return image.replace("uploads", "cms_images");
-};
+import { populateImage } from "../utils/strapiFields.mjs";
+import { renameImage } from "../utils/renameImage.mjs";
 
 export default async function () {
   const token = process.env.STRAPI_TOKEN;
@@ -66,8 +57,6 @@ export default async function () {
       Image: renameImage(highlight.Image.url),
     })),
   };
-
-  console.log({ formattedHome });
 
   return formattedHome;
 }

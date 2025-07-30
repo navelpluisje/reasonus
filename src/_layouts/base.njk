@@ -1,15 +1,15 @@
 {% css "base" %}
-    {% include "styles/base.css" %}
+{% include "styles/base.css" %}
 {% endcss %}
-
 {% set baseCss %}
-    {% getBundleFileUrl "css", "base" %}
+{% getBundleFileUrl "css", "base" %}
 {% endset %}
-
 {% set pageCss %}
-    {% getBundleFileUrl "css" %}
+{% getBundleFileUrl "css" %}
 {% endset %}
-
+{% set pageJavascript %}
+{% getBundleFileUrl "js" %}
+{% endset %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,8 +24,9 @@
             rel="stylesheet">
         <link rel="stylesheet" href="{{ baseCss | trim | url }}">
         <link rel="stylesheet" href="{{ pageCss | trim | url }}">
-</head>
-<body>
-    {{ content | safe }}
-</body>
+    </head>
+    <body>
+        {{ content | safe }}
+        <script src="{{ pageJavascript | trim | url }}"></script>
+    </body>
 </html>
