@@ -52,7 +52,7 @@
         padding: 2rem 0 0;
         
         img {
-            box-shadow: 0 .2rem .3rem -.15rem rgba(0,0,0,.5) inset, 0 .25rem .3rem -.25rem rgba(0,0,0,.5);
+            box-shadow: 0 .25rem .3rem -.25rem rgba(0,0,0,.5);
             background-color: var(--accent-color);
             border-radius: 1rem;
         }
@@ -65,7 +65,7 @@
         margin: 2rem 0 .5rem;
         padding: 1rem;
         border-radius: 1rem;
-        box-shadow: 0 .2rem .3rem -.15rem rgba(0,0,0,.5) inset, 0 .25rem .3rem -.25rem rgba(0,0,0,.5);
+        box-shadow: 0 .25rem .3rem -.25rem rgba(0,0,0,.5);
         
 
         h2, h3, h4, p {
