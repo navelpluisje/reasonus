@@ -1,0 +1,11 @@
+---
+  layout: post.njk
+  pagination:
+    data: posts
+    size: 1
+    alias: post
+  eleventyComputed:
+    permalink: "posts/{{ post.Title | slugify }}/"
+    title: "ReaSonus :: {{ post.Title | safe }}"
+---
+

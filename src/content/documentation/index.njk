@@ -1,9 +1,11 @@
 ---
   layout: documentation.njk
-  title: Documentation
   pagination:
     data: documentation
     size: 1
     alias: doc
-  permalink: "documentation/{{ doc.Slug | slugify }}/"
+  eleventyComputed:
+    permalink: "documentation/{{ doc.Slug | slugify }}/"
+    title: "ReaSonus :: {{ doc.Title | safe }}"
 ---
+

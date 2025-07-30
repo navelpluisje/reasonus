@@ -1,0 +1,50 @@
+import qs from "qs";
+import "dotenv/config";
+import Fetch from "@11ty/eleventy-fetch";
+import { populateImage } from "../utils/strapiFields.mjs";
+import { jsonToDOM } from "../utils/jsonToDOM.mjs";
+
+export default async function () {
+  const token = process.env.STRAPI_TOKEN;
+  const strapiUrl = process.env.STRAPI_URL;
+  let posts_response;
+
+  const query = {
+    fields: ["Title", "Content", "Tags"],
+    sort: ["publishedAt:desc"],
+    populate: {
+      Image: populateImage,
+    },
+  };
+
+  try {
+    posts_response = await Fetch(
+      `${strapiUrl}/api/posts?${qs.stringify(query, {
+        encodeValuesOnly: true,
+      })}`,
+      {
+        duration: "1d",
+        type: "json",
+        fetchOptions: {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      }
+    );
+  } catch (e) {
+    console.error("Error while retreiving menu data", e);
+  }
+
+  // @ts-ignore
+  const formattedPosts = (posts_response?.data || []).map((item) => {
+    return {
+      Title: item.Title,
+      Content: jsonToDOM(item.Content),
+      Image: item.Image?.url,
+      tags: item.Tags.split(","),
+    };
+  });
+
+  return formattedPosts;
+}

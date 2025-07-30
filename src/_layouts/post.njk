@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+
+{% css %}
+{% include "styles/documentation.css" %}
+{% include "styles/documentation-block.css" %}
+{% include "styles/documentation-default-content.css" %}
+{% include "styles/documentation-image-content.css" %}
+{% include "styles/menu.css" %}
+{% include "styles/header.css" %}
+{% include "styles/menu.css" %}
+{% include "styles/footer.css" %}
+{% include "styles/explanation.macro.css" %}
+{% include "styles/tabs.macro.css" %}
+{% endcss %}
+<section class="documentation-page">
+  {% include "header.njk" %}
+  <section class="center">
+    {% include "menu.njk" %}
+    <section class="page-content">
+      {{ post.Title }}
+      {{ pagination | dump }}
+      {% if pagination.href.previous %}Previous Blog Post:
+        <a href="{{ pagination.href.previous }}">{{ pagination.page.previous.Title }}</a>
+      {% endif %}
+      {% if pagination.href.next %}Next Blog Post:
+        <a href="{{ pagination.href.next }}">{{ pagination.page.next.Title }}</a>
+      {% endif %}
+    </section>
+  </section>
+  {% include "footer.njk" %}
+</section>

@@ -1,27 +1,20 @@
 ---
 layout: base.njk
+
 ---
 
-{% css %} 
-  {% include "styles/documentation.css" %} 
-  {% include "styles/documentation-block.css" %} 
-  {% include "styles/documentation-default-content.css" %} 
-  {% include "styles/documentation-image-content.css" %} 
-  {% include "styles/documentation-tabs-content.css" %} 
-  {% include "styles/menu.css" %} 
-  {% include "styles/header.css" %} 
-  {% include "styles/menu.css" %} 
-  {% include "styles/footer.css" %} 
-  {% include "styles/explanation.macro.css" %} 
-  {% include "styles/tabs.macro.css" %} 
+{% css %}
+{% include "styles/documentation.css" %}
 {% endcss %}
-
 <section class="documentation-page">
   {% include "header.njk" %}
   <section class="center">
     {% include "menu.njk" %}
     <section class="page-content">
-      {% for block in doc.Blocks %} 
+      {% for block in doc.Blocks %}
+        {{ loop.index }}
+        {{ doc.Blocks[loop.index - 1].Title }}
+        {{ loop.length }}
         {% include "documentation-block.njk" %}
       {% endfor %}
     </section>

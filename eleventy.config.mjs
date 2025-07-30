@@ -7,8 +7,13 @@ export default function (eleventyConfig) {
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])
   );
 
-  eleventyConfig.addNunjucksFilter("slug", function (value) {
+  eleventyConfig.addNunjucksFilter("slug", function (value = "") {
     return value.toLowerCase().replace(/\s/g, "-");
+  });
+
+  eleventyConfig.addNunjucksFilter("strip", function (value, length = 200) {
+    const val = value.replace(/<[\/a-z0-9]*>/g, " ");
+    return val.substring(0, length) + "...";
   });
 
   eleventyConfig.addNunjucksFilter("pathPrefix", function (value) {
@@ -35,6 +40,10 @@ export default function (eleventyConfig) {
         return result;
       },
     ],
+  });
+
+  eleventyConfig.addBundle("js", {
+    toFileDirectory: `javascript`,
   });
 
   eleventyConfig.addPassthroughCopy({

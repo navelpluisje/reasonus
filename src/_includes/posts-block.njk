@@ -1,0 +1,12 @@
+<article class="posts-block {{ item.Color | slugify }}">
+    <header>
+        <img src="{{ post.Image | url }}" alt="" class="image"/>
+        <img src="{{ '/images/logo-only.svg' | url }}" alt="" class="logo"/>
+    </header>
+    <section class="content">
+        <header>{{post.Title}}</header>
+        <section>
+            {{ post.Content | strip }}
+        </section>
+    </section>
+</article>

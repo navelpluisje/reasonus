@@ -1,15 +1,27 @@
+{% css %}
+{% include "styles/documentation-default-content.css" %}
+{% endcss %}
 <section class="default-content">
   <section class="content">
-    {% if block.Title %}
-      <h3>{{ block.Title | safe }}</h3>
-    {% endif %} 
-    {{ block.Content | pathPrefix | safe }} 
+    {{ block.Content | pathPrefix | safe }}
+    {% if block.Tabs | dump !== '[]' %}
+      {% js %}
+      {% include "javascript/tabs.js" %}
+      {% endjs %}
+      {% css %}
+      {% include "styles/tabs.macro.css" %}
+      {% endcss %}
+      {{ tabs(block.Tabs) }}
+    {% endif %}
   </section>
   {% if block.Explanations | dump !== '[]' %}
-      <section class="extras">
-          {% for extra in block.Explanations %}
-              {{ explanation(extra.Title, extra.Content, extra.type) }}
-          {% endfor %}
-      </section>
+    {% css %}
+    {% include "styles/explanation.macro.css" %}
+    {% endcss %}
+    <section class="extras">
+      {% for extra in block.Explanations %}
+        {{ explanation(extra.Title, extra.Content, extra.type) }}
+      {% endfor %}
+    </section>
   {% endif %}
 </section>
