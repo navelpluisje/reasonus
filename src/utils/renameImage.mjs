@@ -2,6 +2,7 @@ import { downloadImage } from "./downloadImage.mjs";
 
 export const renameImage = (image = "") => {
   image && downloadImage(image);
+  const imageName = image.split("/").pop();
 
-  return image.replace("uploads", "cms_images");
+  return `/cms_images/${imageName}`;
 };

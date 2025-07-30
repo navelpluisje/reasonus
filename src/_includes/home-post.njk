@@ -1,8 +1,8 @@
-<a class="home-post {{ post.Color }}" href="/posts/{{ post.Title | slugify }}">
+<a class="home-post {{ post.Color }}" href="{{ post.Url | url }}">
     <article class="{{ post.Color }}">
         <header>
             <img src="{{ post.Image | url }}" alt="" class="image"/>
-            <img src="{{ '/images/logo-only.svg' | url }}" alt="" class="logo"/>
+            <img src="{{ '/images/logo-only.svg' | url | url }}" alt="" class="logo"/>
         </header>
         <section class="content">
             <section class="title">{{ post.Title}}</section>
