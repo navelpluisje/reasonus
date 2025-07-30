@@ -29,7 +29,7 @@ jobs:
         run: |
           npm ci
           npm run build:prod
-          rm .gitignore
+          mv ./dist/src/public/cms_images ./dist/cms_images
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
