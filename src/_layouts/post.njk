@@ -3,30 +3,34 @@ layout: base.njk
 ---
 
 {% css %}
-{% include "styles/documentation.css" %}
-{% include "styles/documentation-block.css" %}
-{% include "styles/documentation-default-content.css" %}
-{% include "styles/documentation-image-content.css" %}
-{% include "styles/menu.css" %}
-{% include "styles/header.css" %}
-{% include "styles/menu.css" %}
-{% include "styles/footer.css" %}
-{% include "styles/explanation.macro.css" %}
-{% include "styles/tabs.macro.css" %}
+{% include "styles/post.css" %}
 {% endcss %}
-<section class="documentation-page">
+<section class="post-page {{ post.Color }}">
   {% include "header.njk" %}
   <section class="center">
-    {% include "menu.njk" %}
-    <section class="page-content">
-      {{ post.Title }}
-      {{ pagination | dump }}
-      {% if pagination.href.previous %}Previous Blog Post:
-        <a href="{{ pagination.href.previous }}">{{ pagination.page.previous.Title }}</a>
-      {% endif %}
-      {% if pagination.href.next %}Next Blog Post:
-        <a href="{{ pagination.href.next }}">{{ pagination.page.next.Title }}</a>
-      {% endif %}
+    <section class="post-image">
+      <img src="{{ post.Image }}"/>
+    </section>
+    <section class="post-content">
+      <h1 class="post-title">
+        {{ post.Title }}
+      </h1>
+      {{ post.Content | safe }}
+      <section class="post-pagination">
+        <div class="previous-post">
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}">Previous Post</a>
+          {% endif %}
+        </div>
+        <div class="post-list">
+          <a href="/posts">All posts</a>
+        </div>
+        <div class="next-post">
+          {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}">Next Post</a>
+          {% endif %}
+        </div>
+      </section>
     </section>
   </section>
   {% include "footer.njk" %}

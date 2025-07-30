@@ -5,7 +5,7 @@
     grid-template-columns: 100%;
     overflow: hidden;
     
-    .header {
+    > .header {
         grid-area: 1/1/2/2;
         width: 100%;
         top: 0;
@@ -13,7 +13,7 @@
     }
     
     
-    .center {
+    > .center {
         padding: 2rem 0 0;
         grid-area: 2/1/3/2;
         width: 100%;
@@ -22,7 +22,7 @@
         overflow: scroll;
     }
     
-    .content {
+    .posts-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
         grid-align-items: start;
@@ -30,7 +30,7 @@
 
     }
 
-    .footer {
+    > .footer {
         grid-area: 3/1/4/2;
     }
 }

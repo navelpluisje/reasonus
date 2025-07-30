@@ -12,9 +12,6 @@ layout: base.njk
     {% include "menu.njk" %}
     <section class="page-content">
       {% for block in doc.Blocks %}
-        {{ loop.index }}
-        {{ doc.Blocks[loop.index - 1].Title }}
-        {{ loop.length }}
         {% include "documentation-block.njk" %}
       {% endfor %}
     </section>

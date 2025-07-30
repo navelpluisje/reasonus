@@ -6,8 +6,15 @@ const components = {
       `<pre>
         <code>${value}</code>
       </pre>`,
-    heading: (value, { level }) => `<h${level}>${value}</${level}>`,
-    link: (value, { url }) => `<a href=${url}>${value}</a>`,
+    heading: (value, { level }) => `<h${level}>${value}</h${level}>`,
+    link: (value, { url }) => {
+      console.log(url);
+      if (url.startsWith("http")) {
+        return `<a href=${url} target="_blank" rel="noreferrer noopener">${value}</a>`;
+      } else {
+        return `<a href=${url}>${value}</a>`;
+      }
+    },
     list: (value, { format }) => {
       if (format === "ordered") {
         return `<ol>${value}</ol>`;

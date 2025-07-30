@@ -4,24 +4,11 @@ layout: base.njk
 
 {% css %}
 {% include "styles/posts.css" %}
-{% include "styles/posts-block.css" %}
 {% endcss %}
 <section class="posts-page">
   {% include "header.njk" %}
   <section class="center">
-    <section class="content">
-      {% for post in posts %}
-        {% include "posts-block.njk" %}
-      {% endfor %}
-      {% for post in posts %}
-        {% include "posts-block.njk" %}
-      {% endfor %}
-      {% for post in posts %}
-        {% include "posts-block.njk" %}
-      {% endfor %}
-      {% for post in posts %}
-        {% include "posts-block.njk" %}
-      {% endfor %}
+    <section class="posts-grid">
       {% for post in posts %}
         {% include "posts-block.njk" %}
       {% endfor %}
@@ -29,14 +16,3 @@ layout: base.njk
   </section>
   {% include "footer.njk" %}
 </section>
-{# <article>
-        <header>
-          {{ post.Title }}
-        </header>
-        <section>
-          {{ post.Content | strip }}
-        </section>
-        <footer>
-          <a href="/posts/{{ post.Title | slugify }}">Read more</a>
-        </footer>
-      </article> #}

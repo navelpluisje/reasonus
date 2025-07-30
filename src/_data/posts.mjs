@@ -36,10 +36,13 @@ export default async function () {
     console.error("Error while retreiving menu data", e);
   }
 
+  const colors = ["blue", "green", "red", "grey", "yellow"];
+
   // @ts-ignore
-  const formattedPosts = (posts_response?.data || []).map((item) => {
+  const formattedPosts = (posts_response?.data || []).map((item, index) => {
     return {
       Title: item.Title,
+      Color: colors[index % 5],
       Content: jsonToDOM(item.Content),
       Image: item.Image?.url,
       tags: item.Tags.split(","),

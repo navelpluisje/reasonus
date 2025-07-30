@@ -3,7 +3,7 @@
     
     display: grid;
     height: 100%;
-    grid-template-rows: 15rem 1rem auto;
+    grid-template-rows: 10rem 1rem auto;
     border-radius: 1rem;
     background: var(--accent-color);
     min-height: 10rem;
@@ -15,9 +15,13 @@
     &.blue {
         --accent-color: var(--sky-blue);
     }
+    &.green {
+        --accent-color: var(--olive);
+    }
     &.red {
         --accent-color: var(--tomato);
     }
+    &.grey,
     &.gray {
         --accent-color: var(--battleship-gray);
     }
@@ -34,29 +38,12 @@
         position: relative;
         
         .image {
-            --offset-vertical: -2rem;
-            --offset-horizontal: 2rem;
-            
             grid-area: 1/1/2/2;
             max-width: unset;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(calc(-50% + var(--offset-vertical)), calc(-50% + var(--offset-horizontal)));
-            
-            
-            .blue & {
-                --offset-vertical: -2rem;
-                --offset-horizontal: 2rem;
-            }
-            .red & {
-                --offset-vertical: -2.5rem;
-                --offset-horizontal: 2.5rem;
-            }
-            .gray & {
-                --offset-vertical: -3rem;
-                --offset-horizontal: 4.5rem;
-            }
+            transform: translate(calc(-50%), calc(-50%));
         }
         
         .logo {
@@ -84,4 +71,17 @@
         border-color: var(--accent-color);
         box-shadow: 0 -.25rem .5rem -.125rem rgba(0,0,0,.5);
     }
+
+    .title {
+        font-weight: 400;
+        margin-bottom: .5rem;
+        font-size: 1.25rem;
+        border-bottom: 2px solid var(--accent-color);
+        width: fit-content;
+    }
+
+    .button {
+        float: right;
+    }
+
 }

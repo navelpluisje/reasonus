@@ -16,6 +16,10 @@ export default function (eleventyConfig) {
     return val.substring(0, length) + "...";
   });
 
+  eleventyConfig.addNunjucksFilter("first", function (value, length = 3) {
+    return value.slice(0, length);
+  });
+
   eleventyConfig.addNunjucksFilter("pathPrefix", function (value) {
     if (!pathPrefix) {
       return value;
