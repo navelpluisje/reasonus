@@ -1,7 +1,7 @@
 import Nunjucks from "nunjucks";
 
 export default function (eleventyConfig) {
-  const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "";
+  const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "xx";
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])

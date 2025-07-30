@@ -3,6 +3,8 @@ import "dotenv/config";
 import Fetch from "@11ty/eleventy-fetch";
 import { populateImage } from "../utils/strapiFields.mjs";
 import { jsonToDOM } from "../utils/jsonToDOM.mjs";
+import { renameImage } from "../utils/renameImage.mjs";
+import slugify from "@sindresorhus/slugify";
 
 export default async function () {
   const token = process.env.STRAPI_TOKEN;
@@ -41,10 +43,11 @@ export default async function () {
   // @ts-ignore
   const formattedPosts = (posts_response?.data || []).map((item, index) => {
     return {
+      Url: `/posts/${slugify(item.Title, { decamelize: false })}`,
       Title: item.Title,
       Color: colors[index % 5],
       Content: jsonToDOM(item.Content),
-      Image: item.Image?.url,
+      Image: renameImage(item.Image?.url),
       tags: item.Tags.split(","),
     };
   });

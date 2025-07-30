@@ -21,6 +21,7 @@ layout: base.njk
         {% for post in posts | first(3) %}
             {% include 'home-post.njk' %}
         {% endfor %}
+        <a class="button" href="{{ '/posts/' | url }}" style="margin-top: 0">All posts</a>
     </section>
     {% include "home-footer.njk" %}
 </section>

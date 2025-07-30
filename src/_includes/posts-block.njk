@@ -11,6 +11,6 @@
         <section>
             {{ post.Content | strip }}
         </section>
-        <a href="/posts/{{ post.Title | slugify }}" class="button">Read more</a>
+        <a href="{{ post.Url | url }}" class="button">Read more</a>
     </section>
 </article>
