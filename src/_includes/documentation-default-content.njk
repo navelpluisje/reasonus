@@ -9,14 +9,14 @@
       {% include "javascript/tabs.js" %}
       {% endjs %}
       {% css %}
-      {% include "styles/tabs.macro.css" %}
+      {% include "macros/styles/tabs.macro.css" %}
       {% endcss %}
       {{ tabs(block.Tabs) }}
     {% endif %}
   </section>
   {% if block.Explanations | dump !== '[]' %}
     {% css %}
-    {% include "styles/explanation.macro.css" %}
+    {% include "macros/styles/explanation.macro.css" %}
     {% endcss %}
     <section class="extras">
       {% for extra in block.Explanations %}
