@@ -1,0 +1,37 @@
+---
+permalink: "feed.xml"
+eleventyExcludeFromCollections: true
+metadata:
+    language: "en"
+    title: "ReaSonus Native"
+    subtitle: "Information about new ReaSonus Native features, releases and more"
+    base: "https://navelpluisje.github.io/reasonus/"
+    author:
+        name: "Erwin Goossen (Navelpluisje)"
+        email: ""
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
+    <title>{{ metadata.title }}</title>
+    <subtitle>{{ metadata.description }}</subtitle>
+    <link href="{{ metadata.base }}feed.xml" rel="self"/>
+    <link href="{{ metadata.base }}"/>
+    <updated>{{ posts[0].PublishedDate }}</updated>
+    <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+    <author>
+        <name>{{ metadata.author.name }}</name>
+    </author>
+    {%- for post in posts %}
+        {%- set absolutePostUrl %}{{ post.Url | htmlBaseUrl(metadata.base) }}{% endset %}
+        <entry>
+            <title>{{ post.Title }}</title>
+            <link href="{{ absolutePostUrl }}"/>
+            <updated>{{ post.PublishedDate }}</updated>
+            <id>{{ absolutePostUrl }}</id>
+            <content type="html">
+                {{ post.Content | renderTransforms(post.Content, metadata.base) }}
+            </content>
+        </entry>
+    {%- endfor %}
+</feed>

@@ -8,30 +8,35 @@ layout: base.njk
 <section class="post-page {{ post.Color }}">
   {% include "header.njk" %}
   <section class="center">
-    <section class="post-image">
-      <img src="{{ post.Image | url }}"/>
+    <section class="post-meta-group">
+      <section class="post-image">
+        <img src="{{ post.Image | url }}" alt="" class="image"/>
+        <img src="{{ '/images/logo-only.svg' | url }}" alt="" class="logo"/>
+      </section>
+      {% include "post-extras.njk" %}
     </section>
-    <section class="post-content">
+    <section class="post-content-group">
       <h1 class="post-title">
         {{ post.Title }}
       </h1>
-      {{ post.Content | safe }}
-      <section class="post-pagination">
-        <div class="previous-post">
-          {% if pagination.href.next %}
-            <a href="{{ pagination.href.next | url }}">Previous Post</a>
-          {% endif %}
-        </div>
-        <div class="post-list">
-          <a href="{{ '/posts' | url }}">All posts</a>
-        </div>
-        <div class="next-post">
-          {% if pagination.href.previous %}
-            <a href="{{ pagination.href.previous | url }}">Next Post</a>
-          {% endif %}
-        </div>
+      <section class="post-content">
+        {{ post.Content | safe }}
       </section>
     </section>
+    <section class="post-pagination">
+      <div class="previous-post">
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next | url }}">Previous Post</a>
+        {% endif %}
+      </div>
+      <div class="post-list">
+        <a href="{{ '/posts' | url }}">All posts</a>
+      </div>
+      <div class="next-post">
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous | url }}">Next Post</a>
+        {% endif %}
+      </div>
+    </section>
   </section>
-  {% include "footer.njk" %}
-</section>
+  {% include "footer.njk" %}</section></section>

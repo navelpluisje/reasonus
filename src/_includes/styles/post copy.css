@@ -1,0 +1,111 @@
+.post-page {
+    --accent-color: var(--jonquil);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: var(--header-height) 1fr auto;
+    grid-template-columns: 100%;
+    overflow: hidden;
+    
+    &.yellow {
+        --accent-color: var(--jonquil);
+    }
+    
+    &.blue {
+        --accent-color: var(--sky-blue);
+    }
+    
+    &.green {
+        --accent-color: var(--olive);
+    }
+    
+    &.red {
+        --accent-color: var(--tomato);
+    }
+    
+    &.grey,
+    &.gray {
+        --accent-color: var(--battleship-gray);
+    }
+
+    > .header {
+        grid-area: 1/1/2/2;
+        width: 100%;
+        top: 0;
+        z-index: 2;
+    }
+    
+    
+    > .center {
+        grid-area: 2/1/3/2;
+        display: grid;
+        width: 100%;
+        max-width: 1200px;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        margin: 0 auto;
+        overflow: scroll;
+        padding: 0 1rem;
+    }
+    
+    .post-image {
+        grid-area: 1/1/2/2;
+        overflow: scroll;
+        align-self: start;
+        padding: 2rem 0 0;
+    }
+
+    .post-content {
+        background-color: white;
+        grid-area: 1/2/2/3;
+        overflow: scroll;
+        margin: 2rem 0 .5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 .25rem .3rem -.25rem rgba(0,0,0,.5);
+        
+
+        h2, h3, h4, p {
+            margin: .5rem 0;
+        }
+
+        blockquote {
+            margin: .5rem 0;
+            padding: .5rem 15rem .5rem 1.5rem;
+            border-left: 2px solid var(--accent-color);
+        }
+    }
+
+    .post-title {
+        font-weight: 400;
+        font-size: 2rem;
+        border-bottom: 2px solid var(--accent-color);
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
+    
+    > .footer {
+        grid-area: 3/1/4/2;
+    }
+
+    .post-pagination {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 3rem auto 0;
+        padding: 0 1rem 1rem;
+        max-width: 400px;
+    }
+
+    .previous-post {
+        text-align: start;
+    }
+
+    .post-list {
+        text-align: center;
+    }
+
+    .next-post {
+        text-align: end;
+    }
+}
+    
