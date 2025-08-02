@@ -3,7 +3,7 @@
 {% endcss %}
 <section class="image-content">
     <picture class="img-container">
-        <img class="{{ block.Title | slugify }}" src="{{ block.Image | url }}" alt="{{ block.ImageAlt }}"/>
+        <img class="{{ block.Title | slugify }}" src="{{ block.Image }}" alt="{{ block.ImageAlt }}"/>
     </picture>
     <section class="content">
         {{ block.Content | pathPrefix | safe }}
