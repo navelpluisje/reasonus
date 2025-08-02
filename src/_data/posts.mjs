@@ -4,6 +4,7 @@ import Fetch from "@11ty/eleventy-fetch";
 import { populateImage } from "../utils/strapiFields.mjs";
 import { jsonToDOM } from "../utils/jsonToDOM.mjs";
 import { renameImage } from "../utils/renameImage.mjs";
+import { formatDate } from "../utils/formatDate.mjs";
 import slugify from "@sindresorhus/slugify";
 
 export default async function () {
@@ -12,7 +13,7 @@ export default async function () {
   let posts_response;
 
   const query = {
-    fields: ["Title", "Content", "Tags"],
+    fields: ["Title", "Content", "Tags", "updatedAt"],
     sort: ["publishedAt:desc"],
     populate: {
       Image: populateImage,
@@ -48,6 +49,8 @@ export default async function () {
       Color: colors[index % 5],
       Content: jsonToDOM(item.Content),
       Image: renameImage(item.Image?.url),
+      PublishedAt: formatDate(item.updatedAt),
+      PublishedDate: item.updatedAt,
       tags: item.Tags.split(","),
     };
   });

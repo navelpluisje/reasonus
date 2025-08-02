@@ -1,4 +1,6 @@
 import Nunjucks from "nunjucks";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import * as prettier from "prettier";
 
 export default function (eleventyConfig) {
   const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "";
@@ -6,6 +8,9 @@ export default function (eleventyConfig) {
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])
   );
+
+  eleventyConfig.addNunjucksFilter("dateToRfc3339", pluginRss.dateToRfc3339);
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addNunjucksFilter("slug", function (value = "") {
     return value.toLowerCase().replace(/\s/g, "-");
@@ -35,23 +40,60 @@ export default function (eleventyConfig) {
     toFileDirectory: `styles`,
     transforms: [
       // Add the pathPrefix to all css urls is the current url starts with a slash
-      (content) => {
-        if (!pathPrefix) {
-          return content;
+      async (content) => {
+        let result = content;
+        if (pathPrefix) {
+          result = content.replace(/url\('\//g, `url('/${pathPrefix}/`);
         }
 
-        const result = content.replace(/url\('\//g, `url('/${pathPrefix}/`);
-        return result;
+        const formattedContent = await prettier.format(result || "", {
+          parser: "css",
+        });
+
+        return formattedContent;
       },
     ],
   });
 
   eleventyConfig.addBundle("js", {
     toFileDirectory: `javascript`,
+    transforms: [
+      async (content) =>
+        await prettier.format(content || "", {
+          parser: "babel",
+          format: true,
+        }),
+    ],
   });
 
   eleventyConfig.addPassthroughCopy({
     "src/public/": "/",
+  });
+
+  eleventyConfig.addTransform("format-output", async function (content) {
+    if (!content || typeof this.page === "string") {
+      return content;
+    }
+
+    let parsed = false;
+    const parseTypes = ["css", "js", "html", "xml"];
+    const parsers = ["css", "babel", "html", "html"];
+
+    for (const type in parseTypes) {
+      if ((this.page.outputPath || "").endsWith(parseTypes[type])) {
+        const formattedContent = await prettier.format(content || "", {
+          parser: parsers[type],
+          format: true,
+          printWidth: 120,
+        });
+        parsed = true;
+        return formattedContent;
+      }
+    }
+
+    if (!parsed) {
+      return content;
+    }
   });
 
   return {

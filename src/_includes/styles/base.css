@@ -11,10 +11,16 @@
   --black-30:hsl(0, 0.00%, 20.00%, .3);
   --background:hsl(240, 6.70%, 97.10%);
 
-  --header-height: 5.25rem;
+  --header-height: 4.25rem;
   --menu-width: 256px;
 
   --font-heading: 'lexend', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --header-height: 5.25rem;
+  }
 }
 
 html {

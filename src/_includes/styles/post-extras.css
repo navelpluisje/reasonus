@@ -1,0 +1,15 @@
+.post-extras {
+    dl {
+        margin: 0;
+    }
+
+    dt {
+        font-weight: 400;
+    }
+    
+    dd {
+        font-weight: 300;
+        margin: 0 0 0 .5rem;
+    }
+    
+}
