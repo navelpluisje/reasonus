@@ -14,7 +14,7 @@
           {% set url = ['/', item.Type, '/', item.Slug, '/'] | join | lower %}
         {% endif %}
         <li class="main {{ item.Color | lower }} {{ 'active' if page.url === url }}">
-          <a href="{{ url | url | lower }}">{{ item.Title }}</a>
+          <a href="{{ url | lower }}">{{ item.Title }}</a>
         </li>
         <ul>
           {% for subItem in item.SubMenu %}

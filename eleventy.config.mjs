@@ -3,7 +3,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import * as prettier from "prettier";
 
 export default function (eleventyConfig) {
-  const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "";
+  const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "xx";
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])

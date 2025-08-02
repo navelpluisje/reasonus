@@ -7,7 +7,7 @@
             {% for contentItem in content %}
                 {{ contentItem.Content | pathPrefix | safe }}
                 {% if contentItem.Image %}
-                    <img class="{{ titleitle | slugify }}" src="{{ contentItem.Image | url }}" alt="{{ contentItem.ImageAlt }}"/>
+                    <img class="{{ titleitle | slugify }}" src="{{ contentItem.Image }}" alt="{{ contentItem.ImageAlt }}"/>
                 {% endif %}
             {% endfor %}
         </section>
