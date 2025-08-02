@@ -1,616 +1,1204 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ReaSonus :: FaderPort 8 &amp; 16</title>
-        <link rel="icon" href="/reasonus/images/favicon.svg">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/reasonus/styles/ROMejcehpd.css">
-        <link rel="stylesheet" href="/reasonus/styles/JaCKIUWs-n.css">
-    </head>
-    <body>
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: FaderPort 8 &amp; 16</title>
+    <link rel="icon" href="/reasonus/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/reasonus/styles/kM5ZwruLA6.css" />
+    <link rel="stylesheet" href="/reasonus/reasonus/styles/KLXvmIXqZ6.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/reasonus/">
+          <img src="/reasonus/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo"
+        /></a>
+      </header>
+      <section class="center">
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red">
+                <a href="/reasonus/reasonus/documentation/">Lets Start</a>
+              </li>
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#lets-start"> Lets Start </a>
+                </li>
 
-<section class="documentation-page">
-  
-<header class="header">
-    <a href="/reasonus/">
-        <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo"></a>
-    </header>
-  <section class="center">
-    
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#installation"> Installation </a>
+                </li>
 
-<aside class="menu">
-  <nav>
-    <ul>
-      
-        
-          
-        
-        <li class="main red ">
-          <a href="/reasonus/documentation/">Lets Start</a>
-        </li>
-        <ul>
-          
-            <li class="sub red">
-              <a on:click="{handleAnchorClick}" href="#lets-start">
-                Lets Start
-              </a>
-            </li>
-          
-            <li class="sub red">
-              <a on:click="{handleAnchorClick}" href="#installation">
-                Installation
-              </a>
-            </li>
-          
-            <li class="sub red">
-              <a on:click="{handleAnchorClick}" href="#settings">
-                Settings
-              </a>
-            </li>
-          
-        </ul>
-      
-        
-          
-        
-        <li class="main blue active">
-          <a href="/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
-        </li>
-        <ul>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#fader-modes">
-                Fader Modes
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#transport">
-                Transport
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#automation">
-                Automation
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#general">
-                General
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#mix-management">
-                Mix Management
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#session-navigator">
-                Session Navigator
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#function-controls">
-                Function Controls
-              </a>
-            </li>
-          
-        </ul>
-      
-        
-          
-        
-        <li class="main green ">
-          <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
-        </li>
-        <ul>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#track">
-                Track
-              </a>
-            </li>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#transport">
-                Transport
-              </a>
-            </li>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#session-navigator">
-                Session Navigator
-              </a>
-            </li>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#function-control">
-                Function Control
-              </a>
-            </li>
-          
-        </ul>
-      
-        
-          
-        
-        <li class="main gray ">
-          <a href="/reasonus/documentation/goodies/">Goodies</a>
-        </li>
-        <ul>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#plugin-mapping">
-                Plugin Mapping
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#functions-management">
-                Functions Management
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#filters-management">
-                Filters Management
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#reasonus-actions">
-                ReaSonus Actions
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#remove-old-version">
-                Remove old version
-              </a>
-            </li>
-          
-        </ul>
-      
-    </ul>
-  </nav>
-</aside>
-    <section class="page-content">
-      
-        
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+              </ul>
 
+              <li class="main blue active">
+                <a href="/reasonus/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
+              </li>
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
+                </li>
 
-<div class="documentation-block" id="fader-modes">
-  <article class="blue">
-    <header>
-      <h2>Fader Modes</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="fader-modes" src="/reasonus/cms_images/controller_track_325f321fcc.svg" alt="">
-    </picture>
-    <section class="content">
-        <p>The <strong>FaderPort</strong> has multiple fader modes. These modes control the functionality of the fader, mute, solo, select button and the content of the displays.</p><p>By pressing the <strong>Plugin</strong>, <strong>Send</strong> and <strong>[Left Shift] + Send</strong> (which shows the receives) when they are already active, you can switch between Hui and Track mode.</p><p>By pressing the <strong>Pan</strong> button when it is already active, you can switch between Pan 1 and Pan 2 value (more info on pan modes below). The displays indicates which one is active by inverting the color.</p>
-        
-            
-            
-            
-    <section class="tabs-macro">
-        <section class="tab-bar">
-            
-                <button data-id="y00vrscjshi2denad0gfsha2-31-18">Track</button>
-            
-                <button data-id="y00vrscjshi2denad0gfsha2-31-14">Plugin</button>
-            
-                <button data-id="y00vrscjshi2denad0gfsha2-31-15">Send</button>
-            
-                <button data-id="y00vrscjshi2denad0gfsha2-31-16">Receive</button>
-            
-                <button data-id="y00vrscjshi2denad0gfsha2-31-17">Pan</button>
-            
-        </section>
-        <section class="tab-content">
-            
-                <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-31-18">
-                    <ol><li><strong>Display</strong></li><ul><li><strong>Line 1</strong>:<strong> Track name</strong></li><li><strong>Line 2</strong>:</li><ul><li><strong>Default</strong>: Track number</li><li><strong>Arm</strong>: Input name</li></ul><li><strong>Line 3</strong>:</li><ul><li><strong>Default</strong>: Pan value (depending on the mode it is pan or width)</li><li><strong>Arm</strong>: Track monitor mode</li></ul><li><strong>Line 4</strong></li><ul><li><strong>Default</strong>: Not Used</li><li><strong>Arm</strong>: Recording mode</li></ul></ul><li><strong>Meter</strong>: Shows the Vu meter only in default mode. The meter is hidden when using the shift and or arm button.</li><li><strong>Value bar</strong>: Displays the Tracks current pan position.</li><li><strong>Pan/Param</strong>:</li><ul><li><strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li><li><strong>Left Shift</strong>: Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li></ul><li><strong>Select button</strong>: </li><ul><li><strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.</li><li><strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay selected.</li><li><strong>Right Shift</strong>: Selects the range of Tracks between the previous selected Track and the current selected Track.</li><li><strong>Arm</strong>: Toggle Track arm.</li></ul><li><strong>Solo</strong>:</li><ul><li><strong>Default</strong>: Isolates the corresponding Tracks output signal in the mix.</li><li><strong>Long Press</strong>: Holding the Solo button for longer then half a second makes the button momentary. This means that after releasing the button after that half a second, the value will go to the previous value after release. This can be helpfull for quickly checking a track soloed.</li></ul><li><strong>Mute</strong>:</li><ul><li><strong>Default</strong>: Mutes the corresponding Tracks output signal.</li><li><strong>Long Press</strong>: Holding the Mute button for longer then half a second makes the button momentary. This means that after releasing the button after that half a second, the value will go to the previous value after release. This can be helpfull for quickly checking with the track muted.</li></ul><li><strong>Touch-sensitive Fader</strong>:</li><ul><li><strong>Default</strong>: Control volume levels.</li><li><strong>Touch</strong>: When enabled in the settings, using [Left Shift] + Fader Touch will reset the value</li></ul></ol>
-                    
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green">
+                <a href="/reasonus/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray">
+                <a href="/reasonus/reasonus/documentation/goodies/">Goodies</a>
+              </li>
+              <ul>
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#filters-management"> Filters Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#reasonus-actions"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#remove-old-version"> Remove old version </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="fader-modes">
+            <article class="blue">
+              <header>
+                <h2>Fader Modes</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="fader-modes" src="/reasonus/reasonus/cms_images/controller_track_325f321fcc.svg" alt="" />
+                </picture>
+                <section class="content">
+                  <p>
+                    The <strong>FaderPort</strong> has multiple fader modes. These modes control the functionality of
+                    the fader, mute, solo, select button and the content of the displays.
+                  </p>
+                  <p>
+                    By pressing the <strong>Plugin</strong>, <strong>Send</strong> and
+                    <strong>[Left Shift] + Send</strong> (which shows the receives) when they are already active, you
+                    can switch between Hui and Track mode.
+                  </p>
+                  <p>
+                    By pressing the <strong>Pan</strong> button when it is already active, you can switch between Pan 1
+                    and Pan 2 value (more info on pan modes below). The displays indicates which one is active by
+                    inverting the color.
+                  </p>
+
+                  <section class="tabs-macro">
+                    <section class="tab-bar">
+                      <button data-id="y00vrscjshi2denad0gfsha2-31-18">Track</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-31-14">Plugin</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-31-15">Send</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-31-16">Receive</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-31-17">Pan</button>
+                    </section>
+                    <section class="tab-content">
+                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-31-18">
+                        <ol>
+                          <li><strong>Display</strong></li>
+                          <ul>
+                            <li><strong>Line 1</strong>:<strong> Track name</strong></li>
+                            <li><strong>Line 2</strong>:</li>
+                            <ul>
+                              <li><strong>Default</strong>: Track number</li>
+                              <li><strong>Arm</strong>: Input name</li>
+                            </ul>
+                            <li><strong>Line 3</strong>:</li>
+                            <ul>
+                              <li><strong>Default</strong>: Pan value (depending on the mode it is pan or width)</li>
+                              <li><strong>Arm</strong>: Track monitor mode</li>
+                            </ul>
+                            <li><strong>Line 4</strong></li>
+                            <ul>
+                              <li><strong>Default</strong>: Not Used</li>
+                              <li><strong>Arm</strong>: Recording mode</li>
+                            </ul>
+                          </ul>
+                          <li>
+                            <strong>Meter</strong>: Shows the Vu meter only in default mode. The meter is hidden when
+                            using the shift and or arm button.
+                          </li>
+                          <li><strong>Value bar</strong>: Displays the Tracks current pan position.</li>
+                          <li><strong>Pan/Param</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
+                              set the pan position back to center.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Controlls pan value 1 for the currently selected track. Push
+                              to set the pan position back to center.
+                            </li>
+                          </ul>
+                          <li><strong>Select button</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay
+                              selected.
+                            </li>
+                            <li>
+                              <strong>Right Shift</strong>: Selects the range of Tracks between the previous selected
+                              Track and the current selected Track.
+                            </li>
+                            <li><strong>Arm</strong>: Toggle Track arm.</li>
+                          </ul>
+                          <li><strong>Solo</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Isolates the corresponding Tracks output signal in the mix.
+                            </li>
+                            <li>
+                              <strong>Long Press</strong>: Holding the Solo button for longer then half a second makes
+                              the button momentary. This means that after releasing the button after that half a second,
+                              the value will go to the previous value after release. This can be helpfull for quickly
+                              checking a track soloed.
+                            </li>
+                          </ul>
+                          <li><strong>Mute</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Mutes the corresponding Tracks output signal.</li>
+                            <li>
+                              <strong>Long Press</strong>: Holding the Mute button for longer then half a second makes
+                              the button momentary. This means that after releasing the button after that half a second,
+                              the value will go to the previous value after release. This can be helpfull for quickly
+                              checking with the track muted.
+                            </li>
+                          </ul>
+                          <li><strong>Touch-sensitive Fader</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Control volume levels.</li>
+                            <li>
+                              <strong>Touch</strong>: When enabled in the settings, using [Left Shift] + Fader Touch
+                              will reset the value
+                            </li>
+                          </ul>
+                        </ol>
+
                         <section class="extras">
-                            
-                                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Time Code</h4>
-        </header>
-        <section>
-            
-                <p>When you are in Track mode, you can toggle the time code to display in the displays by pressing the <strong>Track</strong>-button again. This will show the time code in the last displays, according to the length of the time code. In the settings are options to overwrite the toime code as displayed in <strong>REAPER</strong> with one of your choice.</p>
-                
-                    <img class="undefined" src="/reasonus/cms_images/time_code_5d09f0834c.svg" alt="">
-                
-            
-        </section>
-    </article>
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Time Code</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When you are in Track mode, you can toggle the time code to display in the displays by
+                                pressing the <strong>Track</strong>-button again. This will show the time code in the
+                                last displays, according to the length of the time code. In the settings are options to
+                                overwrite the toime code as displayed in <strong>REAPER</strong> with one of your
+                                choice.
+                              </p>
 
-                            
+                              <img
+                                class="undefined"
+                                src="/reasonus/reasonus/cms_images/time_code_5d09f0834c.svg"
+                                alt=""
+                              />
+                            </section>
+                          </article>
                         </section>
-                    
+                      </section>
+
+                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-31-14">
+                        <ol>
+                          <li><strong>Display</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Line 1</strong>: Track name, the colors are inverted in track mode for the
+                              selected track.
+                            </li>
+                            <li><strong>Line 2</strong>: Plugin name</li>
+                            <li><strong>Line 3</strong>: Plugin enabled</li>
+                            <li>
+                              <strong>Line 4</strong>: In Hui mode this shows the current index and total number of
+                              plugins. In track mode, it is empty
+                            </li>
+                          </ul>
+                          <li><strong>Meter</strong>: Disabled</li>
+                          <li><strong>Value bar</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Displays the Tracks current pan position.</li>
+                            <li><strong>Left Shift</strong>: Track volume</li>
+                          </ul>
+                          <li><strong>Pan/Param</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
+                              set the pan position back to center.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Controlls pan value 1 for the currently selected track. Push
+                              to set the pan position back to center.
+                            </li>
+                          </ul>
+                          <li><strong>Select button</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay
+                              selected.
+                            </li>
+                            <li><strong>Right Shift</strong>: Selects the range of Tracks between the previous</li>
+                            <li><strong>Arm</strong>: Toggle Track arm.</li>
+                          </ul>
+                          <li>
+                            <strong>Solo</strong>: The Solo button is illuminated when there is a mapping available
+                          </li>
+                          <ul>
+                            <li><strong>Default</strong>: Toggle plugin window.</li>
+                          </ul>
+                          <li><strong>Mute</strong>: The mute button is illuminated when the plugin is disabled</li>
+                          <ul>
+                            <li><strong>Default</strong>: Toggle plugin enabled.</li>
+                            <li><strong>Left Shift</strong>: Toggle plugin offline.</li>
+                          </ul>
+                          <li><strong>Touch-Sensitive Fader</strong>: Control track volume levels.</li>
+                        </ol>
+                      </section>
+
+                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-31-15">
+                        <ol>
+                          <li><strong>Display</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Line 1</strong>: Track name, the colors are inverted in track mode for the
+                              selected track.
+                            </li>
+                            <li><strong>Line 2</strong>: Send destination name</li>
+                            <li><strong>Line 3</strong>: Send mode</li>
+                            <li>
+                              <strong>Line 4</strong>: In Hui mode this shows the current index and total number of
+                              sends. In track mode, it shows the send automation mode
+                            </li>
+                          </ul>
+                          <li><strong>Meter</strong>: Disabled</li>
+                          <li><strong>Value bar</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Displays the Sends current pan position.</li>
+                            <li><strong>Left Shift</strong>: Send volume</li>
+                          </ul>
+                          <li><strong>Pan/Param</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
+                              set the pan position back to center.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Controlls pan value 2 for the currently selected track. Push
+                              to set the pan position back to center.
+                            </li>
+                          </ul>
+                          <li><strong>Select button</strong>:</li>
+                          <ul>
+                            <li>Default: Unique-select the Track. Other Tracks will be de-selected.</li>
+                            <li>Left Shift: Select the Track. All previous selected Tracks will also stay selected.</li>
+                            <li>
+                              Right Shift: Selects the range of Tracks between the previous selected Track and the
+                              current selected Track.
+                            </li>
+                            <li>Arm: Toggle Track arm.</li>
+                          </ul>
+                          <li><strong>Solo</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Toggle send phase.</li>
+                            <li><strong>Left Shift</strong>: Toggle send Mono/Stereo.</li>
+                          </ul>
+                          <li><strong>Mute</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Toggle send mute.</li>
+                            <li><strong>Left Shift</strong>: Loop through send mode.</li>
+                          </ul>
+                          <li><strong>Touch-Sensitive Fader</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Control send volume level.</li>
+                            <li><strong>Left Shift</strong>: Control send pan.</li>
+                          </ul>
+                        </ol>
+                      </section>
+
+                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-31-16">
+                        <ol>
+                          <li><strong>Display</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Line 1</strong>: Track name, the colors are inverted in track mode for the
+                              selected track.
+                            </li>
+                            <li><strong>Line 2</strong>: Receive source name</li>
+                            <li><strong>Line 3</strong>: Receive mode</li>
+                            <li>
+                              <strong>Line 4</strong>: In Hui mode this shows the current index and total number of
+                              receives. In track mode, it shows the send automation mode
+                            </li>
+                          </ul>
+                          <li><strong>Meter</strong>: Disabled</li>
+                          <li><strong>Value bar</strong>:</li>
+                          <ul>
+                            <li>Default: Displays the Receives current pan position.</li>
+                            <li>Left Shift: Receive volume</li>
+                          </ul>
+                          <li><strong>Pan/Param</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Controls pan value 1 for the currently selected track. Push to
+                              set the pan position back to center.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Controls pan value 1 for the currently selected track. Push
+                              to set the pan position back to center.
+                            </li>
+                          </ul>
+                          <li><strong>Select button</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
+                            </li>
+                            <li>
+                              <strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay
+                              selected.
+                            </li>
+                            <li><strong>Right Shift</strong>: Selects the range of Tracks between the previous</li>
+                            <li><strong>Arm</strong>: Toggle Track arm.</li>
+                          </ul>
+                          <li><strong>Solo</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Toggle receive phase.</li>
+                            <li><strong>Left Shift</strong>: Toggle receive Mono/Stereo.</li>
+                          </ul>
+                          <li><strong>Mute:</strong></li>
+                          <ul>
+                            <li><strong>Default</strong>: Toggle receive mute.</li>
+                            <li><strong>Left Shift</strong>: Loop through receive mode.</li>
+                          </ul>
+                          <li><strong>Touch-Sensitive Fader</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Control receive volume level.</li>
+                            <li><strong>Left Shift</strong>: Control receive pan.</li>
+                          </ul>
+                        </ol>
+                      </section>
+
+                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-31-17">
+                        <ol>
+                          <li><strong>Display</strong>:</li>
+                          <ul>
+                            <li><strong>Line 1</strong>: track name</li>
+                            <li><strong>Line 2</strong>: Track number</li>
+                            <li><strong>Line 3</strong>: Value Pan 1</li>
+                            <li><strong>Line 4</strong>: Value Pan 2</li>
+                          </ul>
+                          <li><strong>Meter</strong>: Disabled</li>
+                          <li><strong>Value bar</strong>: Displays the Tracks current volume.</li>
+                          <li><strong>Pan/Param</strong>:</li>
+                          <ul>
+                            <li>
+                              Default: Controlls pan value 1 for the currently selected track. Push to set the pan
+                              position back to center.
+                            </li>
+                            <li>
+                              Left Shift: Controlls pan value2 for the currently selected track. Push to set the pan
+                              position back to center.
+                            </li>
+                          </ul>
+                          <li><strong>Select button</strong>:</li>
+                          <ul>
+                            <li>Default: Unique-select the Track. Other Tracks will be de-selected.</li>
+                            <li>Left Shift: Select the Track. All previous selected Tracks will also stay selected.</li>
+                            <li>Right Shift: Selects the range of Tracks between the previous</li>
+                            <li>Arm: Toggle Track arm.</li>
+                          </ul>
+                          <li><strong>Solo</strong>:</li>
+                          <ul>
+                            <li>
+                              <strong>Default</strong>: Isolates the corresponding Tracks output signal in the mix.
+                            </li>
+                            <li>
+                              <strong>Long Press</strong>: Holding the Solo button for longer then half a second makes
+                              the button momentary. This means that after releasing the button after that half a second,
+                              the value will go to the previous value after release. This can be helpfull for quickly
+                              checking a track soloed.
+                            </li>
+                          </ul>
+                          <li><strong>Mute</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Mutes the corresponding Tracks output signal.</li>
+                            <li>
+                              <strong>Long Press</strong>: Holding the Mute button for longer then half a second makes
+                              the button momentary. This means that after releasing the button after that half a second,
+                              the value will go to the previous value after release. This can be helpfull for quickly
+                              checking with the track muted.
+                            </li>
+                          </ul>
+                          <li><strong>Touch-Sensitive Fader</strong>:</li>
+                          <ul>
+                            <li><strong>Default</strong>: Control corresponding Pan value</li>
+                            <li>
+                              Touch: When enabled in the settings, usinf
+                              <strong>[Left Shift] + Fader Touch</strong> will reset the value
+                            </li>
+                          </ul>
+                        </ol>
+                      </section>
+                    </section>
+                  </section>
                 </section>
-            
-                <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-31-14">
-                    <ol><li><strong>Display</strong>:</li><ul><li><strong>Line 1</strong>: Track name, the colors are inverted in track mode for the selected track.</li><li><strong>Line 2</strong>: Plugin name</li><li><strong>Line 3</strong>: Plugin enabled</li><li><strong>Line 4</strong>: In Hui mode this shows the current index and total number of plugins. In track mode, it is empty</li></ul><li><strong>Meter</strong>: Disabled</li><li><strong>Value bar</strong>:</li><ul><li><strong>Default</strong>: Displays the Tracks current pan position.</li><li><strong>Left Shift</strong>: Track volume</li></ul><li><strong>Pan/Param</strong>:</li><ul><li><strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li><li><strong>Left Shift</strong>: Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li></ul><li><strong>Select button</strong>:</li><ul><li><strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.</li><li><strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay selected.</li><li><strong>Right Shift</strong>: Selects the range of Tracks between the previous</li><li><strong>Arm</strong>: Toggle Track arm.</li></ul><li><strong>Solo</strong>: The Solo button is illuminated when there is a mapping available</li><ul><li><strong>Default</strong>: Toggle plugin window.</li></ul><li><strong>Mute</strong>: The mute button is illuminated when the plugin is disabled</li><ul><li><strong>Default</strong>: Toggle plugin enabled.</li><li><strong>Left Shift</strong>: Toggle plugin offline.</li></ul><li><strong>Touch-Sensitive Fader</strong>: Control track volume levels.</li></ol>
-                    
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>HUI or Track mode</h4>
+                    </header>
+                    <section>
+                      <p>
+                        For the <strong>Plugin</strong>, <strong>Send</strong> and <strong>Receive</strong> Fader modes,
+                        when you open them first, they open in <strong>HUI</strong> mode. In this mode you controll all
+                        plugins, sends and receives from the respective channel. In the display you see a counter for
+                        the number of items and the current selected one. You can use the Pan encoder to scroll though
+                        the items.
+                      </p>
+
+                      <img class="undefined" src="/reasonus/reasonus/cms_images/hui_mode_69105f44aa.svg" alt="" />
+
+                      <p>
+                        In Track mode (press the button again to get here), all the plugins, sends and receives of the
+                        first selected track are spread over the tracks. If there are more items then the number of
+                        channels you can use the Pan encoder to scroll to the next items. The selected track is
+                        highlighted.
+                      </p>
+
+                      <img class="undefined" src="/reasonus/reasonus/cms_images/track_mode_d41ca208a5.svg" alt="" />
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Pan values</h4>
+                    </header>
+                    <section>
+                      <p>Reaper has 3 pan modes. Depending on the choosen mode, there are 1 or 2 pan values.</p>
+                      <ul>
+                        <li>
+                          <strong>Stereo Balance/Mono Pa</strong>n: This is the default and in REAPER you'll see only
+                          one pan knob/fader. In this mode <strong>Pan Value 2</strong> has no function
+                        </li>
+                        <li>
+                          <strong>Stereo Pan</strong>: This mode has 2 values. <strong>Pan Value 1</strong> is for
+                          Left/Right panning and <strong>Pan Value 2</strong> for the width
+                        </li>
+                        <li>
+                          <strong>Dual Pan</strong>: This mode has 2 values. <strong>Pan Value 1</strong> is for Left
+                          panning value and <strong>Pan Value 2</strong> for the right panning value
+                        </li>
+                      </ul>
+                      <p>
+                        The last will show 2 knobs/faders in REAPER for panning. You can find more info about the
+                        <strong>Panning Modes</strong> in the REAPER documentation
+                      </p>
+                      <p></p>
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Shift buttons</h4>
+                    </header>
+                    <section>
+                      <p>
+                        The <strong>FaderPort</strong> has 2 <strong>Shift</strong> buttons, one on the left and one on
+                        the right side of the faders. There are functions the need one of the
+                        <strong>Shift</strong> buttons to be pressed as well.
+                      </p>
+                      <p>
+                        By short pressing one of the Shift buttons it will get engaged constant for most controls except
+                        the fader modes.
+                      </p>
+                      <p>In the settings is an option to swap the left and right shift buttons.</p>
+                    </section>
+                  </article>
                 </section>
-            
-                <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-31-15">
-                    <ol><li><strong>Display</strong>:</li><ul><li><strong>Line 1</strong>: Track name, the colors are inverted in track mode for the selected track.</li><li><strong>Line 2</strong>: Send destination name</li><li><strong>Line 3</strong>: Send mode</li><li><strong>Line 4</strong>: In Hui mode this shows the current index and total number of sends. In track mode, it shows the send automation mode</li></ul><li><strong>Meter</strong>: Disabled</li><li><strong>Value bar</strong>: </li><ul><li><strong>Default</strong>: Displays the Sends current pan position.</li><li><strong>Left Shift</strong>: Send volume</li></ul><li><strong>Pan/Param</strong>:</li><ul><li><strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li><li><strong>Left Shift</strong>: Controlls pan value 2 for the currently selected track. Push to set the pan position back to center.</li></ul><li><strong>Select button</strong>:</li><ul><li>Default: Unique-select the Track. Other Tracks will be de-selected.</li><li>Left Shift: Select the Track. All previous selected Tracks will also stay selected.</li><li>Right Shift: Selects the range of Tracks between the previous selected Track and the current selected Track.</li><li>Arm: Toggle Track arm.</li></ul><li><strong>Solo</strong>:</li><ul><li><strong>Default</strong>: Toggle send phase.</li><li><strong>Left Shift</strong>: Toggle send Mono/Stereo.</li></ul><li><strong>Mute</strong>:</li><ul><li><strong>Default</strong>: Toggle send mute.</li><li><strong>Left Shift</strong>: Loop through send mode.</li></ul><li><strong>Touch-Sensitive Fader</strong>:</li><ul><li><strong>Default</strong>: Control send volume level.</li><li><strong>Left Shift</strong>: Control send pan.</li></ul></ol>
-                    
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="transport">
+            <article class="blue">
+              <header>
+                <h2>Transport</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="transport"
+                    src="/reasonus/reasonus/cms_images/controller_transport_f5bf14c98b.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <ol>
+                    <li><strong>Stop</strong>: Stops playback.</li>
+                    <li><strong>Loop</strong>: Engages / disengages Looping</li>
+                    <li>
+                      <strong>Play / Pause</strong>: Starts playback at the current playback- cursor position. Press
+                      again to pause playback.
+                    </li>
+                    <li><strong>Rewind:</strong></li>
+                    <ul>
+                      <li>
+                        <strong>Default</strong>: Rewinds in a slow pace. You can toggle the speed by pressing the
+                        button. All the other keys will stop the rewind
+                      </li>
+                      <li><strong>Left Shift</strong>: Go to the start of the project</li>
+                    </ul>
+                    <li><strong>Fast Forward</strong>:</li>
+                    <ul>
+                      <li>
+                        <strong>Default</strong>: Fast Forwards in a slow pace. You can toggle the speed by pressing the
+                        button. All the other keys will stop the Fast Forward
+                      </li>
+                      <li><strong>Left Shift</strong>: Go to the end of the project</li>
+                    </ul>
+                    <li>
+                      <strong>Record</strong>: Press to start recording at the current playback-cursor position for
+                      record-enabled tracks.
+                    </li>
+                  </ol>
                 </section>
-            
-                <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-31-16">
-                    <ol><li><strong>Display</strong>:</li><ul><li><strong>Line 1</strong>: Track name, the colors are inverted in track mode for the selected track.</li><li><strong>Line 2</strong>: Receive source name</li><li><strong>Line 3</strong>: Receive mode</li><li><strong>Line 4</strong>: In Hui mode this shows the current index and total number of receives. In track mode, it shows the send automation mode</li></ul><li><strong>Meter</strong>: Disabled</li><li><strong>Value bar</strong>:</li><ul><li>Default: Displays the Receives current pan position.</li><li>Left Shift: Receive volume</li></ul><li><strong>Pan/Param</strong>:</li><ul><li><strong>Default</strong>: Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li><li><strong>Left Shift</strong>: Controls pan value 1 for the currently selected track. Push to set the pan position back to center.</li></ul><li><strong>Select button</strong>:</li><ul><li><strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.</li><li><strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay selected.</li><li><strong>Right Shift</strong>: Selects the range of Tracks between the previous </li><li><strong>Arm</strong>: Toggle Track arm.</li></ul><li><strong>Solo</strong>:</li><ul><li><strong>Default</strong>: Toggle receive phase.</li><li><strong>Left Shift</strong>: Toggle receive Mono/Stereo.</li></ul><li><strong>Mute:</strong></li><ul><li><strong>Default</strong>: Toggle receive mute.</li><li><strong>Left Shift</strong>: Loop through receive mode.</li></ul><li><strong>Touch-Sensitive Fader</strong>:</li><ul><li><strong>Default</strong>: Control receive volume level.</li><li><strong>Left Shift</strong>: Control receive pan.</li></ul></ol>
-                    
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="automation">
+            <article class="blue">
+              <header>
+                <h2>Automation</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="automation"
+                    src="/reasonus/reasonus/cms_images/controller_automation_80f8296821.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <ol>
+                    <li><strong>Latch</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Latch Automation on currently selected track.</li>
+                      <li><strong>Left Shift</strong>: Save your session.</li>
+                      <li><strong>Right Shift</strong>: Engages Latch Automation globally.</li>
+                    </ul>
+                    <li><strong>Trim</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Trim Automation on currently selected track.</li>
+                      <li><strong>Left Shift</strong>: Redo the last action.</li>
+                      <li><strong>Right Shift</strong>: Engages Trim Automation globally.</li>
+                    </ul>
+                    <li><strong>Off</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Latch Preview Automation on currently selected track.</li>
+                      <li><strong>Left Shift</strong>: Undo the last action.</li>
+                      <li><strong>Right Shift</strong>: Engages Latch Preview Automation globally.</li>
+                    </ul>
+                    <li><strong>Touch</strong>:</li>
+                    <ul>
+                      <li><strong>Default:</strong> Engages Touch Automation on currently selected track.</li>
+                      <li>
+                        <strong>Left Shift</strong>: Opens the menu. Within the menu you can set all the options
+                        available in the settings screen. You can use the pan encoder to select the item and set a
+                        value. With pressing you confirm your options. All changes are applied instant, so no reload of
+                        the surface. Pressing the button combination again, will get you to the previous mode. The last
+                        display will show the version number of ReaSonus Native
+                      </li>
+                      <li><strong>Right Shift</strong>: Engages Touch Automation globally.</li>
+                    </ul>
+                    <li><strong>Write</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Write Automation on currently selected track.</li>
+                      <li><strong>Left Shift</strong>: Not implemented yet.</li>
+                      <li><strong>Right Shift</strong>: Engages Write Automation globally.</li>
+                    </ul>
+                    <li><strong>Read</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Read Automation on currently selected track.</li>
+                      <li><strong>Left Shift</strong>: Not implemented yet.</li>
+                      <li><strong>Right Shift</strong>: Engages Read Automation globally.</li>
+                    </ul>
+                  </ol>
                 </section>
-            
-                <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-31-17">
-                    <ol><li><strong>Display</strong>:</li><ul><li><strong>Line 1</strong>: track name</li><li><strong>Line 2</strong>: Track number</li><li><strong>Line 3</strong>: Value Pan 1</li><li><strong>Line 4</strong>: Value Pan 2</li></ul><li><strong>Meter</strong>: Disabled</li><li><strong>Value bar</strong>: Displays the Tracks current volume.</li><li><strong>Pan/Param</strong>:</li><ul><li>Default: Controlls pan value 1 for the currently selected track. Push to set the pan position back to center.</li><li>Left Shift: Controlls pan value2 for the currently selected track. Push to set the pan position back to center.</li></ul><li><strong>Select button</strong>:</li><ul><li>Default: Unique-select the Track. Other Tracks will be de-selected.</li><li>Left Shift: Select the Track. All previous selected Tracks will also stay selected.</li><li>Right Shift: Selects the range of Tracks between the previous </li><li>Arm: Toggle Track arm.</li></ul><li><strong>Solo</strong>:</li><ul><li><strong>Default</strong>: Isolates the corresponding Tracks output signal in the mix.</li><li><strong>Long Press</strong>: Holding the Solo button for longer then half a second makes the button momentary. This means that after releasing the button after that half a second, the value will go to the previous value after release. This can be helpfull for quickly checking a track soloed.</li></ul><li><strong>Mute</strong>:</li><ul><li><strong>Default</strong>: Mutes the corresponding Tracks output signal.</li><li><strong>Long Press</strong>:  Holding the Mute button for longer then half a second makes the button momentary. This means that after releasing the button after that half a second, the value will go to the previous value after release. This can be helpfull for quickly checking with the track muted.</li></ul><li><strong>Touch-Sensitive Fader</strong>:</li><ul><li><strong>Default</strong>:  Control corresponding Pan value</li><li>Touch: When enabled in the settings, usinf <strong>[Left Shift] + Fader Touch</strong> will reset the value</li></ul></ol>
-                    
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>More about Automation Modes</h4>
+                    </header>
+                    <section>
+                      <p>
+                        More info about automation modes can be found in this video by
+                        <a
+                          href="https://reaper.blog/2017/07/reaper-automation-modes-explained/"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          >The REAPER Blog</a
+                        >.
+                      </p>
+                    </section>
+                  </article>
                 </section>
-            
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="general">
+            <article class="blue">
+              <header>
+                <h2>General</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="general" src="/reasonus/reasonus/cms_images/controller_general_b3df0606a3.svg" alt="" />
+                </picture>
+                <section class="content">
+                  <ol>
+                    <li><strong>Encoder</strong>: The behaviour differs per fader mode</li>
+                    <ul>
+                      <li><strong>Track mode</strong>: Rotating the encoder will alter the track pan</li>
+                      <li><strong>Plugin mode</strong>: When in Hui mode this will scroll through the track plugins</li>
+                      <li><strong>Send mode</strong>: When in Hui mode this will scroll through the track sends</li>
+                      <li>
+                        <strong>Receive mode</strong>: When in Hui mode this will scroll through the track receives
+                      </li>
+                      <li><strong>Menu mode</strong>: Scroll through the menu options</li>
+                    </ul>
+                    <li><strong>Encoder Click</strong>:</li>
+                    <ul>
+                      <li>
+                        <strong>Default:</strong> Toggle between pan values (left/right, pan/width, etc), depending on
+                        the track pan mode
+                      </li>
+                      <li><strong>Left Shift</strong>: Reset the pan and with to default values</li>
+                      <li><strong>Menu mode</strong>: Select/confirm by pressing the encoder</li>
+                    </ul>
+                    <li><strong>Arm</strong>:</li>
+                    <ul>
+                      <li>
+                        <strong>Default</strong>: Behaves as a modifier key. Pressing this button will enable you to set
+                        ther record arm with the track Select buttons. A short press of this button will maintain the
+                        pressed state
+                      </li>
+                      <li><strong>Left Shift</strong>: Arm all tracks for recording</li>
+                      <li><strong>Right Shift</strong>: Unarm all tracks for recording</li>
+                    </ul>
+                    <li><strong>Solo Clear</strong>: Unsolo all the tracks soloed tracks</li>
+                    <li><strong>Mute Clear</strong>: Unmute all the muted tracks</li>
+                    <li><strong>ByPass</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Bypass all plugins for the selected tracks</li>
+                      <li><strong>Left Shift</strong>: Bypass all plugins for all the tracks</li>
+                    </ul>
+                    <li><strong>Macro</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Toggle the window for managing the filters.</li>
+                      <li>
+                        <strong>Left </strong>Shift: Toggle the window filters dialog for managing the actions attached
+                        to the function keys.
+                      </li>
+                    </ul>
+                    <li><strong>Link</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>:</li>
+                      <ul>
+                        <li>
+                          When not controlling a plugin, it will make the last fader controll the last touched
+                          parameter. This can be usefull for creating quick envelopes for that parameter. The display
+                          will show info about the plugin, parameter and value. The group of actual track faders will be
+                          7 or 15 from then.
+                        </li>
+                        <li>
+                          When controlling a plugin, it will toggle the plugin map edit mode. You are then able to edit
+                          your plugin mapping
+                        </li>
+                      </ul>
+                      <li><strong>Left Shift</strong>: Toggle following the cursor</li>
+                    </ul>
+                  </ol>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="mix-management">
+            <article class="blue">
+              <header>
+                <h2>Mix Management</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="mix-management"
+                    src="/reasonus/reasonus/cms_images/controller_mix_management_4ff1783721.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <p>
+                    Mix management houses a serie of filters to filter the tracks to ease your mixing even more. Here a
+                    description of all the filter options available
+                  </p>
+                  <ol>
+                    <li><strong>Audio</strong>: Filter all the tracks that have audio items in them</li>
+                    <li><strong>VI</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Filter all tracks with Virtual Instruments</li>
+                      <li><strong>Left Shift</strong>: Filter all tracks with MIDI items</li>
+                    </ul>
+                    <li><strong>Bus</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Show only the top level tracks</li>
+                      <li><strong>Left Shift</strong>: Filter all the tracks with hardware outputs</li>
+                      <li><strong>Right Shift</strong>: Filter all the folder tracks</li>
+                    </ul>
+                    <li><strong>VCA</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Filter all the VCA tracks</li>
+                      <li><strong>Left Shift</strong>: Filter all the tracks with effects attached to them</li>
+                      <li><strong>Right Shift</strong>: Filter all the tracks with receives</li>
+                    </ul>
+                    <li><strong>All</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Reset all the filter and show all the tracks</li>
+                      <li>
+                        Left Shift: Show the custom menu's. This will display all your filters in the track displays.
+                        Use the select button to select the filter. If there are more filters then there are tracks, you
+                        can use the Pan encoder to scroll through the filters
+                      </li>
+                      <li><strong>Right Shift</strong>: Filter all the tracks with sends</li>
+                    </ul>
+                  </ol>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Button Colors</h4>
+                    </header>
+                    <section>
+                      <p>
+                        When selecting a filter the button illuminates and can have one of the three different colors.
+                        This way it is easier to see which filter ypou applied to your mix
+                      </p>
+                      <ul>
+                        <li><strong>White</strong>: When you selected the filter without shift button.</li>
+                        <li>
+                          <strong>Yellow</strong>: When you selected the filter with the <strong>Left Shif</strong>t
+                          button.
+                        </li>
+                        <li>
+                          <strong>Green</strong>: When you selected the filter with the
+                          <strong>Right Shift</strong> button.
+                        </li>
+                      </ul>
+                      <p></p>
+                      <p></p>
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Managing the User Filters</h4>
+                    </header>
+                    <section>
+                      <p>
+                        <strong>ReaSonus Native</strong> has a user interface for managing your filters. More info about
+                        how to manage the User Filters can be found here:
+                        <a href="/reasonus/documentation/goodies/#filters-management">Filters Management</a>.
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="session-navigator">
+            <article class="blue">
+              <header>
+                <h2>Session Navigator</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="session-navigator"
+                    src="/reasonus/reasonus/cms_images/controller_session_c9c9e565aa.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <p>
+                    The Session Navigator provides quick navigation and session controlls. Each button alters the
+                    functions of the push-button encoder and the Next and Prev buttons on either side.
+                  </p>
+                  <ol>
+                    <li><strong>Channel</strong>: Control channel scrolling</li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>: Not implemented</li>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li>
+                      </ul>
+                    </ul>
+                    <li>
+                      <strong>Master</strong>: Control the master channel. When Master fader mode is engaged, the last
+                      channel of the FaderPort will control the master track. The encoder, next and previous button will
+                      handle the selected Session
+                    </li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Sets the volume for the master track</li>
+                        <li><strong>Left Shift</strong>: Set the pan, or left pan for the master track</li>
+                        <li><strong>Right Shift</strong>: Set the width, or right pan for the master track</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Not implemented</li>
+                        <li><strong>Left Shift</strong>: Reset the pan, or left pan for the master track</li>
+                        <li><strong>Right Shift</strong>: Reset the width, or right pan for the master track</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                      </ul>
+                    </ul>
+                    <li><strong>Zoom</strong>: Handle zooming the navigator in Reaper</li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Zoom Reaper out horizontal</li>
+                        <li><strong>Left Shift</strong>: Zoom Reaper out vertical</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Zoom Reaper in/out horizontal</li>
+                        <li><strong>Left Shift</strong>: Zoom Reaper in/out vertical</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Toggle track zoom to minimum height</li>
+                        <li><strong>Left Shift</strong>: Toggle track zoom to maximum height</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Zoom Reaper in horizontal</li>
+                        <li><strong>Left Shift</strong>: Zoom Reaper in vertical</li>
+                      </ul>
+                    </ul>
+                    <li><strong>Click</strong>: Handle the different metronome functions</li>
+                    <ul>
+                      <li><strong>Previous</strong>: Set metronome speed to 1x</li>
+                      <li><strong>Encoder</strong>: Adjust the Metronome volume</li>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Toggle metronome on/off</li>
+                        <li><strong>Left Shift</strong>: Show metronome/pre-roll settings</li>
+                      </ul>
+                      <li><strong>Next</strong>: Set metronome speed to 2x</li>
+                    </ul>
+                    <li><strong>Scroll</strong>: Handle scrolling the navigator in Reaper</li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Scroll Reaper up</li>
+                        <li><strong>Left Shift</strong>: Scroll Reaper left</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Scroll Reaper up/down</li>
+                        <li><strong>Left Shift</strong>: Scroll Reaper left/right</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Vertical scroll selected tracks into view</li>
+                        <li><strong>Left Shift</strong>: Horizontal scroll to put play cursor at 50%</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Scroll Reaper down</li>
+                        <li><strong>Left Shift</strong>: Scroll Reaper right</li>
+                      </ul>
+                    </ul>
+                    <li><strong>Section</strong>: Handle adding, deleting and editing regions</li>
+                    <ul>
+                      <li><strong>Previous</strong>: Filter all tracks with Virtual Instruments</li>
+                      <ul>
+                        <li><strong>Default</strong>: Goto/select previous marker/region</li>
+                        <li><strong>Left Shift</strong>: Set the start point for a new section</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Move edit cursor forward/backward one beat</li>
+                        <li><strong>Left Shift</strong>: Move cursor left/right one pixel</li>
+                        <li><strong>Right Shift</strong>: Move cursor left/right, creating time selection</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Edit region near cursor</li>
+                        <li><strong>Left Shift</strong>: Insert region from time selection and edit</li>
+                        <li><strong>Right Shift</strong>: Delete region near cursor</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Goto/select next marker/region</li>
+                        <li><strong>Left Shift</strong>: Set the end point for a new section</li>
+                      </ul>
+                    </ul>
+                    <li>
+                      <strong>Bank</strong>: Control bank scrolling. Depending on your controller with 8 or 16 channels
+                    </li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>: Not implemented</li>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li>
+                        <li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li>
+                      </ul>
+                    </ul>
+                    <li><strong>Marker</strong>: Handle adding, deleting and editing markers</li>
+                    <ul>
+                      <li><strong>Previous</strong>: Goto/select previous marker/region</li>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Move edit cursor forward/backward one beat</li>
+                        <li><strong>Left Shift</strong>: Move cursor left/right one pixel</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Insert marker at current position</li>
+                        <li><strong>Left Shift</strong>: Insert and/or edit marker at current position</li>
+                        <li><strong>Right Shift</strong>: Delete marker near cursor</li>
+                      </ul>
+                      <li><strong>Next</strong>: Goto/select next marker/region</li>
+                    </ul>
+                  </ol>
+                  <p></p>
+                  <p></p>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Master fader mode</h4>
+                    </header>
+                    <section>
+                      <p>
+                        When master fader mode is engaged and the master button is pressed, the last channel of the
+                        FaderPort will control the master track. This will:
+                      </p>
+                      <ul>
+                        <li>Let you control the master fader, mute and solo button</li>
+                        <li>
+                          Let you control the automation mode of the master track (track should be selected as with the
+                          other tracks)
+                        </li>
+                        <li>Let you control the Master track plugins</li>
+                      </ul>
+                      <p>
+                        Sends and Receives do not work for the master track as it is not supported for the master track
+                        in Reaper
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="function-controls">
+            <article class="blue">
+              <header>
+                <h2>Function Controls</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="function-controls"
+                    src="/reasonus/reasonus/cms_images/controller_function_5faeccda5f.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <p>
+                    Each of the eight buttons also gives you acces to configurable functions by pressing the
+                    <strong>Left Shift</strong> buttons together with these buttons
+                  </p>
+                  <ul>
+                    <li><strong>F1</strong>: Custom function (user defined)</li>
+                    <li><strong>F2</strong>: Custom function (user defined)</li>
+                    <li><strong>F3</strong>: Custom function (user defined)</li>
+                    <li><strong>F4</strong>: Custom function (user defined)</li>
+                    <li><strong>F5</strong>: Custom function (user defined)</li>
+                    <li><strong>F6</strong>: Custom function (user defined)</li>
+                    <li><strong>F7</strong>: Custom function (user defined)</li>
+                    <li><strong>F8</strong>: Custom function (user defined)</li>
+                  </ul>
+                  <p></p>
+                  <p></p>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Managing the functions</h4>
+                    </header>
+                    <section>
+                      <p>
+                        <strong>ReaSonus Native</strong> has a user interface for managing your Functions. More info
+                        about how to manage the Functions can be found here:
+                        <a href="/reasonus/documentation/goodies/#functions-management">Functions Management</a>.
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
         </section>
-    </section>
+      </section>
 
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>HUI or Track mode</h4>
-        </header>
-        <section>
-            
-                <p>For the <strong>Plugin</strong>, <strong>Send</strong> and <strong>Receive</strong> Fader modes, when you open them first, they open in <strong>HUI</strong> mode. In this mode you controll all plugins, sends and receives from the respective channel. In the display you see a counter for the number of items and the current selected one. You can use the Pan encoder to scroll though the items.</p>
-                
-                    <img class="undefined" src="/reasonus/cms_images/hui_mode_69105f44aa.svg" alt="">
-                
-            
-                <p>In Track mode (press the button again to get here), all the plugins, sends and receives of the first selected track are spread over the tracks. If there are more items then the number of channels you can use the Pan encoder to scroll to the next items. The selected track is highlighted.</p>
-                
-                    <img class="undefined" src="/reasonus/cms_images/track_mode_d41ca208a5.svg" alt="">
-                
-            
-        </section>
-    </article>
-
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Pan values</h4>
-        </header>
-        <section>
-            
-                <p>Reaper has 3 pan modes. Depending on the choosen mode, there are 1 or 2 pan values.</p><ul><li><strong>Stereo Balance/Mono Pa</strong>n: This is the default and in REAPER you'll see only one pan knob/fader. In this mode <strong>Pan Value 2</strong> has no function</li><li><strong>Stereo Pan</strong>: This mode has 2 values. <strong>Pan Value 1</strong> is for Left/Right panning and <strong>Pan Value 2</strong> for the width</li><li><strong>Dual Pan</strong>: This mode has 2 values. <strong>Pan Value 1</strong> is for Left panning value and <strong>Pan Value 2</strong> for the right panning value</li></ul><p>The last will show 2 knobs/faders in REAPER for panning. You can find more info about the <strong>Panning Modes</strong> in the REAPER documentation</p><p></p>
-                
-            
-        </section>
-    </article>
-
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Shift buttons</h4>
-        </header>
-        <section>
-            
-                <p>The <strong>FaderPort</strong> has 2 <strong>Shift</strong> buttons, one on the left and one on the right side of the faders. There are functions the need one of the <strong>Shift</strong> buttons to be pressed as well.</p><p>By short pressing one of the Shift buttons it will get engaged constant for most controls except the fader modes.</p><p>In the settings is an option to swap the left and right shift buttons.</p>
-                
-            
-        </section>
-    </article>
-
-            
-        </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
-
-
-<div class="documentation-block" id="transport">
-  <article class="blue">
-    <header>
-      <h2>Transport</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="transport" src="/reasonus/cms_images/controller_transport_f5bf14c98b.svg" alt="">
-    </picture>
-    <section class="content">
-        <ol><li><strong>Stop</strong>: Stops playback.</li><li><strong>Loop</strong>: Engages / disengages Looping</li><li><strong>Play / Pause</strong>: Starts playback at the current playback- cursor position. Press again to pause playback.</li><li><strong>Rewind:</strong></li><ul><li><strong>Default</strong>: Rewinds in a slow pace. You can toggle the speed by pressing the button. All the other keys will stop the rewind</li><li><strong>Left Shift</strong>: Go to the start of the project</li></ul><li><strong>Fast Forward</strong>:</li><ul><li><strong>Default</strong>: Fast Forwards in a slow pace. You can toggle the speed by pressing the button. All the other keys will stop the Fast Forward</li><li><strong>Left Shift</strong>: Go to the end of the project</li></ul><li><strong>Record</strong>: Press to start recording at the current playback-cursor position for record-enabled tracks.
-
-</li></ol>
-        
-    </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
-
-
-<div class="documentation-block" id="automation">
-  <article class="blue">
-    <header>
-      <h2>Automation</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="automation" src="/reasonus/cms_images/controller_automation_80f8296821.svg" alt="">
-    </picture>
-    <section class="content">
-        <ol><li><strong>Latch</strong>:</li><ul><li><strong>Default</strong>: Engages Latch Automation on currently selected track.</li><li><strong>Left Shift</strong>: Save your session.</li><li><strong>Right Shift</strong>: Engages Latch Automation globally.</li></ul><li><strong>Trim</strong>:</li><ul><li><strong>Default</strong>: Engages Trim Automation on currently selected track.</li><li><strong>Left Shift</strong>: Redo the last action.</li><li><strong>Right Shift</strong>: Engages Trim Automation globally.</li></ul><li><strong>Off</strong>:</li><ul><li><strong>Default</strong>: Engages Latch Preview Automation on currently selected track.</li><li><strong>Left Shift</strong>: Undo the last action.</li><li><strong>Right Shift</strong>: Engages Latch Preview Automation globally.</li></ul><li><strong>Touch</strong>:</li><ul><li><strong>Default:</strong> Engages Touch Automation on currently selected track.</li><li><strong>Left Shift</strong>: Opens the menu. Within the menu you can set all the options available in the settings screen. You can use the pan encoder to select the item and set a value. With pressing you confirm your options. All changes are applied instant, so no reload of the surface. Pressing the button combination again, will get you to the previous mode. The last display will show the version number of ReaSonus Native</li><li><strong>Right Shift</strong>: Engages Touch Automation globally.</li></ul><li><strong>Write</strong>:</li><ul><li><strong>Default</strong>: Engages Write Automation on currently selected track.</li><li><strong>Left Shift</strong>: Not implemented yet.</li><li><strong>Right Shift</strong>: Engages Write Automation globally.</li></ul><li><strong>Read</strong>:</li><ul><li><strong>Default</strong>: Engages Read Automation on currently selected track.</li><li><strong>Left Shift</strong>: Not implemented yet.</li><li><strong>Right Shift</strong>: Engages Read Automation globally.
-
-</li></ul></ol>
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>More about Automation Modes</h4>
-        </header>
-        <section>
-            
-                <p>More info about automation modes can be found in this video by <a href="https://reaper.blog/2017/07/reaper-automation-modes-explained/" target="_blank" rel="noreferrer noopener">The REAPER Blog</a>.</p>
-                
-            
-        </section>
-    </article>
-
-            
-        </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
-
-
-<div class="documentation-block" id="general">
-  <article class="blue">
-    <header>
-      <h2>General</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="general" src="/reasonus/cms_images/controller_general_b3df0606a3.svg" alt="">
-    </picture>
-    <section class="content">
-        <ol><li><strong>Encoder</strong>: The behaviour differs per fader mode</li><ul><li><strong>Track mode</strong>: Rotating the encoder will alter the track pan</li><li><strong>Plugin mode</strong>: When in Hui mode this will scroll through the track plugins</li><li><strong>Send mode</strong>: When in Hui mode this will scroll through the track sends</li><li><strong>Receive mode</strong>: When in Hui mode this will scroll through the track receives</li><li><strong>Menu mode</strong>: Scroll through the menu options</li></ul><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default:</strong> Toggle between pan values (left/right, pan/width, etc), depending on the track pan mode</li><li><strong>Left Shift</strong>: Reset the pan and with to default values</li><li><strong>Menu mode</strong>: Select/confirm by pressing the encoder</li></ul><li><strong>Arm</strong>:</li><ul><li><strong>Default</strong>: Behaves as a modifier key. Pressing this button will enable you to set ther record arm with the track Select buttons. A short press of this button will maintain the pressed state</li><li><strong>Left Shift</strong>: Arm all tracks for recording</li><li><strong>Right Shift</strong>: Unarm all tracks for recording</li></ul><li><strong>Solo Clear</strong>: Unsolo all the tracks soloed tracks</li><li><strong>Mute Clear</strong>: Unmute all the muted tracks</li><li><strong>ByPass</strong>:</li><ul><li><strong>Default</strong>: Bypass all plugins for the selected tracks</li><li><strong>Left Shift</strong>: Bypass all plugins for all the tracks</li></ul><li><strong>Macro</strong>:</li><ul><li><strong>Default</strong>: Toggle the window for managing the filters.</li><li><strong>Left </strong>Shift: Toggle the window filters dialog for managing the actions attached to the function keys.</li></ul><li><strong>Link</strong>:</li><ul><li><strong>Default</strong>:</li><ul><li>When not controlling a plugin, it will make the last fader controll the last touched parameter. This can be usefull for creating quick envelopes for that parameter. The display will show info about the plugin, parameter and value. The group of actual track faders will be 7 or 15 from then.</li><li>When controlling a plugin, it will toggle the plugin map edit mode. You are then able to edit your plugin mapping</li></ul><li><strong>Left Shift</strong>: Toggle following the cursor
-
-</li></ul></ol>
-        
-    </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
-
-
-<div class="documentation-block" id="mix-management">
-  <article class="blue">
-    <header>
-      <h2>Mix Management</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="mix-management" src="/reasonus/cms_images/controller_mix_management_4ff1783721.svg" alt="">
-    </picture>
-    <section class="content">
-        <p>Mix management houses a serie of filters to filter the tracks to ease your mixing even more. Here a description of all the filter options available</p><ol><li><strong>Audio</strong>: Filter all the tracks that have audio items in them</li><li><strong>VI</strong>:</li><ul><li><strong>Default</strong>: Filter all tracks with Virtual Instruments</li><li><strong>Left Shift</strong>: Filter all tracks with MIDI items</li></ul><li><strong>Bus</strong>:</li><ul><li><strong>Default</strong>: Show only the top level tracks</li><li><strong>Left Shift</strong>: Filter all the tracks with hardware outputs</li><li><strong>Right Shift</strong>: Filter all the folder tracks</li></ul><li><strong>VCA</strong>:</li><ul><li><strong>Default</strong>: Filter all the VCA tracks</li><li><strong>Left Shift</strong>: Filter all the tracks with effects attached to them</li><li><strong>Right Shift</strong>: Filter all the tracks with receives</li></ul><li><strong>All</strong>:</li><ul><li><strong>Default</strong>: Reset all the filter and show all the tracks</li><li>Left Shift: Show the custom menu's. This will display all your filters in the track displays. Use the select button to select the filter. If there are more filters then there are tracks, you can use the Pan encoder to scroll through the filters</li><li><strong>Right Shift</strong>: Filter all the tracks with sends
-</li></ul></ol>
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Button Colors</h4>
-        </header>
-        <section>
-            
-                <p>When selecting a filter the button illuminates and can have one of the three different colors. This way it is easier to see which filter ypou applied to your mix</p><ul><li><strong>White</strong>: When you selected the filter without shift button.</li><li><strong>Yellow</strong>: When you selected the filter with the <strong>Left Shif</strong>t button.</li><li><strong>Green</strong>: When you selected the filter with the <strong>Right Shift</strong> button.</li></ul><p></p><p></p>
-                
-            
-        </section>
-    </article>
-
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Managing the User Filters</h4>
-        </header>
-        <section>
-            
-                <p><strong>ReaSonus Native</strong> has a user interface for managing your filters. More info about how to manage the User Filters can be found here: <a href="/documentation/goodies/#filters-management">Filters Management</a>.</p>
-                
-            
-        </section>
-    </article>
-
-            
-        </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
-
-
-<div class="documentation-block" id="session-navigator">
-  <article class="blue">
-    <header>
-      <h2>Session Navigator</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="session-navigator" src="/reasonus/cms_images/controller_session_c9c9e565aa.svg" alt="">
-    </picture>
-    <section class="content">
-        <p>The Session Navigator provides quick navigation and session controlls. Each button alters the functions of the push-button encoder and the Next and Prev buttons on either side.</p><ol><li><strong>Channel</strong>: Control channel scrolling</li><ul><li><strong>Previous</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li></ul><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li></ul><li><strong>Encoder Click</strong>: Not implemented</li><li><strong>Next</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li></ul></ul><li><strong>Master</strong>: Control the master channel. When Master fader mode is engaged, the last channel of the FaderPort will control the master track. The encoder, next and previous button will handle the selected Session</li><ul><li><strong>Previous</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li></ul><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Sets the volume for the master track</li><li><strong>Left Shift</strong>: Set the pan, or left pan for the master track</li><li><strong>Right Shift</strong>: Set the width, or right pan for the master track</li></ul><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default</strong>: Not implemented</li><li><strong>Left Shift</strong>: Reset the pan, or left pan for the master track</li><li><strong>Right Shift</strong>: Reset the width, or right pan for the master track</li></ul><li><strong>Next</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 8/16 tracks</li></ul></ul><li><strong>Zoom</strong>: Handle zooming the navigator in Reaper</li><ul><li><strong>Previous</strong>:</li><ul><li><strong>Default</strong>: Zoom Reaper out horizontal</li><li><strong>Left Shift</strong>: Zoom Reaper out vertical</li></ul><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Zoom Reaper in/out horizontal</li><li><strong>Left Shift</strong>: Zoom Reaper in/out vertical</li></ul><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default</strong>: Toggle track zoom to minimum height</li><li><strong>Left Shift</strong>: Toggle track zoom to maximum height</li></ul><li><strong>Next</strong>:</li><ul><li><strong>Default</strong>: Zoom Reaper in horizontal</li><li><strong>Left Shift</strong>: Zoom Reaper in vertical</li></ul></ul><li><strong>Click</strong>: Handle the different metronome functions</li><ul><li><strong>Previous</strong>: Set metronome speed to 1x</li><li><strong>Encoder</strong>: Adjust the Metronome volume</li><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default</strong>: Toggle metronome on/off</li><li><strong>Left Shift</strong>: Show metronome/pre-roll settings</li></ul><li><strong>Next</strong>: Set metronome speed to 2x</li></ul><li><strong>Scroll</strong>: Handle scrolling the navigator in Reaper</li><ul><li><strong>Previous</strong>:</li><ul><li><strong>Default</strong>: Scroll Reaper up</li><li><strong>Left Shift</strong>: Scroll Reaper left</li></ul><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Scroll Reaper up/down</li><li><strong>Left Shift</strong>: Scroll Reaper left/right</li></ul><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default</strong>: Vertical scroll selected tracks into view</li><li><strong>Left Shift</strong>: Horizontal scroll to put play cursor at 50%</li></ul><li><strong>Next</strong>:</li><ul><li><strong>Default</strong>: Scroll Reaper down</li><li><strong>Left Shift</strong>: Scroll Reaper right</li></ul></ul><li><strong>Section</strong>: Handle adding, deleting and editing regions</li><ul><li><strong>Previous</strong>: Filter all tracks with Virtual Instruments</li><ul><li><strong>Default</strong>: Goto/select previous marker/region</li><li><strong>Left Shift</strong>: Set the start point for a new section</li></ul><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Move edit cursor forward/backward one beat</li><li><strong>Left Shift</strong>: Move cursor left/right one pixel</li><li><strong>Right Shift</strong>: Move cursor left/right, creating time selection</li></ul><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default</strong>: Edit region near cursor</li><li><strong>Left Shift</strong>: Insert region from time selection and edit</li><li><strong>Right Shift</strong>: Delete region near cursor</li></ul><li><strong>Next</strong>:</li><ul><li><strong>Default</strong>: Goto/select next marker/region</li><li><strong>Left Shift</strong>: Set the end point for a new section</li></ul></ul><li><strong>Bank</strong>: Control bank scrolling. Depending on your controller with 8 or 16 channels</li><ul><li><strong>Previous</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li></ul><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li></ul><li><strong>Encoder Click</strong>: Not implemented</li><li><strong>Next</strong>:</li><ul><li><strong>Default</strong>: Moves the faderbank by steps of 8/16 tracks</li><li><strong>Left Shift</strong>: Moves the faderbank by steps of 1 track</li></ul></ul><li><strong>Marker</strong>: Handle adding, deleting and editing markers</li><ul><li><strong>Previous</strong>: Goto/select previous marker/region</li><li><strong>Encoder</strong>:</li><ul><li><strong>Default</strong>: Move edit cursor forward/backward one beat</li><li><strong>Left Shift</strong>: Move cursor left/right one pixel</li></ul><li><strong>Encoder Click</strong>:</li><ul><li><strong>Default</strong>: Insert marker at current position</li><li><strong>Left Shift</strong>: Insert and/or edit marker at current position</li><li><strong>Right Shift</strong>: Delete marker near cursor</li></ul><li><strong>Next</strong>: Goto/select next marker/region</li></ul></ol><p></p><p></p>
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Master fader mode</h4>
-        </header>
-        <section>
-            
-                <p>When master fader mode is engaged and the master button is pressed, the last channel of the FaderPort will control the master track. This will:</p><ul><li>Let you control the master fader, mute and solo button</li><li>Let you control the automation mode of the master track (track should be selected as with the other tracks)</li><li>Let you control the Master track plugins</li></ul><p>Sends and Receives do not work for the master track as it is not supported for the master track in Reaper </p>
-                
-            
-        </section>
-    </article>
-
-            
-        </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
-
-
-<div class="documentation-block" id="function-controls">
-  <article class="blue">
-    <header>
-      <h2>Function Controls</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="function-controls" src="/reasonus/cms_images/controller_function_5faeccda5f.svg" alt="">
-    </picture>
-    <section class="content">
-        <p>Each of the eight buttons also gives you acces to configurable functions by pressing the <strong>Left Shift</strong> buttons together with these buttons</p><ul><li><strong>F1</strong>: Custom function (user defined)</li><li><strong>F2</strong>: Custom function (user defined)</li><li><strong>F3</strong>: Custom function (user defined)</li><li><strong>F4</strong>: Custom function (user defined)</li><li><strong>F5</strong>: Custom function (user defined)</li><li><strong>F6</strong>: Custom function (user defined)</li><li><strong>F7</strong>: Custom function (user defined)</li><li><strong>F8</strong>: Custom function (user defined)</li></ul><p></p><p></p>
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Managing the functions</h4>
-        </header>
-        <section>
-            
-                <p><strong>ReaSonus Native</strong> has a user interface for managing your Functions. More info about how to manage the Functions can be found here: <a href="/documentation/goodies/#functions-management">Functions Management</a>.</p>
-                
-            
-        </section>
-    </article>
-
-            
-        </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-    </section>
-  </section>
-  
-<footer class="footer">
-    <section class="footer-content">
-        <ul class="link-list">
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
             <li>
-                <a href="https://github.com/navelpluisje/Reasonus-Native">
-                    <img src="/reasonus/images/icon-github.svg" alt=""> Repository
-                </a>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/reasonus/images/icon-github.svg" alt="" /> Repository
+              </a>
             </li>
             <li>
-                <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
-                    <img src="/reasonus/images/icon-bug.svg" alt="">Report an issue</a>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/reasonus/images/icon-bug.svg" alt="" />Report an issue</a
+              >
             </li>
             <li>
-                <a href="https://forum.cockos.com/showthread.php?t=267116">
-                    <img src="/reasonus/images/icon-chat.svg" alt="">Discussion</a>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/reasonus/images/icon-chat.svg" alt="" />Discussion</a
+              >
             </li>
             <li>
-                <a href="https://buymeacoffee.com/navelpluisje">
-                    <img src="/reasonus/images/icon-coffee.svg" alt="">Buy me some coffee</a>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/reasonus/images/icon-coffee.svg" alt="" />Buy me some coffee</a
+              >
             </li>
-        </ul>
+          </ul>
+        </section>
+      </footer>
     </section>
-</footer>
-</section>
-        <script src="/reasonus/javascript/n0P_KT6K2G.js"></script>
-    </body>
+    <script src="/reasonus/reasonus/javascript/PXd_SpCJ7f.js"></script>
+  </body>
 </html>

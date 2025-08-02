@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>ReaSonus Native</title>
+  <subtitle></subtitle>
+  <link href="https://navelpluisje.github.io/reasonus/feed.xml" rel="self" />
+  <link href="https://navelpluisje.github.io/reasonus/" />
+  <updated>2025-07-31T16:49:28.810Z</updated>
+  <id>https://navelpluisje.github.io/reasonus/reasonus/</id>
+  <author>
+    <name>Erwin Goossen (Navelpluisje)</name>
+  </author>
+  <entry>
+    <title>New ReaSonus version (v0.2.0)</title>
+    <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-2-0" />
+    <updated>2025-07-31T16:49:28.810Z</updated>
+    <id>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-2-0</id>
+    <content type="html">
+      &lt;p&gt;A new version of ReaSonus Native has been released. &lt;/p&gt;&lt;h3&gt;What&#39;s
+      Changed&lt;/h3&gt;&lt;h4&gt;All devices&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Better dialog handling via actions. Show
+      meassage when dialog not supported for installed device&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;FaderPort
+      8/16&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Added Master Fader Mode with plugin control. The Master button makes the last
+      track control the master track.&lt;/li&gt;&lt;li&gt;Added Master Fader Automation&lt;/li&gt;&lt;li&gt;Fixed issue
+      with wrong assigned solo buttons on FP16&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;FaderPort
+      V2&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Added separate action for functions dialog&lt;/li&gt;&lt;li&gt;Disable fader and
+      controls when no track selected&lt;/li&gt;&lt;li&gt;Make all the track buttons work on master track as
+      well&lt;/li&gt;&lt;li&gt;Added option to select and control hidden selected tracks
+      &lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Install&lt;/h3&gt;&lt;p&gt;ReaSonus Native is now available in ReaPack. There is
+      no need to add a repository, but works out-of-the-box. In ReaPack search for &lt;code&gt;ReaSonus&lt;/code&gt; and
+      you can install it.&lt;/p&gt;&lt;h3&gt;Documentation&lt;/h3&gt;&lt;p&gt;Documentation can be found here. If you
+      see typo&#39;s or other issues with the documentation, please report them, so the documentation can get
+      updated.&lt;/p&gt;&lt;p&gt;Thanx to anyone reporting issues and help me debug
+      them.&lt;/p&gt;&lt;blockquote&gt;Full Changelog: &lt;a
+      href=https://github.com/navelpluisje/Reasonus-Native/compare/0.1.4...0.2.0 target=&quot;_blank&quot;
+      rel=&quot;noreferrer
+      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.1.4...0.2.0&lt;/a&gt;&lt;/blockquote&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>New ReaSonus version (v0.1.4)</title>
+    <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-1-4" />
+    <updated>2025-07-30T14:21:33.982Z</updated>
+    <id>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-1-4</id>
+    <content type="html">
+      &lt;p&gt;A new version of ReaSonus Native has been release. &lt;/p&gt;&lt;h3&gt;What&#39;s
+      Changed&lt;/h3&gt;&lt;h4&gt;All devices&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Fixed functions and filters dialog states
+      (After closing the dialog, you had to click the button twice)&lt;/li&gt;&lt;li&gt;Added the version number to the
+      settings dialog&lt;/li&gt;&lt;li&gt;Show the correct functions window when calling it from the actions
+      list&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;FaderPort 8/16&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Fixed issue where pressing the
+      link button with no tracks crashed Reaper&lt;/li&gt;&lt;li&gt;When loading larger project, some buttons were not
+      lit&lt;/li&gt;&lt;li&gt;Reset the faders and buttons on load and close of a project and
+      reaper&lt;/li&gt;&lt;li&gt;When closing Reaper a good bye message is displayed&lt;/li&gt;&lt;li&gt;Right Shift
+      Select now selected a range&lt;/li&gt;&lt;li&gt;Added setting to untouch the l;ast touched param after learn in
+      menu mapping&lt;/li&gt;&lt;li&gt;Added descriptions to the on-device menu&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;FaderPort
+      V2&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Set next visible item as selected when selected track is not
+      visible&lt;/li&gt;&lt;li&gt;Some V2 session
+      improvements&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Install&lt;/h3&gt;&lt;p&gt;ReaSonus Native is now available in
+      ReaPack. There is no need to add a repository, but works out-of-the-box. In ReaPack search for
+      &lt;code&gt;ReaSonus&lt;/code&gt; and you can install
+      it.&lt;/p&gt;&lt;h3&gt;Documentation&lt;/h3&gt;&lt;p&gt;Documentation can be found here. If you see typo&#39;s or
+      other issues with the documentation, please report them, so the documentation can get
+      updated.&lt;/p&gt;&lt;p&gt;Thanx to anyone reporting issues and help me debug
+      them.&lt;/p&gt;&lt;blockquote&gt;Full Changelog: &lt;a
+      href=https://github.com/navelpluisje/Reasonus-Native/compare/0.1.3...0.1.4 target=&quot;_blank&quot;
+      rel=&quot;noreferrer
+      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.1.3...0.1.4&lt;/a&gt;&lt;/blockquote&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>New ReaSonus version (v0.1.3)</title>
+    <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-1-3" />
+    <updated>2025-07-30T14:15:08.060Z</updated>
+    <id>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-1-3</id>
+    <content type="html">
+      &lt;p&gt;A new version of ReaSonus Native has been release. &lt;/p&gt;&lt;h3&gt;What&#39;s
+      Changed&lt;/h3&gt;&lt;h4&gt;All devices&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Fixed issue with resetted function ids on
+      Reaper startup&lt;/li&gt;&lt;li&gt;Quite some pan fixed for all devices and both master and track
+      channels&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;FaderPort 8/16&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Display fix for the FaderPort
+      16&lt;/li&gt;&lt;li&gt;Fixed issue where Reaper could crash when editting a non-existing
+      filter&lt;/li&gt;&lt;li&gt;Improved the behaviour of Parent Select for the filters&lt;/li&gt;&lt;li&gt;Fixed
+      filter key issue when adding filters too quick&lt;/li&gt;&lt;li&gt;Added version number to the
+      menu&lt;/li&gt;&lt;li&gt;Unselect all tracks before solo-select&lt;/li&gt;&lt;li&gt;Fixed issue with time code
+      when ruler was selected.&lt;/li&gt;&lt;li&gt;Now displays time code when nb of trachs is
+      minimal&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;FaderPort V2&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Set next visible item as
+      selected when selected track is not visible&lt;/li&gt;&lt;li&gt;Some V2 session
+      improvements&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Install&lt;/h3&gt;&lt;p&gt;ReaSonus Native is now available in
+      ReaPack. There is no need to add a repository, but works out-of-the-box. In ReaPack search for
+      &lt;code&gt;ReaSonus&lt;/code&gt; and you can install
+      it.&lt;/p&gt;&lt;h3&gt;Documentation&lt;/h3&gt;&lt;p&gt;Documentation can be found here. If you see typo&#39;s or
+      other issues with the documentation, please report them, so the documentation can get
+      updated.&lt;/p&gt;&lt;p&gt;Thanx to anyone reporting issues and help me debug
+      them.&lt;/p&gt;&lt;blockquote&gt;Full Changelog: &lt;a
+      href=https://github.com/navelpluisje/Reasonus-Native/compare/v0.1.1...0.1.3 target=&quot;_blank&quot;
+      rel=&quot;noreferrer
+      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/v0.1.1...0.1.3&lt;/a&gt;&lt;/blockquote&gt;
+    </content>
+  </entry>
+</feed>

@@ -2,7 +2,7 @@
   const menuItems = document.querySelectorAll(".menu .sub a");
   function handleAnchorClick(event) {
     const rootFontSize = parseFloat(
-      window.getComputedStyle(document.body).getPropertyValue("font-size")
+      window.getComputedStyle(document.body).getPropertyValue("font-size"),
     );
     event.preventDefault();
     const link = event.currentTarget;

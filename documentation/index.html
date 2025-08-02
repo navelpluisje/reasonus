@@ -1,376 +1,410 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ReaSonus :: Let&#39;s Start</title>
-        <link rel="icon" href="/reasonus/images/favicon.svg">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/reasonus/styles/ROMejcehpd.css">
-        <link rel="stylesheet" href="/reasonus/styles/reG_5ZZFip.css">
-    </head>
-    <body>
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: Let&#39;s Start</title>
+    <link rel="icon" href="/reasonus/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/reasonus/styles/kM5ZwruLA6.css" />
+    <link rel="stylesheet" href="/reasonus/reasonus/styles/9KSF9ZMKNe.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/reasonus/">
+          <img src="/reasonus/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo"
+        /></a>
+      </header>
+      <section class="center">
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red active">
+                <a href="/reasonus/reasonus/documentation/">Lets Start</a>
+              </li>
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#lets-start"> Lets Start </a>
+                </li>
 
-<section class="documentation-page">
-  
-<header class="header">
-    <a href="/reasonus/">
-        <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo"></a>
-    </header>
-  <section class="center">
-    
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#installation"> Installation </a>
+                </li>
 
-<aside class="menu">
-  <nav>
-    <ul>
-      
-        
-          
-        
-        <li class="main red active">
-          <a href="/reasonus/documentation/">Lets Start</a>
-        </li>
-        <ul>
-          
-            <li class="sub red">
-              <a on:click="{handleAnchorClick}" href="#lets-start">
-                Lets Start
-              </a>
-            </li>
-          
-            <li class="sub red">
-              <a on:click="{handleAnchorClick}" href="#installation">
-                Installation
-              </a>
-            </li>
-          
-            <li class="sub red">
-              <a on:click="{handleAnchorClick}" href="#settings">
-                Settings
-              </a>
-            </li>
-          
-        </ul>
-      
-        
-          
-        
-        <li class="main blue ">
-          <a href="/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
-        </li>
-        <ul>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#fader-modes">
-                Fader Modes
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#transport">
-                Transport
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#automation">
-                Automation
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#general">
-                General
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#mix-management">
-                Mix Management
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#session-navigator">
-                Session Navigator
-              </a>
-            </li>
-          
-            <li class="sub blue">
-              <a on:click="{handleAnchorClick}" href="#function-controls">
-                Function Controls
-              </a>
-            </li>
-          
-        </ul>
-      
-        
-          
-        
-        <li class="main green ">
-          <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
-        </li>
-        <ul>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#track">
-                Track
-              </a>
-            </li>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#transport">
-                Transport
-              </a>
-            </li>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#session-navigator">
-                Session Navigator
-              </a>
-            </li>
-          
-            <li class="sub green">
-              <a on:click="{handleAnchorClick}" href="#function-control">
-                Function Control
-              </a>
-            </li>
-          
-        </ul>
-      
-        
-          
-        
-        <li class="main gray ">
-          <a href="/reasonus/documentation/goodies/">Goodies</a>
-        </li>
-        <ul>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#plugin-mapping">
-                Plugin Mapping
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#functions-management">
-                Functions Management
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#filters-management">
-                Filters Management
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#reasonus-actions">
-                ReaSonus Actions
-              </a>
-            </li>
-          
-            <li class="sub gray">
-              <a on:click="{handleAnchorClick}" href="#remove-old-version">
-                Remove old version
-              </a>
-            </li>
-          
-        </ul>
-      
-    </ul>
-  </nav>
-</aside>
-    <section class="page-content">
-      
-        
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+              </ul>
 
+              <li class="main blue">
+                <a href="/reasonus/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
+              </li>
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
+                </li>
 
-<div class="documentation-block" id="lets-start">
-  <article class="red">
-    <header>
-      <h2>Lets Start</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="lets-start" src="/reasonus/cms_images/favicon_ac742ea7c9.svg" alt="">
-    </picture>
-    <section class="content">
-        <p>Welcome to <strong>ReaSonus Native</strong> documentation</p><p>The documentation should guide you through the functionalities of <strong>ReaSonus Native</strong>. The first part is about installation and settings</p><p>The second part will explain all the controlls of the <strong>FaderPort</strong>: what they do, when they do it, and so on.</p><p>The last part explains the goodies in <strong>ReaSonus Native</strong> like filter management, managing the functions and plugin mapping</p><p>If one of the screenshots is not as clear as you would like, open it in real life. Nothing as good as the real deal</p><p></p>
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>Will be appreciated</h4>
-        </header>
-        <section>
-            
-                <p><strong>ReaSonus Native</strong> is a free and open source project, but takes some time and effort to create and maintain. It is not required of course but a donation for maintaining would be highly appreciated. This will, for example, be used for maintaining the Windows version, because I do not own a Windows machine.</p><p>Donations can be made via the link in the footer.</p>
-                
-            
-        </section>
-    </article>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#transport"> Transport </a>
+                </li>
 
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>The big Thanx</h4>
-        </header>
-        <section>
-            
-                <p>This project would not have been possible without you, reading this. But also a big thanx goes to the following people:</p><ul><li>Geoff Waddington, The man behind the impressive CSI. Without the CSI project, this would probably never been created.</li><li>Cfillion, for helping me out with some annoyances I ran into with C++ and CMake.</li><li>All volunteers helping with testing, reviewing the documentation and being patient.</li></ul><p></p><p></p>
-                
-            
-        </section>
-    </article>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#automation"> Automation </a>
+                </li>
 
-            
-        </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#general"> General </a>
+                </li>
 
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#mix-management"> Mix Management </a>
+                </li>
 
-<div class="documentation-block" id="installation">
-  <article class="red">
-    <header>
-      <h2>Installation</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="installation" src="/reasonus/cms_images/icon_github_color_f2868bfd43.svg" alt="">
-    </picture>
-    <section class="content">
-        <h3>Before you start</h3><p><strong>ReaSonus Native</strong> has the following dependencies:</p><p><strong>SWS</strong>: If you have not installed it yet, you can download it from the SWS website</p><p>Also your <strong>FaderPort</strong> should be in <strong>Studio One mode</strong>. You can check the manual for more info about that </p><h3>ReaPack</h3><p>By far the easiest way to install <strong>ReaSonus Native</strong> is via <strong>ReaPack</strong>.</p><p>In <strong>REAPER</strong> open <strong>ReaPack</strong>, search for '<strong>ReaSonus</strong>'. Select 'ReaSonus Native' and install it.</p><h3>Manual installation</h3><p>For manual install ReaSonus Native you have to download the latest version and move it to the correct folder</p><p>Download ReaSonus Native</p><p>In <strong>Reaper</strong>, go to <code>Options->Show REAPER resource in Explorer/Finder</code>. This will open the folder with all the <strong>REAPER</strong> files. In this folder, open the UserPlugins folder and copy the downloaded ReaSonus extension to the folder.</p><h3>Nice Extras</h3><p>REAPER does not reinitialize midi devices when they get activated with REAPER already running. You can in that case open the preferences, open the settings page of ReaSonus Native under Control/OSC/Web and close it again.</p><p>To make this a bit easier you could add another extension named reaper_automidireset. This performs the reset automatically in the background. More info here on the Forum</p><p></p>
-        
-    </section>
-    
-</section>
-    
-  </article>
-</div>
-      
-        
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#session-navigator"> Session Navigator </a>
+                </li>
 
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
 
-<div class="documentation-block" id="settings">
-  <article class="red">
-    <header>
-      <h2>Settings</h2>
-    </header>
-    
-    
-      
-<section class="image-content">
-    <picture class="img-container">
-        <img class="settings" src="/reasonus/cms_images/settings_bc7268d308.webp" alt="">
-    </picture>
-    <section class="content">
-        <p>After installation you have to change some settings to make it work. (Image is just for visual)</p>
-        
-            
-            
-            
-    <section class="tabs-macro">
-        <section class="tab-bar">
-            
-                <button data-id="xx7yrm9ibnqm8412uqx4jmp3-34-19">FaderPort 8 &amp; 16</button>
-            
-                <button data-id="xx7yrm9ibnqm8412uqx4jmp3-34-20">FaderPort V2</button>
-            
-        </section>
-        <section class="tab-content">
-            
-                <section class="tab faderport-8-and-16" data-id="xx7yrm9ibnqm8412uqx4jmp3-34-19">
-                    <p>First of all you should select the correct <strong>Control surface mode</strong>. Select <strong>ReaSonus FaderPort 8 & 16</strong> the settings as displayed in the image should appear:</p><ul><li><strong>Surface</strong>: Select your controller here.</li><li><strong>MIDI In</strong>: Select the proper MIDI Input</li><li><strong>MIDI Out</strong>: Select the proper MIDI Input</li></ul><p>These should get you started with the FaderPort.Beside these there are a couple of settings to make your life easier:</p><ul><li><strong>Disable Plugin Control</strong>: If you use another controller for controlling the plugins, you can select this. The plugins mode is still active and you are still able to open the plugin window. From that point, the ReaSonus FaderPort will not do anything anymore for the plugins</li><li><strong>Untouch last touched param after learn</strong>: When selected the last touched param will be set to untouched after parameter learn.</li><li><strong>Enable master fader mode</strong>: When selected en pressing the master button will enable master fader mode. This makes the last track of the FaderPort control the master track.</li><li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li><li><strong>Fader Reset</strong>: When eneabled, you can use the [Left Shift] button to reset the fader value while touching teh fader.</li><li><strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms and release it, it will instant unsolo again</li><li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER</li><li><strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time code with</li></ul><p>The Documentation button should open your default browser and open this website</p>
-                    
+              <li class="main green">
+                <a href="/reasonus/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray">
+                <a href="/reasonus/reasonus/documentation/goodies/">Goodies</a>
+              </li>
+              <ul>
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#filters-management"> Filters Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#reasonus-actions"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#remove-old-version"> Remove old version </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="lets-start">
+            <article class="red">
+              <header>
+                <h2>Lets Start</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="lets-start" src="/reasonus/reasonus/cms_images/favicon_ac742ea7c9.svg" alt="" />
+                </picture>
+                <section class="content">
+                  <p>Welcome to <strong>ReaSonus Native</strong> documentation</p>
+                  <p>
+                    The documentation should guide you through the functionalities of <strong>ReaSonus Native</strong>.
+                    The first part is about installation and settings
+                  </p>
+                  <p>
+                    The second part will explain all the controlls of the <strong>FaderPort</strong>: what they do, when
+                    they do it, and so on.
+                  </p>
+                  <p>
+                    The last part explains the goodies in <strong>ReaSonus Native</strong> like filter management,
+                    managing the functions and plugin mapping
+                  </p>
+                  <p>
+                    If one of the screenshots is not as clear as you would like, open it in real life. Nothing as good
+                    as the real deal
+                  </p>
+                  <p></p>
                 </section>
-            
-                <section class="tab faderport-v2" data-id="xx7yrm9ibnqm8412uqx4jmp3-34-20">
-                    <p>First of all you should select the correct <strong>Control surface mode</strong>. Select <strong>ReaSonus FaderPort V2</strong> and the settings as displayed in the image should appear:</p><ul><li><strong>MIDI In</strong>: Select the proper MIDI Input</li><li><strong>MIDI Out</strong>: Select the proper MIDI Input</li></ul><p>These should get you started with the <strong>FaderPort</strong>.Beside these there are a couple of settings to make your life easier:</p><ul><li><strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms and release it, it will instant unsolo again</li><li><strong>Control hidden MCP tracks</strong>: By default <strong>ReaSonus</strong> will step through the visible tracks. With this option ste also the hidden files in the MCP will be selectable</li></ul><p>The Documentation button should open your default browser and open this website</p><p></p>
-                    
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Will be appreciated</h4>
+                    </header>
+                    <section>
+                      <p>
+                        <strong>ReaSonus Native</strong> is a free and open source project, but takes some time and
+                        effort to create and maintain. It is not required of course but a donation for maintaining would
+                        be highly appreciated. This will, for example, be used for maintaining the Windows version,
+                        because I do not own a Windows machine.
+                      </p>
+                      <p>Donations can be made via the link in the footer.</p>
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>The big Thanx</h4>
+                    </header>
+                    <section>
+                      <p>
+                        This project would not have been possible without you, reading this. But also a big thanx goes
+                        to the following people:
+                      </p>
+                      <ul>
+                        <li>
+                          Geoff Waddington, The man behind the impressive CSI. Without the CSI project, this would
+                          probably never been created.
+                        </li>
+                        <li>Cfillion, for helping me out with some annoyances I ran into with C++ and CMake.</li>
+                        <li>All volunteers helping with testing, reviewing the documentation and being patient.</li>
+                      </ul>
+                      <p></p>
+                      <p></p>
+                    </section>
+                  </article>
                 </section>
-            
-        </section>
-    </section>
+              </section>
+            </article>
+          </div>
 
-        
-    </section>
-    
-        
-        <section class="extras">
-            
-                
-    <article class="explanation-macro ">
-        <header>
-            <h4>On-Device Menu</h4>
-        </header>
-        <section>
-            
-                <p>By pressing<strong> [Left Shift] + Touch</strong>-button on the <strong>FaderPort</strong>, you will be able to make all those settings on the device as well.</p>
-                
-            
-        </section>
-    </article>
+          <div class="documentation-block" id="installation">
+            <article class="red">
+              <header>
+                <h2>Installation</h2>
+              </header>
 
-            
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="installation"
+                    src="/reasonus/reasonus/cms_images/icon_github_color_f2868bfd43.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <h3>Before you start</h3>
+                  <p><strong>ReaSonus Native</strong> has the following dependencies:</p>
+                  <p>
+                    <strong>SWS</strong>: If you have not installed it yet, you can download it from the SWS website
+                  </p>
+                  <p>
+                    Also your <strong>FaderPort</strong> should be in <strong>Studio One mode</strong>. You can check
+                    the manual for more info about that
+                  </p>
+                  <h3>ReaPack</h3>
+                  <p>
+                    By far the easiest way to install <strong>ReaSonus Native</strong> is via <strong>ReaPack</strong>.
+                  </p>
+                  <p>
+                    In <strong>REAPER</strong> open <strong>ReaPack</strong>, search for '<strong>ReaSonus</strong>'.
+                    Select 'ReaSonus Native' and install it.
+                  </p>
+                  <h3>Manual installation</h3>
+                  <p>
+                    For manual install ReaSonus Native you have to download the latest version and move it to the
+                    correct folder
+                  </p>
+                  <p>Download ReaSonus Native</p>
+                  <p>
+                    In <strong>Reaper</strong>, go to <code>Options->Show REAPER resource in Explorer/Finder</code>.
+                    This will open the folder with all the <strong>REAPER</strong> files. In this folder, open the
+                    UserPlugins folder and copy the downloaded ReaSonus extension to the folder.
+                  </p>
+                  <h3>Nice Extras</h3>
+                  <p>
+                    REAPER does not reinitialize midi devices when they get activated with REAPER already running. You
+                    can in that case open the preferences, open the settings page of ReaSonus Native under
+                    Control/OSC/Web and close it again.
+                  </p>
+                  <p>
+                    To make this a bit easier you could add another extension named reaper_automidireset. This performs
+                    the reset automatically in the background. More info here on the Forum
+                  </p>
+                  <p></p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="settings">
+            <article class="red">
+              <header>
+                <h2>Settings</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="settings" src="/reasonus/reasonus/cms_images/settings_bc7268d308.webp" alt="" />
+                </picture>
+                <section class="content">
+                  <p>After installation you have to change some settings to make it work. (Image is just for visual)</p>
+
+                  <section class="tabs-macro">
+                    <section class="tab-bar">
+                      <button data-id="xx7yrm9ibnqm8412uqx4jmp3-34-19">FaderPort 8 &amp; 16</button>
+
+                      <button data-id="xx7yrm9ibnqm8412uqx4jmp3-34-20">FaderPort V2</button>
+                    </section>
+                    <section class="tab-content">
+                      <section class="tab faderport-8-and-16" data-id="xx7yrm9ibnqm8412uqx4jmp3-34-19">
+                        <p>
+                          First of all you should select the correct <strong>Control surface mode</strong>. Select
+                          <strong>ReaSonus FaderPort 8 & 16</strong> the settings as displayed in the image should
+                          appear:
+                        </p>
+                        <ul>
+                          <li><strong>Surface</strong>: Select your controller here.</li>
+                          <li><strong>MIDI In</strong>: Select the proper MIDI Input</li>
+                          <li><strong>MIDI Out</strong>: Select the proper MIDI Input</li>
+                        </ul>
+                        <p>
+                          These should get you started with the FaderPort.Beside these there are a couple of settings to
+                          make your life easier:
+                        </p>
+                        <ul>
+                          <li>
+                            <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
+                            plugins, you can select this. The plugins mode is still active and you are still able to
+                            open the plugin window. From that point, the ReaSonus FaderPort will not do anything anymore
+                            for the plugins
+                          </li>
+                          <li>
+                            <strong>Untouch last touched param after learn</strong>: When selected the last touched
+                            param will be set to untouched after parameter learn.
+                          </li>
+                          <li>
+                            <strong>Enable master fader mode</strong>: When selected en pressing the master button will
+                            enable master fader mode. This makes the last track of the FaderPort control the master
+                            track.
+                          </li>
+                          <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
+                          <li>
+                            <strong>Fader Reset</strong>: When eneabled, you can use the [Left Shift] button to reset
+                            the fader value while touching teh fader.
+                          </li>
+                          <li>
+                            <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons
+                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
+                            solo button longer then 500ms and release it, it will instant unsolo again
+                          </li>
+                          <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER</li>
+                          <li>
+                            <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time
+                            code with
+                          </li>
+                        </ul>
+                        <p>The Documentation button should open your default browser and open this website</p>
+                      </section>
+
+                      <section class="tab faderport-v2" data-id="xx7yrm9ibnqm8412uqx4jmp3-34-20">
+                        <p>
+                          First of all you should select the correct <strong>Control surface mode</strong>. Select
+                          <strong>ReaSonus FaderPort V2</strong> and the settings as displayed in the image should
+                          appear:
+                        </p>
+                        <ul>
+                          <li><strong>MIDI In</strong>: Select the proper MIDI Input</li>
+                          <li><strong>MIDI Out</strong>: Select the proper MIDI Input</li>
+                        </ul>
+                        <p>
+                          These should get you started with the <strong>FaderPort</strong>.Beside these there are a
+                          couple of settings to make your life easier:
+                        </p>
+                        <ul>
+                          <li>
+                            <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons
+                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
+                            solo button longer then 500ms and release it, it will instant unsolo again
+                          </li>
+                          <li>
+                            <strong>Control hidden MCP tracks</strong>: By default <strong>ReaSonus</strong> will step
+                            through the visible tracks. With this option ste also the hidden files in the MCP will be
+                            selectable
+                          </li>
+                        </ul>
+                        <p>The Documentation button should open your default browser and open this website</p>
+                        <p></p>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>On-Device Menu</h4>
+                    </header>
+                    <section>
+                      <p>
+                        By pressing<strong> [Left Shift] + Touch</strong>-button on the <strong>FaderPort</strong>, you
+                        will be able to make all those settings on the device as well.
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
         </section>
-    
-</section>
-    
-  </article>
-</div>
-      
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/reasonus/images/icon-github.svg" alt="" /> Repository
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/reasonus/images/icon-bug.svg" alt="" />Report an issue</a
+              >
+            </li>
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/reasonus/images/icon-chat.svg" alt="" />Discussion</a
+              >
+            </li>
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/reasonus/images/icon-coffee.svg" alt="" />Buy me some coffee</a
+              >
+            </li>
+          </ul>
+        </section>
+      </footer>
     </section>
-  </section>
-  
-<footer class="footer">
-    <section class="footer-content">
-        <ul class="link-list">
-            <li>
-                <a href="https://github.com/navelpluisje/Reasonus-Native">
-                    <img src="/reasonus/images/icon-github.svg" alt=""> Repository
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
-                    <img src="/reasonus/images/icon-bug.svg" alt="">Report an issue</a>
-            </li>
-            <li>
-                <a href="https://forum.cockos.com/showthread.php?t=267116">
-                    <img src="/reasonus/images/icon-chat.svg" alt="">Discussion</a>
-            </li>
-            <li>
-                <a href="https://buymeacoffee.com/navelpluisje">
-                    <img src="/reasonus/images/icon-coffee.svg" alt="">Buy me some coffee</a>
-            </li>
-        </ul>
-    </section>
-</footer>
-</section>
-        <script src="/reasonus/javascript/n0P_KT6K2G.js"></script>
-    </body>
+    <script src="/reasonus/reasonus/javascript/PXd_SpCJ7f.js"></script>
+  </body>
 </html>
