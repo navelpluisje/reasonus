@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReaSonus :: New ReaSonus version (v0.1.3)</title>
+    <title>ReaSonus :: New ReaSonus version (v0.3.0)</title>
     <link rel="icon" href="/reasonus/images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/reasonus/styles/fqsRomk1-k.css" />
   </head>
   <body>
-    <section class="post-page grey">
+    <section class="post-page blue">
       <header class="header">
         <a href="/reasonus/"> <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" /></a>
       </header>
@@ -26,10 +26,10 @@
             <img src="/reasonus/images/logo-only.svg" alt="" class="logo" />
           </section>
 
-          <article class="post-extras grey">
+          <article class="post-extras blue">
             <dl>
               <dt>Published:</dt>
-              <dd>30-07-2025</dd>
+              <dd>14-10-2025</dd>
             </dl>
             <dl>
               <dt>Author:</dt>
@@ -48,36 +48,54 @@
           </article>
         </section>
         <section class="post-content-group">
-          <h1 class="post-title">New ReaSonus version (v0.1.3)</h1>
+          <h1 class="post-title">New ReaSonus version (v0.3.0)</h1>
           <section class="post-content">
-            <p>A new version of ReaSonus Native has been release.</p>
+            <p>A new version of ReaSonus Native has been released.</p>
+            <blockquote>This version has a new dependency: <strong>ReaImGui v0.10.*</strong></blockquote>
             <h3>What's Changed</h3>
             <h4>All devices</h4>
             <ul>
-              <li>Fixed issue with resetted function ids on Reaper startup</li>
-              <li>Quite some pan fixed for all devices and both master and track channels</li>
+              <li>Moved the dialogs to ReaImgui. See the documentation for more details.</li>
+              <li>Fixed issue with saw-tooth like envelopes in touch mode</li>
             </ul>
             <h4>FaderPort 8/16</h4>
             <ul>
-              <li>Display fix for the FaderPort 16</li>
-              <li>Fixed issue where Reaper could crash when editting a non-existing filter</li>
-              <li>Improved the behaviour of Parent Select for the filters</li>
-              <li>Fixed filter key issue when adding filters too quick</li>
-              <li>Added version number to the menu</li>
-              <li>Unselect all tracks before solo-select</li>
-              <li>Fixed issue with time code when ruler was selected.</li>
-              <li>Now displays time code when nb of trachs is minimal</li>
+              <li>
+                Added pan channel: The pan button now makes the faders handle the pan. Removed the shift + fader
+                behaviour
+              </li>
+              <li>Moved the receives channel to [Shift] + [Send] to make space for the Pan channel</li>
+              <li>
+                Added option to make [Left Shift] + [Fader Touch] reset the fader value. This is a setting and off by
+                default
+              </li>
+              <li>
+                Changed the shift behaviour for all channel related modi (track, plugin, send, etc...). Now when the
+                shift(left or right), this does not reflect on these modi.
+              </li>
+              <li>Fixed issue where all faders right of the last send fader also moved.</li>
+              <li>
+                Added converter for the old zon plugin mapping files (It is always recommanded doing a test run on a
+                portable install)
+              </li>
+              <li>
+                When on-device menu is open, it will now close with any click on the <strong>[Touch]</strong> button
+              </li>
+              <li>
+                Added option in the settings to change the Display layout in track mode. This also available in the
+                on-device menu
+              </li>
             </ul>
             <h4>FaderPort V2</h4>
             <ul>
-              <li>Set next visible item as selected when selected track is not visible</li>
-              <li>Some V2 session improvements</li>
+              <li>Fixed bug where fader became inresponsive after adding a new track</li>
             </ul>
             <h3>Install</h3>
             <p>
               ReaSonus Native is now available in ReaPack. There is no need to add a repository, but works
               out-of-the-box. In ReaPack search for <code>ReaSonus</code> and you can install it.
             </p>
+            <blockquote>Don't forget to install SWS and ReaImGui v0.10 if you have not installed them yet</blockquote>
             <h3>Documentation</h3>
             <p>
               Documentation can be found here. If you see typo's or other issues with the documentation, please report
@@ -87,22 +105,22 @@
             <blockquote>
               Full Changelog:
               <a
-                href="https://github.com/navelpluisje/Reasonus-Native/compare/v0.1.1...0.1.3"
+                href="https://github.com/navelpluisje/Reasonus-Native/compare/0.2.0...0.3.0"
                 target="_blank"
                 rel="noreferrer noopener"
-                >https://github.com/navelpluisje/Reasonus-Native/compare/v0.1.1...0.1.3</a
+                >https://github.com/navelpluisje/Reasonus-Native/compare/0.2.0...0.3.0</a
               >
             </blockquote>
           </section>
         </section>
         <section class="post-pagination">
-          <div class="previous-post"></div>
+          <div class="previous-post">
+            <a href="/reasonus/posts/new-reasonus-version-v0-2-0/">Previous Post</a>
+          </div>
           <div class="post-list">
             <a href="/reasonus/posts">All posts</a>
           </div>
-          <div class="next-post">
-            <a href="/reasonus/posts/new-reasonus-version-v0-1-4/">Next Post</a>
-          </div>
+          <div class="next-post"></div>
         </section>
       </section>
 

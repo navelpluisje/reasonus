@@ -45,6 +45,10 @@
               </li>
               <ul>
                 <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub blue">
                   <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
                 </li>
 
@@ -78,6 +82,10 @@
               </li>
               <ul>
                 <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub green">
                   <a on:click="{handleAnchorClick}" href="#track"> Track </a>
                 </li>
 
@@ -99,11 +107,15 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
                 </li>
 
                 <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
                 </li>
 
                 <li class="sub gray">
@@ -122,6 +134,34 @@
           </nav>
         </aside>
         <section class="page-content">
+          <div class="documentation-block" id="settings">
+            <article class="green">
+              <header>
+                <h2>Settings</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="settings" src="/reasonus/cms_images/fp_2_settings_925c8cb68b.webp" alt="" />
+                </picture>
+                <section class="content">
+                  <p>For the faderPort v2 ReaSonus has the following 2 settings</p>
+                  <ul>
+                    <li>
+                      <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary.
+                      The timeout for being momentary is 500 milli seconds. In short: If you press the solo button
+                      longer then 500ms and release it, it will instant unsolo again
+                    </li>
+                    <li>
+                      <strong>Control hidden MCP tracks</strong>: By default ReaSonus will step through the visible
+                      tracks. With this option ste also the hidden files in the MCP will be selectable
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </article>
+          </div>
+
           <div class="documentation-block" id="track">
             <article class="green">
               <header>

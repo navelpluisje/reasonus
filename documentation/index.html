@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/reasonus/styles/kM5ZwruLA6.css" />
-    <link rel="stylesheet" href="/reasonus/styles/9KSF9ZMKNe.css" />
+    <link rel="stylesheet" href="/reasonus/styles/ToHUBDyyEQ.css" />
   </head>
   <body>
     <section class="documentation-page">
@@ -44,6 +44,10 @@
                 <a href="/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
               </li>
               <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
                 <li class="sub blue">
                   <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
                 </li>
@@ -78,6 +82,10 @@
               </li>
               <ul>
                 <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub green">
                   <a on:click="{handleAnchorClick}" href="#track"> Track </a>
                 </li>
 
@@ -99,11 +107,15 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
                 </li>
 
                 <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
                 </li>
 
                 <li class="sub gray">
@@ -258,99 +270,30 @@
 
               <section class="image-content">
                 <picture class="img-container">
-                  <img class="settings" src="/reasonus/cms_images/settings_bc7268d308.webp" alt="" />
+                  <img class="settings" src="/reasonus/cms_images/fp_8_init_preferences_9825cf1920.webp" alt="" />
                 </picture>
                 <section class="content">
-                  <p>After installation you have to change some settings to make it work. (Image is just for visual)</p>
-
-                  <section class="tabs-macro">
-                    <section class="tab-bar">
-                      <button data-id="xx7yrm9ibnqm8412uqx4jmp3-34-19">FaderPort 8 &amp; 16</button>
-
-                      <button data-id="xx7yrm9ibnqm8412uqx4jmp3-34-20">FaderPort V2</button>
-                    </section>
-                    <section class="tab-content">
-                      <section class="tab faderport-8-and-16" data-id="xx7yrm9ibnqm8412uqx4jmp3-34-19">
-                        <p>
-                          First of all you should select the correct <strong>Control surface mode</strong>. Select
-                          <strong>ReaSonus FaderPort 8 & 16</strong> the settings as displayed in the image should
-                          appear:
-                        </p>
-                        <ul>
-                          <li><strong>Surface</strong>: Select your controller here.</li>
-                          <li><strong>MIDI In</strong>: Select the proper MIDI Input</li>
-                          <li><strong>MIDI Out</strong>: Select the proper MIDI Input</li>
-                        </ul>
-                        <p>
-                          These should get you started with the FaderPort.Beside these there are a couple of settings to
-                          make your life easier:
-                        </p>
-                        <ul>
-                          <li>
-                            <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
-                            plugins, you can select this. The plugins mode is still active and you are still able to
-                            open the plugin window. From that point, the ReaSonus FaderPort will not do anything anymore
-                            for the plugins
-                          </li>
-                          <li>
-                            <strong>Untouch last touched param after learn</strong>: When selected the last touched
-                            param will be set to untouched after parameter learn.
-                          </li>
-                          <li>
-                            <strong>Enable master fader mode</strong>: When selected en pressing the master button will
-                            enable master fader mode. This makes the last track of the FaderPort control the master
-                            track.
-                          </li>
-                          <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
-                          <li>
-                            <strong>Fader Reset</strong>: When eneabled, you can use the [Left Shift] button to reset
-                            the fader value while touching teh fader.
-                          </li>
-                          <li>
-                            <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons
-                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
-                            solo button longer then 500ms and release it, it will instant unsolo again
-                          </li>
-                          <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER</li>
-                          <li>
-                            <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time
-                            code with
-                          </li>
-                        </ul>
-                        <p>The Documentation button should open your default browser and open this website</p>
-                      </section>
-
-                      <section class="tab faderport-v2" data-id="xx7yrm9ibnqm8412uqx4jmp3-34-20">
-                        <p>
-                          First of all you should select the correct <strong>Control surface mode</strong>. Select
-                          <strong>ReaSonus FaderPort V2</strong> and the settings as displayed in the image should
-                          appear:
-                        </p>
-                        <ul>
-                          <li><strong>MIDI In</strong>: Select the proper MIDI Input</li>
-                          <li><strong>MIDI Out</strong>: Select the proper MIDI Input</li>
-                        </ul>
-                        <p>
-                          These should get you started with the <strong>FaderPort</strong>.Beside these there are a
-                          couple of settings to make your life easier:
-                        </p>
-                        <ul>
-                          <li>
-                            <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons
-                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
-                            solo button longer then 500ms and release it, it will instant unsolo again
-                          </li>
-                          <li>
-                            <strong>Control hidden MCP tracks</strong>: By default <strong>ReaSonus</strong> will step
-                            through the visible tracks. With this option ste also the hidden files in the MCP will be
-                            selectable
-                          </li>
-                        </ul>
-                        <p>The Documentation button should open your default browser and open this website</p>
-                        <p></p>
-                      </section>
-                    </section>
-                  </section>
+                  <p>
+                    After installation you have to change some settings to make it work. The screenshot is for the
+                    FaderPort 8/16. The only difference with the FaderPort v2 version is the Surface Select.
+                  </p>
+                  <p>
+                    First of all you should select the correct <strong>Control surface mode</strong>. Select
+                    <strong>ReaSonus FaderPort 8 & 16</strong> the settings as displayed in the image should appear:
+                  </p>
+                  <ul>
+                    <li><strong>Surface</strong>: Select your controller here. (FaderPort 8/16 only)</li>
+                    <li><strong>MIDI In</strong>: Select the proper MIDI Input</li>
+                    <li><strong>MIDI Out</strong>: Select the proper MIDI Input</li>
+                  </ul>
+                  <p>On the right side you have 2 buttons:</p>
+                  <ul>
+                    <li>
+                      <strong>ReaSonus Settings</strong>: Opens the ReaSonus Control Panel and activates the Settings
+                      tab
+                    </li>
+                    <li><strong>Documentations</strong>: Opens this website in your default browser</li>
+                  </ul>
                 </section>
 
                 <section class="extras">
@@ -399,6 +342,6 @@
         </section>
       </footer>
     </section>
-    <script src="/reasonus/javascript/PXd_SpCJ7f.js"></script>
+    <script src="/reasonus/javascript/Mz7EBJ1uU2.js"></script>
   </body>
 </html>

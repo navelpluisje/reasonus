@@ -45,6 +45,10 @@
               </li>
               <ul>
                 <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub blue">
                   <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
                 </li>
 
@@ -78,6 +82,10 @@
               </li>
               <ul>
                 <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub green">
                   <a on:click="{handleAnchorClick}" href="#track"> Track </a>
                 </li>
 
@@ -99,11 +107,15 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
                 </li>
 
                 <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
                 </li>
 
                 <li class="sub gray">
@@ -122,6 +134,63 @@
           </nav>
         </aside>
         <section class="page-content">
+          <div class="documentation-block" id="reasonus-control-panel">
+            <article class="gray">
+              <header>
+                <h2>ReaSonus Control Panel</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="reasonus-control-panel" src="/reasonus/cms_images/fp_8_mapping2_5eab720156.webp" alt="" />
+                </picture>
+                <section class="content">
+                  <p>
+                    The ReaSonus Control Panel is the place to be for configuring your FaderPort. The Control Panel has
+                    several tabs:
+                  </p>
+                  <ul>
+                    <li>Function Keys: Assign actions to the function keys</li>
+                    <li>Custom Filters: Create custom filters to make mixing easier (FaderPort 8/16 only)</li>
+                    <li>Plugin Mapping: Edit your plugin mappings here (FaderPort 8/16 only)</li>
+                    <li>Settings: Control all the settings</li>
+                    <li>About ReaSonus: What's in the name</li>
+                  </ul>
+                  <p>In the next chapters you can read more about all the functionalities.</p>
+                  <p>The image is for the FaderPort 8/16.</p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="functions-management">
+            <article class="gray">
+              <header>
+                <h2>Functions Management</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="functions-management" src="/reasonus/cms_images/fp_8_functions_af6e02881a.webp" alt="" />
+                </picture>
+                <section class="content">
+                  <p>
+                    Within <strong>ReaSonus</strong> it is fairly simple to manage the actions attached to the function
+                    buttons. To open the window click the <strong>Left Shift + Macro</strong>-button, or open the
+                    <strong>ReaSonus Control Panel</strong> and select the <strong>Function Keys</strong> tab.
+                  </p>
+                  <p>There are 8 fields (4 for the FaderPort V2) for the function keys with all 2 buttons.</p>
+                  <p>
+                    Each block shows the name and info for the corresponding action. Selecting an other action can be
+                    done by clicking the icon in the top right corner. This will open the acions list.
+                  </p>
+                  <p>Click the save button to save your changes.</p>
+                  <p></p>
+                </section>
+              </section>
+            </article>
+          </div>
+
           <div class="documentation-block" id="plugin-mapping">
             <article class="gray">
               <header>
@@ -130,7 +199,7 @@
 
               <section class="image-content">
                 <picture class="img-container">
-                  <img class="plugin-mapping" src="/reasonus/cms_images/plugin_edit_c6c4215216.webp" alt="" />
+                  <img class="plugin-mapping" src="/reasonus/cms_images/fp_8_mapping2_5eab720156.webp" alt="" />
                 </picture>
                 <section class="content">
                   <p>
@@ -138,17 +207,18 @@
                     MIDI Learn. You can also use the UI, which gives you the option to change parameter names, step
                     number, and so on. This requires changing the mapping files by hand.
                   </p>
+                  <p>This is a FaderPort 8/16 only functionality</p>
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-19-11">MIDI Learn</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-86-42">MIDI Learn</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-19-12">Ui</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-86-43">Ui</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-19-13">Manual</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-86-44">Manual</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-19-11">
+                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-86-42">
                         <p></p>
                         <h3>New Plugin Mapping</h3>
                         <p>
@@ -208,15 +278,31 @@
                         </p>
                       </section>
 
-                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-19-12">
+                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-86-43">
                         <p>
-                          Within ReaSonus it is also possible to manually add a mapping or to edit some settings of the
-                          mapping. If you want to use this, you have to be in the learn mode. More about that in the
-                          MIDI Learn tab.
+                          Within <strong>ReaSonus</strong> it is also possible to manually add a mapping or to edit some
+                          settings of the mapping. If you want to use this, do one of teh following:
+                        </p>
+                        <ul>
+                          <li>
+                            Go into the learn mode. In this mode, press the Left Shift and press the Select button of
+                            the channel you want to edit. This opens the <strong>Plugin Mapping</strong> with the
+                            current effect and parameter selected.
+                          </li>
+                          <li>
+                            Open the <strong>ReaSonus Control Panel</strong> and open the tab
+                            <strong>Plugin Mapping</strong>. Then you can select the developer and the plugin.
+                          </li>
+                        </ul>
+                        <h3>The panel</h3>
+                        <p>
+                          On the left side you see the list of plugins which are already mapped. The are gouped by
+                          developer to make searchin a bit easier.
                         </p>
                         <p>
-                          In this mode, press the Left Shift and press the Select button of the channel you want to
-                          edit. The window on the left appears:
+                          On the right side at the top you see a list with numbered buttons. These represent the tracks
+                          you assign the controls to. When the list gets larger you can scroll through the list.
+                          Clicking a button it will show the the settings for that track.
                         </p>
                         <h3>The Fields</h3>
                         <ul>
@@ -234,11 +320,11 @@
                             parameter. In case of on/off this will be 2
                           </li>
                         </ul>
-                        <p>Changes are saved instant.</p>
+                        <p>Click the save button to save your changes.</p>
                         <p></p>
                       </section>
 
-                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-19-13">
+                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-86-44">
                         <p>
                           The mapping of the plugins is done in simple ini files. These can be opened in your editor of
                           choice. The files are located in the next location:
@@ -255,42 +341,6 @@
             </article>
           </div>
 
-          <div class="documentation-block" id="functions-management">
-            <article class="gray">
-              <header>
-                <h2>Functions Management</h2>
-              </header>
-
-              <section class="image-content">
-                <picture class="img-container">
-                  <img
-                    class="functions-management"
-                    src="/reasonus/cms_images/function_control_f61f45fd54.webp"
-                    alt=""
-                  />
-                </picture>
-                <section class="content">
-                  <p>
-                    Within <strong>ReaSonus</strong> it is fairly simple to manage the actions attached to the function
-                    buttons. To open the window click the <strong>Left Shift + Macro</strong>-button.
-                  </p>
-                  <p>There are 8 fields (4 for the FaderPort V2) for the function keys with all 2 buttons.</p>
-                  <ul>
-                    <li>
-                      <strong>...</strong>: This will open the actions window of reaper. Look up the action you want to
-                      attach to theh function button and select it.
-                    </li>
-                    <li>
-                      <strong>info</strong>: Clicking this button will display info about the corresponding action.
-                    </li>
-                  </ul>
-                  <p></p>
-                  <p></p>
-                </section>
-              </section>
-            </article>
-          </div>
-
           <div class="documentation-block" id="filters-management">
             <article class="gray">
               <header>
@@ -299,22 +349,27 @@
 
               <section class="image-content">
                 <picture class="img-container">
-                  <img class="filters-management" src="/reasonus/cms_images/filter_management_7ef7bc0c6d.webp" alt="" />
+                  <img class="filters-management" src="/reasonus/cms_images/fp_8_filters_4400669e14.webp" alt="" />
                 </picture>
                 <section class="content">
                   <p>
                     <strong>ReaSonus Native</strong> has the ability to create and manage your own track filters. The
                     filters are based on file names with additional options. To open the window click the Macro-button.
+                    Or select the <strong>Custom Filters</strong> tab in the <strong>ReaSonus Control Panel.</strong>
                   </p>
+                  <p>Don't forget to click the save button when you're done editing.</p>
                   <h3>Adding and removing filters</h3>
                   <p>
                     The left side of the window contains the list with available filters. If you want to delete a
-                    filter, select the filter in the list and click the 'minus' button under the list
+                    filter, select the filter in the list and click the 'X' button on the right
                   </p>
-                  <p>Adding a new filter is as simple as deleting one. Click the 'plus' button to create a new one.</p>
                   <p>
-                    By selecting a filter and use the arrow buttons you are able to change the order of the filters.
-                    This is also the order in which the filters are displayed.
+                    Adding a new filter is as simple as deleting one. Enter a name in the input field above the list and
+                    click the '+' button.
+                  </p>
+                  <p>
+                    The order of the filters on the FaderPort is the same order as they appear in the list. You can
+                    change the order by dragging and dropping the items.
                   </p>
                   <h3>The Filter Options</h3>
                   <p>
@@ -328,8 +383,8 @@
                     </li>
                     <li>
                       F<strong>ilter text</strong>: Adding a text can be done by entering it in the input field and
-                      click the 'plus' button. Removing an item can be done by selecting it and clicking the 'minus'
-                      button under the list.
+                      click the 'plus' button. Removing an item can be done by selecting it and clicking the 'X' button
+                      on the right.
                     </li>
                     <li><strong>Show track siblings</strong>: Show all the sibbling tracks of matching tracks</li>
                     <li><strong>Show track parents</strong>: Show all parent tracks of matching tracks</li>
@@ -342,6 +397,16 @@
                       option will show all matches
                     </li>
                   </ul>
+                  <h3>The 'Preview'</h3>
+                  <p>
+                    There is a 'Preview' available that represents your settings. The 2 channels with the dark-yellow
+                    background represent tracks that match the name. The ones with the bright yellow border will be the
+                    ones that will be visible after using the filter.
+                  </p>
+                  <p>
+                    This 'Preview' should help you a bit with understanding the effect of the different filter options
+                    and how they interact with eachother
+                  </p>
                 </section>
 
                 <section class="extras">
@@ -404,29 +469,32 @@
 
                   <article class="explanation-macro">
                     <header>
-                      <h4>Reasonus: Show the ReaSonus Filters window</h4>
+                      <h4>Reasonus: Show the ReaSonus Native 8/16 Control Panel</h4>
                     </header>
                     <section>
                       <p>
-                        Toggle the ReaSonus filters window. This action has a state, so should reflect its state in the
-                        button
+                        Toggle the <strong>ReaSonus Control Panel </strong>for the <strong>FaderPort 8/16</strong>. This
+                        action has a state, so should reflect its state in the button
                       </p>
-                      <p>ID: <code>REASONUS_SHOW_REASONUS_FILTERS_WINDOW</code></p>
+                      <p>
+                        ID: <code><strong>REASONUS_SHOW_REASONUS_8_CONTROL_WINDOW</strong></code>
+                      </p>
                       <p></p>
                     </section>
                   </article>
 
                   <article class="explanation-macro">
                     <header>
-                      <h4>Reasonus: Show the ReaSonus Functions window</h4>
+                      <h4>Reasonus: Show the ReaSonus Native V2 Control Panel</h4>
                     </header>
                     <section>
                       <p>
-                        Toggle the ReaSonus functions window. This action has a state, so should reflect its state in
-                        the button
+                        Toggle the <strong>ReaSonus Control Panel </strong>for the <strong>FaderPort v2</strong>. This
+                        action has a state, so should reflect its state in the button
                       </p>
-                      <p>This one is for the FaderPort 8 & 16 only</p>
-                      <p>ID: <code>REASONUS_SHOW_REASONUS_FUNCTION_WINDOW</code></p>
+                      <p>
+                        ID: <code><strong>REASONUS_SHOW_REASONUS_V2_CONTROL_WINDOW</strong></code>
+                      </p>
                       <p></p>
                     </section>
                   </article>
@@ -450,6 +518,20 @@
                       <p>Closes all the open fx windows. All other windows just stay open</p>
                       <p>ID: <code>REASONUS_CLOSE_ALL_FLOATING_FX_WINDOWS_COMMAND</code></p>
                       <p></p>
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Reasonus: Convert the old zon mappings to the new ini mappings</h4>
+                    </header>
+                    <section>
+                      <p>
+                        Convert all the zon plugin mapping files from the old ReaSonus version to the new file structure
+                      </p>
+                      <p>ID: <code>REASONUS_CONVERT_PLUGIN_ZON_TO_INI</code></p>
+
+                      <img class="undefined" src="/reasonus/cms_images/fp_8_mapping_converter_9e6714bd0a.webp" alt="" />
                     </section>
                   </article>
                 </section>

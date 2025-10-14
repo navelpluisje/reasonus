@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/reasonus/styles/kM5ZwruLA6.css" />
-    <link rel="stylesheet" href="/reasonus/styles/KLXvmIXqZ6.css" />
+    <link rel="stylesheet" href="/reasonus/styles/9KSF9ZMKNe.css" />
   </head>
   <body>
     <section class="documentation-page">
@@ -44,6 +44,10 @@
                 <a href="/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
               </li>
               <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
                 <li class="sub blue">
                   <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
                 </li>
@@ -78,6 +82,10 @@
               </li>
               <ul>
                 <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub green">
                   <a on:click="{handleAnchorClick}" href="#track"> Track </a>
                 </li>
 
@@ -99,11 +107,15 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
                 </li>
 
                 <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
                 </li>
 
                 <li class="sub gray">
@@ -122,6 +134,70 @@
           </nav>
         </aside>
         <section class="page-content">
+          <div class="documentation-block" id="settings">
+            <article class="blue">
+              <header>
+                <h2>Settings</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="settings" src="/reasonus/cms_images/fp_8_settings_1c1e66ff1d.webp" alt="" />
+                </picture>
+                <section class="content">
+                  <p>For the FaderPort 8/16, ReaSonus has a couple of settings:</p>
+                  <ul>
+                    <li>
+                      <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
+                      plugins, you can select this. The plugins mode is still active and you are still able to open the
+                      plugin window. From that point, the ReaSonus FaderPort will not do anything anymore for the
+                      plugins.
+                    </li>
+                    <li>
+                      <strong>Untouch last touched param after learn</strong>: When selected the last touched param will
+                      be set to untouched after parameter learn.
+                    </li>
+                    <li>
+                      <strong>Enable master fader mode</strong>: When selected en pressing the master button will enable
+                      master fader mode. This makes the last track of the FaderPort control the master track.
+                    </li>
+                    <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
+                    <li>
+                      <strong>Fader Reset</strong>: When eneabled, you can use the [Left Shift] button to reset the
+                      fader value while touching teh fader.
+                    </li>
+                    <li>
+                      <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary.
+                      The timeout for being momentary is 500 milli seconds. In short: If you press the solo button
+                      longer then 500ms and release it, it will instant unsolo again.
+                    </li>
+                    <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER.</li>
+                    <li>
+                      <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time code
+                      with.
+                    </li>
+                    <li><strong>Track mode display:</strong> Change the Display layout for the track mode.</li>
+                  </ul>
+                  <p></p>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>On-Device menu</h4>
+                    </header>
+                    <section>
+                      <p>
+                        By pressing<strong> [Left Shift] + Touch</strong>-button on the <strong>FaderPort</strong>, you
+                        will be able to make all those settings on the device as well.
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+
           <div class="documentation-block" id="fader-modes">
             <article class="blue">
               <header>
@@ -150,18 +226,18 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="y00vrscjshi2denad0gfsha2-31-18">Track</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-101-51">Track</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-31-14">Plugin</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-101-47">Plugin</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-31-15">Send</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-101-48">Send</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-31-16">Receive</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-101-49">Receive</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-31-17">Pan</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-101-50">Pan</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-31-18">
+                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-101-51">
                         <ol>
                           <li><strong>Display</strong></li>
                           <ul>
@@ -265,7 +341,7 @@
                         </section>
                       </section>
 
-                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-31-14">
+                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-101-47">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -324,7 +400,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-31-15">
+                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-101-48">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -358,13 +434,18 @@
                           </ul>
                           <li><strong>Select button</strong>:</li>
                           <ul>
-                            <li>Default: Unique-select the Track. Other Tracks will be de-selected.</li>
-                            <li>Left Shift: Select the Track. All previous selected Tracks will also stay selected.</li>
                             <li>
-                              Right Shift: Selects the range of Tracks between the previous selected Track and the
-                              current selected Track.
+                              <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
                             </li>
-                            <li>Arm: Toggle Track arm.</li>
+                            <li>
+                              <strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay
+                              selected.
+                            </li>
+                            <li>
+                              <strong>Right Shift</strong>: Selects the range of Tracks between the previous selected
+                              Track and the current selected Track.
+                            </li>
+                            <li><strong>Arm</strong>: Toggle Track arm.</li>
                           </ul>
                           <li><strong>Solo</strong>:</li>
                           <ul>
@@ -384,7 +465,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-31-16">
+                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-101-49">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -446,7 +527,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-31-17">
+                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-101-50">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -460,19 +541,24 @@
                           <li><strong>Pan/Param</strong>:</li>
                           <ul>
                             <li>
-                              Default: Controlls pan value 1 for the currently selected track. Push to set the pan
-                              position back to center.
+                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
+                              set the pan position back to center.
                             </li>
                             <li>
-                              Left Shift: Controlls pan value2 for the currently selected track. Push to set the pan
-                              position back to center.
+                              <strong>Left Shift</strong>: Controlls pan value2 for the currently selected track. Push
+                              to set the pan position back to center.
                             </li>
                           </ul>
                           <li><strong>Select button</strong>:</li>
                           <ul>
-                            <li>Default: Unique-select the Track. Other Tracks will be de-selected.</li>
-                            <li>Left Shift: Select the Track. All previous selected Tracks will also stay selected.</li>
-                            <li>Right Shift: Selects the range of Tracks between the previous</li>
+                            <li>
+                              <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
+                            </li>
+                            <li>
+                              <strong>Left Shift:</strong> Select the Track. All previous selected Tracks will also stay
+                              selected.
+                            </li>
+                            <li><strong>Right Shift</strong>: Selects the range of Tracks between the previous</li>
                             <li>Arm: Toggle Track arm.</li>
                           </ul>
                           <li><strong>Solo</strong>:</li>
@@ -832,9 +918,9 @@
                     <ul>
                       <li><strong>Default</strong>: Reset all the filter and show all the tracks</li>
                       <li>
-                        Left Shift: Show the custom menu's. This will display all your filters in the track displays.
-                        Use the select button to select the filter. If there are more filters then there are tracks, you
-                        can use the Pan encoder to scroll through the filters
+                        <strong>Left Shift</strong>: Show the custom menu's. This will display all your filters in the
+                        track displays. Use the select button to select the filter. If there are more filters then there
+                        are tracks, you can use the Pan encoder to scroll through the filters
                       </li>
                       <li><strong>Right Shift</strong>: Filter all the tracks with sends</li>
                     </ul>
