@@ -2,5 +2,4 @@
 
 ### ¿Share?
 
-https://docs.bsky.app/docs/advanced-guides/intent-links
-https://dev.to/codepo8/adding-a-share-to-mastodon-link-to-any-web-site-485m
+[![Build Eleventy](https://github.com/navelpluisje/reasonus/actions/workflows/build.yml/badge.svg)](https://github.com/navelpluisje/reasonus/actions/workflows/build.yml)
