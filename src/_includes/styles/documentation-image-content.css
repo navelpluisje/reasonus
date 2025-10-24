@@ -21,6 +21,7 @@
             width: 100%;
             top: 0;
             bottom: 1rem;
+            cursor: pointer;
 
             &.general-controlls,
             &.mix-management {

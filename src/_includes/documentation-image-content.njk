@@ -2,8 +2,14 @@
 {% include "styles/documentation-image-content.css" %}
 {% endcss %}
 <section class="image-content">
+    {% js %}
+    {% include "javascript/imagePopout.js" %}
+    {% endjs %}
+    {% css %}
+    {% include "styles/image-popout.css" %}
+    {% endcss %}
     <picture class="img-container">
-        <img class="{{ block.Title | slugify }}" src="{{ block.Image }}" alt="{{ block.ImageAlt }}"/>
+        <img class="{{ block.Title | slugify }} popout" src="{{ block.Image }}" alt="{{ block.ImageAlt }}"/>
     </picture>
     <section class="content">
         {{ block.Content | pathPrefix | safe }}

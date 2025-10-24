@@ -1,0 +1,24 @@
+.image-popout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: hsla(0deg, 0%, 0%, .6);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        background-color: white;
+        border-radius: .5rem;
+        border: 2px solid white;
+    }
+}

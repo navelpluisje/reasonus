@@ -28,5 +28,6 @@
         position: relative;
         height: 5rem;
         margin: .5rem 0 .75rem;
+        cursor: pointer;
     }
 }
