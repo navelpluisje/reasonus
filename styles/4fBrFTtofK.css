@@ -17,7 +17,7 @@
   --font-heading: "lexend", sans-serif;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   :root {
     --header-height: 5.25rem;
   }
