@@ -1,9 +1,10 @@
 .menu {
     position: sticky;
-    /* top: var(--header-height); */
-    /* z-index: 33; */
     padding: 2rem 1rem;
-    /* width: var(--menu-width); */
+    width: var(--menu-width);
+    justify-self: end;
+    cursor: pointer;
+    overflow: scroll;
 
     ul {
         list-style: none;
@@ -100,5 +101,32 @@
         align-items: center;
         border-style: solid;
         border-width: 0 0 .125rem 0;
+    }
+}
+
+.menu-button {
+    display: grid;
+    width: 2.25rem;
+    height: 1.75rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    padding: .25rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: .4rem;
+    position: fixed;
+    top: 1.25rem;
+    right: 1rem;
+    z-index: 2;
+
+    div {
+        background-color: var(--black);
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menu-button {
+        display: none;
     }
 }

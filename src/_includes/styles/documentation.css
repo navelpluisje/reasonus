@@ -18,9 +18,15 @@
         display: grid;
         width: 100%;
         max-width: 1200px;
-        grid-template-columns: var(--menu-width) 1fr;
+        grid-template-columns: 0 100vw;
         margin: 0 auto;
         overflow: scroll;
+        overflow-x: hidden;
+        transition: grid-template-columns .3s ease;
+        
+        &.show-menu {
+            grid-template-columns: var(--menu-width) 100vw;
+        }
     }
     
     .page-content {
@@ -32,5 +38,24 @@
     > .footer {
         grid-area: 3/1/4/2;
     }
+
+    code {
+        word-break: break-all;
+    }
 }
+
+@media screen and (min-width: 1024px) {
+    .documentation-page {
+        > .center {
+            grid-template-columns: var(--menu-width) 1fr;
+
+            &.show-menu {
+                grid-template-columns: var(--menu-width) 1fr;
+            }
+
+        }
+    }
+
+}
+
     

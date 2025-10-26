@@ -53,12 +53,27 @@
             width: 2rem;
             margin-right: .5rem;
         }
+
+        span {
+            display: none;
+        }
     }
 
     .coffee-link {
         display: block;
         height: 7.25rem;
         width: 7.25rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        .link-list {
+            span {
+                display: initial;
+            }
+        }
     }
 
 }

@@ -1,6 +1,5 @@
 .documentation-block {
     container-type: inline-size;
-    max-width: 30rem;
     width: 100%;
 
     > article {
@@ -8,7 +7,7 @@
         
         display: grid;
         height: 100%;
-        grid-template-rows: 4.5rem auto .25rem;
+        grid-template-rows: 3.5rem auto .25rem;
         border-radius: 1rem;
         background: var(--accent-color);
         position: relative;
@@ -52,7 +51,7 @@
             font-family: var(--font-heading);
             letter-spacing: -4%;
             font-weight: 300;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
     
@@ -82,5 +81,13 @@
 @media (min-width: 786px) {
     .documentation-block {
         max-width: 90rem;
+
+        > article {
+            grid-template-rows: 4.5rem auto .25rem;
+        }
+
+        header h2 {
+            font-size: 2rem;
+        }
     }
 }

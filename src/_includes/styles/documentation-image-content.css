@@ -18,7 +18,8 @@
             justify-self: center;
             border-radius: .75rem;
             position: sticky;
-            width: 100%;
+            max-width: 100%;
+            max-height: 22rem;
             top: 0;
             bottom: 1rem;
             cursor: pointer;
@@ -26,6 +27,7 @@
             &.general-controlls,
             &.mix-management {
                 max-width: 10rem;
+                max-height: auto;
             }
         }
     }
