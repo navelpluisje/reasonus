@@ -350,7 +350,11 @@
     grid-template-columns: 20rem 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: "image content" "extras extras";
+  }
+}
 
+@media (min-width: 1024px) {
+  .image-content {
     .image-container img {
       max-height: initial;
     }
