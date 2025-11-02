@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/reasonus/styles/4fBrFTtofK.css" />
-    <link rel="stylesheet" href="/reasonus/styles/OgGpP8hWDQ.css" />
+    <link rel="stylesheet" href="/reasonus/styles/tGSQNaF_p5.css" />
   </head>
   <body>
     <section class="documentation-page">
@@ -128,6 +128,10 @@
                 </li>
 
                 <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#translations-editor"> Translations Editor </a>
+                </li>
+
+                <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#reasonus-actions"> ReaSonus Actions </a>
                 </li>
 
@@ -150,40 +154,78 @@
                   <img class="settings popout" src="/reasonus/cms_images/fp_8_settings_1c1e66ff1d.webp" alt="" />
                 </picture>
                 <section class="content">
-                  <p>For the FaderPort 8/16, ReaSonus has a couple of settings:</p>
-                  <ul>
-                    <li>
-                      <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
-                      plugins, you can select this. The plugins mode is still active and you are still able to open the
-                      plugin window. From that point, the ReaSonus FaderPort will not do anything anymore for the
-                      plugins.
-                    </li>
-                    <li>
-                      <strong>Untouch last touched param after learn</strong>: When selected the last touched param will
-                      be set to untouched after parameter learn.
-                    </li>
-                    <li>
-                      <strong>Enable master fader mode</strong>: When selected en pressing the master button will enable
-                      master fader mode. This makes the last track of the FaderPort control the master track.
-                    </li>
-                    <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
-                    <li>
-                      <strong>Fader Reset</strong>: When eneabled, you can use the [Left Shift] button to reset the
-                      fader value while touching teh fader.
-                    </li>
-                    <li>
-                      <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary.
-                      The timeout for being momentary is 500 milli seconds. In short: If you press the solo button
-                      longer then 500ms and release it, it will instant unsolo again.
-                    </li>
-                    <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER.</li>
-                    <li>
-                      <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time code
-                      with.
-                    </li>
-                    <li><strong>Track mode display:</strong> Change the Display layout for the track mode.</li>
-                  </ul>
+                  <p>
+                    For the<strong> FaderPort 8/16</strong>, <strong>ReaSonus Native</strong> has a couple of settings.
+                    For convenience reasons these are grouped.
+                  </p>
                   <p></p>
+
+                  <section class="tabs-macro">
+                    <section class="tab-bar">
+                      <button data-id="y00vrscjshi2denad0gfsha2-174-103">Global</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-174-104">Controller</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-174-105">Display</button>
+                    </section>
+                    <section class="tab-content">
+                      <section class="tab global" data-id="y00vrscjshi2denad0gfsha2-174-103">
+                        <ul>
+                          <li>
+                            <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
+                            plugins, you can select this. The plugins mode is still active and you are still able to
+                            open the plugin window. From that point, the <strong>ReaSonus FaderPort </strong>will not do
+                            anything anymore for the plugins.
+                          </li>
+                          <li>
+                            <strong>ReaSonus UI Language</strong>: Select the language you want to use. If your language
+                            is not there (currently only en-US is supplied), Click the
+                            <strong>Edit Languages</strong> button. You can create your own languages. Read more on the
+                            Language Editor under the Goodies
+                          </li>
+                          <li>
+                            <strong>Distraction free mode</strong>: Disable the active state for some buttons and do not
+                            blink the buttons anymore
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab controller" data-id="y00vrscjshi2denad0gfsha2-174-104">
+                        <ul>
+                          <li>
+                            <strong>Untouch last touched param after learn</strong>: When selected the last touched
+                            param will be set to untouched after parameter learn.
+                          </li>
+                          <li>
+                            <strong>Enable master fader mode</strong>: When selected en pressing the master button will
+                            enable master fader mode. This makes the last track of the FaderPort control the master
+                            track.
+                          </li>
+                          <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
+                          <li>
+                            <strong>Fader Reset</strong>: When eneabled, you can use the [Left Shift] button to reset
+                            the fader value while touching teh fader.
+                          </li>
+                          <li>
+                            <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons
+                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
+                            solo button longer then 500ms and release it, it will instant unsolo again.
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab display" data-id="y00vrscjshi2denad0gfsha2-174-105">
+                        <ul>
+                          <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER.</li>
+                          <li>
+                            <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time
+                            code with.
+                          </li>
+                          <li><strong>Track mode display:</strong> Change the Display layout for the track mode.</li>
+                        </ul>
+                      </section>
+                    </section>
+                  </section>
                 </section>
 
                 <section class="extras">
@@ -195,6 +237,22 @@
                       <p>
                         By pressing<strong> [Left Shift] + Touch</strong>-button on the <strong>FaderPort</strong>, you
                         will be able to make all those settings on the device as well.
+                      </p>
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Translations Editor</h4>
+                    </header>
+                    <section>
+                      <p>
+                        To manage the translations, <strong>ReaSonus Native</strong> has a
+                        <strong>Translations Editor</strong> build in. Read the
+                        <a href="/reasonus/documentation/goodies/#translations-editor"
+                          >Translations Editor documentation</a
+                        >
+                        on how to add and edit translations and languages.
                       </p>
                     </section>
                   </article>
@@ -231,18 +289,18 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="y00vrscjshi2denad0gfsha2-101-51">Track</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-175-110">Track</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-101-47">Plugin</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-175-106">Plugin</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-101-48">Send</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-175-107">Send</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-101-49">Receive</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-175-108">Receive</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-101-50">Pan</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-175-109">Pan</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-101-51">
+                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-175-110">
                         <ol>
                           <li><strong>Display</strong></li>
                           <ul>
@@ -271,12 +329,16 @@
                           <li><strong>Pan/Param</strong>:</li>
                           <ul>
                             <li>
-                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
-                              set the pan position back to center.
+                              <strong>Press</strong>: Switch between pan value 1 or pan value 2. The displays will tell
+                              what mode you are currently in.
                             </li>
                             <li>
-                              <strong>Left Shift</strong>: Controlls pan value 1 for the currently selected track. Push
-                              to set the pan position back to center.
+                              Default: Controls pan value 1 or value 2, depending on the current selected mode, for the
+                              currently selected track.
+                            </li>
+                            <li>
+                              <strong>Left Shift + Press</strong>: Resets the pan value to it's default, depending on
+                              the current mode
                             </li>
                           </ul>
                           <li><strong>Select button</strong>:</li>
@@ -350,7 +412,7 @@
                         </section>
                       </section>
 
-                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-101-47">
+                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-175-106">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -374,12 +436,7 @@
                           <li><strong>Pan/Param</strong>:</li>
                           <ul>
                             <li>
-                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
-                              set the pan position back to center.
-                            </li>
-                            <li>
-                              <strong>Left Shift</strong>: Controlls pan value 1 for the currently selected track. Push
-                              to set the pan position back to center.
+                              <strong>Default</strong>: In Hue mode step through the plugins. In track mode, no function
                             </li>
                           </ul>
                           <li><strong>Select button</strong>:</li>
@@ -409,7 +466,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-101-48">
+                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-175-107">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -432,14 +489,7 @@
                           </ul>
                           <li><strong>Pan/Param</strong>:</li>
                           <ul>
-                            <li>
-                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
-                              set the pan position back to center.
-                            </li>
-                            <li>
-                              <strong>Left Shift</strong>: Controlls pan value 2 for the currently selected track. Push
-                              to set the pan position back to center.
-                            </li>
+                            <li>Default: In Hue mode step through the sends. In track mode, no function</li>
                           </ul>
                           <li><strong>Select button</strong>:</li>
                           <ul>
@@ -474,7 +524,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-101-49">
+                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-175-108">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -497,14 +547,7 @@
                           </ul>
                           <li><strong>Pan/Param</strong>:</li>
                           <ul>
-                            <li>
-                              <strong>Default</strong>: Controls pan value 1 for the currently selected track. Push to
-                              set the pan position back to center.
-                            </li>
-                            <li>
-                              <strong>Left Shift</strong>: Controls pan value 1 for the currently selected track. Push
-                              to set the pan position back to center.
-                            </li>
+                            <li>Default: In Hue mode step through the receives. In track mode, no function</li>
                           </ul>
                           <li><strong>Select button</strong>:</li>
                           <ul>
@@ -536,7 +579,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-101-50">
+                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-175-109">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -547,17 +590,7 @@
                           </ul>
                           <li><strong>Meter</strong>: Disabled</li>
                           <li><strong>Value bar</strong>: Displays the Tracks current volume.</li>
-                          <li><strong>Pan/Param</strong>:</li>
-                          <ul>
-                            <li>
-                              <strong>Default</strong>: Controlls pan value 1 for the currently selected track. Push to
-                              set the pan position back to center.
-                            </li>
-                            <li>
-                              <strong>Left Shift</strong>: Controlls pan value2 for the currently selected track. Push
-                              to set the pan position back to center.
-                            </li>
-                          </ul>
+                          <li><strong>Pan/Param</strong>: No function</li>
                           <li><strong>Select button</strong>:</li>
                           <ul>
                             <li>
@@ -1221,7 +1254,7 @@
                 <section class="content">
                   <p>
                     Each of the eight buttons also gives you acces to configurable functions by pressing the
-                    <strong>Left Shift</strong> buttons together with these buttons
+                    <strong>Left Shift</strong> or the <strong>Right Shift</strong> button together with these buttons
                   </p>
                   <ul>
                     <li><strong>F1</strong>: Custom function (user defined)</li>
@@ -1285,6 +1318,6 @@
       </footer>
     </section>
     <div id="image-container"></div>
-    <script src="/reasonus/javascript/DfNJeHcAAB.js"></script>
+    <script src="/reasonus/javascript/dddZ-IICA7.js"></script>
   </body>
 </html>

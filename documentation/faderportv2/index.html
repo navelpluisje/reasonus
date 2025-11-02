@@ -128,6 +128,10 @@
                 </li>
 
                 <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#translations-editor"> Translations Editor </a>
+                </li>
+
+                <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#reasonus-actions"> ReaSonus Actions </a>
                 </li>
 
@@ -150,7 +154,7 @@
                   <img class="settings popout" src="/reasonus/cms_images/fp_2_settings_925c8cb68b.webp" alt="" />
                 </picture>
                 <section class="content">
-                  <p>For the faderPort v2 ReaSonus has the following 2 settings</p>
+                  <p>For the FaderPort v2 <strong>ReaSonus Native</strong> has the following 2 settings</p>
                   <ul>
                     <li>
                       <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary.
@@ -158,8 +162,12 @@
                       longer then 500ms and release it, it will instant unsolo again
                     </li>
                     <li>
-                      <strong>Control hidden MCP tracks</strong>: By default ReaSonus will step through the visible
-                      tracks. With this option ste also the hidden files in the MCP will be selectable
+                      <strong>Control hidden MCP tracks</strong>: By default <strong>ReaSonus Native</strong> will step
+                      through the visible tracks. With this option also the hidden files in the MCP will be selectable
+                    </li>
+                    <li>
+                      <strong>Enable option to disable fader move when selecting tracks:</strong> This option makes it
+                      possible to use [Shift] + [Channel] to disable fader moves when selecting tracks in REAPER
                     </li>
                   </ul>
                 </section>

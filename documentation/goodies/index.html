@@ -128,6 +128,10 @@
                 </li>
 
                 <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#translations-editor"> Translations Editor </a>
+                </li>
+
+                <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#reasonus-actions"> ReaSonus Actions </a>
                 </li>
 
@@ -155,18 +159,20 @@
                 </picture>
                 <section class="content">
                   <p>
-                    The ReaSonus Control Panel is the place to be for configuring your FaderPort. The Control Panel has
-                    several tabs:
+                    The <strong>ReaSonus Native Control Panel</strong> is the place to be for configuring your
+                    <strong>FaderPort</strong>. The Control Panel has several tabs:
                   </p>
                   <ul>
-                    <li>Function Keys: Assign actions to the function keys</li>
-                    <li>Custom Filters: Create custom filters to make mixing easier (FaderPort 8/16 only)</li>
-                    <li>Plugin Mapping: Edit your plugin mappings here (FaderPort 8/16 only)</li>
-                    <li>Settings: Control all the settings</li>
-                    <li>About ReaSonus: What's in the name</li>
+                    <li><strong>Function Keys</strong>: Assign actions to the function keys</li>
+                    <li>
+                      <strong>Custom Filters</strong>: Create custom filters to make mixing easier (FaderPort 8/16 only)
+                    </li>
+                    <li><strong>Plugin Mapping</strong>: Edit your plugin mappings here (FaderPort 8/16 only)</li>
+                    <li><strong>Settings</strong>: Control all the settings</li>
+                    <li><strong>About ReaSonus</strong>: What's in the name</li>
                   </ul>
                   <p>In the next chapters you can read more about all the functionalities.</p>
-                  <p>The image is for the FaderPort 8/16.</p>
+                  <blockquote>The image is for the FaderPort 8/16.</blockquote>
                 </section>
               </section>
             </article>
@@ -188,11 +194,12 @@
                 </picture>
                 <section class="content">
                   <p>
-                    Within <strong>ReaSonus</strong> it is fairly simple to manage the actions attached to the function
-                    buttons. To open the window click the <strong>Left Shift + Macro</strong>-button, or open the
-                    <strong>ReaSonus Control Panel</strong> and select the <strong>Function Keys</strong> tab.
+                    Within <strong>ReaSonus Native</strong> it is fairly simple to manage the actions attached to the
+                    function buttons. To open the window click the <strong>[Left Shift] + [Macro]</strong>-button, or
+                    open the <strong>ReaSonus Native Control Panel</strong> and select the
+                    <strong>Function Keys</strong> tab.
                   </p>
-                  <p>There are 8 fields (4 for the FaderPort V2) for the function keys with all 2 buttons.</p>
+                  <p>There are 2 tabs with 8 fields (4 for the FaderPort V2) for the function keys.</p>
                   <p>
                     Each block shows the name and info for the corresponding action. Selecting an other action can be
                     done by clicking the icon in the top right corner. This will open the acions list.
@@ -224,14 +231,14 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-86-42">MIDI Learn</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-179-111">MIDI Learn</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-86-43">Ui</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-179-112">Ui</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-86-44">Manual</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-179-113">Manual</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-86-42">
+                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-179-111">
                         <p></p>
                         <h3>New Plugin Mapping</h3>
                         <p>
@@ -291,7 +298,7 @@
                         </p>
                       </section>
 
-                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-86-43">
+                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-179-112">
                         <p>
                           Within <strong>ReaSonus</strong> it is also possible to manually add a mapping or to edit some
                           settings of the mapping. If you want to use this, do one of teh following:
@@ -337,7 +344,7 @@
                         <p></p>
                       </section>
 
-                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-86-44">
+                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-179-113">
                         <p>
                           The mapping of the plugins is done in simple ini files. These can be opened in your editor of
                           choice. The files are located in the next location:
@@ -450,6 +457,77 @@
                       </p>
                     </section>
                   </article>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="translations-editor">
+            <article class="gray">
+              <header>
+                <h2>Translations Editor</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="translations-editor popout"
+                    src="/reasonus/cms_images/translations_editor_b857920baf.webp"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <p>Within <strong>Reasonus Native</strong> it is possible to manage languages and translations.</p>
+                  <h3>Add Language</h3>
+                  <ul>
+                    <li>Open the <strong>Reasonus Native Translations Editor</strong> via:</li>
+                    <ul>
+                      <li>Actions List: Search for <code>translations</code> and select the proper action</li>
+                      <li>
+                        Open the <strong>Settings Page</strong> in the <strong>ReaSonus Native Control panel</strong>
+                      </li>
+                    </ul>
+                    <li>Enter a name for the new language. It is recommanded to follow the next convention:</li>
+                    <ul>
+                      <li>
+                        The first 2 letters are for the language like <code>en</code>, <code>nl</code>, <code>fr</code>,
+                        in lower case
+                      </li>
+                      <li>The second 2 letters will be the country like <code>CA</code>, <code>DE</code>, etc</li>
+                      <li>Connevct these with a dash like: <code>en-US</code>, <code>fr-CA</code></li>
+                    </ul>
+                    <li>
+                      Click the add icon next to the input field. A new file for your language is created and populated
+                      with the en-US translations
+                    </li>
+                    <li>Now you can edit the translations to your liking and sasve the changes</li>
+                    <li>
+                      After editing the changes you can go to the <strong>Settings Page</strong> in the
+                      <strong>Control Panel</strong>
+                    </li>
+                    <li>Select your language and click Save</li>
+                  </ul>
+                  <h3>Contribute</h3>
+                  <p>
+                    For now, only en-US will be shipped with <strong>ReaSonus Native</strong>. If you think your
+                    language should get added to the <strong>ReaSonus Native</strong> install, please contact me. When
+                    doing that, please keep in mind that I will ask you for updates to the file when changes are needed,
+                    so it not a one-of.
+                  </p>
+                  <h3>How do updates work</h3>
+                  <p>A little bit of technical background:</p>
+                  <ul>
+                    <li>
+                      When updated with <strong>ReaPack</strong> the new <code>en-US</code> translation file will get
+                      installed in the <code><Reaper resource="" path="">/UserPlugins/ReaSonus</Reaper></code> folder
+                    </li>
+                    <li>On startup of REAPER the current en-US file will get overwritten with the new one.</li>
+                    <li>
+                      All other language files will get updated with the newly added translations. (current translations
+                      will off course stay as they are)
+                    </li>
+                    <li>You can now update the newly added translations to the language you want</li>
+                  </ul>
                 </section>
               </section>
             </article>
@@ -638,6 +716,6 @@
       </footer>
     </section>
     <div id="image-container"></div>
-    <script src="/reasonus/javascript/DfNJeHcAAB.js"></script>
+    <script src="/reasonus/javascript/dddZ-IICA7.js"></script>
   </body>
 </html>
