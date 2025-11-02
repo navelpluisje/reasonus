@@ -26,7 +26,7 @@ export const downloadImage = (imagePath) => {
   }
 
   https
-    .get(imageUrl, (response) => {
+    .get(`${imageUrl}?${Date.now()}`, (response) => {
       response.pipe(file);
 
       file.on("finish", () => {

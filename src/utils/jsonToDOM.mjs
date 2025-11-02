@@ -63,7 +63,7 @@ const getModifiers = (val) => {
 export function jsonToDOM(blocks = []) {
   let result = "";
 
-  for (const block of blocks) {
+  for (const block of blocks || []) {
     const { type, children, ...rest } = block;
 
     if (children) {
