@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReaSonus :: New ReaSonus version (v0.3.0)</title>
+    <title>ReaSonus :: New ReaSonus version (v0.4.2)</title>
     <link rel="icon" href="/reasonus/images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/reasonus/styles/HhVi_WZHHi.css" />
   </head>
   <body>
-    <section class="post-page grey">
+    <section class="post-page blue">
       <header class="header">
         <a href="/reasonus/"> <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" /></a>
       </header>
@@ -26,10 +26,10 @@
             <img src="/reasonus/images/logo-only.svg" alt="" class="logo" />
           </section>
 
-          <article class="post-extras grey">
+          <article class="post-extras blue">
             <dl>
               <dt>Published:</dt>
-              <dd>14-10-2025</dd>
+              <dd>18-11-2025</dd>
             </dl>
             <dl>
               <dt>Author:</dt>
@@ -48,47 +48,17 @@
           </article>
         </section>
         <section class="post-content-group">
-          <h1 class="post-title">New ReaSonus version (v0.3.0)</h1>
+          <h1 class="post-title">New ReaSonus version (v0.4.2)</h1>
           <section class="post-content">
             <p>A new version of ReaSonus Native has been released.</p>
-            <blockquote>This version has a new dependency: <strong>ReaImGui v0.10.*</strong></blockquote>
             <h3>What's Changed</h3>
             <h4>All devices</h4>
             <ul>
-              <li>Moved the dialogs to ReaImgui. See the documentation for more details.</li>
-              <li>Fixed issue with saw-tooth like envelopes in touch mode</li>
+              <li>Fixed issue where REAPER crashed when selecting a hidden track in the track manager</li>
             </ul>
             <h4>FaderPort 8/16</h4>
             <ul>
-              <li>
-                Added pan channel: The pan button now makes the faders handle the pan. Removed the shift + fader
-                behaviour
-              </li>
-              <li>Moved the receives channel to [Shift] + [Send] to make space for the Pan channel</li>
-              <li>
-                Added option to make [Left Shift] + [Fader Touch] reset the fader value. This is a setting and off by
-                default
-              </li>
-              <li>
-                Changed the shift behaviour for all channel related modi (track, plugin, send, etc...). Now when the
-                shift(left or right), this does not reflect on these modi.
-              </li>
-              <li>Fixed issue where all faders right of the last send fader also moved.</li>
-              <li>
-                Added converter for the old zon plugin mapping files (It is always recommanded doing a test run on a
-                portable install)
-              </li>
-              <li>
-                When on-device menu is open, it will now close with any click on the <strong>[Touch]</strong> button
-              </li>
-              <li>
-                Added option in the settings to change the Display layout in track mode. This also available in the
-                on-device menu
-              </li>
-            </ul>
-            <h4>FaderPort V2</h4>
-            <ul>
-              <li>Fixed bug where fader became inresponsive after adding a new track</li>
+              <li>Fixed issue where the FaderPort was not following the selected track in REAPER</li>
             </ul>
             <h3>Install</h3>
             <p>
@@ -105,24 +75,22 @@
             <blockquote>
               Full Changelog:
               <a
-                href="https://github.com/navelpluisje/Reasonus-Native/compare/0.2.0...0.3.0"
+                href="https://github.com/navelpluisje/Reasonus-Native/compare/0.4.1...0.4.2"
                 target="_blank"
                 rel="noreferrer noopener"
-                >https://github.com/navelpluisje/Reasonus-Native/compare/0.2.0...0.3.0</a
+                >https://github.com/navelpluisje/Reasonus-Native/compare/0.4.1...0.4.2</a
               >
             </blockquote>
           </section>
         </section>
         <section class="post-pagination">
           <div class="previous-post">
-            <a href="/reasonus/posts/new-reasonus-version-v0-2-0/">Previous Post</a>
+            <a href="/reasonus/posts/new-reasonus-version-v0-4-1/">Previous Post</a>
           </div>
           <div class="post-list">
             <a href="/reasonus/posts">All posts</a>
           </div>
-          <div class="next-post">
-            <a href="/reasonus/posts/new-reasonus-version-v0-4-0/">Next Post</a>
-          </div>
+          <div class="next-post"></div>
         </section>
       </section>
 
