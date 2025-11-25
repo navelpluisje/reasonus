@@ -112,10 +112,6 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
-                </li>
-
-                <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
                 </li>
 
@@ -168,6 +164,10 @@
                     <li>
                       <strong>Enable option to disable fader move when selecting tracks:</strong> This option makes it
                       possible to use [Shift] + [Channel] to disable fader moves when selecting tracks in REAPER
+                    </li>
+                    <li>
+                      <strong>Enable endless track scrolling:</strong> When on the last track and clicking the next
+                      button, go to the first track. Same for previous, but then the other way around.
                     </li>
                   </ul>
                 </section>
@@ -392,13 +392,19 @@
                     </ul>
                     <li><strong>Channel</strong>: Control channel scrolling. The button will have the track color.</li>
                     <ul>
-                      <li><strong>Previous</strong>: Select the previous track.</li>
+                      <li>
+                        <strong>Previous</strong>: Select the previous track. If the current track is the first track,
+                        the last track wil get selected
+                      </li>
                       <li><strong>Encoder</strong>:</li>
                       <ul>
                         <li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li>
                       </ul>
                       <li><strong>Encoder Click</strong>: Not implemented</li>
-                      <li><strong>Next</strong>: Select the next track.</li>
+                      <li>
+                        <strong>Next</strong>: Select the next track. If the current track is the last track, the first
+                        track wil get selected
+                      </li>
                     </ul>
                     <li>
                       <strong>Section</strong>: Handle adding, deleting and editing regions. Pressing this button wile

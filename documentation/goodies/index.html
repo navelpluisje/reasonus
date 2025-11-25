@@ -112,10 +112,6 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
-                </li>
-
-                <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
                 </li>
 
@@ -143,41 +139,6 @@
           </nav>
         </aside>
         <section class="page-content">
-          <div class="documentation-block" id="reasonus-control-panel">
-            <article class="gray">
-              <header>
-                <h2>ReaSonus Control Panel</h2>
-              </header>
-
-              <section class="image-content">
-                <picture class="img-container">
-                  <img
-                    class="reasonus-control-panel popout"
-                    src="/reasonus/cms_images/fp_8_mapping2_5eab720156.webp"
-                    alt=""
-                  />
-                </picture>
-                <section class="content">
-                  <p>
-                    The <strong>ReaSonus Native Control Panel</strong> is the place to be for configuring your
-                    <strong>FaderPort</strong>. The Control Panel has several tabs:
-                  </p>
-                  <ul>
-                    <li><strong>Function Keys</strong>: Assign actions to the function keys</li>
-                    <li>
-                      <strong>Custom Filters</strong>: Create custom filters to make mixing easier (FaderPort 8/16 only)
-                    </li>
-                    <li><strong>Plugin Mapping</strong>: Edit your plugin mappings here (FaderPort 8/16 only)</li>
-                    <li><strong>Settings</strong>: Control all the settings</li>
-                    <li><strong>About ReaSonus</strong>: What's in the name</li>
-                  </ul>
-                  <p>In the next chapters you can read more about all the functionalities.</p>
-                  <blockquote>The image is for the FaderPort 8/16.</blockquote>
-                </section>
-              </section>
-            </article>
-          </div>
-
           <div class="documentation-block" id="functions-management">
             <article class="gray">
               <header>
@@ -199,11 +160,22 @@
                     open the <strong>ReaSonus Native Control Panel</strong> and select the
                     <strong>Function Keys</strong> tab.
                   </p>
-                  <p>There are 2 tabs with 8 fields (4 for the FaderPort V2) for the function keys.</p>
                   <p>
-                    Each block shows the name and info for the corresponding action. Selecting an other action can be
-                    done by clicking the icon in the top right corner. This will open the acions list.
+                    There are 2 tabs with 8 fields for the function keys on the FaderPort 8/16 and there are 4 functions
+                    keys for the FaderPort V2.
                   </p>
+                  <p>
+                    Each function block shows the name and info for the corresponding action, together with the action
+                    id.
+                  </p>
+                  <p>There are 2 buittons per block available:</p>
+                  <ul>
+                    <li>
+                      <strong>The magnifying glass</strong>: Opens the action list. You can select the action you want
+                      and then press the select button.
+                    </li>
+                    <li><strong>The refresh button</strong>: This will clear the selected action.</li>
+                  </ul>
                   <p>Click the save button to save your changes.</p>
                   <p></p>
                 </section>
@@ -231,14 +203,14 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-179-111">MIDI Learn</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-201-126">MIDI Learn</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-179-112">Ui</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-201-127">Ui</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-179-113">Manual</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-201-128">Manual</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-179-111">
+                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-201-126">
                         <p></p>
                         <h3>New Plugin Mapping</h3>
                         <p>
@@ -246,9 +218,9 @@
                           possible. When in the Plugin Channel Mode:
                         </p>
                         <ul>
-                          <li>Press the Solo button to open the window of that plugin.</li>
+                          <li>Press the <strong>[Solo]</strong> button to open the window of that plugin.</li>
                           <li>
-                            Press the <strong>Link</strong>-button will open the editing mode. If no mapping has been
+                            Press the <strong>[Link</strong>] button will open the editing mode. If no mapping has been
                             done for the selected plugin, a new mapping will be created automaticaly. In this mode the
                             button is blinking.
                           </li>
@@ -259,14 +231,14 @@
                         </p>
                         <p>
                           Now you can wiggle/touch a parameter in the plugin and then press the
-                          <strong>Select</strong> button of the channel you want to assign it to or touch the fader.
-                          This should change the text <strong>Free</strong> to the name of the parameter (The top one
-                          for the select button and the bottom one for the fader).
+                          <strong>[Select]</strong> button of the channel you want to assign it to or touch the fader of
+                          choice. This should change the text <strong>Free</strong> to the name of the parameter (The
+                          top one for the select button and the bottom one for the fader).
                         </p>
                         <p>
-                          The <strong>Select</strong>-button can be used fo toggle buttons (on/off) or plugin parameters
-                          with a limited amount of steps. in that case, when the correct data is available from the
-                          plugin, pressing the <strong>Select</strong>-button will loop through the options
+                          The <strong>[Select</strong>] button can be used for toggle buttons (on/off) or plugin
+                          parameters with a limited amount of steps. In that case, when the correct data is available
+                          from the plugin, pressing the <strong>[Select</strong>] button will loop through the options
                         </p>
                         <p>
                           If all channels are populated (or earlier) you can use the Pan/Param encoder to scroll to a
@@ -274,22 +246,22 @@
                         </p>
                         <p>
                           If you want to disconnect an assignment, you can press the Right Shift and press the Select
-                          button or touch the fader you want to disconnect. The connection in removed and the text will
-                          change to Free again.
+                          button or touch the fader you want to disconnect. The connection is removed and the text will
+                          change to <strong>Free</strong> again.
                         </p>
                         <p>
-                          Once done editing, press thge <strong>Link</strong>-button again. Now you can use your mapping
-                          instantly
+                          Once done editing, press thge [<strong>Link</strong>] button again. Now you can use your
+                          mapping instantly
                         </p>
                         <h3>Edit Mapping</h3>
                         <p>
                           If the selected plugin already has a mapping, this will get activated instantly. If you want
-                          to make changes to the mapping, press the <strong>Link</strong> button. This will enable the
+                          to make changes to the mapping, press the <strong>[Link]</strong> button. This will enable the
                           edit mode. All values should be cleared from the displays and the empty slots will display the
                           Empty text again.
                         </p>
                         <p>
-                          If you want to overwrite a mapping, just wiggle/touch a plugin parameter and the select the
+                          If you want to overwrite a mapping, just wiggle/touch a plugin parameter and then select the
                           control you want to assign it to. This will overwrite it
                         </p>
                         <h3>Overwriting names</h3>
@@ -298,53 +270,57 @@
                         </p>
                       </section>
 
-                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-179-112">
+                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-201-127">
+                        <blockquote>
+                          It is at this point not possible to add mappings in the
+                          <strong>ReaSonus Control Panel</strong>
+                        </blockquote>
                         <p>
                           Within <strong>ReaSonus</strong> it is also possible to manually add a mapping or to edit some
-                          settings of the mapping. If you want to use this, do one of teh following:
+                          settings of the mapping. If you want to use this, do one of the following:
                         </p>
                         <ul>
                           <li>
-                            Go into the learn mode. In this mode, press the Left Shift and press the Select button of
-                            the channel you want to edit. This opens the <strong>Plugin Mapping</strong> with the
-                            current effect and parameter selected.
+                            Go into the learn mode. In this mode, press the <strong>[Left Shift]</strong> and press the
+                            <strong>[Select]</strong> button of the channel you want to edit. This opens the
+                            <strong>Plugin Mapping</strong> with the current effect and parameter selected.
                           </li>
                           <li>
                             Open the <strong>ReaSonus Control Panel</strong> and open the tab
-                            <strong>Plugin Mapping</strong>. Then you can select the developer and the plugin.
+                            <strong>Plugin Mapping</strong>. Then you can select the developer and the plugin you want
+                            to edit.
                           </li>
                         </ul>
                         <h3>The panel</h3>
                         <p>
-                          On the left side you see the list of plugins which are already mapped. The are gouped by
-                          developer to make searchin a bit easier.
+                          On the left side you see the list of plugins which are already mapped. They are gouped by
+                          developer to make searching a bit easier.
                         </p>
                         <p>
                           On the right side at the top you see a list with numbered buttons. These represent the tracks
-                          you assign the controls to. When the list gets larger you can scroll through the list.
-                          Clicking a button it will show the the settings for that track.
+                          you assign the controls to. When the list gets larger you can <strong>scroll</strong> through
+                          the list. Clicking a button will show you the settings for that track.
                         </p>
                         <h3>The Fields</h3>
                         <ul>
                           <li>
-                            <strong>Control Name</strong>: The display name for the control. This is how the parameter
-                            appears in the display and is editable
+                            <strong>Plugin Parameter</strong>: This is a dropdown with all the available parameters of
+                            the selected plugin.
                           </li>
                           <li>
-                            <strong>Original Name</strong>: The name given by the developer of the plugin. This is not
-                            editable and purly for reference
+                            <strong>Parameter Display Name</strong>: A configurable name for the parameter. This can
+                            come in handy as most times the original names are fairly long.
                           </li>
-                          <li><strong>Param Id</strong>: The index of the parameter.</li>
                           <li>
                             <strong>Number of Steps</strong>: (Select only) the numbe rof steps/options for the
                             parameter. In case of on/off this will be 2
                           </li>
                         </ul>
-                        <p>Click the save button to save your changes.</p>
+                        <p>Click the <strong>Save</strong> button to save your changes.</p>
                         <p></p>
                       </section>
 
-                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-179-113">
+                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-201-128">
                         <p>
                           The mapping of the plugins is done in simple ini files. These can be opened in your editor of
                           choice. The files are located in the next location:
@@ -545,94 +521,240 @@
                     With <strong>ReaSonus Native</strong> also some actions get installed. These are internally also
                     used in the extension, but if you want one or more of them as a menu button, you can.
                   </p>
-                </section>
 
-                <section class="extras">
-                  <article class="explanation-macro">
-                    <header>
-                      <h4>Reasonus: Toggle follow the play cursor</h4>
-                    </header>
-                    <section>
-                      <p>
-                        Toggle Follow the play cursor. This action has a state, so should reflect its state in the
-                        button
-                      </p>
-                      <p>ID: <code>REASONUS_TOGGLE_PLAY_CURSOR_COMMAND</code></p>
-                      <p></p>
+                  <section class="tabs-macro">
+                    <section class="tab-bar">
+                      <button data-id="i1wueez611runwgmpq3d4m5a-22-129">All</button>
+
+                      <button data-id="i1wueez611runwgmpq3d4m5a-22-130">FaderPort 8/16</button>
+
+                      <button data-id="i1wueez611runwgmpq3d4m5a-22-131">FaderPort V2</button>
                     </section>
-                  </article>
+                    <section class="tab-content">
+                      <section class="tab all" data-id="i1wueez611runwgmpq3d4m5a-22-129">
+                        <p>These acttion apply to all the devices.</p>
 
-                  <article class="explanation-macro">
-                    <header>
-                      <h4>Reasonus: Show the ReaSonus Native 8/16 Control Panel</h4>
-                    </header>
-                    <section>
-                      <p>
-                        Toggle the <strong>ReaSonus Control Panel </strong>for the <strong>FaderPort 8/16</strong>. This
-                        action has a state, so should reflect its state in the button
-                      </p>
-                      <p>
-                        ID: <code><strong>REASONUS_SHOW_REASONUS_8_CONTROL_WINDOW</strong></code>
-                      </p>
-                      <p></p>
+                        <section class="extras">
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle follow the play cursor</h4>
+                            </header>
+                            <section>
+                              <p>
+                                Toggle Follow the play cursor. This action has a state, so should reflect its state in
+                                the button
+                              </p>
+                              <p>ID: <code>REASONUS_TOGGLE_PLAY_CURSOR_COMMAND</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Show Reaper resource path</h4>
+                            </header>
+                            <section>
+                              <p>Shows the Reaper Resource folder location in a console so you can easily copy it</p>
+                              <p>ID: <code>REASONUS_SHOW_REAPER_RESOURCE_PATH_COMMAND</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Convert the old zon mappings to the new ini mappings</h4>
+                            </header>
+                            <section>
+                              <p>
+                                Convert all the zon plugin mapping files from the old ReaSonus version to the new file
+                                structure
+                              </p>
+                              <p>ID: <code>REASONUS_CONVERT_PLUGIN_ZON_TO_INI</code></p>
+                            </section>
+                          </article>
+                        </section>
+                      </section>
+
+                      <section class="tab faderport-8-16" data-id="i1wueez611runwgmpq3d4m5a-22-130">
+                        <p>These actions are <strong>FaderPort 8/16</strong> only</p>
+
+                        <section class="extras">
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Show the ReaSonus Native 8/16 Control Panel</h4>
+                            </header>
+                            <section>
+                              <p>
+                                Toggle the <strong>ReaSonus Control Panel </strong>for the
+                                <strong>FaderPort 8/16</strong>. This action has a state, so should reflect its state in
+                                the button
+                              </p>
+                              <p>
+                                ID: <code><strong>REASONUS_SHOW_REASONUS_8_CONTROL_WINDOW</strong></code>
+                              </p>
+                              <p></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle disable plugins setting</h4>
+                            </header>
+                            <section>
+                              <p>
+                                If you use another controller for controlling the plugins, you can select this. The
+                                plugins mode is still active and you are still able to open the plugin window. From that
+                                point, the ReaSonus FaderPort will not do anything anymore for the plugins.
+                              </p>
+                              <p>ID:<code>_REASONUS_FP8_TOGGLE_DISABLE_PLUGINS</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle distraction free setting</h4>
+                            </header>
+                            <section>
+                              <p>Remove all that can be distracting like blinking buttons, some buttons `on` state.</p>
+                              <p>ID: <code>_REASONUS_FP8_TOGGLE_DISTRACTION_FREE_MODE</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle untouch last touched param after learn setting</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When selected the last touched param will be set to untouched after parameter learn.
+                              </p>
+                              <p>ID: <code>_REASONUS_FP8_TOGGLE_UNTOUCH_LAST_TOUCHED_PARAM</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle master fader mode setting</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When selected en pressing the master button will enable master fader mode. This makes
+                                the last track of the FaderPort control the master track.
+                              </p>
+                              <p>ID: <code>_REASONUS_FP8_TOGGLE_MASTER_FADER_MODE</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle swap shift buttons setting</h4>
+                            </header>
+                            <section>
+                              <p>This swaps the left and right Shift button.</p>
+                              <p>ID: <code>_REASONUS_FP8_TOGGLE_SWAP_SHIFT_BUTTONS</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle fader reset: Left shift and fader touch setting</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When eneabled, you can use the [Left Shift] button to reset the fader value while
+                                touching the fader.
+                              </p>
+                              <p>ID: <code>_REASONUS_FP8_TOGGLE_FADER_RESET</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Toggle momentary mute/solo setting</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When set, it will make the Solo and Mute buttons momentary. The timeout for being
+                                momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms
+                                and release it, it will instant unsolo again.
+                              </p>
+                              <p>ID: <code>_REASONUS_FP8_TOGGLE_MOMENTARY_MUTE_SOLO</code></p>
+                            </section>
+                          </article>
+                        </section>
+                      </section>
+
+                      <section class="tab faderport-v2" data-id="i1wueez611runwgmpq3d4m5a-22-131">
+                        <p>These actions are <strong>FaderPort v2</strong> only</p>
+
+                        <section class="extras">
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: Show the ReaSonus Native V2 Control Panel</h4>
+                            </header>
+                            <section>
+                              <p>
+                                Toggle the <strong>ReaSonus Control Panel </strong>for the
+                                <strong>FaderPort v2</strong>. This action has a state, so should reflect its state in
+                                the button
+                              </p>
+                              <p>
+                                ID: <code><strong>REASONUS_SHOW_REASONUS_V2_CONTROL_WINDOW</strong></code>
+                              </p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: v2 Toggle control hidden tracks</h4>
+                            </header>
+                            <section>
+                              <p>Do not skip the hidden tracks when scrolling through te tracks</p>
+                              <p>ID <code>_REASONUS_FPV2_TOGGLE_CONTROL_HIDDEN_TRACKS</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: v2 Toggle disable fader move</h4>
+                            </header>
+                            <section>
+                              <p>
+                                This enables the option to disable the fader move when selecting another track. So no
+                                fader moves while doing other things in REAPER.
+                              </p>
+                              <p>ID <code>_REASONUS_FPV2_TOGGLE_DISABLE_FADER_MOVE</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: v2 Toggle endless track scroll</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When on the last track and clicking the next button, go to the first track. Same for
+                                previous, but then the other way around.
+                              </p>
+                              <p>ID <code>_REASONUS_FPV2_TOGGLE_ENDLESS_TRACK_SCROLL</code></p>
+                            </section>
+                          </article>
+
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Reasonus: v2 Toggle momentary mute/solo setting</h4>
+                            </header>
+                            <section>
+                              <p>
+                                When set, it will make the Solo and Mute buttons momentary. The timeout for being
+                                momentary is 500 milli seconds. In short: If you press the solo button longer then 500ms
+                                and release it, it will instant unsolo again.
+                              </p>
+                              <p>ID <code>_REASONUS_FPV2_TOGGLE_MOMENTARY_MUTE_SOLO</code></p>
+                            </section>
+                          </article>
+                        </section>
+                      </section>
                     </section>
-                  </article>
-
-                  <article class="explanation-macro">
-                    <header>
-                      <h4>Reasonus: Show the ReaSonus Native V2 Control Panel</h4>
-                    </header>
-                    <section>
-                      <p>
-                        Toggle the <strong>ReaSonus Control Panel </strong>for the <strong>FaderPort v2</strong>. This
-                        action has a state, so should reflect its state in the button
-                      </p>
-                      <p>
-                        ID: <code><strong>REASONUS_SHOW_REASONUS_V2_CONTROL_WINDOW</strong></code>
-                      </p>
-                      <p></p>
-                    </section>
-                  </article>
-
-                  <article class="explanation-macro">
-                    <header>
-                      <h4>Reasonus: Show Reaper resource path</h4>
-                    </header>
-                    <section>
-                      <p>Shows the Reaper Resource folder location in a console so you can easily copy it</p>
-                      <p>ID: <code>REASONUS_SHOW_REAPER_RESOURCE_PATH_COMMAND</code></p>
-                      <p></p>
-                    </section>
-                  </article>
-
-                  <article class="explanation-macro">
-                    <header>
-                      <h4>Reasonus: Close all floating fx windows</h4>
-                    </header>
-                    <section>
-                      <p>Closes all the open fx windows. All other windows just stay open</p>
-                      <p>ID: <code>REASONUS_CLOSE_ALL_FLOATING_FX_WINDOWS_COMMAND</code></p>
-                      <p></p>
-                    </section>
-                  </article>
-
-                  <article class="explanation-macro">
-                    <header>
-                      <h4>Reasonus: Convert the old zon mappings to the new ini mappings</h4>
-                    </header>
-                    <section>
-                      <p>
-                        Convert all the zon plugin mapping files from the old ReaSonus version to the new file structure
-                      </p>
-                      <p>ID: <code>REASONUS_CONVERT_PLUGIN_ZON_TO_INI</code></p>
-
-                      <img
-                        class="undefined popout"
-                        src="/reasonus/cms_images/fp_8_mapping_converter_9e6714bd0a.webp"
-                        alt=""
-                      />
-                    </section>
-                  </article>
+                  </section>
                 </section>
               </section>
             </article>

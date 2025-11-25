@@ -112,10 +112,6 @@
               </li>
               <ul>
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#reasonus-control-panel"> ReaSonus Control Panel </a>
-                </li>
-
-                <li class="sub gray">
                   <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
                 </li>
 
@@ -162,14 +158,14 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="y00vrscjshi2denad0gfsha2-174-103">Global</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-192-118">Global</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-174-104">Controller</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-192-119">Controller</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-174-105">Display</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-192-120">Display</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab global" data-id="y00vrscjshi2denad0gfsha2-174-103">
+                      <section class="tab global" data-id="y00vrscjshi2denad0gfsha2-192-118">
                         <ul>
                           <li>
                             <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
@@ -190,7 +186,7 @@
                         </ul>
                       </section>
 
-                      <section class="tab controller" data-id="y00vrscjshi2denad0gfsha2-174-104">
+                      <section class="tab controller" data-id="y00vrscjshi2denad0gfsha2-192-119">
                         <ul>
                           <li>
                             <strong>Untouch last touched param after learn</strong>: When selected the last touched
@@ -214,7 +210,7 @@
                         </ul>
                       </section>
 
-                      <section class="tab display" data-id="y00vrscjshi2denad0gfsha2-174-105">
+                      <section class="tab display" data-id="y00vrscjshi2denad0gfsha2-192-120">
                         <ul>
                           <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER.</li>
                           <li>
@@ -289,18 +285,18 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="y00vrscjshi2denad0gfsha2-175-110">Track</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-193-125">Track</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-175-106">Plugin</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-193-121">Plugin</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-175-107">Send</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-193-124">Send</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-175-108">Receive</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-193-122">Receive</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-175-109">Pan</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-193-123">Pan</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-175-110">
+                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-193-125">
                         <ol>
                           <li><strong>Display</strong></li>
                           <ul>
@@ -361,6 +357,7 @@
                             <li>
                               <strong>Default</strong>: Isolates the corresponding Tracks output signal in the mix.
                             </li>
+                            <li><strong>Left Shift</strong>: Exclusive solo</li>
                             <li>
                               <strong>Long Press</strong>: Holding the Solo button for longer then half a second makes
                               the button momentary. This means that after releasing the button after that half a second,
@@ -412,7 +409,7 @@
                         </section>
                       </section>
 
-                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-175-106">
+                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-193-121">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -466,7 +463,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-175-107">
+                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-193-124">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -496,14 +493,8 @@
                             <li>
                               <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
                             </li>
-                            <li>
-                              <strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay
-                              selected.
-                            </li>
-                            <li>
-                              <strong>Right Shift</strong>: Selects the range of Tracks between the previous selected
-                              Track and the current selected Track.
-                            </li>
+                            <li><strong>Left Shift</strong>: Add a new send for this track (Read more below)</li>
+                            <li><strong>Right Shift</strong>: Remove the selected Send from this track</li>
                             <li><strong>Arm</strong>: Toggle Track arm.</li>
                           </ul>
                           <li><strong>Solo</strong>:</li>
@@ -522,10 +513,52 @@
                             <li><strong>Left Shift</strong>: Control send pan.</li>
                           </ul>
                         </ol>
+
+                        <section class="extras">
+                          <article class="explanation-macro">
+                            <header>
+                              <h4>Adding sends on-device</h4>
+                            </header>
+                            <section>
+                              <ul>
+                                <li>
+                                  Press <strong>[Left Shift]</strong> + <strong>[Select] </strong>for the channel you
+                                  want to add the send for
+                                </li>
+                                <li>
+                                  In the display 2 lines appear. The first one with the track number, the second the
+                                  track name
+                                </li>
+                                <li>Use the <strong>Pan/Param</strong> encoder to scroll through the tracks</li>
+                                <li>Press the <strong>Pan/Param</strong> encoder to select the send</li>
+                                <li>Send will be added</li>
+                              </ul>
+                              <p><strong>For deleting a send in Hui mode:</strong></p>
+                              <ul>
+                                <li>
+                                  Use the <strong>Pan/Param</strong> encoder to scroll to the send you want to delete
+                                </li>
+                                <li>
+                                  Press <strong>[Right Shift]</strong> + <strong>[Select]</strong> on the track you want
+                                  to remove the send from
+                                </li>
+                              </ul>
+                              <p><strong>For deleting a send in Track mode:</strong></p>
+                              <ul>
+                                <li>Select the track you want to remove the send from</li>
+                                <li>
+                                  Press <strong>[Right Shift]</strong> + <strong>[Select]</strong> on the send you want
+                                  to remove
+                                </li>
+                              </ul>
+                              <p></p>
+                            </section>
+                          </article>
+                        </section>
                       </section>
 
-                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-175-108">
-                        <ol>
+                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-193-122">
+                        <ul>
                           <li><strong>Display</strong>:</li>
                           <ul>
                             <li>
@@ -555,10 +588,13 @@
                               <strong>Default</strong>: Unique-select the Track. Other Tracks will be de-selected.
                             </li>
                             <li>
-                              <strong>Left Shift</strong>: Select the Track. All previous selected Tracks will also stay
-                              selected.
+                              <strong>Left Shift</strong>: Add a new receive for this track (Read more in the Sends tab)
                             </li>
-                            <li><strong>Right Shift</strong>: Selects the range of Tracks between the previous</li>
+                            <li><strong>Right Shift</strong>: Remove the selected Receive from this track</li>
+                          </ul>
+                        </ul>
+                        <ul>
+                          <ul>
                             <li><strong>Arm</strong>: Toggle Track arm.</li>
                           </ul>
                           <li><strong>Solo</strong>:</li>
@@ -576,10 +612,10 @@
                             <li><strong>Default</strong>: Control receive volume level.</li>
                             <li><strong>Left Shift</strong>: Control receive pan.</li>
                           </ul>
-                        </ol>
+                        </ul>
                       </section>
 
-                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-175-109">
+                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-193-123">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -942,7 +978,12 @@
                     description of all the filter options available
                   </p>
                   <ol>
-                    <li><strong>Audio</strong>: Filter all the tracks that have audio items in them</li>
+                    <li><strong>Audio</strong>:</li>
+                    <ul>
+                      <li><strong>Default:</strong> Filter all the tracks that have audio items in them</li>
+                      <li><strong>Left Shift</strong>: Filter all the tracks with sends</li>
+                      <li><strong>Right Shift</strong>: Filter all the tracks with receives</li>
+                    </ul>
                     <li><strong>VI</strong>:</li>
                     <ul>
                       <li><strong>Default</strong>: Filter all tracks with Virtual Instruments</li>
@@ -968,7 +1009,7 @@
                         track displays. Use the select button to select the filter. If there are more filters then there
                         are tracks, you can use the Pan encoder to scroll through the filters
                       </li>
-                      <li><strong>Right Shift</strong>: Filter all the tracks with sends</li>
+                      <li><strong>Right Shift</strong>: Show custom filters for multi filter select (More below)</li>
                     </ul>
                   </ol>
                 </section>
@@ -1009,6 +1050,28 @@
                         how to manage the User Filters can be found here:
                         <a href="/reasonus/documentation/goodies/#filters-management">Filters Management</a>.
                       </p>
+                    </section>
+                  </article>
+
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Multi filter select</h4>
+                    </header>
+                    <section>
+                      <ul>
+                        <li>Press <strong>[Right Shift]</strong> + <strong>[All]</strong></li>
+                        <li>The filters appear in the displays</li>
+                        <li>Use the <strong>[Select]</strong> buttons to select the filters you want to use</li>
+                        <li>
+                          Once you made your selection, pres <strong>[Right Shift]</strong> + <strong>[All]</strong> and
+                          the filters get applied
+                        </li>
+                      </ul>
+                      <p>
+                        If you want to change your selection, press <strong>[Right Shift]</strong> +
+                        <strong>[All]</strong> again. Your previous selection is still there
+                      </p>
+                      <p></p>
                     </section>
                   </article>
                 </section>
