@@ -4,7 +4,7 @@
   <subtitle></subtitle>
   <link href="https://navelpluisje.github.io/reasonus/feed.xml" rel="self" />
   <link href="https://navelpluisje.github.io/reasonus/" />
-  <updated>2025-11-25T18:48:04.730Z</updated>
+  <updated>2025-11-25T19:25:29.728Z</updated>
   <id>https://navelpluisje.github.io/reasonus/reasonus/</id>
   <author>
     <name>Erwin Goossen (Navelpluisje)</name>
@@ -12,7 +12,7 @@
   <entry>
     <title>New ReaSonus version (v0.5.0)</title>
     <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-5-0" />
-    <updated>2025-11-25T18:48:04.730Z</updated>
+    <updated>2025-11-25T19:25:29.728Z</updated>
     <id>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-5-0</id>
     <content type="html">
       &lt;p&gt;A new version of ReaSonus Native has been released. &lt;/p&gt;&lt;h3&gt;What&#39;s
@@ -32,9 +32,9 @@
       typo&#39;s or other issues with the documentation, please report them, so the documentation can get
       updated.&lt;/p&gt;&lt;p&gt;Thanx to anyone reporting issues and help me debug
       them.&lt;/p&gt;&lt;blockquote&gt;Full Changelog: &lt;a
-      href=https://github.com/navelpluisje/Reasonus-Native/compare/0.4.2...0.4.3 target=&quot;_blank&quot;
+      href=https://github.com/navelpluisje/Reasonus-Native/compare/0.4.3...0.5.0 target=&quot;_blank&quot;
       rel=&quot;noreferrer
-      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.4.2...0.4.3&lt;/a&gt;&lt;/blockquote&gt;
+      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.4.3...0.5.0&lt;/a&gt;&lt;/blockquote&gt;
     </content>
   </entry>
   <entry>
