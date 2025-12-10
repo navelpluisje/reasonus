@@ -1,0 +1,18 @@
+:root { --tomato: hsl(10, 90.1%, 60.2%);--battleship-gray: hsl(129, 3%, 54.3%);--jonquil: hsl(48, 93.4%, 52.5%);--olive: hsl(66, 36.8%, 60%);--white: hsl(0, 0%, 100%);--white-60: hsls(0, 0%, 100%, 0.6);--sky-blue: hsl(192, 48.9%, 63.9%);--black: hsl(0, 0%, 20%);--black-60: hsl(0, 0%, 20%, 0.6);--black-30: hsl(0, 0%, 20%, 0.3);--background: hsl(240, 6.7%, 97.1%);--header-height: 4.25rem;--menu-width: 256px;--font-heading: "lexend", sans-serif } html { box-sizing: border-box;scroll-behavior: smooth } *,
+*:before,
+*:after { box-sizing: inherit } body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul { margin: 0;padding: 0;font-weight: normal } p,
+ol,
+ul { font-weight: 300 } ul,
+ol { padding-left: 1.75rem } b { font-weight: 600 } img { max-width: 100%;height: auto } body { background-color: var(--background);color: var(--black);font-family: "Roboto", serif;line-height: 1.5 } .content { h3 {
+    margin: 0 0 0.5rem } p,
+  ul { margin: 0 0 0.75rem } ul ul,
+  ol ul { margin: 0 } li ~ li { margin-top: 0.25rem } .button { display: inline-block;height: 3rem;background-color: var(--tomato);color: var(--white);margin-top: 1rem;text-align: center;line-height: 3rem;text-decoration: none;font-weight: 500;border-radius: 0.5rem;padding: 0 2rem } a { color: var(--accent-color, var(--jonquil));font-weight: 400 } a[target="_blank"]::after { background-image: url("/reasonus/images/external-link.svg");background-repeat: no-repeat;background-size: contain;content: "";display: inline-block;height: 0.75rem;margin-left: 0.25rem;width: 0.75rem } @media screen and (min-width: 1024px) { :root { --header-height: 5.25rem } }
