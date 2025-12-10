@@ -1,9 +1,11 @@
 name: Build Eleventy
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch
+
 env:
   # Setting an environment variable with the value of a configuration variable
   STRAPI_URL: ${{ vars.STRAPI_URL }}

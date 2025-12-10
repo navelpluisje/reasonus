@@ -1,6 +1,9 @@
 import Nunjucks from "nunjucks";
 import pluginRss from "@11ty/eleventy-plugin-rss";
+import nested from "postcss-nested";
+import * as postcss from "postcss";
 import * as prettier from "prettier";
+import { transform } from "nested-css-to-flat";
 
 export default function (eleventyConfig) {
   const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "xx";
@@ -50,7 +53,10 @@ export default function (eleventyConfig) {
           parser: "css",
         });
 
-        return formattedContent;
+        // const y = transform(formattedContent);
+        // console.log({ y });
+
+        return transform(formattedContent);
       },
     ],
   });
