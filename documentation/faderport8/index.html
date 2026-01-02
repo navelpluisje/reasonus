@@ -50,6 +50,10 @@
               </li>
               <ul>
                 <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub blue">
                   <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
                 </li>
 
@@ -135,6 +139,111 @@
           </nav>
         </aside>
         <section class="page-content">
+          <div class="documentation-block" id="settings">
+            <article class="blue">
+              <header>
+                <h2>Settings</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="settings popout" src="." alt="" />
+                </picture>
+                <section class="content">
+                  <p>
+                    For the FaderPort 8/16 <strong>ReaSonus Native</strong> has quite some options. These are split into
+                    a couple of tabs:
+                  </p>
+
+                  <section class="tabs-macro">
+                    <section class="tab-bar">
+                      <button data-id="y00vrscjshi2denad0gfsha2-245-174">Global</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-245-175">Controller</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-245-176">Plugin Control</button>
+
+                      <button data-id="y00vrscjshi2denad0gfsha2-245-177">Display</button>
+                    </section>
+                    <section class="tab-content">
+                      <section class="tab global" data-id="y00vrscjshi2denad0gfsha2-245-174">
+                        <ul>
+                          <li><strong>ReaSonus UI Language</strong>: Tha language for the ReaSonus Control panel.</li>
+                          <li>
+                            <strong>Distraction free mode</strong>: Remove all that can be distracting like blinking
+                            buttons, some buttons `on` state.
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab controller" data-id="y00vrscjshi2denad0gfsha2-245-175">
+                        <ul>
+                          <li>
+                            <strong>Enable master fader mode</strong>: When selected en pressing the master button will
+                            enable master fader mode. This makes the last track of the FaderPort control the master
+                            track.
+                          </li>
+                          <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
+                          <li>
+                            <strong>Fader Reset: Left shift and fader touch</strong>: When eneabled, you can use the
+                            [Left Shift] button to reset the fader value while touching teh fader.
+                          </li>
+                          <li>
+                            <strong>Mute/Solo Momentary</strong>: When set, it will make the Solo and Mute buttons
+                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
+                            solo button longer then 500ms and release it, it will instant unsolo again.
+                          </li>
+                          <li>
+                            <strong>Enable write action for Latch Preview mode automation</strong>: When enabled and the
+                            automation mode is in Latch Preview, the Ltatch review button will trigger the write action
+                            selected.
+                          </li>
+                          <li>
+                            <strong>Write action for Latch Preview mode automation</strong>: Action triggered when
+                            engaging the Latch Preview button when in Latch Preview automation mode.
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab plugin-control" data-id="y00vrscjshi2denad0gfsha2-245-176">
+                        <ul>
+                          <li>
+                            <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
+                            plugins, you can select this. The plugins mode is still active and you are still able to
+                            open the plugin window. From that point, the ReaSonus FaderPort will not do anything anymore
+                            for the plugins.
+                          </li>
+                          <li>
+                            <strong>Untouch last touched param after learn</strong>: When selected the last touched
+                            param will be set to untouched after parameter learn.
+                          </li>
+                          <li>
+                            <strong>Step size when scrolling through plugin parameters</strong>: Set the step size for
+                            scrolling through the plugin parameters when in plugin control mode.
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab display" data-id="y00vrscjshi2denad0gfsha2-245-177">
+                        <ul>
+                          <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER.</li>
+                          <li>
+                            <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time
+                            code with.
+                          </li>
+                          <li>
+                            <strong>Track color brightness</strong>: Set the track color brightness for the unselected
+                            state. This will make the color in the unselected mode more visible.
+                          </li>
+                        </ul>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </article>
+          </div>
+
           <div class="documentation-block" id="fader-modes">
             <article class="blue">
               <header>
@@ -163,20 +272,20 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="y00vrscjshi2denad0gfsha2-237-163">Track</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-250-183">Track</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-237-158">Plugin</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-250-178">Plugin</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-237-162">Send</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-250-182">Send</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-237-159">Receive</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-250-179">Receive</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-237-160">Pan</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-250-180">Pan</button>
 
-                      <button data-id="y00vrscjshi2denad0gfsha2-237-161">Plugin Control</button>
+                      <button data-id="y00vrscjshi2denad0gfsha2-250-181">Plugin Control</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-237-163">
+                      <section class="tab track" data-id="y00vrscjshi2denad0gfsha2-250-183">
                         <ol>
                           <li><strong>Display</strong></li>
                           <ul>
@@ -289,7 +398,7 @@
                         </section>
                       </section>
 
-                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-237-158">
+                      <section class="tab plugin" data-id="y00vrscjshi2denad0gfsha2-250-178">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -341,7 +450,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-237-162">
+                      <section class="tab send" data-id="y00vrscjshi2denad0gfsha2-250-182">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -435,7 +544,7 @@
                         </section>
                       </section>
 
-                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-237-159">
+                      <section class="tab receive" data-id="y00vrscjshi2denad0gfsha2-250-179">
                         <ul>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -493,7 +602,7 @@
                         </ul>
                       </section>
 
-                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-237-160">
+                      <section class="tab pan" data-id="y00vrscjshi2denad0gfsha2-250-180">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
@@ -550,7 +659,7 @@
                         </ol>
                       </section>
 
-                      <section class="tab plugin-control" data-id="y00vrscjshi2denad0gfsha2-237-161">
+                      <section class="tab plugin-control" data-id="y00vrscjshi2denad0gfsha2-250-181">
                         <ol>
                           <li><strong>Display</strong>:</li>
                           <ul>
