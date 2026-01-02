@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: FaderPort V2</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/4fBrFTtofK.css" />
+    <link rel="stylesheet" href="/reasonus/styles/wMnA9cprPd.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/"> <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" /></a>
+      </header>
+      <section class="center">
+        <button class="menu-button" id="menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red">
+                <a href="/reasonus/documentation/">Lets Start</a>
+              </li>
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#lets-start"> Lets Start </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#installation"> Installation </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+              </ul>
+
+              <li class="main blue">
+                <a href="/reasonus/documentation/faderport8/">FaderPort 8 / 16</a>
+              </li>
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#fader-modes"> Fader Modes </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green active">
+                <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#settings"> Settings </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray">
+                <a href="/reasonus/documentation/goodies/">Goodies</a>
+              </li>
+              <ul>
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#functions-management"> Functions Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#plugin-mapping"> Plugin Mapping </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#filters-management"> Filters Management </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#translations-editor"> Translations Editor </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#reasonus-actions"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a on:click="{handleAnchorClick}" href="#remove-old-version"> Remove old version </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="settings">
+            <article class="green">
+              <header>
+                <h2>Settings</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="settings popout" src="/reasonus/cms_images/fp_2_settings_925c8cb68b.webp" alt="" />
+                </picture>
+                <section class="content">
+                  <p>For the FaderPort v2 <strong>ReaSonus Native</strong> has the following 2 settings</p>
+                  <ul>
+                    <li>
+                      <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary.
+                      The timeout for being momentary is 500 milli seconds. In short: If you press the solo button
+                      longer then 500ms and release it, it will instant unsolo again
+                    </li>
+                    <li>
+                      <strong>Control hidden MCP tracks</strong>: By default <strong>ReaSonus Native</strong> will step
+                      through the visible tracks. With this option also the hidden files in the MCP will be selectable
+                    </li>
+                    <li>
+                      <strong>Enable option to disable fader move when selecting tracks:</strong> This option makes it
+                      possible to use [Shift] + [Channel] to disable fader moves when selecting tracks in REAPER
+                    </li>
+                    <li>
+                      <strong>Enable endless track scrolling:</strong> When on the last track and clicking the next
+                      button, go to the first track. Same for previous, but then the other way around.
+                    </li>
+                    <li>
+                      <strong>Enable write action for Latch Preview mode automation</strong>: Enable the posibilty to
+                      trigger a write action when engaging the <strong>Latch Preview </strong>(Pan) button when in
+                      Latch<strong> Preview mode</strong>
+                    </li>
+                    <li>
+                      <strong>Write action for Latch Preview mode automation</strong>: Action triggered when engaging
+                      the Latch Preview button when in Latch Preview automation mode
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="track">
+            <article class="green">
+              <header>
+                <h2>Track</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="track popout" src="/reasonus/cms_images/track_automation_a48a5f5b45.svg" alt="" />
+                </picture>
+                <section class="content">
+                  <p>
+                    The FaderPort V2 has a single fader that is mostly used for the selected track. 7 of the top 8
+                    buttons controll theh selected track.
+                  </p>
+                  <ol>
+                    <li><strong>Solo</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Isolates the selected Track output signal in the mix.</li>
+                      <li>
+                        <strong>Long Press</strong>: Holding the Solo button for longer then half a second makes the
+                        button momentary. This means that after releasing the button after that half a second, the value
+                        will go to the previous value after release. This can be helpfull for quickly checking a track
+                        soloed.
+                      </li>
+                      <li><strong>Shift</strong>: Unsolo all the soloed tracks.</li>
+                    </ul>
+                    <li><strong>Mute</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Mutes the selected Track output signal.</li>
+                      <li>
+                        <strong>Long Press</strong>: Holding the Mute button for longer then half a second makes the
+                        button momentary. This means that after releasing the button after that half a second, the value
+                        will go to the previous value after release. This can be helpfull for quickly checking with the
+                        track muted.
+                      </li>
+                      <li><strong>Shift</strong>: Unmute all the muted tracks.</li>
+                    </ul>
+                    <li><strong>Arm</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Arm the selected Track for recording.</li>
+                      <li><strong>Shift</strong>: Toggle Arm all tracks for recording.</li>
+                    </ul>
+                    <li>
+                      <strong>Shift</strong>: Speaks for itself I hope. By default this is a momentary button. When
+                      clicking/release quick the Shift stays engaged
+                    </li>
+                    <li><strong>Bypass</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Toggle Bypass all the effects for the selected track.</li>
+                      <li><strong>Shift</strong>: Toggle Bypass all the effects for all tracks.</li>
+                    </ul>
+                    <li><strong>Touch</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Touch Automation for the selected track.</li>
+                      <li><strong>Shift</strong>: Engages Latch Automation for the selected track.</li>
+                    </ul>
+                    <li><strong>Write</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Write Automation for the selected track.</li>
+                      <li><strong>Shift</strong>: Engages Trim Automation for the selected track.</li>
+                    </ul>
+                    <li><strong>Read</strong>:</li>
+                    <ul>
+                      <li><strong>Default</strong>: Engages Read Automation for the selected track.</li>
+                      <li><strong>Shift</strong>: Engages Latch Preview Automation for the selected track.</li>
+                    </ul>
+                  </ol>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Momentary Mute/Solo</h4>
+                    </header>
+                    <section>
+                      <p>
+                        Making the <strong>Mute</strong> and <strong>Solo</strong> momentary is a setting. In REAPER go
+                        to the Preferences pane, select <strong>Control/OSC/web</strong> and double click the
+                        <strong>ReaSonus FaderPort V2</strong>
+                      </p>
+                      <p>Toggle the check box named <strong>Mute/Solo Momentary</strong></p>
+                      <p></p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="transport">
+            <article class="green">
+              <header>
+                <h2>Transport</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="transport popout" src="/reasonus/cms_images/controller_transport_f5bf14c98b.svg" alt="" />
+                </picture>
+                <section class="content">
+                  <ol>
+                    <li><strong>Stop</strong>: Stops playback.</li>
+                    <li><strong>Loop</strong>: Engages / disengages Looping</li>
+                    <li>
+                      <strong>Play / Pause</strong>: Starts playback at the current playback- cursor position. Press
+                      again to pause playback.
+                    </li>
+                    <li><strong>Rewind</strong>:</li>
+                    <ul>
+                      <li>
+                        Default: Rewinds in a slow pace. You can toggle the speed by pressing the button. All the other
+                        keys will stop the rewind
+                      </li>
+                      <li>Shift: Go to the start of the project</li>
+                    </ul>
+                    <li><strong>Fast Forward</strong>:</li>
+                    <ul>
+                      <li>
+                        Default: Fast Forwards in a slow pace. You can toggle the speed by pressing the button. All the
+                        other keys will stop the Fast Forward
+                      </li>
+                      <li>Shift: Go to the end of the project</li>
+                    </ul>
+                    <li>
+                      <strong>Record</strong>: Press to start recording at the current playback-cursor position for
+                      record-enabled tracks.
+                    </li>
+                  </ol>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="session-navigator">
+            <article class="green">
+              <header>
+                <h2>Session Navigator</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="session-navigator popout"
+                    src="/reasonus/cms_images/controller_session_v2_387579b629.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <p>
+                    The Session Navigator provides quick navigation and session controlls. Buttons 2 till 8 alters the
+                    functions of the push-button encoder and the Previous (Undo) and Next (Redo) buttons on either side.
+                  </p>
+                  <p>
+                    Pressing Shift + Undo will Undo the last action and pressing Shift + Redo will Redo the last action
+                    in most of the cases, unless otherwise stated below.
+                  </p>
+                  <p>
+                    Pressing Shift + Encoder click will save the project in some of the cases, unless otherwise stated
+                    below.
+                  </p>
+                  <ol>
+                    <li><strong>Link</strong>: The previous, next and encoder will keep the last function.</li>
+                    <ul>
+                      <li>
+                        Default: The odd one of the list. This one toggle the Last Touched FX Param mode. This will
+                        enable you to controll the last touched FX parameter with the fader for creating better
+                        automation envelopes.
+                      </li>
+                      <li>Shift: Toggle following the cursor while playing</li>
+                    </ul>
+                    <li>
+                      <strong>Master</strong>: In master mode the Fader controlls the master volume and the encoder is
+                      used for panning
+                    </li>
+                    <ul>
+                      <li><strong>Previous</strong>: Select the previous track.</li>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Set the pan, or left pan for the master track</li>
+                        <li><strong>Shift</strong>: Set the width, or right pan for the master track</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Set the pan, or left pan to the center value</li>
+                        <li><strong>Shift</strong>: Set the width, or right pan to the center value</li>
+                      </ul>
+                      <li>Next: Select the next track.</li>
+                    </ul>
+                    <li><strong>Pan</strong>: Read more on pan modes below</li>
+                    <ul>
+                      <li><strong>Previous</strong>: Select the previous track.</li>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Set the pan, or left pan for the selected track</li>
+                        <li><strong>Shift</strong>: Set the width, or right pan for the selected track</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Set the pan, or left pan to the center value</li>
+                        <li><strong>Shift</strong>: Set the width, or right pan to the center value</li>
+                      </ul>
+                      <li><strong>Next</strong>: Select the next track.</li>
+                    </ul>
+                    <li><strong>Click</strong>: Handle the different metronome functions</li>
+                    <ul>
+                      <li><strong>Previous</strong>: Set metronome speed to 1x</li>
+                      <li><strong>Encoder</strong>: Adjust the Metronome volume</li>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Toggle metronome on/off</li>
+                        <li><strong>Shift</strong>: Show metronome/pre-roll settings</li>
+                      </ul>
+                      <li><strong>Next</strong>: Set metronome speed to 2x</li>
+                    </ul>
+                    <li><strong>Channel</strong>: Control channel scrolling. The button will have the track color.</li>
+                    <ul>
+                      <li>
+                        <strong>Previous</strong>: Select the previous track. If the current track is the first track,
+                        the last track wil get selected
+                      </li>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Moves the faderbank by steps of 1 track</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>: Not implemented</li>
+                      <li>
+                        <strong>Next</strong>: Select the next track. If the current track is the last track, the first
+                        track wil get selected
+                      </li>
+                    </ul>
+                    <li>
+                      <strong>Section</strong>: Handle adding, deleting and editing regions. Pressing this button wile
+                      in the Section mode, will open the edit Region window
+                    </li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Goto/select previous marker/region</li>
+                        <li><strong>Shift</strong>: Set the start point for a new section</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Move edit cursor forward/backward one beat</li>
+                        <li><strong>Shift</strong>: Move cursor left/right one pixel</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Insert region from time selection and edit...</li>
+                        <li><strong>Shift</strong>: Delete region near cursor</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Goto/select next marker/region</li>
+                        <li><strong>Shift</strong>: Set the end point for a new section</li>
+                      </ul>
+                    </ul>
+                    <li><strong>Scroll</strong>: Handle scrolling the navigator in Reaper</li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Scroll Reaper up</li>
+                        <li><strong>Shift</strong>: Scroll Reaper left</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Scroll Reaper up/down</li>
+                        <li><strong>Shift</strong>: Scroll Reaper left/right</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Vertical scroll selected tracks into view</li>
+                        <li><strong>Shift</strong>: Horizontal scroll to put play cursor at 50%</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Scroll Reaper down</li>
+                        <li><strong>Shift</strong>: Scroll Reaper right</li>
+                      </ul>
+                    </ul>
+                    <li>
+                      <strong>Marker</strong>: Handle adding, deleting and editing markers. Pressing this button wile in
+                      the Marker mode, will add a marker at the current position
+                    </li>
+                    <ul>
+                      <li><strong>Previous</strong>: Goto/select previous marker/region</li>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Move edit cursor forward/backward one beat</li>
+                        <li><strong>Shift</strong>: Move cursor left/right one pixel</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Insert and/or edit marker at current position</li>
+                        <li><strong>Shift</strong>: Delete marker near cursor</li>
+                      </ul>
+                      <li><strong>Next</strong>: Goto/select next marker/region</li>
+                    </ul>
+                  </ol>
+                  <p>Alternative functionality</p>
+                  <ul>
+                    <li><strong>Zoom</strong> (Shift+Scroll): Handle zooming the navigator in Reaper</li>
+                    <ul>
+                      <li><strong>Previous</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Zoom Reaper out horizontal</li>
+                        <li><strong>Shift</strong>: Zoom Reaper out vertical</li>
+                      </ul>
+                      <li><strong>Encoder</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Zoom Reaper in/out horizontal</li>
+                        <li><strong>Shift</strong>: Zoom Reaper in/out vertical</li>
+                      </ul>
+                      <li><strong>Encoder Click</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Toggle track zoom to minimum height</li>
+                        <li><strong>Shift</strong>: Toggle track zoom to maximum height</li>
+                      </ul>
+                      <li><strong>Next</strong>:</li>
+                      <ul>
+                        <li><strong>Default</strong>: Zoom Reaper in horizontal</li>
+                        <li><strong>Shift</strong>: Zoom Reaper in vertical</li>
+                      </ul>
+                    </ul>
+                    <li><strong>Flip</strong> (Shift+Pan): Toggle the Filter Management window</li>
+                    <li>
+                      <strong>Lock</strong> (Shift+Channel): When the setting
+                      <strong>Enable option to disable fader move when selecting tracks </strong>is enabled this will
+                      toggle the actual disabling of the fader
+                    </li>
+                  </ul>
+                  <p></p>
+                  <p></p>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Pan values</h4>
+                    </header>
+                    <section>
+                      <p>Reaper has 3 pan modes. Depending on the choosen mode, there are 1 or 2 pan values.</p>
+                      <ul>
+                        <li>
+                          <strong>Stereo Balance/Mono Pan</strong>: This is the default and in REAPER you'll see only
+                          one pan knob/fader. In this mode <strong>Pan Value 2</strong> has no function
+                        </li>
+                        <li>
+                          <strong>Stereo Pan</strong>: This mode has 2 values. <strong>Pan Value 1</strong> is for
+                          Left/Right panning and <strong>Pan Value 2</strong> for the width
+                        </li>
+                        <li>
+                          <strong>Dual Pan</strong>: This mode has 2 values. <strong>Pan Value 1</strong> is for Left
+                          panning value and <strong>Pan Value 2</strong> for the right panning value
+                        </li>
+                      </ul>
+                      <p>
+                        The last will show 2 knobs/faders in REAPER for panning. You can find more info about the
+                        <strong>Panning Modes</strong> in the REAPER documentation
+                      </p>
+                      <p></p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="function-control">
+            <article class="green">
+              <header>
+                <h2>Function Control</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="function-control popout"
+                    src="/reasonus/cms_images/controller_function_v2_62955386fd.svg"
+                    alt=""
+                  />
+                </picture>
+                <section class="content">
+                  <p>
+                    The bottom row of the eight buttons also gives you acces to configurable functions by pressing the
+                    <strong>Shift</strong> buttons together with these buttons
+                  </p>
+                  <p>The functions can be changed as described in below.</p>
+                  <ul>
+                    <li><strong>F1</strong>: Custom function (user defined)</li>
+                    <li><strong>F2</strong>: Custom function (user defined)</li>
+                    <li><strong>F3</strong>: Custom function (user defined)</li>
+                    <li><strong>F4</strong>: Custom function (user defined)</li>
+                  </ul>
+                  <p></p>
+                  <p></p>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Managing the functions</h4>
+                    </header>
+                    <section>
+                      <p>
+                        <strong>ReaSonus Native</strong> has a user interface for managing your Functions. More info
+                        about how to manage the Functions can be found here:
+                        <a href="/reasonus/documentation/goodies/#functions-management">Functions Management</a>.
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" /> <span>Repository</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" /> <span>Report an issue</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" /> <span>Discussion</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" /> <span>Buy me some coffee</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+    <script src="/reasonus/javascript/cEGCafctvV.js"></script>
+  </body>
+</html>

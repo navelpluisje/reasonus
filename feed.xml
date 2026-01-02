@@ -9,6 +9,12 @@
   <author>
     <name>Erwin Goossen (Navelpluisje)</name>
   </author>
+  <image>
+    <url>https://navelpluisje.github.io/reasonus/images/favicon.svg</url>
+    <title>ReaSonus Native</title>
+    <width>64</width>
+    <height>64</height>
+  </image>
   <entry>
     <title>New ReaSonus version (v0.7.0)</title>
     <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-7-0" />
