@@ -48,6 +48,7 @@
 
   .post-meta-group {
     display: contents;
+    overflow: hidden;
   }
 
   .post-content-group {
@@ -92,8 +93,8 @@
     font-weight: 400;
     font-size: 1.5rem;
     border-bottom: 2px solid var(--accent-color);
-    /* width: fit-content; */
     z-index: 1;
+    box-shadow: 0 -0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.5);
   }
 
   .post-extras {
@@ -157,6 +158,11 @@
   .post-page {
     .post-title {
       font-size: 2rem;
+      overflow-x: hidden;
+    }
+
+    .post-extras {
+      box-shadow: none;
     }
   }
 }
@@ -195,6 +201,7 @@
       background-image: transparent;
       padding: 0;
       margin-bottom: 2rem;
+      box-shadow: none;
     }
 
     .post-content {
@@ -214,6 +221,7 @@
       gap: 1rem;
       border-radius: 1rem;
       border-bottom: 0.25rem solid var(--accent-color);
+      box-shadow: 0 -0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.5);
     }
   }
 }
