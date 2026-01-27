@@ -6,7 +6,7 @@ export default function (eleventyConfig) {
   const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "xx";
 
   let nunjucksEnvironment = new Nunjucks.Environment(
-    new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"])
+    new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"]),
   );
 
   eleventyConfig.addNunjucksFilter("dateToRfc3339", pluginRss.dateToRfc3339);
@@ -17,7 +17,8 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("strip", function (value, length = 200) {
-    const val = value.replace(/<[\/a-z0-9]*>/g, " ");
+    const val = value.replace(/<[\/a-z0-9="\s:\._]*>/g, " ");
+    console.log(val);
     return val.substring(0, length) + "...";
   });
 

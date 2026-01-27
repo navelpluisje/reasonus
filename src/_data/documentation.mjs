@@ -45,7 +45,7 @@ export default async function () {
         encodeValuesOnly: true,
       })}`,
       {
-        duration: "1s",
+        // duration: "1s",
         type: "json",
         fetchOptions: {
           headers: {

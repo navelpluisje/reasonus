@@ -10,9 +10,9 @@ const components = {
     link: (value, { url }) => {
       console.log(url);
       if (url.startsWith("http")) {
-        return `<a href=${url} target="_blank" rel="noreferrer noopener">${value}</a>`;
+        return `<a href="${url}" target="_blank" rel="noreferrer noopener">${value}</a>`;
       } else {
-        return `<a href=${url}>${value}</a>`;
+        return `<a href="${url}">${value}</a>`;
       }
     },
     list: (value, { format }) => {
@@ -23,11 +23,11 @@ const components = {
       return `<ul>${value}</ul>`;
     },
     "list-item": (value) => `<li>${value}</li>`,
-    image: (image) =>
-      `<img
-        src="${image.url}"
-        alt="${image.alternativeText || undefined}"
-      />`,
+    image: (_, { image }) => `<img
+      class="popout"
+      src="${image?.url}"
+      alt="${image?.alternativeText || undefined}"
+    />`,
   },
   modifiers: {
     bold: (value) => `<strong>${value}</strong>`,
