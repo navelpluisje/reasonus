@@ -198,6 +198,12 @@
       margin-right: 0.5rem;
     }
 
+    img.wide {
+      height: 2.5rem;
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
     span {
       display: none;
     }

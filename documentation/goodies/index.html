@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/reasonus/styles/4fBrFTtofK.css" />
-    <link rel="stylesheet" href="/reasonus/styles/jeDXGBjia_.css" />
+    <link rel="stylesheet" href="/reasonus/styles/91uhlMuz-b.css" />
   </head>
   <body>
     <section class="documentation-page">
@@ -208,14 +208,12 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-240-164">MIDI Learn</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-269-206">MIDI Learn</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-240-165">Ui</button>
-
-                      <button data-id="i1wueez611runwgmpq3d4m5a-240-166">Manual</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-269-207">Ui</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-240-164">
+                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-269-206">
                         <p></p>
                         <h3>New Plugin Mapping</h3>
                         <p>
@@ -275,7 +273,7 @@
                         </p>
                       </section>
 
-                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-240-165">
+                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-269-207">
                         <blockquote>
                           It is at this point not possible to add mappings in the
                           <strong>ReaSonus Control Panel</strong>
@@ -306,11 +304,56 @@
                           you assign the controls to. When the list gets larger you can <strong>scroll</strong> through
                           the list. Clicking a button will show you the settings for that track.
                         </p>
-                        <h3>The Fields</h3>
+                        <h3>The topbar</h3>
+                        <img
+                          class="popout"
+                          src="https://ingenious-oasis-28d9838f23.media.strapiapp.com/fp_8_mapping_topbar_fc101f11e5.webp"
+                          alt="fp_8_mapping_topbar.webp"
+                        />
+                        <p>
+                          The topbar displays the number of edited groups and the total number of groups. Beside that
+                          info there are a couple of buttons to make your live easier:
+                        </p>
                         <ul>
                           <li>
-                            <strong>Plugin Parameter</strong>: This is a dropdown with all the available parameters of
-                            the selected plugin.
+                            <strong>Go To Group</strong>: When clicking this button a little popup appears with an input
+                            field. You can enter the group number here to go quickly go to that group. When using the
+                            Enter or Escape key the popup disappears.
+                          </li>
+                          <li>
+                            <strong>Undo</strong>: Undo the changes of the currently selected group. If you want to undo
+                            all changes, use the Cancel button in the bottom of the page.
+                          </li>
+                          <li><strong>Add</strong>: Add a new group after the currently selected group.</li>
+                          <li><strong>Delete</strong>: Delete the currently selected group.</li>
+                        </ul>
+                        <h3>Navigation</h3>
+                        <img
+                          class="popout"
+                          src="https://ingenious-oasis-28d9838f23.media.strapiapp.com/fp_8_mapping_navigation_50d5d16f54.webp"
+                          alt="fp_8_mapping_navigation.webp"
+                        />
+                        <p>
+                          Navigate through the groups. Select the group you want to edit, or use the previous and next
+                          buttons to step through the groups.
+                        </p>
+                        <p>
+                          When using the Left Shift key of your keyboard and clicking the previous or next button, you
+                          will step with 13 groups. This makes it easier to step faster through teh groups when the
+                          plugin has a lot of groups.
+                        </p>
+                        <p>If you want to re-order them, you can drag and drop the groups.</p>
+                        <h3>Select</h3>
+                        <img
+                          class="popout"
+                          src="https://ingenious-oasis-28d9838f23.media.strapiapp.com/fp_8_mapping_select_010af183bb.webp"
+                          alt="fp_8_mapping_select.webp"
+                        />
+                        <ul>
+                          <li>
+                            <strong>Plugin Parameter</strong>: This is a popup with all the available parameters of the
+                            selected plugin with a search field. This makes iti easier to find a parameter when there
+                            are a lot of parameters.
                           </li>
                           <li>
                             <strong>Parameter Display Name</strong>: A configurable name for the parameter. This can
@@ -325,19 +368,27 @@
                             inverted or not inverted. This can help you organize your mappings a bit.
                           </li>
                         </ul>
-                        <p>Click the <strong>Save</strong> button to save your changes.</p>
-                        <p></p>
-                      </section>
-
-                      <section class="tab manual" data-id="i1wueez611runwgmpq3d4m5a-240-166">
-                        <p>
-                          The mapping of the plugins is done in simple ini files. These can be opened in your editor of
-                          choice. The files are located in the next location:
-                          <code><Path to="" reaper="" resources="">/ReaSonus/Plugins</Path></code
-                          >. All the plugins are grouped by developer what makes searching a bit easier
-                        </p>
-                        <p>More info will follow</p>
-                        <p></p>
+                        <h3>Fader</h3>
+                        <img
+                          class="popout"
+                          src="https://ingenious-oasis-28d9838f23.media.strapiapp.com/fp_8_mapping_fader_045b03637e.webp"
+                          alt="fp_8_mapping_fader.webp"
+                        />
+                        <ul>
+                          <li>
+                            <strong>Plugin Parameter</strong>: This is a popup with all the available parameters of the
+                            selected plugin with a search field. This makes iti easier to find a parameter when there
+                            are a lot of parameters.
+                          </li>
+                          <li>
+                            <strong>Parameter Display Name</strong>: A configurable name for the parameter. This can
+                            come in handy as most times the original names are fairly long.
+                          </li>
+                          <li>
+                            <strong>Label style</strong>: Set the label style for the parameter label in the display to
+                            inverted or not inverted. This can help you organize your mappings a bit.
+                          </li>
+                        </ul>
                       </section>
                     </section>
                   </section>
@@ -534,14 +585,14 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-26-167">All</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-32-208">All</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-26-168">FaderPort 8/16</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-32-209">FaderPort 8/16</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-26-169">FaderPort V2</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-32-210">FaderPort V2</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab all" data-id="i1wueez611runwgmpq3d4m5a-26-167">
+                      <section class="tab all" data-id="i1wueez611runwgmpq3d4m5a-32-208">
                         <p>These acttion apply to all the devices.</p>
 
                         <section class="extras">
@@ -583,7 +634,7 @@
                         </section>
                       </section>
 
-                      <section class="tab faderport-8-16" data-id="i1wueez611runwgmpq3d4m5a-26-168">
+                      <section class="tab faderport-8-16" data-id="i1wueez611runwgmpq3d4m5a-32-209">
                         <p>These actions are <strong>FaderPort 8/16</strong> only</p>
 
                         <section class="extras">
@@ -692,7 +743,7 @@
                         </section>
                       </section>
 
-                      <section class="tab faderport-v2" data-id="i1wueez611runwgmpq3d4m5a-26-169">
+                      <section class="tab faderport-v2" data-id="i1wueez611runwgmpq3d4m5a-32-210">
                         <p>These actions are <strong>FaderPort v2</strong> only</p>
 
                         <section class="extras">
@@ -825,22 +876,31 @@
           <ul class="link-list">
             <li>
               <a href="https://github.com/navelpluisje/Reasonus-Native">
-                <img src="/reasonus/images/icon-github.svg" alt="" /> <span>Repository</span>
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
               </a>
             </li>
             <li>
               <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
-                <img src="/reasonus/images/icon-bug.svg" alt="" /> <span>Report an issue</span>
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
               </a>
             </li>
             <li>
               <a href="https://forum.cockos.com/showthread.php?t=267116">
-                <img src="/reasonus/images/icon-chat.svg" alt="" /> <span>Discussion</span>
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
               </a>
             </li>
             <li>
               <a href="https://buymeacoffee.com/navelpluisje">
-                <img src="/reasonus/images/icon-coffee.svg" alt="" /> <span>Buy me some coffee</span>
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
               </a>
             </li>
           </ul>

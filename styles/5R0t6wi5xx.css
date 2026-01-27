@@ -48,6 +48,12 @@
       width: 2.25rem;
       margin-right: 0.5rem;
     }
+
+    img.large {
+      height: 3.25rem;
+      width: auto;
+      margin-right: 0.5rem;
+    }
   }
 
   .coffee {
