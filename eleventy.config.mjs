@@ -18,7 +18,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("strip", function (value, length = 200) {
     const val = value.replace(/<[\/a-z0-9="\s:\._]*>/g, " ");
-    console.log(val);
     return val.substring(0, length) + "...";
   });
 

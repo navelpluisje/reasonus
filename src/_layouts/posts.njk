@@ -1,5 +1,8 @@
 ---
 layout: base.njk
+pagination:
+  size: 9
+  data: posts
 ---
 
 {% css %}
@@ -9,10 +12,25 @@ layout: base.njk
   {% include "header.njk" %}
   <section class="center">
     <section class="posts-grid">
-      {% for post in posts %}
+      {% for post in pagination.items %}
         {% include "posts-block.njk" %}
       {% endfor %}
     </section>
+  </section>
+  <section class="pagination">
+    <div class="next-page">
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">Newer Post</a>
+      {% endif %}
+    </div>
+    <div class="position">
+      {{ pagination.pageNumber + 1 }} / {{ pagination.pages.length }}
+    </div>
+    <div class="previous-page">
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">Older Posts</a>
+      {% endif %}
+    </div>
   </section>
   {% include "footer.njk" %}
 </section>

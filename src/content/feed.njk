@@ -22,12 +22,7 @@ metadata:
     <author>
         <name>{{ metadata.author.name }}</name>
     </author>
-    <image>
-        <url>https://navelpluisje.github.io/reasonus/images/favicon.svg</url>
-        <title>ReaSonus Native</title>
-        <width>64</width>
-        <height>64</height>
-    </image>
+    <icon>{{ metadata.base }}images/Avatar.png</icon>
     {%- for post in posts %}
         {%- set absolutePostUrl %}{{ post.Url | htmlBaseUrl(metadata.base) }}{% endset %}
         <entry>
