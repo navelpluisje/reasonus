@@ -9,12 +9,7 @@
   <author>
     <name>Erwin Goossen (Navelpluisje)</name>
   </author>
-  <image>
-    <url>https://navelpluisje.github.io/reasonus/images/favicon.svg</url>
-    <title>ReaSonus Native</title>
-    <width>64</width>
-    <height>64</height>
-  </image>
+  <icon>https://navelpluisje.github.io/reasonus/images/Avatar.png</icon>
   <entry>
     <title>Human Made Content</title>
     <link href="https://navelpluisje.github.io/reasonus/posts/human-made-content" />
