@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReaSonus :: New ReaSonus version (v0.4.2)</title>
+    <title>ReaSonus :: New ReaSonus version (v0.8.0)</title>
     <link rel="icon" href="/reasonus/images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/reasonus/styles/kxRKoOpYvG.css" />
   </head>
   <body>
-    <section class="post-page green">
+    <section class="post-page blue">
       <header class="header">
         <a href="/reasonus/"> <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" /></a>
       </header>
@@ -26,10 +26,10 @@
             <img src="/reasonus/images/logo-only.svg" alt="" class="logo" />
           </section>
 
-          <article class="post-extras green">
+          <article class="post-extras blue">
             <dl>
               <dt>Published:</dt>
-              <dd>18-11-2025</dd>
+              <dd>03-02-2026</dd>
             </dl>
             <dl>
               <dt>Author:</dt>
@@ -48,18 +48,45 @@
           </article>
         </section>
         <section class="post-content-group">
-          <h1 class="post-title">New ReaSonus version (v0.4.2)</h1>
+          <h1 class="post-title">New ReaSonus version (v0.8.0)</h1>
           <section class="post-content">
             <p>A new version of ReaSonus Native has been released.</p>
             <h3>What's Changed</h3>
-            <h4>All devices</h4>
-            <ul>
-              <li>Fixed issue where REAPER crashed when selecting a hidden track in the track manager</li>
-            </ul>
             <h4>FaderPort 8/16</h4>
+            <p>This release has a lot of improvements for the UI for Plugin Mapping:</p>
             <ul>
-              <li>Fixed issue where the FaderPort was not following the selected track in REAPER</li>
+              <li>
+                Added the option to set the step size in Plugin Control mode on the device. The step size can be set
+                both on-device as in the settings.
+              </li>
+              <li>You can now per control set the invert of the label. This can help you grouping sets of controls.</li>
+              <li>All parameters of the plugin are now in the parameters list.</li>
+              <li>Parameter list is now searchable.</li>
+              <li>
+                Added option to go to a group by number. This way you can go fairly quick to group 100 (or further of
+                course).
+              </li>
+              <li>You can now add a new group at any place and delete any group.</li>
+              <li>Drag and drop has been implemented to change the order of the groups.</li>
+              <li>The limit for the maximum number of groups is set to 1024</li>
+              <li>There is an indicator now that tells per group if it has changed or not.</li>
+              <li>Added option to undo changes per group or all at once</li>
+              <li>Some minor bugs with the UI have been fixed</li>
             </ul>
+            <p>One more bug has been fixed:</p>
+            <ul>
+              <li>The automation buttons were not illuminated correct</li>
+            </ul>
+            <blockquote>
+              During development also an issue was found with not taking the plugin type in account. This can cause
+              issues with the mapping as a VST and VST do not have the same mapping A tool has been created to help you
+              fixing this. In the action list search for plugin type and run it.
+            </blockquote>
+            <h4>FaderPort V2</h4>
+            <ul>
+              <li>Fixed an issue where the translations for the UI were not loaded</li>
+            </ul>
+            <p>Thanx a lot to DesertEagleDerek for the code contributions and testing</p>
             <h3>Install</h3>
             <p>
               ReaSonus Native is now available in ReaPack. There is no need to add a repository, but works
@@ -75,24 +102,22 @@
             <blockquote>
               Full Changelog:
               <a
-                href="https://github.com/navelpluisje/Reasonus-Native/compare/0.4.1...0.4.2"
+                href="https://github.com/navelpluisje/Reasonus-Native/compare/0.7.0...0.8.0"
                 target="_blank"
                 rel="noreferrer noopener"
-                >https://github.com/navelpluisje/Reasonus-Native/compare/0.4.1...0.4.2</a
+                >https://github.com/navelpluisje/Reasonus-Native/compare/0.7.0...0.8.0</a
               >
             </blockquote>
           </section>
         </section>
         <section class="post-pagination">
           <div class="previous-post">
-            <a href="/reasonus/posts/new-reasonus-version-v0-4-1/">Previous Post</a>
+            <a href="/reasonus/posts/human-made-content/">Previous Post</a>
           </div>
           <div class="post-list">
             <a href="/reasonus/posts">All posts</a>
           </div>
-          <div class="next-post">
-            <a href="/reasonus/posts/new-reasonus-version-v0-4-3/">Next Post</a>
-          </div>
+          <div class="next-post"></div>
         </section>
       </section>
 

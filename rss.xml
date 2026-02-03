@@ -5,7 +5,7 @@
     <link href="https://navelpluisje.github.io/reasonus/" />
     <description></description>
     <language>en-us</language>
-    <pubDate>2026-01-27T21:01:56.269Z</pubDate>
+    <pubDate>2026-02-03T19:04:58.126Z</pubDate>
     <generator>11ty</generator>
     <id>https://navelpluisje.github.io/reasonus/reasonus/</id>
     <managingEditor>Erwin Goossen (Navelpluisje)</managingEditor>
@@ -15,6 +15,44 @@
       <title>ReaSonus Native</title>
       <link href="https://navelpluisje.github.io/reasonus/" />
     </image>
+    <item>
+      <title>New ReaSonus version (v0.8.0)</title>
+      <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-8-0" />
+      <guid>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-8-0</guid>
+      <pubDate>2026-02-03T19:04:58.126Z</pubDate>
+      <id>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-8-0</id>
+      <description>
+        &lt;p&gt;A new version of ReaSonus Native has been released. &lt;/p&gt;&lt;h3&gt;What&#39;s
+        Changed&lt;/h3&gt;&lt;h4&gt;FaderPort 8/16&lt;/h4&gt;&lt;p&gt;This release has a lot of improvements for the UI
+        for Plugin Mapping:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Added the option to set the step size in Plugin Control mode on
+        the device. The step size can be set both on-device as in the settings.&lt;/li&gt;&lt;li&gt;You can now per
+        control set the invert of the label. This can help you grouping sets of controls.&lt;/li&gt;&lt;li&gt;All
+        parameters of the plugin are now in the parameters list.&lt;/li&gt;&lt;li&gt;Parameter list is now
+        searchable.&lt;/li&gt;&lt;li&gt;Added option to go to a group by number. This way you can go fairly quick to
+        group 100 (or further of course).&lt;/li&gt;&lt;li&gt;You can now add a new group at any place and delete any
+        group.&lt;/li&gt;&lt;li&gt;Drag and drop has been implemented to change the order of the
+        groups.&lt;/li&gt;&lt;li&gt;The limit for the maximum number of groups is set to 1024 &lt;/li&gt;&lt;li&gt;There
+        is an indicator now that tells per group if it has changed or not.&lt;/li&gt;&lt;li&gt;Added option to undo
+        changes per group or all at once&lt;/li&gt;&lt;li&gt;Some minor bugs with the UI have been
+        fixed&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;One more bug has been fixed:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The automation
+        buttons were not illuminated correct&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;During development also an issue was
+        found with not taking the plugin type in account. This can cause issues with the mapping as a VST and VST do not
+        have the same mapping A tool has been created to help you fixing this. In the action list search for plugin type
+        and run it.&lt;/blockquote&gt;&lt;h4&gt;FaderPort V2&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Fixed an issue where the
+        translations for the UI were not loaded&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Thanx a lot to DesertEagleDerek for the
+        code contributions and testing&lt;/p&gt;&lt;h3&gt;Install&lt;/h3&gt;&lt;p&gt;ReaSonus Native is now available in
+        ReaPack. There is no need to add a repository, but works out-of-the-box. In ReaPack search for
+        &lt;code&gt;ReaSonus&lt;/code&gt; and you can install it.&lt;/p&gt;&lt;blockquote&gt;Don&#39;t forget to install
+        SWS and ReaImGui v0.10 if you have not installed them
+        yet&lt;/blockquote&gt;&lt;h3&gt;Documentation&lt;/h3&gt;&lt;p&gt;Documentation can be found here. If you see
+        typo&#39;s or other issues with the documentation, please report them, so the documentation can get
+        updated.&lt;/p&gt;&lt;p&gt;Thanx to anyone reporting issues and help me debug
+        them.&lt;/p&gt;&lt;blockquote&gt;Full Changelog: &lt;a
+        href=&quot;https://github.com/navelpluisje/Reasonus-Native/compare/0.7.0...0.8.0&quot; target=&quot;_blank&quot;
+        rel=&quot;noreferrer
+        noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.7.0...0.8.0&lt;/a&gt;&lt;/blockquote&gt;
+      </description>
+    </item>
     <item>
       <title>Human Made Content</title>
       <link href="https://navelpluisje.github.io/reasonus/posts/human-made-content" />
