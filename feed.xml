@@ -4,7 +4,7 @@
   <subtitle></subtitle>
   <link href="https://navelpluisje.github.io/reasonus/feed.xml" rel="self" />
   <link href="https://navelpluisje.github.io/reasonus/" />
-  <updated>2026-02-08T18:14:54.316Z</updated>
+  <updated>2026-02-08T18:19:49.306Z</updated>
   <id>https://navelpluisje.github.io/reasonus/reasonus/</id>
   <author>
     <name>Erwin Goossen (Navelpluisje)</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>New ReaSonus version (v0.8.1)</title>
     <link href="https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-8-1" />
-    <updated>2026-02-08T18:14:54.316Z</updated>
+    <updated>2026-02-08T18:19:49.306Z</updated>
     <id>https://navelpluisje.github.io/reasonus/posts/new-reasonus-version-v0-8-1</id>
     <content type="html">
       &lt;p&gt;A new version of ReaSonus Native has been released. &lt;/p&gt;&lt;h3&gt;What&#39;s
@@ -28,9 +28,9 @@
       here. If you see typo&#39;s or other issues with the documentation, please report them, so the documentation can
       get updated.&lt;/p&gt;&lt;p&gt;Thanx to anyone reporting issues and help me debug
       them.&lt;/p&gt;&lt;blockquote&gt;Full Changelog: &lt;a
-      href=&quot;https://github.com/navelpluisje/Reasonus-Native/compare/0.7.0...0.8.0&quot; target=&quot;_blank&quot;
+      href=&quot;https://github.com/navelpluisje/Reasonus-Native/compare/0.8.0...0.8.1&quot; target=&quot;_blank&quot;
       rel=&quot;noreferrer
-      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.7.0...0.8.0&lt;/a&gt;&lt;/blockquote&gt;
+      noopener&quot;&gt;https://github.com/navelpluisje/Reasonus-Native/compare/0.8.0...0.8.1&lt;/a&gt;&lt;/blockquote&gt;
     </content>
   </entry>
   <entry>
