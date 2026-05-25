@@ -132,7 +132,7 @@
                 </li>
 
                 <li class="sub gray">
-                  <a on:click="{handleAnchorClick}" href="#remove-old-version"> Remove old version </a>
+                  <a on:click="{handleAnchorClick}" href="#how-do-i"> How do I </a>
                 </li>
               </ul>
             </ul>
@@ -208,12 +208,12 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-273-211">MIDI Learn</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-288-228">MIDI Learn</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-273-212">Ui</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-288-229">Ui</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-273-211">
+                      <section class="tab midi-learn" data-id="i1wueez611runwgmpq3d4m5a-288-228">
                         <p></p>
                         <h3>New Plugin Mapping</h3>
                         <p>
@@ -273,7 +273,7 @@
                         </p>
                       </section>
 
-                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-273-212">
+                      <section class="tab ui" data-id="i1wueez611runwgmpq3d4m5a-288-229">
                         <blockquote>
                           It is at this point not possible to add mappings in the
                           <strong>ReaSonus Control Panel</strong>
@@ -585,14 +585,14 @@
 
                   <section class="tabs-macro">
                     <section class="tab-bar">
-                      <button data-id="i1wueez611runwgmpq3d4m5a-34-213">All</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-36-230">All</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-34-214">FaderPort 8/16</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-36-231">FaderPort 8/16</button>
 
-                      <button data-id="i1wueez611runwgmpq3d4m5a-34-215">FaderPort V2</button>
+                      <button data-id="i1wueez611runwgmpq3d4m5a-36-232">FaderPort V2</button>
                     </section>
                     <section class="tab-content">
-                      <section class="tab all" data-id="i1wueez611runwgmpq3d4m5a-34-213">
+                      <section class="tab all" data-id="i1wueez611runwgmpq3d4m5a-36-230">
                         <p>These actions apply to all the devices.</p>
 
                         <section class="extras">
@@ -634,7 +634,7 @@
                         </section>
                       </section>
 
-                      <section class="tab faderport-8-16" data-id="i1wueez611runwgmpq3d4m5a-34-214">
+                      <section class="tab faderport-8-16" data-id="i1wueez611runwgmpq3d4m5a-36-231">
                         <p>These actions are <strong>FaderPort 8/16</strong> only</p>
 
                         <section class="extras">
@@ -757,7 +757,7 @@
                         </section>
                       </section>
 
-                      <section class="tab faderport-v2" data-id="i1wueez611runwgmpq3d4m5a-34-215">
+                      <section class="tab faderport-v2" data-id="i1wueez611runwgmpq3d4m5a-36-232">
                         <p>These actions are <strong>FaderPort v2</strong> only</p>
 
                         <section class="extras">
@@ -835,20 +835,21 @@
             </article>
           </div>
 
-          <div class="documentation-block" id="remove-old-version">
+          <div class="documentation-block" id="how-do-i">
             <article class="gray">
               <header>
-                <h2>Remove old version</h2>
+                <h2>How do I</h2>
               </header>
 
               <section class="default-content">
                 <section class="content">
+                  <h3>Remove the old ReaSonus version</h3>
                   <p>
                     If you had the 'old' ReaSonus version installed, installing the new one will leave you with some
                     artifacts. Within the Actions List there is a huge list of old ReaSonus actions that addde some of
                     the logic. You do not need them anymore.
                   </p>
-                  <h3>Step 1</h3>
+                  <h4>Step 1</h4>
                   <p>
                     First we will remove all the actions from the list. This can be done by going to the Reaper resource
                     folder. Once in the folder:
@@ -866,7 +867,7 @@
                     </li>
                     <li>Save your changes and step 1 is done</li>
                   </ul>
-                  <h3>Step 2</h3>
+                  <h4>Step 2</h4>
                   <p>Now we will remove all the actual files with th scripts</p>
                   <ul>
                     <li>In the Reaper resource folder is a folder named Scripts. Open this folder</li>
@@ -875,8 +876,41 @@
                     <li>We're done</li>
                   </ul>
                   <p>
-                    When you now restart Reaper and go to the actions list all the old ReaSonus scripts should be gone.
+                    When you now restart <strong>REAPER</strong> and go to the actions list all the old ReaSonus scripts
+                    should be gone.
                   </p>
+                  <h3>Make a backup</h3>
+                  <p>
+                    It will never harm creating backups. If you make backups of your complete
+                    <strong>REAPER</strong> resource folder, you probably should be fine. But here the steps to create a
+                    backup and using a backed up version
+                  </p>
+                  <h4>Making a backup</h4>
+                  <ul>
+                    <li>
+                      Open the <strong>REAPER</strong> resource folder. In REAPER go to `Options` > `Show
+                      <strong>REAPER</strong> resource path in Explorer/Finder`.
+                    </li>
+                    <li>
+                      In there you will find a folder named <strong>ReaSonus</strong>. In this folder are the filters,
+                      settings, localisation files and plugin mapping files located.
+                    </li>
+                    <li>Save a copy of the folder with all the content to a save place.</li>
+                  </ul>
+                  <h4>Using a backed up version</h4>
+                  <ul>
+                    <li>
+                      Open the <strong>REAPER</strong> resource folder. In <strong>REAPER</strong> go to `Options` >
+                      `Show REAPER resource path in Explorer/Finder`.
+                    </li>
+                    <li>You might want to backup the current files. See above how to.</li>
+                    <li>Remove/Rename the <strong>Reasonus</strong> folder</li>
+                    <li>
+                      Move the ReaSonus folder from the backup to the REAPER resource folder. (Be sure it is still named
+                      <strong>ReaSonus</strong>)
+                    </li>
+                    <li>Restart <strong>REAPER</strong></li>
+                  </ul>
                   <p></p>
                 </section>
               </section>
