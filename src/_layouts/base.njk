@@ -1,15 +1,19 @@
 {% css "base" %}
-{% include "styles/base.css" %}
+    {% include "styles/base.css" %}
 {% endcss %}
+
 {% set baseCss %}
-{% getBundleFileUrl "css", "base" %}
+    {% getBundleFileUrl "css", "base" %}
 {% endset %}
+
 {% set pageCss %}
-{% getBundleFileUrl "css" %}
+    {% getBundleFileUrl "css" %}
 {% endset %}
+
 {% set pageJavascript %}
-{% getBundleFileUrl "js" %}
+    {% getBundleFileUrl "js" %}
 {% endset %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

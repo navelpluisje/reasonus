@@ -1,32 +1,43 @@
 {% js %}
 {% include "javascript/smoothScroll.js" %}
 {% endjs %}
+
 {% css %}
 {% include "styles/menu.css" %}
 {% endcss %}
+
 <button class="menu-button" id="menu-button">
   <div></div>
   <div></div>
   <div></div>
 </button>
+
 <aside class="menu">
   <nav>
     <ul>
-      {% for item in menu %}
-        {% if item.Slug === '/' %}
-          {% set url = ['/', item.Type, '/'] | join | lower %}
+      {% for item in menu.menu %}
+        {% set url = ['/', item.Slug, '/'] | join | lower %}
+
+        <li class="main {{ item.Color | lower }} {{ url | activeMenu(page.url) }}" id="{% if item.Type == "Multi Page" %}menu-{{ item.Title | slug }}{% endif %}">
+        {% if item.Type == "Multi Page" %}
+          <button class="multi-menu-item" data-id="menu-{{ item.Title | slug }}">{{ item.Title }}</a>
         {% else %}
-          {% set url = ['/', item.Type, '/', item.Slug, '/'] | join | lower %}
-        {% endif %}
-        <li class="main {{ item.Color | lower }} {{ 'active' if page.url === url }}">
           <a href="{{ url | lower }}">{{ item.Title }}</a>
+        {% endif %}
         </li>
+
         <ul>
           {% for subItem in item.SubMenu %}
             <li class="sub {{ item.Color | lower }}">
-              <a on:click="{handleAnchorClick}" href="#{{ subItem | slugify }}">
-                {{ subItem }}
-              </a>
+              {% if subItem.link %}
+	              <a href="{{ ['/', subItem.slug, '/'] | join | lower }}/">
+	                {{ subItem.title }}
+	              </a>
+	             {% else %}
+	              <a on:click="{handleAnchorClick}" class="intern" href="#{{ subItem.slug | slug }}">
+	                {{ subItem.title }}
+	              </a>
+	            {% endif %}
             </li>
           {% endfor %}
         </ul>

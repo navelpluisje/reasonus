@@ -12,6 +12,14 @@ export default async function () {
       Menu_Items: {
         sort: ["Order:asc"],
         populate: {
+          SubMenuItems: {
+            fields: ["Title", "Order"],
+            populate: {
+              page: {
+                fields: ["Slug", "Type", "Color"],
+              },
+            },
+          },
           page: {
             fields: ["Slug", "Type", "Color"],
             populate: {
@@ -45,22 +53,53 @@ export default async function () {
             Authorization: `Bearer ${token}`,
           },
         },
-      }
+      },
     );
-  } catch (e) {
-    console.error("Error while retreiving menu data", e);
+  } catch (error) {
+    console.error("Error while retrieving menu data", error);
   }
 
-  // @ts-ignore
-  const formattedMenu = (menu_response?.data.Menu_Items || []).map((item) => {
+  const slugs = {};
+  const menu = (menu_response?.data.Menu_Items || []).map((item) => {
+    const pageType = item?.SubMenuItems?.length
+      ? item.SubMenuItems[0].page.Type
+      : item.page.Type;
+
+    const pageSlug = item?.SubMenuItems?.length ? item.Slug : item.page.Slug;
+
+    const subItems = item?.SubMenuItems?.length
+      ? item.SubMenuItems.map((subItem) => {
+          slugs[subItem.page.documentId] =
+            `${item.Type === "Multi Page" ? item.Slug : pageSlug}/${subItem.page.Slug}`;
+
+          return {
+            title: subItem.Title,
+            slug: `${pageType}/${item.Type === "Multi Page" ? item.Slug : pageSlug}/${subItem.page.Slug}`,
+            link: true,
+          };
+        })
+      : item.page.Blocks.map((block) => ({
+          title: block.Title,
+          slug: `${block.Title}`,
+          link: false,
+        }));
+
+    if (item.Type !== "Multi Page") {
+      slugs[item?.page?.documentId] = item?.page?.Slug;
+    }
+
     return {
       Title: item.Title,
-      Slug: item.page.Slug,
-      Type: item.page.Type,
-      Color: item.page.Color,
-      SubMenu: item.page.Blocks.map((block) => block.Title),
+      Slug: `${pageType}/${item.Type === "Multi Page" ? pageSlug : item?.page?.Slug}`,
+      MenuType: item.Type,
+      Type: item.Type,
+      Color: item.Type === "Multi Page" ? item.Color : item?.page?.Color,
+      SubMenu: [...subItems],
     };
   });
 
-  return formattedMenu;
+  return {
+    menu,
+    slugs,
+  };
 }

@@ -1,6 +1,7 @@
 {% css %}
 {% include "styles/documentation-default-content.css" %}
 {% endcss %}
+
 <section class="default-content">
   <section class="content">
     {{ block.Content | pathPrefix | safe }}
@@ -14,10 +15,12 @@
       {{ tabs(block.Tabs) }}
     {% endif %}
   </section>
+
+  {% css %}
+  {% include "macros/styles/explanation.macro.css" %}
+  {% endcss %}
   {% if block.Explanations | dump !== '[]' %}
-    {% css %}
-    {% include "macros/styles/explanation.macro.css" %}
-    {% endcss %}
+
     <section class="extras">
       {% for extra in block.Explanations %}
         {{ explanation(extra.Title, extra.Content, extra.type) }}

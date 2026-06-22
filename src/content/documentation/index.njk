@@ -5,7 +5,6 @@
     size: 1
     alias: doc
   eleventyComputed:
-    permalink: "documentation/{{ doc.Slug | slugify }}/"
+    permalink: "documentation/{% if menu.slugs[doc.Id] %}{{ menu.slugs[doc.Id] | slug }}{% else %}{{ doc.Slug | slug }}{% endif %}/"
     title: "ReaSonus :: {{ doc.Title | safe }}"
 ---
-
