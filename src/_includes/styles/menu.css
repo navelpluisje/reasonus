@@ -3,7 +3,6 @@
     padding: 2rem 1rem;
     width: var(--menu-width);
     justify-self: end;
-    cursor: pointer;
     overflow: scroll;
 
     ul {
@@ -27,7 +26,7 @@
         text-shadow: 0 0 .25rem var(--white-60);
         overflow: hidden;
 
-        ~.main {
+        ~ .main {
             margin-top: .5rem;
         }
 
@@ -43,7 +42,7 @@
         &:not(.active) + ul {
             display: none;
         }
-        
+
         &::after {
             background-color: var(--background);
             position: absolute;
@@ -55,7 +54,7 @@
             border-radius: inherit;
             z-index: 1;
             width: calc(100% + .25rem);
-            box-shadow: 0 -.125rem .5rem -.125rem rgba(0,0,0,.5);
+            box-shadow: 0 -.125rem .5rem -.125rem rgba(0, 0, 0, .5);
         }
 
         &.active::after {
@@ -70,21 +69,40 @@
             margin-top: .25rem;
         }
 
+        button,
         a {
             color: var(--black);
             text-decoration: none;
             width: 100%;
         }
 
+        button {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font: inherit;
+            font-weight: 400;
+            text-align: start;
+            cursor: pointer;
+        }
+
         &.blue {
             --accent-color: var(--sky-blue);
         }
+
         &.red {
             --accent-color: var(--tomato);
         }
+
         &.green {
             --accent-color: var(--olive);
         }
+
+        &.yellow {
+            --accent-color: var(--jonquil);
+        }
+
         &.grey,
         &.gray {
             --accent-color: var(--battleship-gray);

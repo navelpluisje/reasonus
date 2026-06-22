@@ -2,11 +2,7 @@ import qs from "qs";
 import "dotenv/config";
 import { jsonToDOM } from "../utils/jsonToDOM.mjs";
 import Fetch from "@11ty/eleventy-fetch";
-import {
-  populateExplanation,
-  populateImage,
-  populateTabs,
-} from "../utils/strapiFields.mjs";
+import { populateExplanation, populateImage, populateTabs } from "../utils/strapiFields.mjs";
 import { renameImage } from "../utils/renameImage.mjs";
 import { generateId } from "../utils/generateId.mjs";
 
@@ -17,6 +13,9 @@ export default async function () {
   const query = {
     fields: ["Title", "Slug", "Color", "Type"],
     populate: {
+      Parent: {
+        fields: ["Title", "Slug"],
+      },
       Blocks: {
         on: {
           "block.image-block": {
@@ -45,14 +44,14 @@ export default async function () {
         encodeValuesOnly: true,
       })}`,
       {
-        // duration: "1s",
+        duration: "1d",
         type: "json",
         fetchOptions: {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         },
-      }
+      },
     );
 
     // documentation_response = await response.json();
@@ -61,10 +60,13 @@ export default async function () {
   }
 
   // @ts-ignore
-  const formattedDocumentation = (documentation_response?.data || []).map(
-    (item) => ({
+  return (documentation_response?.data || []).map((item) => {
+    return {
+      Id: item.documentId,
       Title: item.Title,
-      Slug: item.Slug,
+      Slug: item?.Parent?.Slug
+        ? `${item?.Parent?.Slug}/${item.Slug}`
+        : item.Slug,
       Type: item.Type,
       Color: item.Color,
       Blocks: item.Blocks.map((block) => {
@@ -95,8 +97,6 @@ export default async function () {
           })),
         };
       }),
-    })
-  );
-
-  return formattedDocumentation;
+    };
+  });
 }

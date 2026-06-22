@@ -16,6 +16,18 @@ export default function (eleventyConfig) {
     return value.toLowerCase().replace(/\s/g, "-");
   });
 
+  eleventyConfig.addNunjucksFilter(
+    "activeMenu",
+    function (url = "", slug = "") {
+      const fixedUrl = url.replace(/\/{2,}/, "/");
+
+      if (fixedUrl === "/documentation/") {
+        return slug === fixedUrl ? "active open" : "";
+      }
+      return slug.startsWith(fixedUrl) ? "active open" : "";
+    },
+  );
+
   eleventyConfig.addNunjucksFilter("strip", function (value, length = 200) {
     const val = value.replace(/<[\/a-z0-9="\s:\._]*>/g, " ");
     return val.substring(0, length) + "...";
