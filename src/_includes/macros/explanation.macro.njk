@@ -5,7 +5,7 @@
         </header>
         <section>
             {% for contentItem in content %}
-                {{ contentItem.Content | pathPrefix | safe }}
+                {{ contentItem.Content | safe }}
                 {% if contentItem.Image %}
                     <img class="{{ titleitle | slugify }} popout" src="{{ contentItem.Image }}" alt="{{ contentItem.ImageAlt }}"/>
                 {% endif %}

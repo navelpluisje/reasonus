@@ -15,7 +15,7 @@
     </picture>
 
     <section class="content">
-        {{ block.Content | pathPrefix | safe }}
+        {{ block.Content | safe }}
         {% if block.Tabs | dump !== '[]' %}
             {% js %}
             {% include "javascript/tabs.js" %}

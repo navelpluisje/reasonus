@@ -1,3 +1,5 @@
+import { renameImage } from "./renameImage";
+
 const components = {
   blocks: {
     paragraph: (value) => `<p>${value}</p>`,
@@ -22,11 +24,15 @@ const components = {
       return `<ul>${value}</ul>`;
     },
     "list-item": (value) => `<li>${value}</li>`,
-    image: (_, { image }) => `<img
-      class="popout"
-      src="${image?.url}"
-      alt="${image?.alternativeText || undefined}"
-    />`,
+    image: (_, { image }) => {
+      const imageUrl = renameImage(image.url);
+
+      return `<img
+        class="popout"
+        src="${imageUrl}"
+        alt="${image?.alternativeText || undefined}" 
+      />`;
+    },
   },
   modifiers: {
     bold: (value) => `<strong>${value}</strong>`,

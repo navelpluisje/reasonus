@@ -28,7 +28,9 @@
 
         <ul>
           {% for subItem in item.SubMenu %}
-            <li class="sub {{ item.Color | lower }}">
+            {% set url = ['/', subItem.slug, '/'] | join | lower %}
+
+            <li class="sub {{ item.Color | lower }} {{ url | activeMenu(page.url)}}">
               {% if subItem.link %}
 	              <a href="{{ ['/', subItem.slug, '/'] | join | lower }}/">
 	                {{ subItem.title }}
