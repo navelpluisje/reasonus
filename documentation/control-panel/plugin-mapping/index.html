@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: Plugin Mapping</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/nethcVqJBB.css" />
+    <link rel="stylesheet" href="/reasonus/styles/iond4x3vVn.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/">
+          <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" />
+        </a>
+      </header>
+      <section class="center">
+        <button class="menu-button" id="menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red" id="">
+                <a href="/reasonus/documentation/">Lets Start</a>
+              </li>
+
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#lets-start"> Lets Start </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#installation"> Installation </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#settings"> Settings </a>
+                </li>
+              </ul>
+
+              <li class="main yellow active open" id="">
+                <a href="/reasonus/documentation/control-panel/">Control Panel</a>
+              </li>
+
+              <ul>
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/function-management/"> Function Management </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/custom-filters/"> Custom Filters </a>
+                </li>
+
+                <li class="sub yellow active open">
+                  <a href="/reasonus/documentation/control-panel/plugin-mapping/"> Plugin Mappings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/settings/"> Settings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/about/"> About </a>
+                </li>
+              </ul>
+
+              <li class="main blue" id="">
+                <a href="/reasonus/documentation/faderport8/">FaderPort 8 &amp; 16</a>
+              </li>
+
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#fader-modes"> Fader Modes </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green" id="">
+                <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray" id="menu-goodies">
+                <button class="multi-menu-item" data-id="menu-goodies">Goodies</button>
+              </li>
+
+              <ul>
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/reasonus-actions/"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/translations/"> Translations </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/how-do-i/"> How Do I </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="plugin-mapping">
+            <article class="yellow">
+              <header>
+                <h2>Plugin Mapping</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="plugin-mapping popout" src="/reasonus/cms_images/fp_8_mapping_4eabeffb31.webp" alt="" />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    <strong>ReaSonus Native</strong> has an extensive way of mapping plugins. There are multiple ways of
+                    managing the mapping of plugin parameters. By far the easiest and fastest will be via MIDI Learn.
+                    This will let you map plugins via the <strong>FaderPort</strong>, but has less options. You can also
+                    use the UI, which gives you more flexibility like the option to change parameter names, step number,
+                    colors and so on.
+                  </p>
+                  <p>This is a FaderPort 8 & 16 only functionality.</p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="add-with-midi-learn">
+            <article class="yellow">
+              <header>
+                <h2>Add with MIDI Learn</h2>
+              </header>
+
+              <section class="default-content">
+                <section class="content">
+                  <h3>New Plugin Mapping</h3>
+                  <p>
+                    The idea about the MIDI Learn method is to make the mapping as simple as possible. When in the
+                    Plugin Channel Mode:
+                  </p>
+                  <ul>
+                    <li>Press the [Solo] button to open the window of that plugin.</li>
+                    <li>
+                      Press the [Link] button will open the editing mode. If no mapping has been done for the selected
+                      plugin, a new mapping will be created automatically. In this mode the button is blinking.
+                    </li>
+                  </ul>
+                  <p>
+                    Now a configuration file gets created in the background and the linking is started. All displays
+                    should have 2 lines with the text Free in it.
+                  </p>
+                  <p>
+                    Now you can wiggle/touch a parameter in the plugin and then press the [Select] button of the channel
+                    you want to assign it to or touch the fader of choice. This should change the text Free to the name
+                    of the parameter (The top one for the select button and the bottom one for the fader).
+                  </p>
+                  <p>
+                    The [Select] button can be used for toggle buttons (on/off) or plugin parameters with a limited
+                    amount of steps. In that case, when the correct data is available from the plugin, pressing the
+                    [Select] button will loop through the options
+                  </p>
+                  <p>
+                    If all channels are populated (or earlier) you can use the Pan/Param encoder to scroll to a next set
+                    of empty slots
+                  </p>
+                  <p>
+                    If you want to disconnect an assignment, you can press the Right Shift and press the Select button
+                    or touch the fader you want to disconnect. The connection is removed and the text will change to
+                    Free again.
+                  </p>
+                  <p>Once done editing, press thge [Link] button again. Now you can use your mapping instantly</p>
+                  <h3>Edit Mapping</h3>
+                  <p>
+                    If the selected plugin already has a mapping, this will get activated instantly. If you want to make
+                    changes to the mapping, press the [Link] button. This will enable the edit mode. All values should
+                    be cleared from the displays and the empty slots will display the Empty text again.
+                  </p>
+                  <p>
+                    If you want to overwrite a mapping, just wiggle/touch a plugin parameter and then select the control
+                    you want to assign it to. This will overwrite it
+                  </p>
+                  <h3>Overwriting names</h3>
+                  <p>It is also possible to overwrite parameter names. Check <strong>Plugin Mapping UI</strong></p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="add-plugin-mapping-in-ui">
+            <article class="yellow">
+              <header>
+                <h2>Add Plugin Mapping in UI</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="add-plugin-mapping-in-ui popout"
+                    src="/reasonus/cms_images/fp_8_mapping_add_overview_7dfc68692f.webp"
+                    alt=""
+                  />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    There is no need to add a plugin mapping from the controller, but it can also be done in the
+                    <strong>ReaSonus Control Panel</strong> under the <strong>Plugin Mapping</strong> page. Here are the
+                    steps to take to add a new mapping.
+                  </p>
+                  <h3>Start adding</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mpping_add_c1cc2ae13f.webp"
+                    alt="fp_8_mpping_add.webp"
+                  />
+                  <p>
+                    Above the mapping list you see a small <strong>Add</strong> button with a plus in it. Click this
+                    button and you'll see the list with available plugins. When opened there will also be an extra
+                    button visible with a refresh icon.
+                  </p>
+                  <h3>Cache</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_rebuild_cache_f18e4d680d.webp"
+                    alt="fp_8_mapping_rebuild_cache.webp"
+                  />
+                  <p>
+                    When opening the list for the first time might take a bit. This is because data about all the
+                    installed plugins will be gathered. To prevent you have to wait every time you want to add a plugin
+                    mapping, all the data will be cached, so the next time you want to add a plugin mapping, the list
+                    will load almost instant.
+                  </p>
+                  <p>
+                    As there is no detection if plugins have been added, removed or updated, rebuilding the cache must
+                    be triggered manual. That's where the refresh button comes in. When clicking this button all the
+                    data of the installed plugins will be updated
+                  </p>
+                  <h3>Plugin List</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_add_filter_ab09e68b01.webp"
+                    alt="fp_8_mapping_add_filter.webp"
+                  />
+                  <p>
+                    After clicking the <strong>Add</strong> button, the list with all your installed plugins will
+                    appear. Here you can select the plugin you want to create a mapping for. To make searching easier,
+                    some filters have been added:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Search plugin</strong>: Type in a (part of a) plugin name to narrow down the selection
+                    </li>
+                    <li>
+                      <strong>Developers Combo</strong>: Select the developer of the plugin you want, to only see these
+                      plugins
+                    </li>
+                    <li>
+                      <strong>Plugin Type</strong>: Select the type of the plugin you want, to only see these plugins
+                    </li>
+                  </ul>
+                  <p>All these filters can be used together to get to your plugin in an as fast way as possible</p>
+                  <p>
+                    Once you made your choice, click the little <strong>Add</strong> button in the row of the plugin.
+                    Once clicked an empty mapping will be created, the list will close, and the newly added plugin
+                    mapping will be selected, so you can start setting up the mapping instant.
+                  </p>
+                  <h3>More Cache</h3>
+                  <p>
+                    As some plugins have a very large list with parameters and this might affect load times, also all
+                    the parameters will be cached per plugin. You can read more about cache, how to clear, refresh etc
+                    below
+                  </p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="plugin-mapping-ui">
+            <article class="yellow">
+              <header>
+                <h2>Plugin Mapping UI</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="plugin-mapping-ui popout"
+                    src="/reasonus/cms_images/fp_8_mapping_edit_c39cfc8c81.webp"
+                    alt=""
+                  />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    Within <strong>ReaSonus Native</strong> it is also possible to manually add a mapping or to edit
+                    some settings of the mapping. If you want to use this, do one of the following:
+                  </p>
+                  <ul>
+                    <li>
+                      Go into the learn mode. In this mode, press the <strong>[Left Shift]</strong> and press the
+                      <strong>[Select]</strong> button of the channel you want to edit. This opens the
+                      <strong>Plugin Mapping</strong> with the current effect and parameter selected. Or read the next
+                      block about adding plugin mappings in the UI
+                    </li>
+                    <li>
+                      Open the <strong>ReaSonus Control Panel</strong> and open the tab <strong>Plugin Mapping</strong>.
+                      Then you can select the developer and the plugin you want to edit.
+                    </li>
+                  </ul>
+                  <h3>The panel</h3>
+                  <p>
+                    On the left side you see the list of plugins which are already mapped. They are grouped by developer
+                    and ordered alphabetically to make searching a bit easier.
+                  </p>
+                  <p>
+                    On the right side at the top you see an info bar and a list with numbered buttons. These represent
+                    the tracks you assign the controls to. When the list gets larger you can
+                    <strong>scroll</strong> through the list. Clicking a button will show you the settings for that
+                    track. The big area underneath is where the selected group will be displayed
+                  </p>
+                  <h3>The top bar</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_info_bar_5b522f2b76.webp"
+                    alt="fp_8_mapping_info_bar.webp"
+                  />
+                  <p>
+                    The top bar displays the number of edited groups and the total number of groups. Beside that info
+                    there are a couple of buttons to make your live easier:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Go To Group</strong>: When clicking this button a little popup appears with an input
+                      field. You can enter the group number here to go quickly go to that group. When using the Enter or
+                      Escape key the popup disappears.
+                    </li>
+                    <li>
+                      <strong>Undo</strong>: Undo the changes of the currently selected group. If you want to undo all
+                      changes, use the Cancel button in the bottom of the page.
+                    </li>
+                    <li><strong>Add</strong>: Add a new group after the currently selected group.</li>
+                    <li><strong>Delete</strong>: Delete the currently selected group.</li>
+                  </ul>
+                  <h3>Navigation</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_navigation_4dcf83e3fa.webp"
+                    alt="fp_8_mapping_navigation.webp"
+                  />
+                  <p>
+                    Navigate through the groups. Select the group you want to edit, or use the previous and next buttons
+                    to step through the groups.
+                  </p>
+                  <p>
+                    When using the Left Shift key of your keyboard and clicking the previous or next button, you will
+                    step with 12 groups. This makes it easier to step faster through teh groups when the plugin has a
+                    lot of groups.
+                  </p>
+                  <p>If you want to re-order them, you can drag and drop the groups.</p>
+                  <h3>Color</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_color_60d6b84112.webp"
+                    alt="fp_8_mapping_color.webp"
+                  />
+                  <ul>
+                    <li>
+                      <strong>Color</strong>: The color that will be set to the <strong>Select</strong> button. This
+                      will use the color picker. You can modify the color palette of the color picker in the
+                      <strong>Settings</strong>.
+                    </li>
+                    <li>
+                      <strong>Show</strong>: The way the color is displayed in the <strong>Select</strong> button. The
+                      preferred default value can be set in the <strong>Settings</strong>
+                    </li>
+                    <ul>
+                      <li><strong>No color</strong>: The <strong>Select</strong> button will always be dimmed white</li>
+                      <li>
+                        <strong>Show color</strong>: When a <strong>Select parameter</strong> is available, it will be
+                        bright, otherwise the selected color is dimmed
+                      </li>
+                      <li>
+                        <strong>Always bright</strong>: Regardless if there is a parameter set for the
+                        <strong>Select button</strong>, it will always be bright
+                      </li>
+                      <li>
+                        <strong>Always dimmed</strong>: Regardless if there is a parameter set for the
+                        <strong>Select button</strong>, it will always be bright
+                      </li>
+                    </ul>
+                  </ul>
+                  <h3>Select</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_select_b89d1bed3c.webp"
+                    alt="fp_8_mapping_select.webp"
+                  />
+                  <ul>
+                    <li>
+                      <strong>Plugin Parameter</strong>: This is a popup with all the available parameters of the
+                      selected plugin with a search field. This makes it easier to find a parameter when there are a lot
+                      of parameters.
+                    </li>
+                    <li>
+                      <strong>Parameter Display Name</strong>: A configurable name for the parameter. This can come in
+                      handy as most times the original names are fairly long. Keep in mind that the
+                      <strong>FaderPort </strong>will display no more then 10 characters.
+                    </li>
+                    <li>
+                      <strong>Number of Steps</strong>: (Select only) the number of steps/options for the parameter. In
+                      case of on/off this will be 2 and using the select button will toggle the value. If there are more
+                      steps for the parameter, clicking the Select button will select the next available value. This can
+                      be helpful for waveform select in a synth plugin or ratio select on a famous compressor.
+                    </li>
+                    <li>
+                      <strong>Label style</strong>: Set the label style for the parameter label in the display to
+                      inverted or not inverted. This can help you organise your mappings a bit.
+                    </li>
+                  </ul>
+                  <h3>Fader</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_fader_359aac6cd1.webp"
+                    alt="fp_8_mapping_fader.webp"
+                  />
+                  <p>
+                    <strong>Plugin Parameter</strong>: This is a popup with all the available parameters of the selected
+                    plugin with a search field. This makes it easier to find a parameter when there are a lot of
+                    parameters.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Parameter Display Name</strong>: A configurable name for the parameter. This can come in
+                      handy as most times the original names are fairly long.
+                    </li>
+                    <li>
+                      <strong>Label style</strong>: Set the label style for the parameter label in the display to
+                      inverted or not inverted. This can help you organise your mappings a bit.
+                    </li>
+                  </ul>
+                  <p></p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="parameter-filters-list">
+            <article class="yellow">
+              <header>
+                <h2>Parameter Filters List</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="parameter-filters-list popout"
+                    src="/reasonus/cms_images/fp_8_mapping_filter_list_overview_8f502c8967.webp"
+                    alt=""
+                  />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    Some plugins have an extensive list of parameters. When looking closer at those longer lists, it
+                    seems that quite some of the parameters are or unused, or not useful for parameter mapping. To
+                    reduce this list there is a parameter <strong>Filter List</strong> is available per plugin
+                    developer. You can add items to the list and edit the list. Every update made to this list will
+                    update the cache for all the plugins of that developer.
+                  </p>
+                  <p>
+                    So if you've added <strong>parameter A</strong> to the list for <strong>developer B</strong>, this
+                    parameter will not appear anymore in all the plugins of that developer. It will though, be available
+                    for the plugins of <strong>developer D</strong>.
+                  </p>
+                  <h3>Add to the block list</h3>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_filter_list_add_2483793f25.webp"
+                    alt="fp_8_mapping_filter_list_add.webp"
+                  />
+                  <p>
+                    When you have a parameter you want to add to the <strong>Filter List</strong>, you have to open the
+                    parameter list and <strong>right-click</strong> the parameter you want to add to the list. A context
+                    menu appears and click the <strong>Add to developers filter list</strong>. The parameter gets added
+                    instant and all the plugin cache files will get updated with this change.
+                  </p>
+                  <h3>Manage the Filter List</h3>
+                  <p>
+                    To add, edit or delete items to the <strong>Filter LIst</strong>, or make a filter more generic, you
+                    can do that in the <strong>Manage filter list for...</strong> page. To open that page, right-click
+                    on a plugin of the developer you want to edit the list for.
+                  </p>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_filter_list_manage_584dd0979f.webp"
+                    alt="fp_8_mapping_filter_list_manage.webp"
+                  />
+                  <p>
+                    A context menu pops up and then select <strong>Manage developers filter list</strong> and the page
+                    will appear. Now you can start editing the <strong>Filters List</strong>.
+                  </p>
+                  <img
+                    class="popout"
+                    src="/reasonus/cms_images/fp_8_mapping_filter_list_edit_254b4294ef.webp"
+                    alt="fp_8_mapping_filter_list_edit.webp"
+                  />
+                  <p>
+                    You can add a new item to the list by typing the filter name in the
+                    <strong>Add new filter Item</strong> and click the <strong>Add</strong> button.
+                  </p>
+                  <p>
+                    If you want to delete an item, you can hover the mouse over the item. A Delete button will appear,
+                    click it and the item will be removed from the list.
+                  </p>
+                  <p>
+                    You can also edit the items or make them more generic. Select the item you want to edit and it will
+                    appear in the <strong>Edit filter item</strong> field. You can now edit the item. Changes will be
+                    reflected in the list as well.
+                  </p>
+                  <p>
+                    To make an item more generic there is the option to use wild cards. By default the parameters need
+                    to fully match the filter name, but adding an asterisk (<strong>*</strong>) will change that
+                    behaviour.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>param*</strong>: When the asterisk is placed after the name, it will match all parameters
+                      starting with the given text. In this case any parameter starting with <strong>param</strong> like
+                      <strong>params</strong>, <strong>param_1</strong>, etc will match.
+                    </li>
+                    <li>
+                      *<strong>param</strong>: When the asterisk is placed in front of the name, it will match all
+                      parameters ending with the given text. In this case any parameter ending with
+                      <strong>param</strong> like <strong>1_param</strong>, track<strong>param</strong>, etc will match.
+                    </li>
+                  </ul>
+                  <p>
+                    If you want to undo all your changes, click the <strong>Cancel</strong> button. Saving the changes
+                    is by clicking the <strong>Save</strong> button. On saving the changes also all the plugin cache
+                    files will get updated, so all changes are available instant
+                  </p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="plugin-cache">
+            <article class="yellow">
+              <header>
+                <h2>Plugin Cache</h2>
+              </header>
+
+              <section class="default-content">
+                <section class="content">
+                  <p>
+                    To increase performance for mapping plugins there are a couple of elements that get cached. As
+                    Wikipedia states:
+                  </p>
+                  <blockquote>
+                    In computing, a cache is a hardware or software component that stores data so that future requests
+                    for that data can be served faster; the data stored in a cache might be the result of an earlier
+                    computation or a copy of data stored elsewhere.
+                  </blockquote>
+                  <p>All the different types of caching used will be described here.</p>
+                  <h3>Installed plugins cache</h3>
+                  <p>
+                    Installed plugin cache stores all the installed plugin data to a file (InstalledPlugins.ini). Data
+                    stored are:
+                  </p>
+                  <ul>
+                    <li>Original name used by REAPER</li>
+                    <li>Developer</li>
+                    <li>Short name (actual plugin name)</li>
+                    <li>Plugin type</li>
+                    <li>Category (currently not used)</li>
+                  </ul>
+                  <p>
+                    This is currently used for adding a plugin mapping in the UI. When adding a mapping in the UI for
+                    the first time, the file gets generated and might take a while (depending on the amount of plugins).
+                  </p>
+                  <p>
+                    This file does not get updated automatically, so when adding or removing a plugin the cache file
+                    does not get updated. If you want to update the cache file, because of missing plugins, go to the
+                    add plugin mapping page and click the refresh button above the plugin mapping list.
+                  </p>
+                  <h3>Plugin parameter cache</h3>
+                  <p>
+                    Plugin parameter cache stores all the plugin parameters in a single file. While generating the cache
+                    file the parameter filters list is taken in account. So the parameters matching the filter list,
+                    will not be available in the cache file. Beside some global plugin info, the next values are stored
+                    per parameter:
+                  </p>
+                  <ul>
+                    <li>Parameter Id: the index of the parameter</li>
+                    <li>Parameter name</li>
+                    <li>Number of steps</li>
+                  </ul>
+                  <p>The cache file gets generated and updated in the following situations:</p>
+                  <ul>
+                    <li>When creating a new mapping (this can be either via the controller as via the UI)</li>
+                    <li>When updating the parameter filter list.</li>
+                  </ul>
+                  <p>You can also trigger an update yourself:</p>
+                  <ul>
+                    <li>
+                      In the Plugin mapping plugins list, right click the plugin you want to regenerate the cache for. A
+                      context menu appears. Select <strong>Rebuild cache for this plugin</strong> and the cache gets
+                      rebuild
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="unknown-plugin-type">
+            <article class="yellow">
+              <header>
+                <h2>Unknown Plugin Type</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="unknown-plugin-type popout"
+                    src="/reasonus/cms_images/fp_8_mapping_unkown_type_664caf3f9c.webp"
+                    alt=""
+                  />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    When having created plugin mappings before version 0.8.0, there might be an issue with a missing
+                    plugin type in the mapping file. There is an action to fix this for all the files with a missing
+                    plugin type. In the REAPER's actions list search for
+                    <code>_REASONUS_FP8_TOGGLE_MOMENTARY_MUTE_SOLO</code> and run it.
+                  </p>
+                  <p>
+                    When selecting a plugin in the Pugins list and that plugin does not have a plugin type in its
+                    mapping file, a appears that asks you to select the correct type. Once selected the file gets
+                    udated, and reloaded to open the mapping page for the selected plugin.
+                  </p>
+                </section>
+              </section>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+    <script src="/reasonus/javascript/O9ZHgYtKgK.js"></script>
+  </body>
+</html>

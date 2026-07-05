@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: Control Panel</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/nethcVqJBB.css" />
+    <link rel="stylesheet" href="/reasonus/styles/9QZTJ-HGiO.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/">
+          <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" />
+        </a>
+      </header>
+      <section class="center">
+        <button class="menu-button" id="menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red" id="">
+                <a href="/reasonus/documentation/">Lets Start</a>
+              </li>
+
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#lets-start"> Lets Start </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#installation"> Installation </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#settings"> Settings </a>
+                </li>
+              </ul>
+
+              <li class="main yellow active open" id="">
+                <a href="/reasonus/documentation/control-panel/">Control Panel</a>
+              </li>
+
+              <ul>
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/function-management/"> Function Management </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/custom-filters/"> Custom Filters </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/plugin-mapping/"> Plugin Mappings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/settings/"> Settings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/about/"> About </a>
+                </li>
+              </ul>
+
+              <li class="main blue" id="">
+                <a href="/reasonus/documentation/faderport8/">FaderPort 8 &amp; 16</a>
+              </li>
+
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#fader-modes"> Fader Modes </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green" id="">
+                <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray" id="menu-goodies">
+                <button class="multi-menu-item" data-id="menu-goodies">Goodies</button>
+              </li>
+
+              <ul>
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/reasonus-actions/"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/translations/"> Translations </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/how-do-i/"> How Do I </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="control-panel">
+            <article class="yellow">
+              <header>
+                <h2>Control Panel</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="control-panel popout" src="/reasonus/cms_images/fp_8_mapping2_5eab720156.webp" alt="" />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    The heart of <strong>ReaSonus Native</strong> is the <strong>ReaSonus Control Panel</strong>. This
+                    is where you can assign <strong>REAPER</strong> actions to the function keys, manage your plugin
+                    mappings or create custom filters. Also all the settings are available in the settings tab.
+                  </p>
+                  <p>
+                    Not all the options are available for all the devices. For the <strong>FaderPort V2</strong> there
+                    is no plugin mapping and custom filter available.
+                  </p>
+                  <h3>FaderPort 8 & 16</h3>
+                  <ul>
+                    <li><a href="/reasonus/documentation/control-panel/function-management">Function Management</a></li>
+                    <li><a href="/reasonus/documentation/control-panel/custom-filters">Custom Filters</a></li>
+                    <li><a href="/reasonus/documentation/control-panel/plugin-mapping/">Plugin Mapping</a></li>
+                    <li><a href="/reasonus/documentation/control-panel/settings/">Settings</a></li>
+                    <li><a href="/reasonus/documentation/control-panel/about/">About</a></li>
+                  </ul>
+                  <h3>FaderPort V2</h3>
+                  <ul>
+                    <li><a href="/reasonus/documentation/control-panel/function-management">Function Management</a></li>
+                    <li><a href="/reasonus/documentation/control-panel/settings/">Settings</a></li>
+                    <li><a href="/reasonus/documentation/control-panel/about/">About</a></li>
+                  </ul>
+                </section>
+              </section>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+    <script src="/reasonus/javascript/O9ZHgYtKgK.js"></script>
+  </body>
+</html>

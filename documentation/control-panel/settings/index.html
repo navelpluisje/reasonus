@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: Settings</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/nethcVqJBB.css" />
+    <link rel="stylesheet" href="/reasonus/styles/KVHcRLRBbX.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/">
+          <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" />
+        </a>
+      </header>
+      <section class="center">
+        <button class="menu-button" id="menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red" id="">
+                <a href="/reasonus/documentation/">Lets Start</a>
+              </li>
+
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#lets-start"> Lets Start </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#installation"> Installation </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#settings"> Settings </a>
+                </li>
+              </ul>
+
+              <li class="main yellow active open" id="">
+                <a href="/reasonus/documentation/control-panel/">Control Panel</a>
+              </li>
+
+              <ul>
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/function-management/"> Function Management </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/custom-filters/"> Custom Filters </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/plugin-mapping/"> Plugin Mappings </a>
+                </li>
+
+                <li class="sub yellow active open">
+                  <a href="/reasonus/documentation/control-panel/settings/"> Settings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/about/"> About </a>
+                </li>
+              </ul>
+
+              <li class="main blue" id="">
+                <a href="/reasonus/documentation/faderport8/">FaderPort 8 &amp; 16</a>
+              </li>
+
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#fader-modes"> Fader Modes </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green" id="">
+                <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray" id="menu-goodies">
+                <button class="multi-menu-item" data-id="menu-goodies">Goodies</button>
+              </li>
+
+              <ul>
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/reasonus-actions/"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/translations/"> Translations </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/how-do-i/"> How Do I </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="settings-faderport-8-and-16">
+            <article class="yellow">
+              <header>
+                <h2>Settings FaderPort 8 &amp; 16</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="settings-faderport-8-and-16 popout"
+                    src="/reasonus/cms_images/fp_8_settings_1c1e66ff1d.webp"
+                    alt=""
+                  />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    For the <strong>FaderPort 8 & 16 ReaSonus Native</strong> has quite some options. These are split
+                    into a couple of tabs:
+                  </p>
+
+                  <section class="tabs-macro">
+                    <section class="tab-bar">
+                      <button data-id="e3oo34p824hvnk5u569dquii-349-246">Global</button>
+
+                      <button data-id="e3oo34p824hvnk5u569dquii-349-247">Controller</button>
+
+                      <button data-id="e3oo34p824hvnk5u569dquii-349-248">Plugin Control</button>
+
+                      <button data-id="e3oo34p824hvnk5u569dquii-349-249">Display</button>
+                    </section>
+                    <section class="tab-content">
+                      <section class="tab global" data-id="e3oo34p824hvnk5u569dquii-349-246">
+                        <ul>
+                          <li><strong>ReaSonus UI Language</strong>: The language for the ReaSonus Control panel.</li>
+                          <li>
+                            <strong>Distraction free mode</strong>: Remove all that can be distracting like blinking
+                            buttons, some buttons `on` state.
+                          </li>
+                          <li>
+                            <strong>Color Palette</strong>: Create your own color palette to use with the plugin mapping
+                            (more to come)
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab controller" data-id="e3oo34p824hvnk5u569dquii-349-247">
+                        <ul>
+                          <li>
+                            <strong>Enable master fader mode</strong>: When selected en pressing the master button will
+                            enable master fader mode. This makes the last track of the FaderPort control the master
+                            track.
+                          </li>
+                          <li><strong>Swap Shift buttons</strong>: This swaps the left and right Shift button.</li>
+                          <li>
+                            <strong>Fader Reset</strong>: Left shift and fader touch: When eneabled, you can use the
+                            [Left Shift] button to reset the fader value while touching teh fader.
+                          </li>
+                          <li>
+                            <strong>Mute/Solo Momentary</strong>: When set, it will make the Solo and Mute buttons
+                            momentary. The timeout for being momentary is 500 milli seconds. In short: If you press the
+                            solo button longer then 500ms and release it, it will instant unsolo again.
+                          </li>
+                          <li>
+                            <strong>Enable write action for Latch Preview mode automation</strong>: When enabled and the
+                            automation mode is in Latch Preview, the Ltatch review button will trigger the write action
+                            selected.
+                          </li>
+                          <li>
+                            <strong>Write action for Latch Preview mode automation</strong>: Action triggered when
+                            engaging the Latch Preview button when in Latch Preview automation mode.
+                          </li>
+                          <li>
+                            <strong>Instant apply filter in multi select</strong>: When enabled the custom filters in
+                            multi select mode gets applied instant
+                          </li>
+                          <li>
+                            <strong>Mute the master track on Fwd and Rwd</strong>: When fast forwarding or rewinding the
+                            playhead, the master track gets muted
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="tab plugin-control" data-id="e3oo34p824hvnk5u569dquii-349-248">
+                        <ul>
+                          <li>
+                            <strong>Disable Plugin Control</strong>: If you use another controller for controlling the
+                            plugins, you can select this. The plugins mode is still active and you are still able to
+                            open the plugin window. From that point, the ReaSonus FaderPort will not do anything anymore
+                            for the plugins.
+                          </li>
+                          <li>
+                            <strong>Untouch last touched param after learn</strong>: When selected the last touched
+                            param will be set to untouched after parameter learn.
+                          </li>
+                          <li>
+                            <strong>Step size when scrolling through plugin parameters</strong>: Set the step size for
+                            scrolling through the plugin parameters when in plugin control mode.
+                          </li>
+                          <li>
+                            <strong>Clear input on close button in param select popup</strong>: When engaged and
+                            clicking the close button in the parameter select popup it will clear the input field.
+                          </li>
+                          <li><strong>Default color mode</strong>: Default color mode for the plugin mapping.</li>
+                          <ul>
+                            <li><strong>No Color</strong>: The select button will always be dimmed white</li>
+                            <li>
+                              <strong>Show Color</strong>: When a select param is available, it will be bright,
+                              otherwise the selected color is dimmed
+                            </li>
+                            <li><strong>Always bright</strong> and <strong>always dimmed</strong> do what they say.</li>
+                          </ul>
+                        </ul>
+                      </section>
+
+                      <section class="tab display" data-id="e3oo34p824hvnk5u569dquii-349-249">
+                        <ul>
+                          <li><strong>Overwrite Time Code</strong>: Overwrites the time code selected in REAPER.</li>
+                          <li>
+                            <strong>Time Code</strong>: Select the time code type you want to overwrite REAPERs time
+                            code with.
+                          </li>
+                          <li>
+                            <strong>Track color brightness</strong>: Set the track color brightness for the unselected
+                            state. This will make the color in the unselected mode more visible.
+                          </li>
+                        </ul>
+                        <h3>Track mode display</h3>
+                        <p>
+                          You can configure the track display to your own needs as not every workflow is the same. For
+                          every line available there is a tab with the settings for that line
+                        </p>
+                        <ul>
+                          <li><strong>Track mode display</strong>: Select the display mode you would like to use</li>
+                          <li><strong>Line Value</strong>: The value to display for this line</li>
+                          <li><strong>Alignment</strong>: Text alignment for this line</li>
+                          <li><strong>Line Invert</strong>: Whether the line colors should be inverted</li>
+                          <li><strong>Value Bar</strong>: The value bar mode</li>
+                          <li><strong>Value</strong>: The value to use for the value bar</li>
+                        </ul>
+                        <p></p>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="settings-faderport-v2">
+            <article class="yellow">
+              <header>
+                <h2>Settings FaderPort V2</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img
+                    class="settings-faderport-v2 popout"
+                    src="/reasonus/cms_images/fp_2_settings_925c8cb68b.webp"
+                    alt=""
+                  />
+                </picture>
+
+                <section class="content">
+                  <p>For the FaderPort v2 ReaSonus Native has the following 2 settings</p>
+                  <ul>
+                    <li><strong>ReaSonus UI Language</strong>: The language for the ReaSonus Control panel.</li>
+                    <li>
+                      <strong>Mute/Solo momentary</strong>: When set, it will make the Solo and Mute buttons momentary.
+                      The timeout for being momentary is 500 milli seconds. In short: If you press the solo button
+                      longer then 500ms and release it, it will instant unsolo again
+                    </li>
+                    <li>
+                      <strong>Control hidden MCP tracks</strong>: By default ReaSonus Native will step through the
+                      visible tracks. With this option also the hidden files in the MCP will be selectable
+                    </li>
+                    <li>
+                      <strong>Enable option to disable fader move when selecting tracks</strong>: This option makes it
+                      possible to use [Shift] + [Channel] to disable fader moves when selecting tracks in REAPER
+                    </li>
+                    <li>
+                      <strong>Enable endless track scrolling</strong>: When on the last track and clicking the next
+                      button, go to the first track. Same for previous, but then the other way around.
+                    </li>
+                    <li>
+                      <strong>Enable write action for Latch Preview mode automation</strong>: Enable the posibilty to
+                      trigger a write action when engaging the Latch Preview (Pan) button when in Latch Preview mode
+                    </li>
+                    <li>
+                      <strong>Write action for Latch Preview mode automation</strong>: Action triggered when engaging
+                      the Latch Preview button when in Latch Preview automation mode
+                    </li>
+                  </ul>
+                  <p></p>
+                </section>
+              </section>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+    <script src="/reasonus/javascript/TUsmFWBzur.js"></script>
+  </body>
+</html>

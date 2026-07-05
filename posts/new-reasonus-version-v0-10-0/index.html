@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: New ReaSonus version (v0.10.0)</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/nethcVqJBB.css" />
+    <link rel="stylesheet" href="/reasonus/styles/kxRKoOpYvG.css" />
+  </head>
+  <body>
+    <section class="post-page blue">
+      <header class="header">
+        <a href="/reasonus/">
+          <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" />
+        </a>
+      </header>
+      <section class="center">
+        <section class="post-meta-group">
+          <section class="post-image">
+            <img src="/reasonus/cms_images/post_base_image_8351087e49.webp" alt="" class="image" />
+            <img src="/reasonus/images/logo-only.svg" alt="" class="logo" />
+          </section>
+
+          <article class="post-extras blue">
+            <dl>
+              <dt>Published:</dt>
+              <dd>02-07-2026</dd>
+            </dl>
+
+            <dl>
+              <dt>Author:</dt>
+              <dd>Erwin Goossen</dd>
+            </dl>
+
+            <dl>
+              <dt>Tags:</dt>
+              <dd>release</dd>
+            </dl>
+
+            <dl>
+              <dt>Subscribe:</dt>
+              <dd>
+                <a href="/reasonus/feed.xml">RSS</a>
+              </dd>
+            </dl>
+          </article>
+        </section>
+        <section class="post-content-group">
+          <h1 class="post-title">New ReaSonus version (v0.10.0)</h1>
+          <section class="post-content">
+            <p>A new version of ReaSonus Native has been released.</p>
+            <h3>What's Changed</h3>
+            <p>This release has the following fixes and improvements which are all focused on plugin mapping:</p>
+            <h3>FaderPort 8/16</h3>
+            <ul>
+              <li>Added option to delete mappings</li>
+              <li>Added option to add mappings in the UI</li>
+              <li>
+                Added color to the mapping group. This has 4 options for the display types and it's possible to set one
+                of the options as the default one
+              </li>
+              <li>Showing plugin type select page when a plugin has not been set (Only for older mapping files)</li>
+              <li>Added a lot of caching for the plugin mapping:</li>
+              <ul>
+                <li>
+                  Plugin parameter caching: when adding a plugin mapping there will be a file generated with all the
+                  parameter info. This makes loading all the parameters way faster, especially when having a large
+                  number of parameters
+                </li>
+                <li>
+                  Installed plugins cache: When adding a plugin mapping in the UI, a cache file is generated with all
+                  the installed plugins (When done for the first time, this might take some time, depending on the
+                  amount of installed plugins). This makes loading the installed plugins list fast.
+                </li>
+                <li>
+                  Added a parameter filter per developer. A lot of plugins have parameters you'll never use like MIDI
+                  CC. There is now a way to store these parameters, so they will not appear in the list with parameters.
+                  Changes to this list will getting applied to all the parameter cache files for that developer.
+                </li>
+              </ul>
+              <li>Style fixes in the ReaSonus Control Panel.</li>
+              <ul>
+                <li>Recreated the list-items so they are all consistent and easier to maintain</li>
+                <li>
+                  Rewrote some elements to make them state full. Also for better handling and more predictable behaviour
+                </li>
+                <li>Fixed some issues with z-indexes on some elements (the wrong items on top of others)</li>
+              </ul>
+            </ul>
+            <p>Please check the documentation for more, in depth info about the plugin mapping new features.</p>
+            <h3>Install</h3>
+            <p>
+              ReaSonus Native is now available in ReaPack. There is no need to add a repository, but works
+              out-of-the-box. In ReaPack search for <code>ReaSonus</code> and you can install it.
+            </p>
+            <blockquote>Don't forget to install SWS and ReaImGui v0.10 if you have not installed them yet</blockquote>
+            <h3>Documentation</h3>
+            <p>
+              Documentation can be found here. If you see typo's or other issues with the documentation, please report
+              them, so the documentation can get updated.
+            </p>
+            <p>Thanx to anyone reporting issues and help me debug them.</p>
+            <blockquote>
+              Full Changelog:
+              <a
+                href="https://github.com/navelpluisje/Reasonus-Native/compare/0.9.0...0.10.0"
+                target="_blank"
+                rel="noreferrer noopener"
+                >https://github.com/navelpluisje/Reasonus-Native/compare/0.9.0...0.10.0</a
+              >
+            </blockquote>
+          </section>
+        </section>
+        <section class="post-pagination">
+          <div class="previous-post">
+            <a href="/reasonus/posts/new-reasonus-version-v0-9-2/">Previous Post</a>
+          </div>
+          <div class="post-list">
+            <a href="/reasonus/posts">All posts</a>
+          </div>
+          <div class="next-post"></div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+  </body>
+</html>

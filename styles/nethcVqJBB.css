@@ -4,7 +4,7 @@
   --jonquil: hsl(48, 93.4%, 52.5%);
   --olive: hsl(66, 36.8%, 60%);
   --white: hsl(0, 0%, 100%);
-  --white-60: hsls(0, 0%, 100%, 0.6);
+  --white-60: hsl(0, 0%, 100%, 0.6);
   --sky-blue: hsl(192, 48.9%, 63.9%);
   --black: hsl(0, 0%, 20%);
   --black-60: hsl(0, 0%, 20%, 0.6);
@@ -78,7 +78,11 @@ body {
 
 .content {
   h3 {
+    font-family: var(--font-heading);
+    font-weight: 300;
     margin: 0 0 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    width: max-content;
   }
 
   p,

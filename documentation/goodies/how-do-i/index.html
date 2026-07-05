@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: How Do I</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/nethcVqJBB.css" />
+    <link rel="stylesheet" href="/reasonus/styles/Qmg7YVDxBx.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/">
+          <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" />
+        </a>
+      </header>
+      <section class="center">
+        <button class="menu-button" id="menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red" id="">
+                <a href="/reasonus/documentation/">Lets Start</a>
+              </li>
+
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#lets-start"> Lets Start </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#installation"> Installation </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#settings"> Settings </a>
+                </li>
+              </ul>
+
+              <li class="main yellow" id="">
+                <a href="/reasonus/documentation/control-panel/">Control Panel</a>
+              </li>
+
+              <ul>
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/function-management/"> Function Management </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/custom-filters/"> Custom Filters </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/plugin-mapping/"> Plugin Mappings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/settings/"> Settings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/about/"> About </a>
+                </li>
+              </ul>
+
+              <li class="main blue" id="">
+                <a href="/reasonus/documentation/faderport8/">FaderPort 8 &amp; 16</a>
+              </li>
+
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#fader-modes"> Fader Modes </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green" id="">
+                <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray active open" id="menu-goodies">
+                <button class="multi-menu-item" data-id="menu-goodies">Goodies</button>
+              </li>
+
+              <ul>
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/reasonus-actions/"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/translations/"> Translations </a>
+                </li>
+
+                <li class="sub gray active open">
+                  <a href="/reasonus/documentation/goodies/how-do-i/"> How Do I </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="remove-the-old-reasonus-version">
+            <article class="gray">
+              <header>
+                <h2>Remove the old ReaSonus version</h2>
+              </header>
+
+              <section class="default-content">
+                <section class="content">
+                  <p>
+                    If you had the 'old' ReaSonus version installed, installing the new one will leave you with some
+                    artifacts. Within the Actions List there is a huge list of old ReaSonus actions that addde some of
+                    the logic. You do not need them anymore.
+                  </p>
+                  <h4>Step 1</h4>
+                  <p>
+                    First we will remove all the actions from the list. This can be done by going to the Reaper resource
+                    folder. Once in the folder:
+                  </p>
+                  <ul>
+                    <li>Search for <code>reaper-kb.ini</code> and make a copy of it (just to be sure)</li>
+                    <li>Open the file in your editor of choice</li>
+                    <li>
+                      There will be a list of lines like
+                      <code>SCR 4 0 REASONUS_ALWAYS_ON "Reasonus: Always On" Reasonus/always-on.lua</code>
+                    </li>
+                    <li>
+                      All the lines with <code>REASONUS_</code> in it can be removed. Please take care not to remove
+                      other lines
+                    </li>
+                    <li>Save your changes and step 1 is done</li>
+                  </ul>
+                  <h4>Step 2</h4>
+                  <p>Now we will remove all the actual files with th scripts</p>
+                  <ul>
+                    <li>In the Reaper resource folder is a folder named Scripts. Open this folder</li>
+                    <li>Inside this folder you'll see all scripts added by either yourself or other script makers</li>
+                    <li>Therer should be a folder named: Reasonus, and remove it</li>
+                    <li>We're done</li>
+                  </ul>
+                  <p>
+                    When you now restart <strong>REAPER</strong> and go to the actions list all the old ReaSonus scripts
+                    should be gone.
+                  </p>
+                </section>
+              </section>
+            </article>
+          </div>
+
+          <div class="documentation-block" id="make-a-backup">
+            <article class="gray">
+              <header>
+                <h2>Make a backup</h2>
+              </header>
+
+              <section class="default-content">
+                <section class="content">
+                  <p>
+                    It will never harm creating backups. If you make backups of your complete
+                    <strong>REAPER</strong> resource folder, you probably should be fine. But here the steps to create a
+                    backup and using a backed up version
+                  </p>
+                  <h4>Making a backup</h4>
+                  <ul>
+                    <li>
+                      Open the <strong>REAPER</strong> resource folder. In REAPER go to <code>Options</code> >
+                      <code>Show </code><code><strong>REAPER</strong></code
+                      ><code> resource path in Explorer/Finder</code>.
+                    </li>
+                    <li>
+                      In there you will find a folder named <strong>ReaSonus</strong>. In this folder are the filters,
+                      settings, localisation files and plugin mapping files located.
+                    </li>
+                    <li>Save a copy of the folder with all the content to a save place.</li>
+                  </ul>
+                  <h4>Using a backed up version</h4>
+                  <ul>
+                    <li>
+                      Open the <strong>REAPER</strong> resource folder. In <strong>REAPER</strong> go to
+                      <code>Options</code> > <code>Show REAPER resource path in Explorer/Finder</code>.
+                    </li>
+                    <li>You might want to backup the current files. See above how to.</li>
+                    <li>Remove/Rename the <strong>Reasonus</strong> folder</li>
+                    <li>
+                      Move the ReaSonus folder from the backup to the REAPER resource folder. (Be sure it is still named
+                      <strong>ReaSonus</strong>)
+                    </li>
+                    <li>Restart <strong>REAPER</strong></li>
+                  </ul>
+                </section>
+              </section>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+    <script src="/reasonus/javascript/T2n-QkAvg7.js"></script>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReaSonus :: Custom Filters</title>
+    <link rel="icon" href="/reasonus/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reasonus/styles/nethcVqJBB.css" />
+    <link rel="stylesheet" href="/reasonus/styles/GmwpTtRakt.css" />
+  </head>
+  <body>
+    <section class="documentation-page">
+      <header class="header">
+        <a href="/reasonus/">
+          <img src="/reasonus/images/logo.webp" alt="ReaSonus logo" class="logo" />
+        </a>
+      </header>
+      <section class="center">
+        <button class="menu-button" id="menu-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li class="main red" id="">
+                <a href="/reasonus/documentation/">Lets Start</a>
+              </li>
+
+              <ul>
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#lets-start"> Lets Start </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#installation"> Installation </a>
+                </li>
+
+                <li class="sub red">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#settings"> Settings </a>
+                </li>
+              </ul>
+
+              <li class="main yellow active open" id="">
+                <a href="/reasonus/documentation/control-panel/">Control Panel</a>
+              </li>
+
+              <ul>
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/function-management/"> Function Management </a>
+                </li>
+
+                <li class="sub yellow active open">
+                  <a href="/reasonus/documentation/control-panel/custom-filters/"> Custom Filters </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/plugin-mapping/"> Plugin Mappings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/settings/"> Settings </a>
+                </li>
+
+                <li class="sub yellow">
+                  <a href="/reasonus/documentation/control-panel/about/"> About </a>
+                </li>
+              </ul>
+
+              <li class="main blue" id="">
+                <a href="/reasonus/documentation/faderport8/">FaderPort 8 &amp; 16</a>
+              </li>
+
+              <ul>
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#fader-modes"> Fader Modes </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#automation"> Automation </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#general"> General </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#mix-management"> Mix Management </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub blue">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-controls"> Function Controls </a>
+                </li>
+              </ul>
+
+              <li class="main green" id="">
+                <a href="/reasonus/documentation/faderportv2/">FaderPort V2</a>
+              </li>
+
+              <ul>
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#track"> Track </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#transport"> Transport </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#session-navigator"> Session Navigator </a>
+                </li>
+
+                <li class="sub green">
+                  <a on:click="{handleAnchorClick}" class="intern" href="#function-control"> Function Control </a>
+                </li>
+              </ul>
+
+              <li class="main gray" id="menu-goodies">
+                <button class="multi-menu-item" data-id="menu-goodies">Goodies</button>
+              </li>
+
+              <ul>
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/reasonus-actions/"> ReaSonus Actions </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/translations/"> Translations </a>
+                </li>
+
+                <li class="sub gray">
+                  <a href="/reasonus/documentation/goodies/how-do-i/"> How Do I </a>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+        <section class="page-content">
+          <div class="documentation-block" id="custom-filters">
+            <article class="yellow">
+              <header>
+                <h2>Custom Filters</h2>
+              </header>
+
+              <section class="image-content">
+                <picture class="img-container">
+                  <img class="custom-filters popout" src="/reasonus/cms_images/fp_8_filters_4400669e14.webp" alt="" />
+                </picture>
+
+                <section class="content">
+                  <p>
+                    <strong>ReaSonus Native</strong> has the ability to create and manage your own track filters. The
+                    filters are based on file names with additional options. To open the window click the Macro-button.
+                    Or select the <strong>Custom Filters</strong> tab in the <strong>ReaSonus Control Panel</strong>.
+                  </p>
+                  <p>Don't forget to click the save button when you're done editing.</p>
+                  <h3>Adding and removing filters</h3>
+                  <p>
+                    The left side of the window contains the list with available filters. If you want to delete a
+                    filter, select the filter in the list and click the 'X' button on the right
+                  </p>
+                  <p>
+                    Adding a new filter is as simple as deleting one. Enter a name in the input field above the list and
+                    click the '+' button.
+                  </p>
+                  <p>
+                    The order of the filters on the FaderPort is the same order as they appear in the list. You can
+                    change the order by dragging and dropping the items.
+                  </p>
+                  <h3>The Filter Options</h3>
+                  <p>
+                    The first match the filter makes is by name. If no name is provided, no tracks will be visible by
+                    selecting that filter. After the name the filter is checking by the given options.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Filter name</strong>: The name of the filter. This will be the name used in the list on
+                      the left side and in the displays of the controller.
+                    </li>
+                    <li>
+                      <strong>Filter text</strong>: Adding a text can be done by entering it in the input field and
+                      click the 'plus' button. Removing an item can be done by selecting it and clicking the 'X' button
+                      on the right.
+                    </li>
+                    <li><strong>Case Insensitive search</strong>: Search case insensitive</li>
+                    <li><strong>Show track siblings</strong>: Show all the sibbling tracks of matching tracks</li>
+                    <li><strong>Show track parents</strong>: Show all parent tracks of matching tracks</li>
+                    <li><strong>Show track children</strong>: Show all the child tracks of matching tracks</li>
+                    <li>
+                      <strong>Show only top level tracks</strong>: Shows only the filtered tracks if they are top-level
+                    </li>
+                    <li>
+                      <strong>Match multiple</strong>: By default the names wil only match the first item. Enabling this
+                      option will show all matches
+                    </li>
+                  </ul>
+                  <h3>The 'Preview'</h3>
+                  <p>
+                    There is a 'Preview' available that represents your settings. The 2 channels with the dark-yellow
+                    background represent tracks that match the name. The ones with the bright yellow border will be the
+                    ones that will be visible after using the filter.
+                  </p>
+                  <p>
+                    This 'Preview' should help you a bit with understanding the effect of the different filter options
+                    and how they interact with each other
+                  </p>
+                </section>
+
+                <section class="extras">
+                  <article class="explanation-macro">
+                    <header>
+                      <h4>Using your own filters</h4>
+                    </header>
+                    <section>
+                      <p>
+                        To use your own filters press <strong>[Left Shift] + All</strong>. This will show all your self
+                        created filters in the displays. If you have created more then 8/16 filters, use the pan encoder
+                        to scroll to the next filters.
+                      </p>
+                      <img
+                        class="popout"
+                        src="/reasonus/cms_images/filter_display_fb655bbd6f.svg"
+                        alt="filter-display.svg"
+                      />
+                      <p>
+                        If there is a filter available press the Select-button to select the filter. The All-button will
+                        now be yellow, to indicate a filter is activated.
+                      </p>
+                      <p>
+                        There is also an option to enable multiple filters at the same time. To do this use
+                        <strong>[Right Shift] + All</strong>. The same appears above, but now selecting a filter will
+                        not return to Track mode, but stays open to select more filters. When done, click
+                        <strong>[Left Shift] + All</strong> again and the filters get applied.
+                      </p>
+                      <p>
+                        In the settings is an option named: <strong>Instant apply filter in multi select</strong>. When
+                        this one is engaged, and you've selected multi filters, the filters get applied once selected.
+                      </p>
+                      <p>
+                        If no filter is available, the display tells you so. Pressing the select button then will ask
+                        you if you want to open the Filter Management window.
+                      </p>
+                    </section>
+                  </article>
+                </section>
+              </section>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <section class="footer-content">
+          <ul class="link-list">
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native">
+                <img src="/reasonus/images/icon-github.svg" alt="" />
+                <span>Repository</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/navelpluisje/Reasonus-Native/issues">
+                <img src="/reasonus/images/icon-bug.svg" alt="" />
+                <span>Report an issue</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://forum.cockos.com/showthread.php?t=267116">
+                <img src="/reasonus/images/icon-chat.svg" alt="" />
+                <span>Discussion</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://buymeacoffee.com/navelpluisje">
+                <img src="/reasonus/images/icon-coffee.svg" alt="" />
+                <span>Buy me some coffee</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/reasonus/posts/human-made-content/">
+                <img class="wide" src="/reasonus/images/human-made-content.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </section>
+    <div id="image-container"></div>
+    <script src="/reasonus/javascript/O9ZHgYtKgK.js"></script>
+  </body>
+</html>
