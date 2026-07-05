@@ -1,4 +1,4 @@
-import { renameImage } from "./renameImage";
+import { renameImage } from "./renameImage.mjs";
 
 const components = {
   blocks: {
