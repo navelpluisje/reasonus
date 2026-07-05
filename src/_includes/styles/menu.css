@@ -30,8 +30,10 @@
             margin-top: .5rem;
         }
 
-        a {
+        a,
+        button {
             display: block;
+            text-shadow: 1px 1px 3px hsl(0, 0%, 100%, 0.7);
         }
 
         + ul {
@@ -111,14 +113,35 @@
 
 
     li.sub {
-        height: 2.5rem;
         padding: 0 1rem;
         border-bottom: .125rem solid var(--accent-color);
         border-radius: .5rem;
         display: flex;
         align-items: center;
-        border-style: solid;
-        border-width: 0 0 .125rem 0;
+        position: relative;
+
+        &.active {
+            a {
+                font-weight: 500;
+            }
+
+            a::before {
+                content: '∘';
+                font-weight: 600;
+            }
+        }
+
+        a, button {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: .375rem 0;
+        }
+
+        &:first-of-type a,
+        &:first-of-type button {
+            padding-top: .125rem;
+        }
     }
 }
 

@@ -11,6 +11,7 @@ export default async function () {
   let documentation_response;
 
   const query = {
+    status: process.env["LOCAL_BUILD"] === "true" ? "draft" : '"published',
     fields: ["Title", "Slug", "Color", "Type"],
     populate: {
       Parent: {

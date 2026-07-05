@@ -41,9 +41,15 @@ export default function (eleventyConfig) {
     if (!pathPrefix) {
       return value;
     }
+
+    if (value.startsWith(`/${pathPrefix}`)) {
+      return value;
+    }
+
     return value
       .replace(/src="\//g, `src="/${pathPrefix}/`)
-      .replace(/href="\//g, `href="/${pathPrefix}/`);
+      .replace(/href="\//g, `href="/${pathPrefix}/`)
+      .replace(/\/{2,}/, "/");
   });
 
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);

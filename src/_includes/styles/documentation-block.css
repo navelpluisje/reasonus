@@ -4,7 +4,7 @@
 
     > article {
         --accent-color: var(--jonquil);
-        
+
         display: grid;
         height: 100%;
         grid-template-rows: 3.5rem auto .25rem;
@@ -19,20 +19,24 @@
         &.yellow {
             --accent-color: var(--jonquil);
         }
+
         &.green {
             --accent-color: var(--olive);
         }
+
         &.blue {
             --accent-color: var(--sky-blue);
         }
+
         &.red {
             --accent-color: var(--tomato);
         }
+
         &.gray {
             --accent-color: var(--battleship-gray);
         }
     }
-    
+
     header {
         grid-area: 1/1/2/2;
         overflow: hidden;
@@ -41,7 +45,7 @@
         position: sticky;
         top: -2rem;
         z-index: 0;
-        
+
         h2 {
             grid-area: 1/1/2/2;
             padding: 0.5rem 2rem;
@@ -52,9 +56,10 @@
             letter-spacing: -4%;
             font-weight: 300;
             font-size: 1.5rem;
+            text-shadow: 1px 1px 2px hsl(0, 0%, 100%, 0.7);
         }
     }
-    
+
     > .content {
         z-index: 4;
         grid-area: 2/1/4/2;
@@ -64,13 +69,14 @@
         padding: 0;
     }
 
+
     blockquote {
-    border-radius: 1rem;
-    background-color: var(--background);
-    padding: .75rem 1rem;
-    font-style: italic;
-    font-size: .75em;
-    margin: 1rem 0 ;
+        border-radius: 1rem;
+        background-color: var(--background);
+        padding: .75rem 1rem;
+        font-style: italic;
+        font-size: .75em;
+        margin: 1rem 0;
     }
 }
 
