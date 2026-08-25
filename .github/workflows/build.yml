@@ -6,8 +6,8 @@ on:
       - main
 env:
   # Setting an environment variable with the value of a configuration variable
-  STRAPI_URL: ${{ vars.STRAPI_URL_LOCAL }}
-  STRAPI_TOKEN: ${{ vars.STRAPI_TOKEN_LOCAL }}
+  STRAPI_URL: ${{ vars.STRAPI_URL_NEW }}
+  STRAPI_TOKEN: ${{ vars.STRAPI_TOKEN_NEW }}
 
 jobs:
   build:
