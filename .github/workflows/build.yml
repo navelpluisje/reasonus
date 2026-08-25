@@ -6,8 +6,8 @@ on:
       - main
 env:
   # Setting an environment variable with the value of a configuration variable
-  STRAPI_URL: ${{ vars.STRAPI_URL }}
-  STRAPI_TOKEN: ${{ vars.STRAPI_TOKEN }}
+  STRAPI_URL: ${{ vars.STRAPI_URL_LOCAL }}
+  STRAPI_TOKEN: ${{ vars.STRAPI_TOKEN_LOCAL }}
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }} {{ vars.STRAPI_URL }}
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
