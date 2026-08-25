@@ -126,8 +126,10 @@
             }
 
             a::before {
-                content: '∘';
+                content: '→';
                 font-weight: 600;
+                transform: translateY(-.125rem);
+                display: inline-block;
             }
         }
 

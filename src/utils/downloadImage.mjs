@@ -14,7 +14,7 @@ export const downloadImage = (imagePath) => {
     ? imagePath
     : `${process.env.STRAPI_URL}${imagePath}`;
   const imageName = `${imageLocation}/${getFileName(imageUrl)}`;
-
+  console.log(imageUrl);
   if (fs.existsSync(imageName)) {
     return;
   }

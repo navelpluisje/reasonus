@@ -17,10 +17,12 @@
     <ul>
       {% for item in menu.menu %}
         {% set url = ['/', item.Slug, '/'] | join | lower %}
+        {% set itemColor = item.Color | lower %}
+        {% set mainItemActive = url | activeMenu(page.url) %}
 
-        <li class="main {{ item.Color | lower }} {{ url | activeMenu(page.url) }}" id="{% if item.Type == "Multi Page" %}menu-{{ item.Title | slug }}{% endif %}">
+        <li class="main {{ itemColor }} {{ mainItemActive }}" id="{% if item.Type == "Multi Page" %}menu-{{ item.Title | slug }}{% endif %}">
         {% if item.Type == "Multi Page" %}
-          <button class="multi-menu-item" data-id="menu-{{ item.Title | slug }}">{{ item.Title }}</a>
+          <button class="multi-menu-item" data-id="menu-{{ item.Title | slug }}">{{ item.Title }}</button>
         {% else %}
           <a href="{{ url | lower }}">{{ item.Title }}</a>
         {% endif %}
@@ -29,10 +31,14 @@
         <ul>
           {% for subItem in item.SubMenu %}
             {% set url = ['/', subItem.slug, '/'] | join | lower %}
+            {% set itemActive = url | activeMenu(page.url) %}
+            {% if not subItem.link and loop.index == 1 %}
+              {% set itemActive = 'active' %}
+            {% endif %}
 
-            <li class="sub {{ item.Color | lower }} {{ url | activeMenu(page.url)}}">
+            <li class="sub {{ itemColor }} {{ itemActive }}">
               {% if subItem.link %}
-	              <a href="{{ ['/', subItem.slug, '/'] | join | lower }}/">
+	              <a href="{{ ['/', subItem.slug, '/'] | join | lower }}">
 	                {{ subItem.title }}
 	              </a>
 	             {% else %}

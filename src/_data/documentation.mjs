@@ -2,7 +2,11 @@ import qs from "qs";
 import "dotenv/config";
 import { jsonToDOM } from "../utils/jsonToDOM.mjs";
 import Fetch from "@11ty/eleventy-fetch";
-import { populateExplanation, populateImage, populateTabs } from "../utils/strapiFields.mjs";
+import {
+  populateExplanation,
+  populateImage,
+  populateTabs,
+} from "../utils/strapiFields.mjs";
 import { renameImage } from "../utils/renameImage.mjs";
 import { generateId } from "../utils/generateId.mjs";
 
@@ -45,7 +49,7 @@ export default async function () {
         encodeValuesOnly: true,
       })}`,
       {
-        duration: "1d",
+        duration: "1s",
         type: "json",
         fetchOptions: {
           headers: {
@@ -54,8 +58,6 @@ export default async function () {
         },
       },
     );
-
-    // documentation_response = await response.json();
   } catch (e) {
     console.error("Error while retreiving menu data", e);
   }
