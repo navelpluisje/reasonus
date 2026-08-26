@@ -3,7 +3,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import * as prettier from "prettier";
 
 export default function (eleventyConfig) {
-  // const pathPrefix = process.env.NODE_ENV === "production" ? "reasonus" : "xx";
+  const pathPrefix = "/";
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(["src/_includes", "src/_layouts"]),
@@ -38,11 +38,11 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("pathPrefix", function (value) {
-    if (!pathPrefix) {
+    if (pathPrefix === "/") {
       return value;
     }
 
-    if (value.startsWith(`/${pathPrefix}`)) {
+    if (value.startsWith(`/${pathPrefix}`.replace("//", "/"))) {
       return value;
     }
 
