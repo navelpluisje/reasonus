@@ -99,7 +99,7 @@
     font-weight: 300;
     font-size: 1.25rem;
     font-family: var(--font-heading);
-    background-image: url("/reasonus/images/logo-only.svg");
+    background-image: url("///images/logo-only.svg");
     background-repeat: no-repeat;
     background-position: -1rem -1rem;
     background-size: 5rem auto;
@@ -266,7 +266,7 @@
     border-radius: 1rem;
     background: var(--accent-color);
     position: relative;
-    background-image: url("/reasonus/images/logo-only.svg");
+    background-image: url("///images/logo-only.svg");
     background-repeat: no-repeat;
     background-position: -1rem -4rem;
     background-size: 17.5rem auto;
@@ -433,68 +433,43 @@
     border: 2px solid white;
   }
 }
-.default-content {
-  padding: 1rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "content" "extras";
-  border-radius: 1rem;
-  background-color: white;
-  z-index: 1;
-  box-shadow: 0 -0.5rem 0.5rem -0.5rem rgba(0, 0, 0, 0.5);
+.tabs-macro {
+  .tab-bar {
+    border-bottom: 1px solid var(--battleship-gray);
+    margin: 1rem 0;
+    position: sticky;
+    top: -2rem;
+    background-color: white;
+    z-index: 1;
 
-  .content {
-    grid-area: content;
+    button {
+      border: none;
+      background-color: transparent;
+      padding: 0.5rem 1rem;
+      font-family: var(--font-heading);
+      font-weight: 300;
+      font-size: 1rem;
+
+      &.selected {
+        border-bottom: 2px solid var(--accent-color);
+      }
+    }
   }
 
-  .extras {
-    grid-area: extras;
+  .tab {
+    display: none;
 
-    .explanation-macro {
-      margin-top: 0;
-    }
-    .explanation-macro + .explanation-macro {
-      margin-top: 1rem;
+    &.selected {
+      display: block;
     }
   }
 }
-.explanation-macro {
-  border-radius: 1rem;
-  border: 2px solid var(--accent-color);
-  background-color: var(--background);
-  padding: 1rem;
-  margin-top: 1rem;
-  background-image: url("/reasonus/images/logo-only-dark.svg");
-  background-repeat: no-repeat;
-  background-position: -2rem -2rem;
 
-  header {
-    position: relative;
-    top: unset;
-    bottom: unset;
-  }
-
-  h4 {
-    font-family: var(--font-heading);
-    font-weight: 300;
-    font-size: 1.25rem;
-    display: inline-block;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent-color);
-  }
-
-  img {
-    position: relative;
-    height: 5rem;
-    margin: 0.5rem 0 0.75rem;
-    cursor: pointer;
-  }
-
-  p + p {
-    margin-top: 0.75rem;
+@media (min-width: 786px) {
+  .tabs-content {
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "image content" "extras extras";
   }
 }
 .footer {
